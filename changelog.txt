@@ -1,3 +1,7 @@
+Version 6.05h
+- Added: Difficulty-specific global variables are now set at the start of every singleplayer-mission, which will allow mappers to create difficulty-specific triggers by specifying these globals for the "27 Global is set..." event.
+- Fixed: The Mobile Stealth Generator and Mobile War Factory didn't display a deploy animation and were unable to repack after having been deployed.
+
 Version 6.05f
 - Fixed: A cliff on Grand Canyon was visually broken (Credits: Bittah Commander).
 - Fixed: Optional objectives in missions (globals) didn't affect following missions (Credits: Bittah Commander).
