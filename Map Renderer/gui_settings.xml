@@ -9,7 +9,7 @@
       <setting name="outputjpg" serializeAs="String">False</setting>
       <setting name="autosize" serializeAs="String">False</setting>
       <setting name="localsize" serializeAs="String">True</setting>
-      <setting name="input" serializeAs="String">E:\Pelit\Tiberian Sun\Maps\Fan-made\tiberian_ring.map</setting>
+      <setting name="input" serializeAs="String"></setting>
       <setting name="enginefs" serializeAs="String">True</setting>
       <setting name="squaredpos" serializeAs="String">False</setting>
       <setting name="output" serializeAs="String"></setting>
