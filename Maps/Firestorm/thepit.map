@@ -49,11 +49,6 @@ TiberiumDeathToVisceroid=no
 FreeRadar=no
 InitTime=10000
 
-[Multiplay]
-Description=The Pit (2-4)
-MinPlayers=2
-MaxPlayers=4
-
 [Lighting]
 Ambient=0.750000
 Red=1.000000
