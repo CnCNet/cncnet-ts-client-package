@@ -13,6 +13,7 @@ zzattack: Created the CNCMaps Renderer and saved me a bit of time by hosting hig
 OmegaBolt: Tested early builds of the client package and provided feedback on it
 Aro: Helped with PR
 E1 Elite: Applied the various improvements to version 6.00 that are listed under "E1 Elite's changes (2021-02-21)" in changelog.txt
+tomsons26: Created the graphics for the info panel on the GDI and Nod sidebars.
 
 Mappers:
 Aro

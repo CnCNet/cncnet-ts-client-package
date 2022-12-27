@@ -1,4 +1,7 @@
 
+Changes (2021-12-14) (Credits: E1 Elite):
+- Ice growth marker - map edge crash fix, optimized and shape changed.
+
 Changes (2021-06-20) (Credits: E1 Elite):
 - Swamp LAT fix.
 

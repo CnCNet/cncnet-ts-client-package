@@ -1,7 +1,20 @@
+Version 6.03
+- Added: Graphics for the info panel (Credits: tomsons26).
+- Added: TS and faction logos for Discord Rich Presence (Credits: CCHyper).
+- Changed: The CnC-DDRAW renderer was updated to the latest version (4.4.5.0) and it's now selected by default instead of TS-DDRAW (OGL).
+- Changed: The 2nd starting position the "[4] FS The Pit" map was moved up by a cell because MCVs couldn't immediately deploy there.
+- Changed: All original maps can now be started with only a spectator present.
+- Fixed: The info panel wouldn't open.
+- Fixed: The positions of various terrain objects and overlay (tiberium trees, clear rocks, sand rocks and fona) were offset towards the top or bottom in the map editor (Credits: Bittah Commander).
+- Fixed: The positions of clear rocks and sand rocks were offset towards the bottom in-game on snow maps (Credits: Bittah Commander).
+- Removed: Players can no longer select white in the game lobby because it looked too similar to the Civilians' grey.
+- Removed: The invisible "Impassable Overlay" (IMOV) was removed from the overlay types to prevent the map editor from creating maps that are incompatible with other versions of TS.
+
 Version 6.00
 - All of the client's menu layouts and textures have been improved (Credits: Bittah Commander, CCHyper, Rampastring)
+- The "Multiple Factory Bonus" game option has been added to the game lobbies
 - Re-compiled the spawner (game.exe) to apply the following patches (Credits: Bittah Commander):
- - https://github.com/CnCNet/ts-patches/blob/master/src/mods/dont_save_without_all_players.asm (Credits: dkeeton)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/mods/dont_save_without_all_players.asm (Credits: Rampastring)
  - https://github.com/CnCNet/ts-patches/blob/master/src/basic_theme_fix.asm (Credits: Rampastring)
  - https://github.com/CnCNet/ts-patches/blob/master/src/harvesters_guardcommand.asm (Credits: AlexB)
  - https://github.com/CnCNet/ts-patches/blob/master/src/flickering_shadow_fix.asm (Credits: AlexB)
@@ -51,11 +64,13 @@ HarvesterUnit=HARV,MCV
 [BASEUNIT]
 Image=MCV
 Name=Mobile Construction Vehicle
+CrateGoodie=yes
 
 [HARV]
 UndeploysInto=HORV
 
 [MCV]
+CrateGoodie=no
 AllowedToStartInMultiplayer=no
 
 
