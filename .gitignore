@@ -5,6 +5,7 @@ VersionWriter.exe
 version
 version_u
 VersionWriter-CopiedFiles/
+cache
 
 skirmish.bat
 
@@ -36,3 +37,6 @@ ts.log
 except.txt
 mpstats.log
 sync*.txt
+
+_gsdata_
+buffer
