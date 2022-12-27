@@ -1,3 +1,7 @@
+Version 6.05f
+- Fixed: A cliff on Grand Canyon was visually broken (Credits: Bittah Commander).
+- Fixed: Optional objectives in missions (globals) didn't affect following missions (Credits: Bittah Commander).
+
 Version 6.05e
 - Changed: The client now uses a new icon (Credits: CCHyper).
 - Fixed: The background of the between-mission map selection screen was off-center (Credits: Bittah Commander).
