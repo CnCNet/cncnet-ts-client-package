@@ -1,0 +1,1 @@
+TS will place saved games in this directory. Do not remove this directory or you will no longer be able to save games.

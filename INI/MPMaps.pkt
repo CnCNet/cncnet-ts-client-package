@@ -1,0 +1,312 @@
+[MultiMaps]
+01=MAPS\TIBERIAN SUN\G_CANYON
+02=MAPS\TIBERIAN SUN\G_KNOLL
+03=MAPS\TIBERIAN SUN\ACCESS
+04=MAPS\TIBERIAN SUN\PENTAGRM
+05=MAPS\TIBERIAN SUN\PITPLATS
+06=MAPS\TIBERIAN SUN\SEISMIC
+07=MAPS\TIBERIAN SUN\SINKHOLE
+08=MAPS\TIBERIAN SUN\T_GARDEN
+09=MAPS\TIBERIAN SUN\TACTICAL
+10=MAPS\TIBERIAN SUN\TERRACE
+11=MAPS\TIBERIAN SUN\TUNNEL
+12=MAPS\TIBERIAN SUN\ARIVRUNS
+13=MAPS\TIBERIAN SUN\CASEYCAN
+14=MAPS\TIBERIAN SUN\CLIFFSIN
+15=MAPS\TIBERIAN SUN\DESOLAR
+16=MAPS\TIBERIAN SUN\HEXTREME
+17=MAPS\TIBERIAN SUN\ICEMUST
+18=MAPS\TIBERIAN SUN\MUTANTS
+19=MAPS\TIBERIAN SUN\POCKETS
+20=MAPS\TIBERIAN SUN\STORMS
+21=MAPS\TIBERIAN SUN\STRMYVLY
+22=MAPS\TIBERIAN SUN\FORESTFR
+23=MAPS\TIBERIAN SUN\ICECLIFF
+24=MAPS\TIBERIAN SUN\SUP_BH_R
+25=MAPS\TIBERIAN SUN\TREAD_L
+26=MAPS\FIRESTORM\DUEL
+27=MAPS\FIRESTORM\FLOAT
+28=MAPS\FIRESTORM\TIERS
+29=MAPS\FIRESTORM\SPRINGS
+30=MAPS\FIRESTORM\2TEMP7
+31=MAPS\FIRESTORM\PERMFRST
+32=MAPS\FIRESTORM\1LWORLD7
+33=MAPS\FIRESTORM\3TWEAK10
+34=MAPS\FIRESTORM\XCAPADES
+35=MAPS\FIRESTORM\CITYSCAP
+36=MAPS\FIRESTORM\NARROW
+37=MAPS\FIRESTORM\1ICE6
+38=MAPS\FIRESTORM\DRAWBRID
+39=MAPS\FIRESTORM\RIVRRAD4
+
+
+[MAPS\TIBERIAN SUN\G_CANYON]
+Description=Grand Canyon (2-4)
+CD=0,1,2
+MinPlayers=2
+MaxPlayers=4
+
+
+[MAPS\TIBERIAN SUN\G_KNOLL]
+Description=Grassy Knoll (2-4)
+CD=0,1,2
+MinPlayers=2
+MaxPlayers=4
+
+
+[MAPS\TIBERIAN SUN\ACCESS]
+Description=Limited Access (2-4)
+CD=0,1,2
+MinPlayers=2
+MaxPlayers=4
+
+
+[MAPS\TIBERIAN SUN\PENTAGRM]
+Description=Pentagram (2-4)
+CD=0,1,2
+MinPlayers=2
+MaxPlayers=4
+
+
+[MAPS\TIBERIAN SUN\PITPLATS]
+Description=Pit or Plateau (2-4)
+CD=0,1,2
+MinPlayers=2
+MaxPlayers=4
+
+
+[MAPS\TIBERIAN SUN\SEISMIC]
+Description=Seismic (2-4)
+CD=0,1,2
+MinPlayers=2
+MaxPlayers=4
+
+
+[MAPS\TIBERIAN SUN\SINKHOLE]
+Description=Sinkholes (2-4)
+CD=0,1,2
+MinPlayers=2
+MaxPlayers=4
+
+
+[MAPS\TIBERIAN SUN\T_GARDEN]
+Description=Tiberium Garden Redux (2-4)
+CD=0,1,2
+MinPlayers=2
+MaxPlayers=4
+
+
+[MAPS\TIBERIAN SUN\TACTICAL]
+Description=Tactical Opportunities (2-4)
+CD=0,1,2
+MinPlayers=2
+MaxPlayers=4
+
+
+[MAPS\TIBERIAN SUN\TERRACE]
+Description=Terrace (2-4)
+CD=0,1,2
+MinPlayers=2
+MaxPlayers=4
+
+
+[MAPS\TIBERIAN SUN\TUNNEL]
+Description=Tunnel Training (2-4)
+CD=0,1,2
+MinPlayers=2
+MaxPlayers=4
+
+
+[MAPS\TIBERIAN SUN\ARIVRUNS]
+Description=A River Runs Near It (4-6)
+CD=0,1,2
+MinPlayers=4
+MaxPlayers=6
+
+
+[MAPS\TIBERIAN SUN\CASEYCAN]
+Description=Casey's Canyon (4-6)
+CD=0,1,2
+MinPlayers=4
+MaxPlayers=6
+
+
+[MAPS\TIBERIAN SUN\CLIFFSIN]
+Description=Cliffs of Insanity (4-6)
+CD=0,1,2
+MinPlayers=4
+MaxPlayers=6
+
+
+[MAPS\TIBERIAN SUN\DESOLAR]
+Description=Desolation Redux (4-6)
+CD=0,1,2
+MinPlayers=4
+MaxPlayers=6
+
+
+[MAPS\TIBERIAN SUN\HEXTREME]
+Description=Hextreme! (4-6)
+CD=0,1,2
+MinPlayers=4
+MaxPlayers=6
+
+
+[MAPS\TIBERIAN SUN\ICEMUST]
+Description=The Ice Must Floe (4-6)
+CD=0,1,2
+MinPlayers=4
+MaxPlayers=6
+
+
+[MAPS\TIBERIAN SUN\MUTANTS]
+Description=Night of the Mutants (4-6)
+CD=0,1,2
+MinPlayers=4
+MaxPlayers=6
+
+
+[MAPS\TIBERIAN SUN\POCKETS]
+Description=Pockets (4-6)
+CD=0,1,2
+MinPlayers=4
+MaxPlayers=6
+
+
+[MAPS\TIBERIAN SUN\STORMS]
+Description=Storms (4-6)
+CD=0,1,2
+MinPlayers=4
+MaxPlayers=6
+
+
+[MAPS\TIBERIAN SUN\STRMYVLY]
+Description=Stormy Valley (4-6)
+CD=0,1,2
+MinPlayers=4
+MaxPlayers=6
+
+
+[MAPS\TIBERIAN SUN\FORESTFR]
+Description=Forest Fires (6-8)
+CD=0,1,2
+MinPlayers=6
+MaxPlayers=8
+
+
+[MAPS\TIBERIAN SUN\ICECLIFF]
+Description=Ice Cliffs (6-8)
+CD=0,1,2
+MinPlayers=6
+MaxPlayers=8
+
+
+[MAPS\TIBERIAN SUN\SUP_BH_R]
+Description=Super Bridgehead Redux (6-8)
+CD=0,1,2
+MinPlayers=6
+MaxPlayers=8
+
+
+[MAPS\TIBERIAN SUN\TREAD_L]
+Description=Tread Lightly (6-8)
+CD=0,1,2
+MinPlayers=6
+MaxPlayers=8
+
+[MAPS\FIRESTORM\DUEL]
+Description=FS Dueling Islands (2)
+CD=0,1,2
+MinPlayers=2
+MaxPlayers=2
+
+
+[MAPS\FIRESTORM\FLOAT]
+Description=FS They All Float (2)
+CD=0,1,2
+MinPlayers=2
+MaxPlayers=2
+
+
+[MAPS\FIRESTORM\TIERS]
+Description=FS Tiers of Sorrow (2)
+CD=0,1,2
+MinPlayers=2
+MaxPlayers=2
+
+
+[MAPS\FIRESTORM\SPRINGS]
+Description=FS Hot Springs (2)
+CD=0,1,2
+MinPlayers=2
+MaxPlayers=2
+
+
+[MAPS\FIRESTORM\2TEMP7]
+Description=FS Hidden Valley (2-4)
+CD=0,1,2
+MinPlayers=2
+MaxPlayers=4
+
+
+[MAPS\FIRESTORM\PERMFRST]
+Description=FS Permafrost (2-4)
+CD=0,1,2
+MinPlayers=2
+MaxPlayers=4
+
+
+[MAPS\FIRESTORM\1LWORLD7]
+Description=FS Theme Park (2-4)
+CD=0,1,2
+MinPlayers=2
+MaxPlayers=4
+
+
+[MAPS\FIRESTORM\3TWEAK10]
+Description=FS Tiberium Forest (2-4)
+CD=0,1,2
+MinPlayers=2
+MaxPlayers=4
+
+
+[MAPS\FIRESTORM\XCAPADES]
+Description=FS Xcapades (2-4)
+CD=0,1,2
+MinPlayers=2
+MaxPlayers=4
+
+
+[MAPS\FIRESTORM\CITYSCAP]
+Description=FS Cityscape (4-6)
+CD=0,1,2
+MinPlayers=4
+MaxPlayers=6
+
+
+[MAPS\FIRESTORM\NARROW]
+Description=FS Narrow River (4-6)
+CD=0,1,2
+MinPlayers=4
+MaxPlayers=6
+
+
+[MAPS\FIRESTORM\1ICE6]
+Description=FS Nowhere to Run (4-6)
+CD=0,1,2
+MinPlayers=4
+MaxPlayers=6
+
+
+[MAPS\FIRESTORM\DRAWBRID]
+Description=FS Drawbridges (6-8)
+CD=0,1,2
+MinPlayers=6
+MaxPlayers=8
+
+
+[MAPS\FIRESTORM\RIVRRAD4]
+Description=FS River Raid (6-8)
+CD=0,1,2
+MinPlayers=6
+MaxPlayers=8

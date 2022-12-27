@@ -1,0 +1,84 @@
+<!doctype html public "-//w3c//dtd html 3.2//en">
+
+<html>
+
+<head>
+		<title>
+		</title>
+		<link rel=stylesheet type="text/css" href="formats.css">
+	</head>
+	
+	<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
+		
+		<p class="heading" align="center">
+		<br>
+		FAQ (Frequently asked questions)
+		</p>
+	<p>	
+  Here a list of the most frequently asked questions regarding FinalSun and FinalAlert:<br><br>
+
+  <br>
+  <b>Q: </b>FinalSun/FinalAlert crashes while loading graphics<br>
+  <b>A: </b>You should try switching to 16 bit color mode<br>
+  <br>
+
+<br>
+  <b>Q: </b>I cannot reach the terrain behind a cliff!<br>
+  <b>A: </b>If you have problems to reach certain parts of the map, you can use the <a href="editt.htm">hide tile and hide tileset tools</a> to hide the cliff. I recommend using the hide tile tool so that only the cliff parts you don´t want to see are hidden. You can now access the terrain behind this cliff part.<br><br>
+
+<br>
+  <b>Q: </b>How can I make for example sandy or grassy terrain? The LAT tileset available just has a rect form?<br>
+  <b>A: </b>Just use the LAT tiles. FinalSun and FinalAlert will automatically smooth the terrain.<br><br>
+
+<br>
+  <b>Q: </b>I tried to make a shore, but how can I connect the sandy beach and the grass? FinalSun/FinalAlert and TS/RA2 do not display it fine <br>
+  <b>A: </b>Use the Sand LAT tile to connect shore and grass.<br><br>
+
+<br>
+  <b>Q: </b>How can I fill a large area with for example water, without having to paint everything myself?<br>
+  <b>A: </b>A new function has been added to version 0.97 Alpha 2 to assist you. Select the tile to fill with in the terrain browser, and then move the mouse cursor where you want to fill the area. Hold down CTRL and then press the left mouse button. Filling only works with the small tiles though (for example the LAT tiles and the small water ones). This makes sense, as filling with the same cliff tile produces weird results.<br><br>
+
+<br>
+  <b>Q: </b>Why does Red Alert 2 / Tiberian Sun complain about a player maximum of 0 players?<br>
+  <b>A: </b>In Multiplayer maps, the waypoints 0-7 define the starting points of the players 1-8. If you want for example to play with 4 players, you need to set the waypoints 0, 1, 2 and 3.<br>
+  <br>
+
+
+  <br>
+  <b>Q: </b>How can I set the starting points of the player(s)?<br>
+  <b>A: </b>Use the starting points list in the object browser at the left. Make sure you begin with player 1, then player 2 and so on (eg do not leave players out, you can of course set player 3 before player 2, but player 2 must exist if player 3 exists)<br>
+  <br>
+
+  <br>
+  <b>Q: </b>How can I play my multiplayer map? Why does RA2 complain about missing maps?<br>
+  <b>A: </b>Save it as mpr file in the RA2/Tiberian Sun directory. If you want to play it online, there are certain differnces between RA2 and TS:<br>
+TS: You have to make sure the map file size is not too big. If you want to play with 2 players, 300 kb should be the maximum. The map will then automatically transfered to the other players<br>
+RA2: The map will be transferred automatically if Edit->Official is set to "no". RA2 will then behave like TS. If Official is set to "yes", you have to copy the file to all players taking part before you start the multiplayer game (or make sure they restart RA2 after copying the file into their RA2 directory). The map must be in the main directory of RA2 on every PC taking part. Fortunately, the map size doesn´t matter here.<br>
+  <br>
+
+<br>
+  <b>Q: </b>Why does my multiplayer map crash after loading?<br>
+  <b>A: </b>You probably haven´t checked the multiplayer option in the new map dialog. To fix this, try the following:<br>
+1) Click on File->New <br>
+2) Multiplayer map <br>
+3) Import Map
+4) Browse for your map <br>
+5) Click OK. <br>
+6) Save the map as .mpr in the RA2/TS directory <br>
+FinalSun/FinalAlert will now automatically repair the map and produce a multiplayer map. This should almost always work. Please note that any building and unit on the map should be given to the neutral player (or special player). FinalSun/FinalAlert does not do this automatically (yet).
+<br>
+  <br>
+
+<br>
+  <b>Q: </b>How can I play my singleplayer map?<br>
+  <b>A: </b>Refer to the <a href="tutsp.htm">singleplayer tutorial</a></b><br>
+  <br>
+
+<br>
+  <b>Q: </b>What are triggers?<br>
+  <b>A: </b>Triggers are used to start certain events on the map. They consist of a general flags area, an event area, and an action area. The flags area just sets the name of the trigger and some things like if the trigger should repeat and who owns the trigger. The events define when this event shall occur. And finally, the actions define what happens if the events are true. Example: If time passed is 30 seconds, then send some units to the player.<br>
+  <br>
+
+</body>
+
+</html>

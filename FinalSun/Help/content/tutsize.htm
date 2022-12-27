@@ -1,0 +1,56 @@
+<!doctype html public "-//w3c//dtd html 3.2//en">
+
+<html>
+
+<head>
+		<title>
+		</title>
+		<link rel=stylesheet type="text/css" href="formats.css">
+	</head>
+	
+	<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
+		
+		<p class="heading" align="center">
+		<br>
+		Changing the Visible Portion of the Map (intermediate level)
+	</p>
+	<p>	
+ Written by: Thalassicus<br>
+Modified by Matze<br>
+<br><br>
+
+The visible portion of the map is what the player can see and move to.  Many maps change this throughout the course of a mission, to ensure that a player completes one objective at a time.  One such level is the Allied mission in Europe, where you must destroy the two nuclear missile silos.  The mission begins with only half of itself visible, and expands to include new objectives.<br><br>
+
+<b>To show only the top half of a map when it is loaded:</b><br>
+<img src="pics/wayp.jpg" height=1 width=20>1)	Under the Edit menu, select Map.<br>
+<img src="pics/wayp.jpg" height=1 width=20>2)	There is one editable text box in the middle.  This is the visible portion of the map, symbolized by the blue line on the iso view.  The top text box shows the actual editable dimensions of the map, symbolized by the red line in the iso view.  In order, the dimensions are:<br>
+<img src="pics/wayp.jpg" height=1 width=40>a.	Left edge of the visible map.<br>
+<img src="pics/wayp.jpg" height=1 width=40>b.	Top edge of the visible map.<br>
+<img src="pics/wayp.jpg" height=1 width=40>c.	Width of the remaining portion of the map.<br>
+<img src="pics/wayp.jpg" height=1 width=40>d.	Height of the remaining portion of the map.<br>
+<img src="pics/wayp.jpg" height=1 width=40>e.	Format: "LeftEdge,TopEdge,Width,Height"<br>
+<img src="pics/wayp.jpg" height=1 width=20>3)	In the second text box, type the following:<br>
+<img src="pics/wayp.jpg" height=1 width=40>a.	Set the left edge at 0 (closest you can get to the left side)<br>
+<img src="pics/wayp.jpg" height=1 width=40>b.	Set the top edge at 4.  DO NOT set the top edge less than 4, or graphic errors will occur.<br>
+<img src="pics/wayp.jpg" height=1 width=40>c.	Look at the top text box and find the width.  Set the visible width to this number as well.<br>
+<img src="pics/wayp.jpg" height=1 width=40>d.	Look at the top text box and find the height.  Set the visible height to this number, divided by 2.  Exact calculations of the middle are not required, you can approximate.<br>
+<img src="pics/wayp.jpg" height=1 width=20>4)	The left visibility border is now at the far left, the right border is at the far right, the top is as close as it can get to the top of the map, and only the top half of the map is visible.<br><br>
+<b>To change the visible portion of any map to only the  bottom half during gameplay:</b><br>
+<img src="pics/wayp.jpg" height=1 width=20>1)	This tutorial assumes that the player will use a global variable '5 ResizeMap' to trigger the map's resizing.<br>
+<img src="pics/wayp.jpg" height=1 width=20>2)	Under the Edit menu, open the Trigger Editor.<br>
+<img src="pics/wayp.jpg" height=1 width=20>3)	Create a new trigger with the following attributes:<br>
+<img src="pics/wayp.jpg" height=1 width=40>a.	Name: "Resize Map 1"<br>
+<img src="pics/wayp.jpg" height=1 width=40>b.	Repeating: No<br>
+<img src="pics/wayp.jpg" height=1 width=40>c.	Event: "36-Global is set", parameter "5 ResizeMap,0"<br>
+<img src="pics/wayp.jpg" height=1 width=40>d.	Action: "40 Resize visible map", parameters:<br>
+<img src="pics/wayp.jpg" height=1 width=60>i.	Top = [Map height divided by 2 (middle of map)]<br>
+<img src="pics/wayp.jpg" height=1 width=60>ii.	Left = 0<br>
+<img src="pics/wayp.jpg" height=1 width=60>iii.	Right = [Map width]<br>
+<img src="pics/wayp.jpg" height=1 width=60>iv.	Bottom  = [Map height divided by two (when added to Top is the same as the bottom half of the map)]<br>
+
+</p>
+
+
+</body>
+
+</html>

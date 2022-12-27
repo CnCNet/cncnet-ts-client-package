@@ -1,0 +1,91 @@
+<!doctype html public "-//w3c//dtd html 3.2//en">
+
+<html>
+
+<html>
+
+<head>
+		<title>
+		</title>
+		<link rel=stylesheet type="text/css" href="formats.css">
+	</head>
+	
+	<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
+		
+		<p class="heading" align="center">
+		<br>
+		Changing lighting (beginner)	</p>
+	<p>	
+ Written by: Thalassicus<br>
+Modified by Matze<br>
+<br><br>
+
+<b>Changing Lighting (beginner level)</b><br>
+Lighting includes five values for both storm and non-storm modes.  Storm mode is what you see around the map whenever the Weather Storm is used; non-storm is anytime else.  Temperate and Snow each have their own color settings for Morning, Afternoon, Dusk, and Nighttime.<br><br>
+
+
+<b>To access the lighting and set up a morning temperate map:</b><br>
+<img src="pics/wayp.jpg" height=1 width=20>1)	Under the Edit menu, select Lighting.<br>
+<img src="pics/wayp.jpg" height=1 width=20>2)	There are five settings each for the Normal and Storm Modes, as described above.  All of the values are on a decimal-percentage scale, so 1.00 is normal lighting, and 0.6 is 60% lighting.  The five settings are:<br>
+
+<img src="pics/wayp.jpg" height=1 width=40>a.	Ambient - Controls the general lighting for any objects on the map, such as structures, units, and terrain brightness.<br>
+
+<img src="pics/wayp.jpg" height=1 width=40>b.	Level - Controls how much the lighting changes for each tile of elevation.  DO NOT set the level to a value greater than about 0.30 (30%) or the lighting will change so drastically that high elevation will be almost pure white, and lower elevation will be so black as to be unobservable.  0.032 (3.2 % change) is about the average lighting step for most maps.<br>
+<img src="pics/wayp.jpg" height=1 width=40>c.	Red - Adjusts how red the terrain looks.<br>
+<img src="pics/wayp.jpg" height=1 width=40>d.	Green - Adjusts how green the terrain looks.<br>
+<img src="pics/wayp.jpg" height=1 width=40>e.	Blue - Adjusts how blue the terrain looks.<br>
+<img src="pics/wayp.jpg" height=1 width=40>f.	The Storm Mode settings are identical in function to all the regular mode settings.<br>
+<img src="pics/wayp.jpg" height=1 width=20>3)	Change the following Normal attributes:<br>
+<img src="pics/wayp.jpg" height=1 width=40>a.	Ambient = 0.750000	// Decreases the normal lighting to 75%<br>
+<img src="pics/wayp.jpg" height=1 width=40>b.	Level = 0.032000	// Level is the same for most maps.<br>
+<img src="pics/wayp.jpg" height=1 width=40>c.	Red = 1.090000	// Slightly increases red (by 9%)<br>
+<img src="pics/wayp.jpg" height=1 width=40>d.	Green = 0.800000	// Decreases green to 80%<br>
+<img src="pics/wayp.jpg" height=1 width=40>e.	Blue = 0.490000	// Decreases blue to 49%<br>
+<img src="pics/wayp.jpg" height=1 width=20>4)	Change the following Storm Mode attributes:<br>
+<img src="pics/wayp.jpg" height=1 width=40>a.	Ambient = 0.650000	// Storm is darker than normal lighting (at 65%)<br>
+<img src="pics/wayp.jpg" height=1 width=40>b.	Level = 0.032000	// Level is the same for most maps.<br>
+<img src="pics/wayp.jpg" height=1 width=40>c.	Red = 0.695000	// The Red, Green, and Blue values are shifted<br>
+<img src="pics/wayp.jpg" height=1 width=40>d.	Green = 0.445000	// from primarily red to primarily blue, while<br>
+<img src="pics/wayp.jpg" height=1 width=40>e.	Blue = 0.775000	// still maintaining the Morning effect.<br>
+<img src="pics/wayp.jpg" height=1 width=20>5)	Your temperate map will now show the morning effect in RAII, and will have a bluish tint whenever a Weather Storm is created.  A table follows with some other lighting values from within RAII.<br>
+<br>
+<table>
+<tr>
+<td>Temperate:</td>	<td>Morning</td>	<td>	Afternoon</td>	<td>	Dusk</td>	<td>	Night	</td>
+</tr>
+<tr>
+<tr>
+<td>Ambient</td>	<td>	0.750000</td>	<td>	1.000000</td>	<td>	0.750000</td>	<td>	0.350000</td>
+</tr>
+<tr>	
+<td>Red</td>	<td>	1.090000</td>	<td>	1.080000</td>	<td>	0.710000</td>	<td>	0.510000</td>
+</tr>
+<tr>	
+<td>Green</td>	<td>	0.800000</td>	<td>	0.940000</td>	<td>	0.810000</td>	<td>	0.460000	</td>
+</tr>
+<tr>
+<td>Blue</td>	<td>	0.490000</td>	<td>	0.680000</td>	<td>	1.190000</td>	<td>	1.410000	</td>
+</tr>
+<tr>
+<td>Snow:</td>	<td></td>	<td></td>	<td>   </td>
+</tr>
+<tr>
+<td>Ambient</td>	<td>	0.750000</td>	<td>	1.000000</td>	<td>	0.750000</td>	<td>	0.550000</td>
+</tr>
+<tr>	
+<td>Red</td>	<td>	1.120000</td>	<td>	0.990000</td>	<td>	1.060000</td>	<td>	0.760000</td>	
+</tr>
+<tr>
+<td>Green</td>	<td>	0.800000</td>	<td>	1.040000</td>	<td>	1.070000</td>	<td>	0.740000	</td>
+</tr>
+<tr>
+<td>Blue</td>	<td>	1.330000</td>	<td>	1.070000</td>	<td>	1.540000</td>	<td>	1.180000</td>
+</tr>
+</table>	
+
+</p>
+
+
+</body>
+
+</html>

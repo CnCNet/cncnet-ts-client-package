@@ -1,0 +1,1 @@
+Tiberian Sun will place taken screenshots in this directory. Do not remove this directory or you will no longer be able to take screenshots.

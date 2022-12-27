@@ -1,0 +1,27 @@
+Credits for Rampastring's version of Tiberian Sun:
+
+Client credits:
+
+Rampastring: For creating the client and applying various improvements to the game, including new game options and maps
+Bittah Commander: For editing the game executable and FinalSun executable so that it reads files from subdirectories instead of MIX files, and for helping with the client's graphics
+Iran: Created the Tiberian Sun spawner, which makes it possible to skip the in-game menu and as a result makes the client possible
+CCHyper: Provided various useful hacks for the game executable, the most important one being the WaveClass error fix
+zzattack: For making the CNCMaps Renderer and saving me a bit of time by hosting high-quality map preview images at ra2maps.zzattack.org
+OmegaBolt: Testing and feedback
+
+The Dawn of the Tiberium Age: For being a development and testing platform for the client
+Twisted Insurrection: For being a development and testing platform for the client
+Project Perfect Mod: For hosting classic C&C modding forums
+CnCNet (including hifi, Rampastring, Iran, FunkyFr3sh, neogrant): For providing an easy-to-use online gaming service for classic Command & Conquer and for hosting this package
+Westwood Studios: For creating the original game
+Electronic Arts Inc.: For making Tiberian Sun freeware so that I'm able to distribute this package
+
+Mappers:
+Aro
+Aurora196
+Crash
+j4m3sb0nd
+Ixith
+Rampastring
+
+Command & Conquer, Tiberian Sun and Command & Conquer Tiberian Sun are trademarks of Electronic Arts Inc.

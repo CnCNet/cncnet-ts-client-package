@@ -1,0 +1,42 @@
+<!doctype html public "-//w3c//dtd html 3.2//en">
+
+<html>
+
+<head>
+		<title>
+		</title>
+		<link rel=stylesheet type="text/css" href="formats.css">
+	</head>
+	
+	<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
+		
+		<p class="heading" align="center">
+		<br>
+	Trigger tutorial 3 (beginners) </p>
+	<p>	
+ Written by: Thalassicus<br>
+Modified by Matze<br>
+<br><br>
+<b>Creating & Using Triggers</b><br>
+A trigger is a cause-and-effect action for RAII or TS to perform while the user is playing a map.  Each trigger has an event and an action associated with it.  A simple trigger used for debugging (or just fun :-) will reveal the entire map.<bR><br>
+
+<b>To reveal the entire map for all players after 30 seconds of gameplay:</b><br>
+1)	Under the edit menu at the top of the screen, select the trigger editor near the middle.  A dialog box pops up.<br>
+2)	Click on "Add Trigger" near the top of the dialog box.  This will fill in many fields, and will default the name field to "New trigger".<br>
+3)	Change the name of the trigger to "Reveal Entire Map".<br>
+4)	Set the house to "Neutral"<br>
+5)	Click on the "Events" tab near the middle of the dialog box.<br>
+6)	Click on "New Event".<br>
+7)	Change the "Event Type" (first text box from top) to "13 - Time elapsed".<br>
+8)	Click on the "Time" parameter in the list.<br>
+9)	Change the value to "30".  This event will now fire after '30'sec of  'Time elapsed' after the scenario is started.<br>
+10)	Click on the "Actions: tab near the middle of the dialog box.<br>
+11)	Click on "New Action"<br>
+12)	Change the action type to "16 - Reveal all map".<br>
+13)	This action requires no parameters.  The trigger will now activate after 30 seconds of gameplay have passed, and it will reveal the entire map for all players.  Have fun with that one! :-)<br>
+
+</p>
+
+</body>
+
+</html>

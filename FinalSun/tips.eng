@@ -1,0 +1,44 @@
+If you do not want AutoShore to be applied when placing tiles, you can disable AutoShore (and AutoLat) in the Options menu.
+After you have activated the tile/terrain placing mode, you can use the arrow keys to scroll through the different tilesets and tiles.
+Use the show/hide functions to make certain fields or terrain types invisible. Using this, map editing in certain parts of the map becomes much easier.
+Have you already tried out the "New map assistant" (File->New)? It creates all stuff you need for a singleplayer and multiplayer map.
+Pay attention to the status bar at the bottom of the window. It often contains useful information.
+Consider that the brush size works for "paint terrain", "flatten terrain" (important!), but not for "raise/lower" terrain.
+You should take a look at campaign maps to see how certain things have been made.
+Do you want to change (not add) units for 1 map? Just add the coding to the end of the text after opening the map with wordpad! It'll stay there and overwrite the settings in your rules.ini!
+Another (Better as some say) way of adding new units to your maps is to edit certain civilian objects. If your map doesn't use a certain civilian building and you want to add a new building, feel free to edit all of the settings of that unit.
+Ever tried importing bitmaps to make maps? Just select 'Import an existing map or bitmap (BMP)' instead of 'Create a completely new map'.
+You should try tool scripts. They are great for making day-night transitions (for example) in your map without knowledge of triggers and of course to learn from them! Be sure to follow the instructions and the manual editing they require. You can find them by clicking 'Map Tools' at the top of your screen > 'Tool Scripts'.
+Never played great fan-made maps? Visit the 'Spotlighted Maps' and 'Map Archive' sections at TiberiumWeb ( www.tiberiumweb.com ) and PPM   ( www.ppmsite.com ) There are great tutorials there as well!
+Don't hesitate to use the Autofill tool! Select a terrain tile (or a LAT tile in the 'Ground' Tab at the left of the screen) and click while holding the CTRL button. There won't be any edges, so a little manual editing might be needed to fix them. It's much faster than manual placing, though.
+Use a reveal trigger to preview your maps without exploring them first! Make a new trigger with Event #8 ('Any Event', it must happen as soon as the game starts) and action # 16 ('Reveal all map', we want to reveal the map to all players here).
+use the 1 object a screen method! Don't overuse objects! Walls of 1 type of rock don't look good, unless its an online map.
+Don't place too many GDI and Nod buildings on your map. A deserted base (or two) is okay, but anything higher than a radar is not recommended.
+Do you want to try out your map and test some triggers without the AI bothering you? Don't mess with AI triggers, just place Nod walls or Concrete wall around all starting waypoints. Human players can easily break through them by blowing them up, but the AI doesn't know what to do and goes limb!
+Did you know that when using event #1 - 'Entered by' you can use the parameter -1? Instead of selecting 1 house, -1 Makes it so that the trigger fires whenever the attached object has been entered, because -1 stands for any!
+Is your map crashing? Take a look if there is tiberium on slopes. Be sure to take a look at your triggers as well. Disable one and see wether it crashes again. Is the map crashing on loading? Be sure to check all autofire triggers and modifications you have made to units.
+Firestorm-only objects like floaters, juggernauts etc. not appearing at all in your new FS campaign? Check wether 'Addon Needed' is set to 1, it enables firestorm stuff for your Singleplayer map. Go to the Edit Tab > Basic > Addon Needed (located in the lower right corner of the Basic Window.
+Sometimes making a new map from scratch is hard. Try drawing the basic layout you want in brown (CLEAR) and blue (WATER) in MS paint, and import the picture In FinalSun.    Tip by Aro
+Annoyed of the sounds in FinalSun? Want to enjoy music while mapping but you can't cause of the horrible sounds? Disable sound by going into FinalSun.ini and adding NoSounds=1 under the [UserInterface] section.     Tip by Aro
+Is your map crashing in-game and you don't know why? Ask for help in the mapping section on www.PPMsite.com and www.TiberiumWeb.com!     Tip by Aro
+I Do not reccomend using Cliff painting tools or AutoShore, you will be guarenteed to get better results doing it manually.     Tip by Aro
+Want to make Ice, but it wont grow as you want it to? In the ice section there is a tile that looks like just water, place this where-ever you would like no ice to grow.     Tip by Aro
+Want to make your map just that extra bit special? Add moving vehicles just for that extra nice feeling. There is a tutorial on how to do this in the FinalSun manual. Just Press F1 while on FinalSun.     Tip by Aro
+New to mapping? Don't know how to change the names on billboards like you may of seen elsewhere? Open up your map in wordpad and type down the billboards filename ([BBOARD01] etc) and the underneath, type in 'Name=' And after the '=' sign, put whatever you would like the billboard to say.     Tip by Aro
+Want to disable something just for a specific map? Open your map up in wordpad, and type down the building(s) you would like to disable using filenames ([GACNST] etc.) and type down just underneath, 'TechLevel=-1'.     Tip by Aro
+A Simple way to get realistic looking slopes is to user the lower slope tool 2x2, and then on the edges use the upper slope tool 1x1, you can get some fantastic results this way!     Tip by Aro
+Lighting can be vital to a maps feel. Open your map in word pad and toy with the invisible light post's until you get some good results (Make sure you know what tags you're using).     Tip by Aro
+Created a map you want to share with others? Join up on either www.ppmsite.com or www.tiberiumweb.com and upload your maps!     Tip by Aro
+If you want to be adventurous with your maps and add so much more, Read some tuturoials on either www.ppmsite.com or www.tiberiumweb.com. You may find some really useful things.     Tip by Aro
+Want to put something into your map that you've seen on an official map or mission? Extract that map with the XCC Mixer and take a look at how it's done.     Tip by Aro
+Take your time while mapping. Don't let yourself get stressed out, take a break once in a while.     Tip by Aro
+Unless you know what you're doing, I don't reccomend using the INI editor in FinalSun. Check up all the possibilities you can do on either www.tiberiumweb.com or www.ppmsite.com.     Tip by Aro
+Single-Player maps require alot more thought and patience. Do you really want to try one? Firstly extract an official campaign mission using the XCC Mixer, and use it as a guide.
+Cliff errors are very common. As mentioned in another tip, there is a tutorial on them and how to fix them on www.tiberiumweb.com. I Reccomend placing cliffs in 2D mode and Framework mode (AKA Marble Madness).     Tip by Aro
+To enter 2D mode, just press your D key on your Keyboard.     Tip by Aro
+Noticed that sometimes the Tiberium gets stuck in-game on the upper section of the map just where it ends? Use the erase overlay layer 3 tool just along the top blue line in FinalSun, which will erase the tiberium that'll be stuck, anything beyond whats left will be fine.     Tip by Aro
+Ever noticed that when you place things at the bottom of the map in FinalSun, that certain area is erased? Go to The edit menu in FinalSun >>> Map, you will see a box near the bottom with four numbers sperated my commas. Take the last number, minus it by 4 (E.g: ,50 would be 46). Now you can see on FinalSun where the map will end in-game.     Tip by Aro
+Don't forget to look at the manual in FinalSun if you want some quick tutorials. Just hit F1 in FinalSun.     Tip by Aro
+Have you made a mod and your new units and buildings etc. ade not appearing in FinalSun? Go to Options >>> Settings and make sure that the first option is checked. Also, make sure that FinalSun is going to the right directory.     Tip by Aro
+There are alot of people out there who like mapping too. Join up on www.ppmsite.com and/or www.tiberiumweb.com, and exchange idea's and converse.     Tip by Aro
+Want to know who Aro is? Well you will if you follow that last tip. =P

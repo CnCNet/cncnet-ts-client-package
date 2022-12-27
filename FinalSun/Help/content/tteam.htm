@@ -1,0 +1,63 @@
+<!doctype html public "-//w3c//dtd html 3.2//en">
+
+<html>
+
+<head>
+		<title>
+		</title>
+		<link rel=stylesheet type="text/css" href="formats.css">
+	</head>
+	
+	<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
+		
+		<p class="heading" align="center">
+		<br>
+	Team(types) tutorial</p>
+	<p>	
+ Written by: Thalassicus<br>
+Modified by Matze<br>
+<br><br>
+
+<b>Creating & Using Teams </b><br>
+<u>Team</u>(types) is the name RAII designers created for groups of units that move around the map and share similar properties.  A team can be created that patrols around a base, or that represents reinforcements for any given player on the map.  Teams are comprised of taskforces and scripts.  <u>Taskforces</u> are a representation of all the different types of units in the team, and the amount of each type of unit.  A <u>script</u> for a team is the list of commands for the team to follow, such as moving to a designated location or attacking a structure.  The process of setting up a team combines many different skills into one inherently simple (although a bit long) task.<br><br>
+
+<b>To reinforce the Americans with 5 GI soldiers from off the map:</b><br>
+1)	In the iso view, Create a waypoint with just inside the red line edge of the map.  This waypoint will be where the reinforcements are created.  Give it an ID using some naming scheme, such as using waypoints 60-69 only for team creation.<br>
+2)	Under the Edit menu, select Taskforces.  A dialog box pops up.<br>
+3)	Click on the top "Add" button.  Defaults the name to "New task force"<bR>
+4)	Change the name to "5 GI" [can be anything descriptive of the units in the taskforce]<br>
+5)	Click on the left "Add" button.  Defaults an item in the center list to "1 GI"<br>
+6)	At the bottom list box, you would select the first type unit in your taskforce.  Leave it at "E1 (GI)".<br>
+7)	Change the "Number of units" for this unit type to 5.  The list now has an item reading "5 GI"<br>
+8)	You would repeat steps 5-7 for any other types of units you wish to include in the taskforce.  For now, close the taskforces window.<br>
+9)	In the iso view, create another waypoint '61' for the destination of the reinforcements.  For now, place it about 20 tiles or so from the origional waypoint.<br>
+10)	Under the Edit menu, select Scripts.  Click on the top "Add" button.<br>
+11)	Change the name of the script to "American reinforce 1 move in"<br>
+12)	Click on the bottom "Add" button.  Adds an item '0' in the center list.<br>
+13)	From the "Type of Action" list box, select "3-Move to Waypoint"<br>
+14)	From the bottom "Waypoint" list box, select '61' (the destination the reinforcements will move to).  Close the Scripts dialog box.<br>
+15)	Under the Edit menu, select Teams.  Click on the top "New" button.<br>
+16)	Change the name property to "American Reinforcements 1"<br>
+17)	Select the veterancy level of '2'<br>
+18)	Select 'Americans' as the house of the team.<br>
+19)	Priority and Max are used by a computer if the team can be created by the AI.  Change Max to 0 so the AI cannot build this team.<br>
+20)	Tech Level is uneeded, group is if you want the units to give themselves the Group 1 slot or any other.  Leave both of these alone for now.<br>
+21)	Waypoint is the place the units magically appear.  Set this to '60', your first waypoint.<br>
+22)	Select your new script.<br>
+23)	Select your new taskforce.<br>
+24)	Tag is used to attach all units in this team to a tag (see Creating & Using Triggers and Tags (advanced level)).  Leave the tag alone for now.<br>
+25)	The flags at the bottom are different properties the team can exhibit, and most of them are unused.  For now, uncheck all of them except "TransportsReturnUpon Unload" and "AreTeamMembersRecruitable".  Check these.<br>
+26)	Create a new trigger with the following properties:<br>
+<img src="pics/wayp.jpg" height=1 width=20>a.	Name: "American Reinforce 1"<br>
+<img src="pics/wayp.jpg" height=1 width=20>b.	House: "Americans"<br>
+<img src="pics/wayp.jpg" height=1 width=20>c.	Repeating: No<br>
+<img src="pics/wayp.jpg" height=1 width=20>d.	Disabled: No<br>
+<img src="pics/wayp.jpg" height=1 width=20>e.	Event: "13 Time elapsed", parameter "30" (is in sec)<br>
+<img src="pics/wayp.jpg" height=1 width=20>f.	Action: "80 Reinforce ground troops", teamtype '01000006 American Reinforcements 1'.  It is also recommended that you set the waypoint parameter to the WP where the team will be created (60 in this case).<br><br>
+
+The team will now appear on the map after 30 seconds have elapsed at Waypoint 60.  The five GI soldiers will then move to waypoint 61.  After the team has been created, it will act just like any other units, and can be selected and controlled.  The only difference will be that a team might have an attached tag to it, or might have some of those special flags set from the Teams dialog box.
+
+
+</body>
+
+</html>

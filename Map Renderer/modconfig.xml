@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<ModConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>Tiberian Sun</Name>
+  <Engine>Firestorm</Engine>
+  <Directories>
+    <string>..\INI</string>
+    <string>..\MIX</string>
+  </Directories>
+  <ExtraMixes />
+  <Theaters>
+    <TheaterSettings>
+      <Type>Temperate</Type>
+      <Mixes>
+        <string>isotemp.mix</string>
+      </Mixes>
+      <TheaterIni>temperat.ini</TheaterIni>
+      <Extension>.tem</Extension>
+      <NewTheaterChar>84</NewTheaterChar>
+      <IsoPaletteName>isotem.pal</IsoPaletteName>
+      <UnitPaletteName>unittem.pal</UnitPaletteName>
+      <OverlayPaletteName>temperat.pal</OverlayPaletteName>
+    </TheaterSettings>
+    <TheaterSettings>
+      <Type>Snow</Type>
+      <Mixes>
+        <string>isosnow.mix</string>
+      </Mixes>
+      <TheaterIni>snow.ini</TheaterIni>
+      <Extension>.sno</Extension>
+      <NewTheaterChar>65</NewTheaterChar>
+      <IsoPaletteName>isosno.pal</IsoPaletteName>
+      <UnitPaletteName>unitsno.pal</UnitPaletteName>
+      <OverlayPaletteName>snow.pal</OverlayPaletteName>
+    </TheaterSettings>
+  </Theaters>
+</ModConfig>
