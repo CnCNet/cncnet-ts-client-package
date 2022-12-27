@@ -1,3 +1,8 @@
+Version 6.05e
+- Changed: The client now uses a new icon (Credits: CCHyper).
+- Fixed: The background of the between-mission map selection screen was off-center (Credits: Bittah Commander).
+- Fixed: Several animations used DemandLoad=true when they shouldn't have, which could lead to crashes when running the game with Vinifera.
+
 Version 6.05c
 - Fixed: Nod mission 7a "Destroy the Research Facility" crashed whenever the Titan beyond the tunnel was destroyed (Credits: Bittah Commander).
 
