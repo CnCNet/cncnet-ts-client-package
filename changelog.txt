@@ -1,0 +1,163 @@
+Version 5.30 (February 10, 2017):
+- Implemented the latest MonoGame / XNA CnCNet Client (Credits: Rampastring)
+ - The client has been almost entirely rewritten; the UI is now better both functionally and graphically, lots of issues have been fixed, and new features added
+ - The client is now open-source, with the code at https://github.com/CnCNet/xna-cncnet-client/
+- Implemented the latest CnCNet game spawner, with a lot of new features and bugfixes (Credits: AlexB, dkeeton, Iran, Rampastring)
+ - The spawner is now open-source as well; see https://github.com/CnCNet/ts-patches
+ - A few examples of features / bugfixes enabled in the included default spawner:
+  - Health of units and buildings is displayed when the cursor is hovered over them
+  - Aircraft can be repaired on any repair bay, not on just the one specified in the RepairBay= key
+  - Multi-Engineer is now always disabled when capturing neutral buildings
+  - You don't hear a sound anymore when Insignificant=yes units die
+  - The game no longer crashes when there's over 75 cameos in the sidebar, instead the extra cameos are simply not shown
+  - For an idea of the full change list, see https://github.com/CnCNet/ts-patches/commits/master
+- The main menu has been remade in higher quality (Credits: Bittah Commander)
+
+Version 4.09 (April 7, 2016):
+- Fixed: Reinforcement triggers on multiplayer maps failed to function when the "Harder AI" option was enabled (Credits: Rampastring)
+
+Version 4.08 (March 19, 2016):
+- Added the "- MP Enable Change Owner Function" script to FinalSun, which adds the multiplayer SpawnX houses to the map (Credits: Bittah Commander)
+
+Version 4.07 (March 11, 2016):
+- Fixed: The game crashed when starting a multiplayer game
+
+Version 4.06 (March 10, 2016):
+- Fixed: CABAL was allied to you in the last Firestorm Nod mission (Credits: Bittah Commander)
+- Fixed: CABAL's Firestorm Wall didn't activate in the last Firestorm Nod mission (Credits: Bittah Commander)
+- Fixed: FinalSun's Houses menu didn't work (Credits: Bittah Commander)
+- Fixed: The "Destroy trigger" map trigger action no longer crashes the game when the trigger to be destroyed is the last trigger on the map's internal list of triggers (Credits: AlexB)
+- Fixed: The CnCNet Client crashed when a game was completed if you weren't the host and the game host had left the game before you returned from the game (Credits: Rampastring)
+- Fixed: The "New Campaign" button had a bad hover-on texture that made the text appear smaller when you moved the cursor over the button (Credits: Rampastring)
+- Fixed: Extra factions can use their own speech files and sidebar graphics now (Credits: Bittah Commander)
+- Fixed: The update status text is no longer black (Credits: Rampastring)
+- Fixed: The "Cheater!" dialog now displays a facepalm image instead of a big pink square
+- Changed: The menu slide animations have been restored (Credits: Bittah Commander)
+
+Version 4.04 (February 21, 2016):
+- Fixed: Blue tiberium damages infantry again (Credits: AlexB)
+- The client now supports multiple multiplayer saves from a specific match (Credits: Rampastring)
+
+Version 4.03 (January 31, 2016):
+- Jumpjet infantry no longer have a chance of crashing the game when an Ion Storm starts (Credits: AlexB)
+
+Version 4.02 (January 25, 2016):
+- Units set to Area Guard mode (by pressing G) will now revert to default (Guard) mode when you tell them to Stop (by pressing S) (Credits: AlexB)
+- Improved the style of various client windows (Credits: Rampastring)
+
+Version 4.00 (January 24, 2016):
+- Added: LAN support (Credits: Rampastring)
+- Fixed: Units will no longer aggressively chase enemy units automatically (Credits: AlexB)
+- Fixed: Updater and custom component settings sometimes displayed "Cannot configure while connected to CnCNet" even when you weren't connected to CnCNet (Credits: Rampastring)
+- Fixed: The client has been optimized to work better with the GameSurge multiplayer servers (Credits: Rampastring)
+- Improved: The game will no longer crash when there's more than 75 buildable objects, instead additional objects will be hidden (Credits: AlexB)
+- Changed: The Statistics, Map Editor and Credits buttons have been moved under a new "Extras" menu (Credits: Rampastring, Bittah Commander)
+
+Version 3.83 (October 16, 2015):
+- Multiplayer games can now be saved and loaded (Credits: Rampastring)
+- Enabled some previously unused videos in the Firestorm campaigns (Credits: Bittah Commander)
+- The CnCNet game counter in the main menu has been hidden because it was misleading (Credits: Rampastring)
+
+Version 3.80 (October 5, 2015):
+- Fixed: Saved games sometimes failed to load, resulting in a black screen in-game (Credits: Rampastring)
+- Fixed: Some waterfall animations were bugged (Credits: Bittah Commander)
+- Fixed: After loading a saved mission of a campaign and then progressing to the next mission, the difficulty level would always revert to Medium (Credits: Rampastring, Bittah Commander, FunkyFr3sh)
+- Fixed: Custom maps weren't transferred properly (Credits: Rampastring)
+- Changed: FinalSun now saves multiplayer maps as .map (Credits: Bittah Commander)
+- Changed: The client now automatically renames .mpr maps to .map
+- Changed: Players with modified files will no longer be automatically kicked when they join a game on CnCNet, but a warning message will be shown instead (Credits: Rampastring)
+- Changed: Custom maps now have their names shown in red to make it clear that the gameplay might be different from stock maps (Credits: Rampastring)
+
+Version 3.76 (September 21, 2015):
+- Map selection screen music is now enabled (Credits: Bittah Commander)
+- Fixed some less common crashes in the CnCNet Lobby (Credits: Rampastring)
+- Added: DDWrapper Renderer (Credits: Aqrit of http://bitpatch.com/ddwrapper.html, Rampastring)
+
+Version 3.75 (September 19, 2015):
+- The broken in-game main menu has been replaced with an image that notifies to run TiberianSun.exe instead of game.exe (Credits: Bittah Commander)
+- The Tiberian Sun score screen has been restored (Credits: Bittah Commander)
+
+Version 3.74 (September 14, 2015):
+- Client architecture improvements
+- Potentially fixed a bug that sometimes caused the CnCNet Client to crash when exiting the Skirmish Lobby
+
+Version 3.73 (September 10, 2015):
+- Improved the compatibility fix that increases performance on Windows 8 and 10 (Credits: Bittah Commander, Rampastring)
+- Added a new compatibility fix that increases FinalSun map editor performance on Windows 7, 8 and 10 (Credits: Bittah Commander, Rampastring)
+- Compatibility fixes can now be enabled or disabled via the Display tab of the options menu (Credits: Rampastring)
+- You can now repeat your last message in the CnCNet lobby chat pressing the up arrow key (Credits: Rampastring)
+- The client now asks if you really want to quit CnCNet if you try to close the CnCNet lobby while being in a game room (Credits: Rampastring)
+- Matches are now only added to statistics if they're at least a minute long (Credits: Rampastring)
+- URLs posted in the chat can now be opened in the CnCNet Game Lobby by double-clicking on them (Credits: Rampastring)
+- Fixed: You no longer see a cryptic message in the lobby each time you get kicked from a game (Credits: Rampastring)
+- Fixed: The AI difficulty on Co-Op maps was always set to easy, regardless of the actual selected difficulty (Credits: Rampastring)
+- Fixed: The CnCNet Client would crash after a game ended if you had created or joined at least two game rooms during the session (Credits: Rampastring)
+- Fixed: The CnCNet Client would crash if you entered the Options menu from the CnCNet Lobby (Credits: Rampastring)
+- Fixed: On some (rare) systems the updater would fail when updating TiberianSun.exe (Credits: Rampastring)
+- The "Disable Sounds" option has been removed from FinalSun for now because it also enabled Beginner Mode (Credits: Bittah Commander)
+
+Version 3.70 (September 3, 2015):
+- (Hopefully) fixed an issue where it was impossible to install custom components
+- The client now starts up faster (Credits: Rampastring)
+
+Version 3.69 (September 2, 2015):
+- Fixed: The "Borderless windowed mode" display setting wasn't loaded properly (Credits: Rampastring)
+- Fixed: The "Back buffer in video memory" display setting wasn't loaded properly (Credits: Rampastring)
+ - Note: If you previously had the back buffer disabled, with this update the option will be enabled once you enter the Options menu.
+         It's recommended that you disable the option again, since it hurts performance on most systems.
+
+Version 3.68 (September 2, 2015):
+- Fixed: Players in the player list could multiply in some cases (Credits: Rampastring)
+- Now you can input your last chat command to the lobby chat input box by hitting the up arrow key (Credits: Rampastring)
+
+Version 3.66 (September 1, 2015):
+- Added the ModMode option to Resources\MainClient.ini. Setting this to true will automatically skip the version mismatch dialog and make the client load faster. (Credits: Rampastring)
+- FinalSun Trigger Editor now shows the "1 AND" trigger type option (Credits: Bittah Commander)
+- FinalSun now has an option for disabling sounds (Credits: Bittah Commander)
+
+Version 3.63 (August 15, 2015):
+- TS Nod Missions 1 and 5 now have additional in-game cinematics (originally created by Westwood but left unused in the original game for some reason) (Credits: Bittah Commander)
+- Fixed: MWMN now uses Oxanna's voice (you could control both Umagon and the MWMN in GDI 9C) (Credits: Bittah Commander)
+- Sound and music indexes in sound01.ini / theme.ini now match those that you need to input in FinalSun to play those sounds / tracks (for mappers) (Credits: Bittah Commander)
+
+Version 3.62 (August 13, 2015):
+- MWMN now uses Umagon's voice (for modders / map makers) (Credits: Bittah Commander)
+- Fixed many tutorial lines which had CABAL named "Cabaal" (Credits: Bittah Commander)
+
+Version 3.61 (August 11, 2015):
+- Fixed Kodiak crash animations (Credits: Bittah Commander)
+- Tiberian Sun Nod campaign videos now work properly (Credits: Bittah Commander)
+  - You'll have to re-download Nod campaign videos in the settings
+- Firestorm GDI and Nod campaign videos now work properly (Credits: Bittah Commander)
+
+Version 3.59 (August 10, 2015):
+- Framework Mode now works in FinalSun (Credits: Bittah Commander)
+
+Version 3.58 (August 10, 2015):
+- The Mammoth tank is no longer invisible (Credits: Bittah Commander)
+- The old, unused Tiberian Dawn / Red Alert unit voxels in Expand00.mix now have entries in Art.ini for modders (Credits: Bittah Commander)
+
+Version 3.57 (August 9, 2015):
+- Implemented bugfixes from Aro's Tiberian Sun: UMP (Credits: Bittah Commander)
+  - Fixes various, mostly graphics-related bugs in Tiberian Sun like missing building animations
+  - UMP Credits: Aro, Lin Kuei Ominae, Chriz, Machine, Crimsonum, Revolutionary
+- Updated the look of social media buttons in the CnCNet lobby (Credits: Bittah Commander)
+- Fixed the Cyborg Reaper death animation so the unit can no longer be killed continously while the anim is playing (it could be farmed for endless XP) (Credits: Bittah Commander)
+
+Version 3.56 (August 7, 2015):
+- Fixed another common Internal Error when starting a game
+- Ingame videos should now work properly (previously they gave an Internal Error)
+
+Version 3.55 (August 7, 2015):
+- Added the -SHUTUP command-line option for TiberianSun.exe that allows skipping the version mismatch dialog (for modders) (Credits: Rampastring)
+- Fixed mission briefings not being displayed on some GDI and Nod campaign missions (Credits: Bittah Commander)
+
+Version 3.54 (August 6, 2015):
+- Fixed a common Internal Error when starting a game (Credits: Bittah Commander)
+- Updated the look of social media buttons in the CnCNet lobby (Credits: Bittah Commander)
+
+Version 3.51 (August 4, 2015):
+- Updated client license in INI files.
+
+Version 3.50 (August 4, 2015):
+- Fixed DTA leftovers from multiplayer colors (Credits: Rampastring)

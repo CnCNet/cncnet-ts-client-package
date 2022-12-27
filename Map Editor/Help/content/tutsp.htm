@@ -1,0 +1,55 @@
+<!doctype html public "-//w3c//dtd html 3.2//en">
+
+<html>
+
+<head>
+		<title>
+		</title>
+		<link rel=stylesheet type="text/css" href="formats.css">
+	</head>
+	
+	<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
+		
+		<p class="heading" align="center">
+		<br>
+		Singleplayer map tutorial		</p>
+	<p>	
+
+Click on File->New. Select the map size and the theater. Make sure multiplayer is <b>not</b> checked. Select the player side before clicking on OK.<br>
+FinalSun now automatically sets up the player houses and the building AI triggers for the enemies. It does not enable the AI Triggers, you can do this by:<br>
+<br><br>
+<b>Improving the AI</b><br><br>
+You should enable all standard AI triggers. You can do this by Edit->Enable AI triggers. Just click on enable all standard AI triggers button at the top, that´s it. By doing this, you enable the computer to do many things.<br><br><br>
+
+<br>
+You should now create the terrain for the map, place the buildings and units, place tiberium, create all needed triggers (if you want to use them) and implement all the stuff you want to have.<br><br><br>
+
+<b>Playing the map</b><br><br>
+To play a singleplayer map, there are 2 different ways:<br><br>
+
+<b>1. Way (recommended for new users)</b><br>
+Just save your map as gdi1a.map (player is GDI/Allied) or nod1a.map (player is NOD/Soviet) in your TS directory and play a normal campaign.<br><br>
+
+<b>2. Way</b><br>
+copy the file <a href="../../_Battle.ini">_Battle.ini</a> to your TS/RA2 directory and rename it to Battle.ini. Open this file in notepad and create a new battle there (example uses TS battle.ini):<br><br>
+
+[Battles]<br>
+1=GDI1<br>
+2=NOD1<br>
+3=YourCampaign<br><br>
+
+[YourCampaign]<br>
+CD=0<br>
+Scenario=YourFirstMap.map<br>
+FinalMovie=<br>
+Description=blabla<br>
+
+<br><br>
+<b>Firestorm (TS only)</b><br>
+
+If you have Firestorm, you need to do additional things: In the basic dialog, you need to set ExpansionSetNeeded to 1 (important!). The battle.ini does not work in Firestorm mode, I haven´t figured this out yet. Just save your map as fsgdi01.map (player is GDI) or fsnod01.map (player is NOD), and start a normal campaign.
+
+</p>
+</body>
+
+</html>

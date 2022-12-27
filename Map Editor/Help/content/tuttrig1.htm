@@ -1,0 +1,33 @@
+<!doctype html public "-//w3c//dtd html 3.2//en">
+
+<html>
+
+<head>
+		<title>
+		</title>
+		<link rel=stylesheet type="text/css" href="formats.css">
+	</head>
+	
+	<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
+		
+		<p class="heading" align="center">
+		<br>
+		Triggers in general tutorial	</p>
+	<p>	
+
+Single player maps always contain <a href="triggers.htm">Triggers</a>. In this tutorial we´ll create a trigger that will show the whole map to the player 20 time units after the human house is attacked. <br>
+I assume that the human player is GDI (doesn´t really matter, for RA2 it would be American) and that your map and the houses are already set up.<br><br>
+
+To reach the trigger editor, click on Edit->Trigger editor. Click on "New trigger" to create a new trigger. You´ll see that a trigger called "New trigger" is selected now. To make things easier, we´ll now rename this trigger to a senseful term. Enter "Player attacked -> Show map" as name in the trigger options tab.<br><br>
+
+Now click on "Events". The events dialog will appear, with no events listed, as we haven´t created any yet. Click on "New event". Event 0 will automatically be selected. Now you have to select the event type. We use "6 House attacked by anybody". An event description appears, and the parameter list contains one parameter, "House". Select "House" (it should already be selected though) and then have a look at the parameter value. It´s automatically set to "0 GDI" (or "0 Americans" for RA2). We´ll leave it as it is, although you can for example set it to "1 Nod" (that will make the trigger fire when Nod is attacked by anybody, including the player!). If we leave the trigger this way, it will fire immeadiatly after GDI/America has been attacked, but we want the game to wait 20 time units. To do this, again click on "New event". Select "13 Time elapsed", and enter 20 as parameter value for the Time parameter.<br><br>
+
+This trigger won´t do anything yet, as we haven´t yet set up any action yet. To change this, click on "Actions". This dialog works almost exactly as the events dialog. Click on "New action". Now select "16 Reveal all map" as action type. Enter 60 as duration parameter. <br><br>
+
+Save your map (if you save it as GDI1a.map/ALL01t.MAP it will be used as first standard GDI/Allied mission of the campaign). Look to the <a href="tutsp.htm">singleplayer topic</a> for more information about how to play singleplayer missions.<br><br>
+</p>
+
+
+</body>
+
+</html>

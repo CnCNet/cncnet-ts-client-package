@@ -1,0 +1,59 @@
+<!doctype html public "-//w3c//dtd html 3.2//en">
+
+<html>
+
+<head>
+		<title>
+		</title>
+		<link rel=stylesheet type="text/css" href="formats.css">
+	</head>
+	
+	<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
+		
+		<p class="heading" align="center">
+		<br>
+   Terrain editing tutorial
+   </p>
+	<p>
+
+One general note: This tutorial just shows one way how to create your own terrain! You can of course use another way!<br><br>
+
+We will create a new multiplayer map.<br><br>
+
+Before you start editing the tutorial, create a new map using File->New. Make sure you check the multiplayer option. You can leave the other options as they are and click on OK. This will create a 64x64 sized singleplayer map with temperate terrain.<br><br>
+
+After some seconds you´ll see the map. You should follow these general rules when creating a new map (this is not necessary but I recommend it):<br>
+Before you start detailed editing, you should first make the cliffs, if you want some. More details about cliff making are below!<br>
+<b>If you made a mistake, you can use Edit->Undo to undo up to 6 steps!</b><br><br>
+
+You should first set the cliffs.<br>
+In order to do this, you can use 2 ways:<br>
+1. Recommended: select one of the cliff painting tools (the dark and bright green icons). If you use these tools, you should begin at the top of the cliff (not necessary though). This way is much easier and faster.<br>
+2. The other way you can also use for any other tile: select the cliff tileset in the left box of the terrain and overlay browser.Then you need to select a tile by clicking on the graphic. For cliffs you should only use this way when you need to exactly specify the cliff.<br><br>
+
+If you have selected the tile you want to place, you can move the mouse cursor into the isoview. You´ll see that the tile is immediatly displayed like it will be after you placed it. If you think the position is correct, click with the left mouse button. Move the mouse away, and the tile is placed. If you want to place water or something like that, you can change the brush size at the top of the main window. Alternatively you can also hold down shift while moving the mouse and holding down the left mouse button, and the tile will be set at every position your mouse reaches.<br><br>
+
+You can now continue placing tiles. You can use the arrow keys (left and right) to scroll through the different tiles in the tileset. This makes it much easier to place cliffs and shores. You can also use the MapTools menu to place cliffs or to automatically create shores (shores only for FinalAlert at the moment)<br><br>
+
+If you want to place cliffs, first paint the cliff tiles using one of the 2 ways described above. After you have finished placing the cliffs itself, you can use MapTools->AutoLevel to do most of the ground raising work. If there are still height errors (they almost always exist), use the flatten ground function to flatten the ground inside the cliff completely (this is very important for the map to look correct!). I recommend using the <a href="editt.htm">flatten ground</a> function with brush size 1 if close to the cliff (else terrain on the other side of the cliff would be flattened, too!), and bigger brush sizes when cliff isn´t close anymore to flatten the rest of this map part. You should begin flattening the tiles next to the cliff and move on to the middle.<br><br>
+
+If you have problems to reach certain parts of the map, you can use the <a href="editt.htm">hide tile and hide tileset tools</a> to hide the cliff. I recommend using the hide tile tool so that only the cliff parts you don´t want to see are hidden. You can now access the terrain behind this cliff part.<br><br>
+
+If you already placed the cliff and you want the whole cliff to be higher, just use raise ground and click on the cliff. You´ll see that (after some seconds, depending how large the cliff is! do not cancel, may take up to 30 seconds or more on very large cliffs!) the whole cliff and also some parts of the normal terrain get raised.<br>
+You can use the same function in order to raise for example water.<br><br>
+
+If you only want to raise one part of the cliff, you can do the same but with pressed CTRL key. This function doesn´t take that long to be executed and does not modify any other tiles or parts of the cliff.<br><br>
+
+<i>New: Fill areas with a specific tile:</i> A new function has been added to version 0.97 Alpha 2 to assist you. Select the tile to fill with in the terrain browser, and then move the mouse cursor where you want to fill the area. Hold down CTRL and then press the left mouse button. Filling only works with the small tiles though (for example the LAT tiles and the small water ones). This makes sense, as filling with the same cliff tile produces weird results.<br><br>
+
+After you have finished terrain editing, you can start placing trees, overlay (like Tiberium or parts of bridges) and units/buildings. 
+Place the waypoints 0 and 1 to define the starting points of the players. This will create a 2 player multiplayer map.<br>
+Set the name of the map using Edit->Basic to "Sample"<br><br>
+
+Run Tiberian Sun / Red Alert 2 and start a new skirmish game. In the normal map list, select "Sample" as map.
+Start the game, and you´ll see your very own map! 
+</p>
+
+</body>
+
+</html>

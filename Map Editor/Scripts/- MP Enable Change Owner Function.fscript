@@ -1,0 +1,29 @@
+// FinalSun Script file
+// Name: Enable "Change owner" function
+// Written By: Bittah Commander
+// Last Change:Dec,18,2015
+// Be careful when editing scripts, they may cause damage to maps if used improperly
+
+
+AskContinue("This script will add the necessary houses to make the "Change owner" function work for this multiplayer map. Keep in mind that that multiplayer maps will crash with added houses, so be sure to remove all houses again before attempting to play the map. Continue?");
+
+SetSafeMode("FALSE","To add houses to the map (remember to delete all houses again before attempting to play the map).");
+
+SetIniKey("Houses","0","GDI");
+SetIniKey("Houses","1","Nod");
+SetIniKey("Houses","2","Allies");
+SetIniKey("Houses","3","Soviet");
+SetIniKey("Houses","4","Neutral");
+SetIniKey("Houses","5","Special");
+SetIniKey("Houses","S","Spawn1");
+SetIniKey("Houses","T","Spawn2");
+SetIniKey("Houses","U","Spawn3");
+SetIniKey("Houses","V","Spawn4");
+SetIniKey("Houses","W","Spawn5");
+SetIniKey("Houses","X","Spawn6");
+SetIniKey("Houses","Y","Spawn7");
+SetIniKey("Houses","Z","Spawn8");
+
+Message("Code for enabling "Change house" function has been added to the map. Remember to delete all houses before attempting to play the map.","Success");
+
+
