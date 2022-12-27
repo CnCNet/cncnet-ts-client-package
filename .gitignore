@@ -18,6 +18,7 @@ FinalSun/finalsunlog.txt
 client.log
 
 Saved Games/*.SAV
+SAVEGAME.NET
 
 ddraw.dll
 ddraw.ini
@@ -26,6 +27,7 @@ sun.ini
 
 spawn.ini
 spawnmap.ini
+spawnSG.ini
 stats.dmp
 statistics.dat
 ts.log
