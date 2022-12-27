@@ -3,6 +3,11 @@ FinalSun v1.01 Patched Standalone:
 
 Changelog:
 
+Changes (2022-01-22): 
+- Map size limit UI description changed.
+- Graphics overrides of low btidge overlay, tibtree, fona and others (Credits: Bittah Commander)
+- FSP DLL support for max map size and mix override through \MIX\extra(00-99).mix files.
+
 Changes (2021-07-29): 
 - Rules.ini updated with Weapons section, removed from FSData.ini
 - Removal of sorting in dropdowns like house list in aircraft/unit/infantry/building options 
@@ -265,7 +270,7 @@ Make Unit window use spawn houses (Not applied)
 Address: 0x101F25 from 00 to 01
 
 Revert SPHouses reference to Houses (Not applied)
-0x1BC133 from SPHouses to Houses
+0x1BCD33 from SPHouses to Houses
 
 Revert FSR.ini reference to firestrm.ini (Not applied)
 Address: 0x1C4854 from FSR.INI to FIRESTRM.INI
