@@ -1,0 +1,146 @@
+
+Changes (2021-06-20) (Credits: E1 Elite):
+- Swamp LAT fix.
+
+Changes (2021-06-15) (Credits: Starkku):
+- Always initialize all tiles for tile recalculations.
+
+Changes (2021-05-26) (Credits: Starkku):
+- Change default value of backup setting to false for command-line.
+
+Changes (2021-01-24) (Credits: Starkku):
+- Add application manifest file and enable DPI awareness.
+- Correctly use Ground lighting value when applying map lighting fixes.
+
+Changes (2020-09-12):
+- Ask send report only once on errors for batch processing. (Credits: E1 Elite)
+
+Changes (2020-08-02) (Credits: zzattack):
+- Zoomable preview window with height and shadow tabs
+- Code re-organization, optimization and fixes
+- UI re-organization and tab order fixes
+- OSMesa and other leftovers removed
+- Tile animation partial fix
+- Mix header reading fix
+- Ecache list parsing is made sorted instead of as OS provides
+- Support ShouldUseCellDrawer tag for animations
+- Infantry on bridge fix (Credits: E1 Elite)
+- File system access restored for preview window (Credits: E1 Elite)
+- Readme, copyright updates
+- Bug report, update check restored
+- About window corrections and build bat file changes (Credits: Starkku)
+
+Note: Though the bug report and update check is enabled in the tool, server may not yet be ready for use.
+
+Changes (2020-05-07):
+- Reset window location if it goes beyond screen resolution for single displays.
+
+Changes (2020-03-15) (Credits: Starkku):
+- Do not save window location if application is minimized.
+- Reset window location if it has negative values.
+- RA2 LAT correction for pavement.
+
+Changes (2019-11-27):
+- LAT system for FS BlueMold, Crystal and Swamp tiles.
+
+Changes (2019-11-24):
+- Start location marker: Removed deduction of 0.6 from size of shapes other than Tiled.
+- Start location marker: Reduced comparative size of square and circle shapes.
+- Start location marker: Added star shape option.
+
+Changes (2019-11-08):
+- Cloakable objects are semi-transparent and other fixes. (Credits: Starkku)
+- Batch render and UI adjustments. (Credits: Metadorius)
+- Updated Batch processing.
+- FrameDecider override is disabled as it exposes code to mod config file.
+- Improved IsoMapPack5 compression.
+
+Changes (2019-09-22):
+- Rules NoShadow flag is now considered.
+- Units with Underwater flag set is now dimmed a bit.
+
+Changes (2019-09-19):
+- Building damage and fire animations now uses ConditionYellow and ConditionRed values.
+
+Changes (2019-09-12):
+- Overlay ID correction for RA2 Riparius ore.
+- Emphasize ore/gems extended to RA2 unused ore of Vinifera and Aboreus.
+
+Changes (2019-09-06 Release 2):
+- Fire animation for damaged buildings shifted by half a cell to the right.
+
+Changes (2019-09-06 Release 1):
+- Enabled AlphaImage for TerrainTypes.
+
+Changes (2019-09-05):
+- Added building rubble feature for RA2/YR.
+
+Changes (2019-08-13):
+- Re-enabled the use of gui_settings.xml for UI settings.
+
+Changes (2019-08-01):
+- Added parameter for modconfig.xml to crop the map bottom during the image rendering for local size option. Values can be in range of 0 to 16.
+- Added parameter for modconfig.xml to adjust map lighting with comma separated values for ambient, red, green and blue. This delta value is added to the values obtained from the map's lighting section. Decimal values can be in range of -1 to 1.
+
+Note: The cropping of bottom rows is applicable for image rendering (JPEG/PNG) only with local size option. It does not affect the preview window or preview map pack generation or when used with full size option. When the bottom rows of the map have some height, it shows vacant portion. To avoid that, there is a cutoff logic which will override the modconfig parameter for cropping the bottom rows when its number of rows to crop are higher.
+
+Changes (2019-07-30):
+- Fixed: Crash caused by SHP addons like bibs in the infantry facings code.
+
+Changes (2019-07-29):
+- Sequence entries are now read from Art.ini for infantries and its Ready values are used for facing calculation.
+- Added parameter for modconfig.xml to enable infantry facing randomization.
+
+Changes (2019-07-26):
+- Walls placed as buildings in maps, now connect with its adjacent walls of its type (building/overlay), gates and walltower.
+
+Note: TSClient version now comes with an extra mix file which contains the tunnel top graphics added to the tunnel floor tiles.
+
+Changes (2019-07-06):
+- Editable dropdown of the start location marker size can now draw the markers with decimal value sizes except for the Tiled marker type.
+- Fixed: Cases where the renderer button won't work for more than once without restarting the application.
+- Fixed: Facings corrected for SHP vehicles where its ART.ini section won't have WalkFrames=1 specified.
+- Fixed: Shadow problem(s) fix for rendering the first instance of a 32-facing SHP vehicle placed on its first or last 8 directions.
+
+Changes (2019-07-04):
+- Added 32-Facing support for SHP Vehicles with SHP turrets and corrections to 8-Facing cases.
+- Added parameter for modconfig.xml to disable tiberium remap for TS mods.
+- Added shapes for startup location marker namely Squared, Circled, Diamond and Ellipsed with size options of 2-6.
+- Generate preview pack now can use SelectedAsAbove option to inject the shapes and sizes provided for startup markers.
+- Tiled position option is also adapted to use the size parameter and is made available for generate preview pack. 
+- Other bug fixes and UI changes.
+
+Changes (2019-06-18):
+- Added show tunnel path lines option.
+- Components are made optional. Either generate PNG/JPEG/Thumbnail or use modify map features or use preview window.
+- Few UI changes, clear button for log and main application remembers its location.
+
+Notes on show tunnel lines option: With the last version of FinalSun not showing tunnel lines, this feature allows to visually verify tunnel plottings in maps. Tunnel lines are drawn for both to and fro between the tunnel ends and missing directional entries are shown with dashed lines. It comes with additional option to raise the drawing of tunnel lines by 4 cells which makes it look better with the tunnel entrance graphics. This option can be unchecked when using it on flat maps. 
+
+Changes (2019-03-23):
+- Mix file loading corrections.
+- Added fix overlays option which removes missing overlays from the map.
+- Added compress IsoMapPack5 section option.
+- Added map backup option. Creates backup file when map is modified with preview injection/fixup tiles/fix overlays/compress tiles pack.
+- Browse to open map will use last opened folder for most part.
+
+Changes (2019-02-19):
+- Tiles and IsoMapPack5 datatype corrected and reading those from map file improved. It can handle maps with compressed IsoMapPack5, get ice growth info etc.
+- SHP vehicles are now rendered properly with base, turret or barrel etc. with correct facings like the TS Titan SHP unit. (no 32 facing support)
+- Fix-tiles now also checks for existence of the subtile index in a tile.
+- Tiles/Cells with Ice growth option set can now be viewed as there is no option to view those in FinalSun. (used in TS snow maps)
+- Enabled the debug (diagnostic) window for release versions also with additional details and improvements.
+- Option provided to use the input map filename itself for output image filenames.
+- Building SHP turrets set with Image= in art.ini are now rendered like in TS Nod SAM turret.
+- Building upgrades improved, now it works even with Image= usage in art.ini like in TS for upgrades of Component tower.
+
+With updated OpenTK library needed for bugfix of voxel rendering on newer graphics card drivers, already non functional OSMesa support is now removed, so also are the hardware / software rendering options.
+
+Package contains the updated map renderer and TSClient addon files to be copied into the tool folder.
+
+Releases (check latest posts): https://ppmforums.com/viewtopic.php?t=29554
+Updated source code: https://github.com/E1Elite/ccmaps-net
+Base source from Starkku's update (20181219) : https://github.com/Starkku/ccmaps-net
+Original source by zzattack: https://github.com/zzattack/ccmaps-net
+
+

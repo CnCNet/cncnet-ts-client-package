@@ -3,15 +3,16 @@ Credits for Rampastring's version of Tiberian Sun:
 People:
 
 Rampastring: Created and compiled the client package, including the new game options and maps, and hacked in new features and bugfixes for the game engine
-Bittah Commander: For editing the FinalSun executable so that it reads files from subdirectories instead of MIX files, for helping with the client's graphics, for compiling the TS package and for helping with testing
+Bittah Commander: For editing the FinalSun executable so that it reads files from subdirectories instead of MIX files, for helping with the client's GUI graphics, for compiling the TS package (currently manages the updates)
 Iran: Created the Tiberian Sun spawner, which makes it possible to skip the in-game menu and as a result makes the client possible. Also hacked in new features and bugfixes for the game engine
 dkeeton: Hacked in new features and bugfixes for the game engine
 AlexB: Hacked in new features and bugfixes for the game engine
 FunkyFr3sh: Hacked in new features and bugfixes for the game engine
-CCHyper: Hacked in new features and bugfixes for the game engine
+CCHyper: Provided various high-resolution images the client's graphics (such as backgrounds and logos), hacked in new features and bugfixes for the game engine and provided other programmers with information on the game engine
 zzattack: Created the CNCMaps Renderer and saved me a bit of time by hosting high-quality map preview images at ra2maps.zzattack.org
 OmegaBolt: Tested early builds of the client package and provided feedback on it
 Aro: Helped with PR
+E1 Elite: Applied the various improvements to version 6.00 that are listed under "E1 Elite's changes (2021-02-21)" in changelog.txt
 
 Mappers:
 Aro

@@ -1,0 +1,96 @@
+
+FSP DLL is a port of FA2sp DLL made for FinalAlert2 by Secsome to FinalSun.
+It uses Syringe to inject code into the FinalSun at runtime.
+
+Links: 
+FSP - https://github.com/E1Elite/FSP
+FA2sp - https://github.com/secsome/FA2sp
+Launcher - https://github.com/E1Elite/FinalSun
+Syringe.exe (Ares 3.0 for YR) - https://launchpad.net/ares/+download
+
+Changes (2021-09-21): 
+- More mappings from FA2sp to FSP dll.
+- Version info added.
+
+FSP changes (2021-07-29):
+- Change owner on left panel/sidebar uses FSData.ini section MPChangeOwners for override in MP maps in case there are no Houses in the map.
+- MPChangeOwners section with empty key/value like just = in a line would leave the change owner list empty.
+- In case MPChangeOwners section doesn't exists in FSData.ini, change owner list defaults to rules houses.
+- [ExtConfigs] UseMPSpawnHouses=yes to support spawn houses provided by ts-patches for MP maps.
+- [ExtConfigs] MPSpawnStartIndex=50 for spawn house index used in trigger's event and action as well as in script action.
+- House dropdown in trigger action, event parameters and script action parameters is now implements based on SP and MP maps.
+- [ExtConfigs] SPChangeOwnerUseRulesAlso=yes option allows to merge houses list from rules to map houses for change owner in SP maps. By default only map houses are used.
+- [ExtConfigs] SPChangeOwnerExcludeStartWith options allows to exclude dummy house names starting with like Spawn.
+- Weapons section for dropdown of trigger action 42 Do explosion at, is now fetched from rules.
+- Radar event dropdown is implemented for triggers.
+- FSP.log file is opened in shared mode to allow multiple instances of FinalSun. File is cleaned when larger than 200kb.
+- House without a color will use White by default.
+- Fixed non-reading of sound01.ini through [Filenames] section in FSData.ini with Sound and SoundFS keys.
+- Theater name hardcoding removed from Tile Manager
+
+FSP features (2021-07-16):
+Extended config [ExtConfigs] in FSData.ini:
+- BrowserRedraw=yes to activate left panel object browser changes.
+- BrowserRedraw.GuessMode (0/1), currently it uses Owner based sorting only, most of FA2sp for RA2/YR based processing is disabled.
+- BrowserRedraw.CleanUp=yes to clear empty groupings.
+- SortByTriggerName=yes to sort the triggers dropdown by their name instead of ID.
+- CopySelectionBound.Color to change color for drag selection for copying cells.
+- CursorSelectionBound.Color to change color for current cell boundary under mouse cursor.
+- CursorSelectionBound.HeightIndicatorColor to change color for vertical dashed line when the current cell under mouse cursor is at a height.
+- Waypoint.Background=yes to draw a background rectangle for waypoints, defaults to false which is transparent.
+- Waypoint.Background.Color to apply a custom waypoint number text background color.
+- Waypoint.Color to change the waypoint number text color.
+- AdjustDropdownWidth (with .Factor and .Max) to set values for parameter combobox size.
+
+Left panel object browser display is taken over and rewritten, needs setting [ExtConfigs] BrowserRedraw=yes in FSData.ini.
+- Ground list names are fetched from FSLanguage.ini based on theater (first 3 chars of [Map] Theater= based names in language file) instead of Ground1/2/3.
+- Infantry, units, aircrafts and buildings can be grouped into sub-catogories which is defined in FSData.ini under section [Sides]. Every technotype can be given its grouping index number in [ForceSides] section. Others category is used for value -1 or undefined IDs.
+- Technitypes also are appended with its IDs to its name for clarity like Civilian (CIV1).
+- IDs on the left panel which are not to be shown can be defined in [Ignore] section and theater based ingnoe sections (first 3 chars of [Map] Theater= is used) of [IgnoreSNO] and [IgnoreTEM]. [IgnoreRA2] section is not used.
+- Player location is shown in MP maps only. The name Player can now be translated to other languages as it is now picked up from FSLanguage.ini.
+Note: Currently left panel is initialized only on map load/create. It doesn't update on add/delete house or changes done through INI Editing. For those changes to appear, map should be saved and reloaded. The whole left panel changes could be disabled by setting [ExtConfigs] BrowserRedraw=no in FSData.ini, so as to use original left panel handling.
+
+Script actions are now configurable through FSData.ini.
+- [ScriptParams] section defines set of parameter dropdown label text and populates the corresponding dropdown content.
+- Waypoint is now shown with cell coordinates.
+- Jump to script line is populated with script actions present for that script
+- GlobalVariables and LocalVariables and parsed from rules and map to populate dropdown
+- Scripts and teams list are populated for switch script actions
+- Adds [DialogList] section reading for the hardcoded speeches list in TS with transcription.
+- Adds [SoundList] section for sounds dropdown in FSData.ini if sound INI files reading fails.
+- Movies and Themes are fetched from INI files and dropdown populated.
+- Facing dropdown is populated with direction info.
+- Animations and BuildingTypes list are also fetched from files to populate the dropdowns.
+- TalkBubble dropdown shows vanilla game values.
+- Attack targettype script value text correction.
+- New mission script shows corrected dropdown entries.
+- Camera speed dropdown is populated with game values.
+
+Trigger parameters for dropdowns used in action and events
+- Theme dropdown implemented
+- Sounds enabled through [SoundList] section in FSData.ini
+- Speeches enabled through [DialogList] section in FSData.ini
+- Weapons list enabled through [Weapons] section in FSData.ini
+- Voxel Anim dropdown is populated from rules
+- Tags dropdown now fetches IDs from [Tags] section in map
+- Spotlight behavior, meteor shower size, camera speed are implemented
+- Waypoint as 2nd parameter now shows coordinates too
+- Crate types and talk bubble are also imlemented but are not usable.
+
+Tile Manager
+- Groups tilesets together based on keywords in SetName of theater INI file for quick access.
+
+Clone buttons
+- Clone current entries with name appended with Clone for Scripttype and Teamtype windows.
+
+Other features
+- Remap colors are recalculated and are shown for additional houses as well.
+- Overlay dropdown shows index followed by name/description (gets sorted by index) and skips overlay index over 254 if given in rules INI preventing crash.
+- Any overlay of wall type will autoconnect.
+- For most dialogs, the content will only be updated while losing focus.
+- Easy encrypted mix files will be correctly read.
+- Translation support through FSLanguage.ini (check FA2spReadme)
+- Read from Finalsun.ini instead of registry.
+- Easy/beginners mode disabled at first run.
+- Undo/Redo extended to 127 steps.
+

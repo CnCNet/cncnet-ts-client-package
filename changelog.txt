@@ -1,3 +1,206 @@
+Version 6.00
+- All of the client's menu layouts and textures have been improved (Credits: Bittah Commander, CCHyper, Rampastring)
+- Re-compiled the spawner (game.exe) to apply the following patches (Credits: Bittah Commander):
+ - https://github.com/CnCNet/ts-patches/blob/master/src/mods/dont_save_without_all_players.asm (Credits: dkeeton)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/basic_theme_fix.asm (Credits: Rampastring)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/harvesters_guardcommand.asm (Credits: AlexB)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/flickering_shadow_fix.asm (Credits: AlexB)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/veterancy_from_allies.asm (Credits: AlexB)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/mods/tiberium4_blocks_infantry.asm (Credits: AlexB)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/spy_fix.asm (Credits: dkeeton)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/paradrop.asm (Credits: dkeeton)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/hack_house_from_house_type.asm (Credits: dkeeton)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/minimum_burst.asm (Credits: dkeeton)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/mods/dta/cloakstop_to_toobigforcarryalls.asm (Credits: Rampastring)
+  - TooBigForCarryalls=yes can be used on vehicle types to disallow Carryalls from picking them up.
+ - https://github.com/CnCNet/ts-patches/blob/master/src/mods/dta/oil_derricks.asm (Credits: Rampastring)
+  - ProduceCashAmount= (255=max) can be used on building types to make them produce credits every 180 frames.
+ - https://github.com/CnCNet/ts-patches/blob/master/src/mods/dta/add_animation_to_factories_without_weaponsfactory.asm (Credits: Rampastring)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/mods/dta/unit_self_heal_repair_step.asm (Credits: Rampastring)
+  - UnitSelfHealRepairStep= (def=1) can be specified under [General] to specify the amount of HP to increase unit's health with for every step while self-healing.
+ - https://github.com/CnCNet/ts-patches/blob/master/src/mods/dta/fix_ai_unit_scatter_for_factories_without_weaponsfactory.asm (Credits: Rampastring)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/mods/dta/mechanics.asm (Credits: Rampastring)
+  - Mechanic=yes can be used on infantry types to allow them to repair vehicles.
+ - https://github.com/CnCNet/ts-patches/blob/master/src/mods/dta/no_guard_cursor_for_repair_vehicles.asm (Credits: Rampastring)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/mods/smarter_firesale.asm (Credits: Rampastring)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/mods/dont_replace_player_name_with_computer.asm (Credits: Rampastring)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/mods/horv_via_undeploysinto.asm (Credits: AlexB)
+  - UndeploysInto can be used on harvesters to specify their "harvester without back" variant.
+ - https://github.com/CnCNet/ts-patches/blob/master/src/mods/no_crate_respawn_with_crates_disabled.asm (Credits: Rampastring)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/mods/buildconst_harvesterunit_baseunit.asm (Credits: AlexB)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/mods/max_pip_counts.asm (Credits: Rampastring)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/mods/ai_target_emp_like_multimissile.asm (Credits: Rampastring)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/mods/fix_burst_exploit.asm (Credits: AlexB)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/mods/smarter_harvesters.asm (Credits: Rampastring)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/mods/fix_building_damage_state_crash.asm (Credits: Rampastring)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/mods/fix_infantryclass_take_damage_null_warhead_crash.asm (Credits: Rampastring)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/c4_repairable_fix.asm (Credits: dkeeton)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/no_charge_power_needed.asm (Credits: dkeeton)
+ - https://github.com/CnCNet/ts-patches/blob/master/src/video_mode_hacks.asm (Credits: dkeeton)
+
+When migrating mods to this TS Client version, make sure to add the following code to the respective sections in Rules.ini:
+
+[General]
+UnitSelfHealRepairStep=1
+BaseUnit=BASEUNIT
+HarvesterUnit=HARV,MCV
+
+[VehicleTypes]
+0=BASEUNIT
+
+[BASEUNIT]
+Image=MCV
+Name=Mobile Construction Vehicle
+
+[HARV]
+UndeploysInto=HORV
+
+[MCV]
+AllowedToStartInMultiplayer=no
+
+
+
+E1 Elite's changes (2021-02-21):
+	
+	Client Resources folder changes
+	- [HotkeyConfigurationWindow] added to GenericWindow.ini
+	- Removed ECache00, 02, 03 mix files from Resources folder
+	- SidebarHack set to yes in GameOptions.ini and ClientDefinitions.ini
+	- Added friendicon.png.
+	
+	Game.exe changes - https://github.com/E1Elite/ts-patches/tree/md4
+	- Team number positions changed so as to not draw over pips and suite with modified selection box (Credits: Tuc0, E1 Elite)
+	- IsoMapPack5 size limit extension (Credits: E1 Elite)
+	- Modified waypoint enhancement hack used, to avoid activating/toggling of firestorm defense.
+	- Support for separate MCV and construction yards for different sides (Credits: AlexB)
+	- Support for additional side's sidebar and speech mix files (Credits: Iran)
+	- Harvesters have its own unloading graphics (Credits: AlexB)
+	- Support for TileSet 255 and above without bridge repair bug (Credits: E1 Elite)
+	- Hardcoding removed for NAWALL, GAWALL, GAFSDF, HMEC, 155mm and ARTYHE
+	- Missing mouse fix for dropship loadout screen (Credits: E1 Elite)
+	- Building selection box for limpet affected color changed from yellow to orange (Credits: Tuc0, E1 Elite)
+	- Smarter harvester (Credits: Rampastring)
+	- Sidebar cameo sort (changed to sort only the 2nd/units strip) (Credits: Rampastring)
+	
+	Language.DLL changes
+	- Changed references of DTA to TSClient in Language.DLL files (Credits: E1 Elite)
+	
+	Rules.ini
+	- TargetDistanceCoefficientDefault set to -1 for better target selection of AI's Attack Targettype scripts
+	- List indices renumbered for BuildingTypes and OverlayTypes.
+	- Uses UndeploysInto=HORV for HARV instead of common UnloadingHarvester.
+	- Few comments
+	
+	Art.ini
+	- building heights changed to appropriate values (mostly civilian buildings)
+	- waterfall anim glitch with first frame corrected at few more places with LoopStart=1. 
+	- protruding anim's Z layer correction, Surface=yes removed for few and Surface=yes added to firestorm wall anim.
+	- GDI barracks third damaged anim entry fix.
+	- Disc thrower and cyborg uses FireProne to sync with firing anim.
+	
+	AI.ini
+	- fixed few base defense teams to guard instead of busy till attacked.
+	
+	Snow.ini, Temperat.ini
+	- Enabled shadow for water cliffs.
+	
+	Battle.ini
+	- Entry for dropship loadout map
+	
+	Graphic updates
+	- unit selection graphics healthbar fix, expanded and shifted by 1 pixel (select.shp) with orange color for limpet effect (Credits: E1 Elite)
+	- shore tiles pathfinding fix for units getting stuck in beach terraintype (units from low bridge on water or wrong shores in maps) (shoreXX tem and sno) (Credits: E1 Elite)
+	- titan wobble fix (mmch.shp, mmchbarl.vxl and mmchbarl.hva) (Credits: Tuc0)
+	- disruptor wobble fix (sonic.vxl and sonic.hva) (Credits: Tuc0)
+	- unused mammoth tank wobble fix (4tnk.vxl and 4tnk.hva) (Credits: Tuc0)
+	- Hover MLRS wobble fix (hvr.vxl and hvr.hva) (Credits: Tuc0)
+	- snow shps for GDI Tech Center fix, where few (snow) pixels used colors unaffected by ambient light (gatech.shp, gatechmk.shp) (Credits: Tuc0) 
+	- construction yard buildup incorrect color fix, orange and almost red used instead of remapable (gacnstmk.shp) (Credits: Tuc0)
+	- GDI barracks incorrect color fix, near remapable colors used instead of remapable (gapile, gtpile, gapilemk, gtpilemk shp files) (Credits: Tuc0)
+	- Jellyfish (Floater) graphics fix which had one frame less that caused shadow frame to be shown (Credits: Tuc0)
+	- paved road tiles fix for being drawn over building bibs (proad10.tem, proad14.tem and proad20.tem) (Credits: Tuc0, E1 Elite)
+	- first subtile change of snow cliffs and water cliff (cliff09.sno, cliff11.sno and wcliff09.sno) to go with the connecting clear/clear LAT tiles. (Credits: Tuc0, E1 Elite)
+	- loadout.shp modified showing to use SPACE to continue (Credits: E1 Elite)
+	
+	Other Mix file changes
+	- ammo01.shp from tem/sno mix copied to isotemp/isosnow mix for FinalSun missing ammo crate graphics. 
+	- mouse.shp moved from conquer.mix to cache.mix.
+	- added files dgreen1.shp, dgreen2.shp, dgreen3.shp, dgreen4.shp, dropdown.shp, dropup.shp, pilotlit.shp and modified loadout.shp to cache.mix.
+	- added files drop0001.shp, drop0002.shp and drop0003.shp to conquer.mix.
+	
+	Maps included (with battle.ini and MPMaps.ini changes)
+	- unreleased FS demo map - FS The Pit (Credits: Westwood Studio, Source: DeeZire + friend, Suggested by SMIFFGIG)
+	(Discussion: https://ppmforums.com/post-553255/tiberian-sun-client/#553255 )
+	- updated Lost Contact map (Credits: Tuc0)
+	- Nod mission nod9b.map cliff height level corrections (Credits: Tuc0)
+	- modified (GDI first mission) gdi1adshp.map for dropship loadout
+	
+	FinalSun map editor changes (Credits: E1 Elite)
+	https://ppmforums.com/topic-47355/finalsun-101-patches/
+	
+	Map Renderer changes (Credits: E1 Elite, Starkku, Metadorius (aka Kerbiter), zzattack)
+	Source code (commit 2021-01-24)- https://github.com/zzattack/ccmaps-net
+	Download link for TSClient addon files:
+	https://ppmforums.com/post-585461/cnc-maps-renderer-rewritten-works-for-tiberian-sun-and-ra2/#585461
+
+
+
+Version 5.46 (March 3, 2020):
+- Updated client (Credits: Rampastring, Kerbiter, Starkku, SadPencil)
+ - Various maintenance fixes and new features, see https://github.com/CnCNet/xna-cncnet-client/releases/tag/2.6.0.4
+- Updated spawner
+- Fixed crash when entering Hotkey Configuration window
+- Fixed typo that made CnC-DDRAW not show up in the Options menu
+
+Version 5.44 (May 19, 2019):
+- Updated client (Credits: Rampastring)
+ - Various maintenance fixes, new features and fixed window borders
+- Updated the "TS-DDRAW" renderer (Credits: dkeeton, FunkyFr3sh)
+- Added the "CnC-DDRAW" renderer (Credits: dkeeton, FunkyFr3sh)
+
+Version 5.43 (February 3, 2018):
+- Updated client (Credits: Rampastring, aside from DDrawCompat)
+ - You can now configure your keyboard hotkeys from the client (Options -> Game -> Configure Hotkeys)
+ - Added DDrawCompat renderer (Credits: narzoul)
+ - Renderers are now listed in Resources\Renderers.ini, allowing you to customize the renderers without modifying the client's source code
+ - Several small enhancements and bug-fixes related to LAN and CnCNet online play
+ - Fixed: Game Type drop-down is no longer drawn below the Tech Level drop-down when it's open
+- Updated spawner. For changes, see https://github.com/CnCNet/ts-patches/commits/master
+ - Some of the changes seem experimental, so there could be bugs related to online play
+
+Version 5.40 (August 31, 2017):
+- Added Tiberian Sun Demo missions (Credits: E1 Elite)
+
+Version 5.38 (August 19, 2017):
+- Added Fan-made map "Lost Contact" (Credits: Tuc0)
+- Added support for multiple sides for Prerequisites and AITriggerTypes (Credits: AlexB)
+- Fixed several minor spawner issues (Credits: dkeeton)
+- Fixed several minor client issues (Credits: Rampastring)
+- Added OpenGL version of the client (Credits: Rampastring)
+
+Version 5.37 (April 8, 2017):
+- Fixed: When the Core Defender was activated in the last Firestorm mission, the radar screen played the GDI campaign intro movie instead of the Core Defender activation movie (Credits: Bittah Commander)
+
+Version 5.36 (March 19, 2017):
+- Fixed: Jump-jets no longer have a chance of crashing the game when an ion storm starts (Credits: AlexB)
+ - This was already fixed earlier, but 5.30 re-introduced this issue
+- You can now enable ModMode= in Resources\ClientDefinitions.ini to disable the "Cheater!" screen that is shown when launching singleplayer missions with a modded game (Credits: Rampastring)
+- Fixed a few minor client issues (Credits: Rampastring)
+- FinalSun now gives saved maps the "Custom Map" game mode instead of the "Standard" game mode (Credits: Bittah Commander)
+
+Version 5.34 (February 17, 2017):
+- Improved quality of main menu background and loading screen (Credits: Bittah Commander)
+
+Version 5.33 (February 12, 2017):
+- Added: Impassable overlay terrain object for FinalSun (Credits: Bittah Commander)
+- Added: Lin Kuei Ominae's Kodiak, placeable in the map editor
+- Fixed it being possible to kill Cyborg Reapers multiple times due to its death animation (Credits: Bittah Commander)
+- The Cyborg Commando now uses the cyborg death cry instead of the regular infantry death cry (Credits: Bittah Commander)
+
+Version 5.31 (February 11, 2017):
+- Fixed: It was impossible to adjust the game speed in-game (Credits: Rampastring)
+- The trackbar button graphics have been improved (Credits: Bittah Commander)
+
 Version 5.30 (February 10, 2017):
 - Implemented the latest MonoGame / XNA CnCNet Client (Credits: Rampastring)
  - The client has been almost entirely rewritten; the UI is now better both functionally and graphically, lots of issues have been fixed, and new features added

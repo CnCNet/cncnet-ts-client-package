@@ -1,0 +1,49 @@
+<h1 id="cncmaps-renderer">CNCMaps Renderer</h1>
+<p>Project page:</p>
+<ul>
+<li><a href="http://github.com/zzattack/ccmaps-net">http://github.com/zzattack/ccmaps-net</a></li>
+</ul>
+<p>Download:
+<ul>
+<li><a href="http://cnc-maps.net/tool/get_latest">http://cnc-maps.net/tool/get_latest</a>
+</li>
+</ul>
+</p>
+<p>This project provides a tool to render battle maps of the most popular Westwood RTS games Red Alert 2 and Tiberian Sun, including their expansions Yuri's Revenge and Firestorm.</p>
+<h2 id="status">Status</h2>
+<p>The project has reached maturity and will know no big feature additions, but bugs might be fixed if reported. I am toying with the idea of building a webservice out of the tool, though, but that would probably appear under a different project.</p>
+<h2 id="installation">Installation</h2>
+<p>Installation should be as simple as running the installer or extracting the latest zip release. The NSIS installer cannot be used on non-Windows OS but the files inside the zip-archive run fine under Mono. The program requires several .mix files from the original games. These include:</p>
+<ul>
+<li>ra2.mix</li>
+<li>language.mix</li>
+<li>theme.mix (or their TS equivalents)</li>
+</ul>
+<p>If the original game is installed under Microsoft Windows the location of these files will be found in the registry, but under Mono you have to specify their location on the command line.</p>
+<p>The program depends on a software-only OpenGL renderer named Mesa. This approach was chosen to maximize compatibility on systems that have no window manager, such as on remote desktop sessions or on headless servers. This dependency is fulfilled on Windows by shipping the OpenGL32.dll and osmesa.dll files. On *nix systems the package <em>libosmesa-7.11.2</em> or newer needs to be installed.</p>
+<h2 id="usage">Usage</h2>
+<p>Instructions on the command line application can be found by invoking <code>cncmaps -h</code>. Alternatively the CNCMaps GUI program can be used which contains descriptions of every option available and interactively updates the corresponding command line.</p>
+<h2 id="development">Development</h2>
+<p>Working on CNCMaps should be as easy as checking out the source. All dependencies, on Windows, are provided within the source tree. On Linux you need the libmesaos package which may be available through your package manager. Alternatively you can build it from http://www.mesa3d.org/download.html.</p>
+<p>Older code repositories which contain a fully functional but not bug-free C++ version of this program can be found at</p>
+<ul>
+<li><a href="http://code.google.com/p/ccmaps">http://code.google.com/p/ccmaps</a> (old)</li>
+<li><a href="http://sf.net/projects/ccmaps">http://sf.net/projects/ccmaps</a> (even older)</li>
+</ul>
+<p>The project is no longer maintained at either of these locations.</p>
+<h2 id="contact">Contact</h2>
+<p>I am the main and only contributor to this project but am very willing to accept patches or collaborate on implementing support of new features or fixes. You can contact me at frank@zzattack.org.</p>
+<h2 id="acknowledgments">Acknowledgments</h2>
+<p>Special thanks go out to authors of several modding tools that have greatly benefited the community as well as development of this program:</p>
+<ul>
+<li>Olaf van der Spek for XCC and XWIS</li>
+<li>The OpenRA project</li>
+<li>All contributors to <a href="http://modenc.renegadeprojects.com">ModEnc</a>, especially the people from #renproj@Freenode</li>
+</ul>
+<h2 id="license">License</h2>
+<p>The license below applies only to those parts of the program that do not contain a conflicting license placed at the top of the source file. These include parts from the <a href="http://github.com/OpenRA/OpenRA/">OpenRA</a> and <a href="https://code.google.com/p/xcc/">XCC</a> projects, which are licenced under the GPL v3.</p>
+<p>(The MIT License)</p>
+<p>Copyright (c) 2007-2013 Frank Razenberg</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>

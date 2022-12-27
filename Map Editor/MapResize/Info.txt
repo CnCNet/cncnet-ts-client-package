@@ -1,0 +1,40 @@
+
+MapResize for TS & RA2
+
+A small tool to resize maps of TS and RA2/YR. Prompted by shortcomings
+of FinalSun/FinalAlert2 like can't resize beyond max size limitation of 
+these map editors, doesn't process tunnels, smudges, base nodes etc. and
+doesn't cleanup well.
+
+It runs on Windows OS with .Net 4.0.
+
+During resize process, this tool additionally performs these tasks:
+- Removes comments
+- Removes duplicates, discards entries in incorrect formats
+- Better compressed IsoMapPack5 section (undone by FinalSun/FinalAlert2)
+
+Limitations:
+- Preview pack/image is not updated as it needs game files for map image.
+Have to use map editors or CnC Map Renderer for that.
+- It isn't smart enough to check if full tunnel path goes beyond map borders.
+
+Source code : https://github.com/E1Elite/MapResize
+This tool uses code from OpenRA and CnC Map Renderer. OpenRA has updated
+code for map pack encoding/decoding, it was easier to pickup these files from
+Starkku's MapTool.
+
+###########################################################
+
+Changes:
+
+2020-11-01 (version 1.0.2.0)
+- Save filename options.
+- Option to change map name in [Basic] section.
+- Updates to validations, log and messages.
+
+2020-10-21 (version 1.0.1.0)
+- Added option for retaining LocalSize position on non-ngative inputs.
+- Few validations and log/messages.
+
+2020-10-20 (version 1.0.0.0)
+- Initial release

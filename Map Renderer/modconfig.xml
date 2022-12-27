@@ -1,12 +1,14 @@
 <?xml version="1.0"?>
 <ModConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Name>Tiberian Sun</Name>
+  <Name>Tiberian Sun Client</Name>
   <Engine>Firestorm</Engine>
   <Directories>
     <string>..\INI</string>
     <string>..\MIX</string>
   </Directories>
-  <ExtraMixes />
+  <ExtraMixes>
+    <string>tstunnelwithtop.mix</string>
+  </ExtraMixes>
   <Theaters>
     <TheaterSettings>
       <Type>Temperate</Type>
@@ -33,4 +35,10 @@
       <OverlayPaletteName>snow.pal</OverlayPaletteName>
     </TheaterSettings>
   </Theaters>
+  <ExtraOptions>
+    <ModOption>
+      <MapLocalSizeBottomCropValue>1</MapLocalSizeBottomCropValue>
+      <LightingAmbientRGBDelta>-0.075,0,0,0</LightingAmbientRGBDelta>
+    </ModOption>
+  </ExtraOptions>
 </ModConfig>
