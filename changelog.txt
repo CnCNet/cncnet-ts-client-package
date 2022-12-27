@@ -1,3 +1,11 @@
+Version 6.05
+- Added: You can now save/load game option presets in the Skirmish/Multiplayer game lobby by clicking on the down arrow in the upper right corner of the Game Options panel (Credits: devo1929).
+- Changed: The maximum size of maps that the map editor can create and open has been increased from 200x200 to 256x256 (Credits: E1 Elite, Secsome).
+- Changed: In the map editor, "Low Bridge" overlays now have an image for all three frames that need to be placed in order function correctly, with clear visual indicators to show where they need to be placed and wich ones are still missing (Credits: Bittah Commander).
+- Changed: In the map editor, the invisible "Low Bridge" overlays that are meant to be placed in the gaps of destroyed bridges now appear as transparent bridge pieces (Credits: Bittah Commander).
+- Fixed: In the map editor, the "Large Tiberium" overlays now appear as the big blue tiberium crystal (blue tiberium tree) instead of appearing as "0x1b" text (Credits: Bittah Commander).
+- Fixed: The "Auto-target Neutrals" and "Aimable SAMs" game options were always enabled skirmish/multiplayer, even when they were turned off in the skirmish/multiplayer game lobby.
+
 Version 6.03
 - Added: Graphics for the info panel (Credits: tomsons26).
 - Added: TS and faction logos for Discord Rich Presence (Credits: CCHyper).

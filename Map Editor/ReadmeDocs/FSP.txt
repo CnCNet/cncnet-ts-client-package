@@ -8,6 +8,11 @@ FA2sp - https://github.com/secsome/FA2sp
 Launcher - https://github.com/E1Elite/FinalSun
 Syringe.exe (Ares 3.0 for YR) - https://launchpad.net/ares/+download
 
+Changes (2022-01-05): 
+- Allow max map size support like 256x256.
+- Override game content using <FinalSun>\MIX\extraXX.mix
+files where XX can be 00-99.
+
 Changes (2021-09-21): 
 - More mappings from FA2sp to FSP dll.
 - Version info added.
