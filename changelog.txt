@@ -1,3 +1,6 @@
+Version 6.05a
+- Fixed: Nod was no longer selectable in Skirmish/Multiplayer.
+
 Version 6.05
 - Added: You can now save/load game option presets in the Skirmish/Multiplayer game lobby by clicking on the down arrow in the upper right corner of the Game Options panel (Credits: devo1929).
 - Changed: The maximum size of maps that the map editor can create and open has been increased from 200x200 to 256x256 (Credits: E1 Elite, Secsome).
