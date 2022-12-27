@@ -1,3 +1,10 @@
+Version 6.05j
+- Added: Tool tips have been added to checkboxes and drop-down menus of the Display and Game tabs of the client's options menu (Credits: Crimsonum).
+- Fixed: The "OK" button was missing from the CnCNet lobby's password entry window.
+- Fixed: The GDI/Nod Concrete Walls and the Firestorm Wall cost only 50 credits instead of 250.
+- Fixed: The Mammoth Mk. II had only 800 hit-points instead of 1200
+- Fixed: The Artillery's weapon's damage and rate of fire were swapped (it did too much damage and fired too slow) and it did a lot more damage against infantry than intended.
+
 Version 6.05h
 - Added: Difficulty-specific global variables are now set at the start of every singleplayer-mission, which will allow mappers to create difficulty-specific triggers by specifying these globals for the "27 Global is set..." event.
 - Fixed: The Mobile Stealth Generator and Mobile War Factory didn't display a deploy animation and were unable to repack after having been deployed.
