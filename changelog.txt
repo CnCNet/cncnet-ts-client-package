@@ -1,6 +1,9 @@
+Version 6.05c
+- Fixed: Nod mission 7a "Destroy the Research Facility" crashed whenever the Titan beyond the tunnel was destroyed (Credits: Bittah Commander).
+
 Version 6.05b
 - Fixed: The Mobile EM-Pulse unit could not deploy its weapon.
-- Removed: The "WEEDGUY" dummy infantry was removed from both rules.ini and art.ini (weapons should be added to the [Weapons] list instead of using this ).
+- Removed: The "WEEDGUY" dummy infantry was removed from both rules.ini and art.ini (weapons should be added to the [Weapons] list instead of using the Weedguy work-around).
 
 Version 6.05a
 - Fixed: Nod was no longer selectable in Skirmish/Multiplayer.
