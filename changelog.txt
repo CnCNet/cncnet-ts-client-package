@@ -1,3 +1,11 @@
+Version 6.05k
+- Changed: Mission names have been updated to contain the mission number in the description for save file description clarity (Credits: CCHyper).
+- Fixed: In Nod mission 5 you could lose the game when one of your starting Engineers died, even when you had already produced more Engineers of your own (Credits: Bittah Commander, Crimsonum).
+- Fixed: In Firestorm GDI mission 7 the nearest tiberium field was supposed to be revealed when you built a harvester (Credits: Bittah Commander, Crimsonum).
+- Fixed: The Elite Cadre didn't appear on the sidebar in Firestorm missions unless you'd crate a saved game and then load it (Credits: Bittah Commander).
+- Fixed: A rare crash caused by a map trigger action value that was out of range (Credits: CCHyper).
+- Fixed: The borders of the CnCNet game creation window weren't scaled properly (Credits: Bittah Commander).
+
 Version 6.05j
 - Added: Tool tips have been added to checkboxes and drop-down menus of the Display and Game tabs of the client's options menu (Credits: Crimsonum).
 - Fixed: The "OK" button was missing from the CnCNet lobby's password entry window.
