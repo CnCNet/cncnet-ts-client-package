@@ -1,0 +1,54 @@
+[Rename]
+
+[Delete]
+INI\battlefs.ini
+Map Editor\Info.txt
+Map Editor\readme marble.doc
+Map Editor\readme.txt
+Map Editor\FSExt.dll
+Map Editor\FSExt.dll.inj
+Map Renderer\CNCMaps.exe
+Map Renderer\CNCMaps.Renderer.GUI.dat
+Map Renderer\Roslyn.Compilers.dll
+Map Renderer\Roslyn.Compilers.CSharp.dll
+Map Renderer\OSMesa.dll
+Map Renderer\NLog.config
+Resources\TS Theme\MultiplayerGameLobby.ini
+Resources\TS Theme\MultiplayerGameLobbyBase.ini
+Resources\TS Theme\SkirmishLobby.ini
+Resources\Binaries\OpenGL\OpenTK.dll
+Resources\TS Theme\LoadingScreen.ini
+Resources\TS Theme\LoadingScreen.png
+Resources\splashScreen.png
+Resources\TS Theme\cncnetlobbybg.png
+Resources\TS Theme\gamecreationoptionsbg.png
+Resources\TS Theme\gamelobbybg.png
+Resources\TS Theme\loadmissionbg.png
+Resources\TS Theme\loadmpsavebg.png
+Resources\TS Theme\loadmpsavepanelbg.png
+Resources\TS Theme\logindialogbg.png
+Resources\TS Theme\missionselectorbg.png
+Resources\TS Theme\msgboxform.png
+Resources\TS Theme\optionsbg.png
+Resources\TS Theme\passwordquerybg.png
+Resources\TS Theme\privatemessagebg.png
+Resources\TS Theme\scoreviewerbg.png
+Resources\TS Theme\scoreviewerpanelbg.png
+Resources\TS Theme\updatequerybg.png
+Resources\TS Theme\updaterbg.png
+Resources\TS Theme\slocindicatorr.png
+Resources\TS Theme\slocindicatorx.png
+Map Editor\Scripts\- MP Enable Change Owner Function.fscript
+INI\MPMaps.pkt
+INI\theme01.ini
+Resources\TS Theme\sortAlphaActive.png
+Resources\TS Theme\sortAlphaInactive.png
+
+[RenameFolder]
+
+[RenameAndMerge]
+
+[DeleteFolderIfEmpty]
+
+[ForceDeleteFolder]
+
