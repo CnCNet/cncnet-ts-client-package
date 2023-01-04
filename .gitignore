@@ -37,6 +37,7 @@ ts.log
 except.txt
 mpstats.log
 sync*.txt
+mpstats.txt
 
 _gsdata_
 buffer
