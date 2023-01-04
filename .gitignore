@@ -4,8 +4,10 @@ DtaverWriter.exe
 VersionWriter.exe
 version
 version_u
+version_cc
 VersionWriter-CopiedFiles/
 cache
+*_u
 
 skirmish.bat
 
@@ -42,10 +44,10 @@ mpstats.txt
 _gsdata_
 buffer
 
-MIX\SCORES.MIX
-MIX\SCORES01.MIX
-MIX\Movies01.mix
-MIX\Movies02.mix
-MIX\Movies03.mix
+SCORES.MIX
+SCORES01.MIX
+Movies01.mix
+Movies02.mix
+Movies03.mix
 
 Language.dll
