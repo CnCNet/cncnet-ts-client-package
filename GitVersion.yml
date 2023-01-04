@@ -1,0 +1,19 @@
+﻿tag-prefix: 'yr-'
+mode: ContinuousDeployment
+increment: Patch
+
+branches:
+  develop:
+    regex: ^develop
+    source-branches: [ 'develop' ]
+    tag: 'dev'
+    
+  qm:
+    regex: ^qm$
+    source-branches: [ 'qm' ]
+    tag: 'qm'
+
+  quakenet:
+    regex: ^quakenet$
+    source-branches: [ 'quakenet' ]
+    tag: 'quakenet'
