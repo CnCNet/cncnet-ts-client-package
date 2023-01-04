@@ -36,7 +36,7 @@ Visceroids=no
 [Basic]
 NextScenario=Maps\Missions\scg05eb.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=Secure Crash Site
+Name=GDI 3A: Locate and Secure Crash Site
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no

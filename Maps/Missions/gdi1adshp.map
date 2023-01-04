@@ -28,7 +28,7 @@ Visceroids=no
 [Basic]
 NextScenario=Maps\Missions\GDI2A.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=Reinforce Phoenix Base
+Name=GDI 1: Reinforce Phoenix Base
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no

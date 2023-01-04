@@ -37,7 +37,7 @@ Visceroids=no
 [Basic]
 NextScenario=Maps\Missions\scg05eb.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=Defend Crash Site
+Name=GDI 4: Defend the Crash Site
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no

@@ -66,7 +66,7 @@ Visceroids=no
 [Basic]
 NextScenario=Maps\Missions\GDI2A.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=Weather the Storm
+Name=GDI 11: Weather the Storm
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no

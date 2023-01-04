@@ -55,7 +55,7 @@ Visceroids=no
 [Basic]
 NextScenario=Maps\Missions\scg06ea.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=Rescue Tratos
+Name=GDI 5B: Rescue Tratos (A)
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no

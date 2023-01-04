@@ -50,7 +50,7 @@ Visceroids=no
 
 [Basic]
 NextScenario=Maps\Missions\GDI2A.map
-Name=The Messiah Returns
+Name=NOD 1: The Messiah Returns
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no

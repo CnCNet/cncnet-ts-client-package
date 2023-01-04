@@ -46,7 +46,7 @@ Visceroids=no
 [Basic]
 NextScenario=Maps\Missions\scg07ea.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=Destroy Vega's Base
+Name=GDI 6B: Destroy Vega's Base
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no

@@ -61,7 +61,7 @@ IonStormWarhead=IonWH
 [Basic]
 NextScenario=Maps\Missions\GDI9A.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=Retrieval of Disrupter Crystals
+Name=GDI 8: Retrieval of Disrupter Crystals
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no

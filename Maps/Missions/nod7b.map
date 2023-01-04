@@ -50,7 +50,7 @@ Visceroids=no
 [Basic]
 NextScenario=Maps\Missions\GDI2A.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=Escort the Bio-toxin Trucks
+Name=NOD 7B: Escort the Bio-toxin Trucks
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no

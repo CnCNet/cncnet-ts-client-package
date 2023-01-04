@@ -53,7 +53,7 @@ Mutant=Special,Mutants
 [Basic]
 NextScenario=Maps\Missions\GDI2A.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=Destroy the Chemical Missile Plant
+Name=GDI 9D: Destroy the Chemical Missile Plant
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no

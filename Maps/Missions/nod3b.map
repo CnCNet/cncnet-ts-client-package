@@ -42,7 +42,7 @@ Visceroids=no
 [Basic]
 NextScenario=Maps\Missions\GDI 2A.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=Free Rebel Commander
+Name=NOD 3B: Free the Rebel Nod Commander
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no

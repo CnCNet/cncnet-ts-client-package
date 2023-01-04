@@ -68,7 +68,7 @@ Visceroids=no
 [Basic]
 NextScenario=Maps\Missions\GDI2A.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=Eviction Notice
+Name=NOD 4A: Eviction Notice
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no

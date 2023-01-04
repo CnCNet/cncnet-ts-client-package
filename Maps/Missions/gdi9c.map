@@ -35,7 +35,7 @@ Visceroids=yes
 [Basic]
 NextScenario=Maps\Missions\GDI2A.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=Mine the Power Grid
+Name=GDI 9C: Mine the Power Grid
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no

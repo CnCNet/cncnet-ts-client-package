@@ -88,7 +88,7 @@ Visceroids=no
 [Basic]
 NextScenario=Maps\Missions\GDI 2A.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=Rescue the Prisoners
+Name=GDI 9A: Rescue the Prisoners
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no

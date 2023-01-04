@@ -59,7 +59,7 @@ Visceroids=no
 [Basic]
 NextScenario=Maps\Missions\GDI2A.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=Destroy Radar Array
+Name=GDI 5A: Destroy the Radar Array
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no

@@ -51,7 +51,7 @@ Mutant=Special
 [Basic]
 NextScenario=Maps\Missions\gdi8a.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=Capture Hammerfest Base
+Name=GDI 7: Recapture Hammerfest Base
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no

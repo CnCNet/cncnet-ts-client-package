@@ -71,7 +71,7 @@ Visceroids=no
 [Basic]
 NextScenario=Maps\Missions\GDI2A.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=Locate and Capture Umagon
+Name=NOD 6B: Locate and Capture Umagon (A)
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no

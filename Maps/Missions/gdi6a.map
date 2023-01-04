@@ -50,7 +50,7 @@ Visceroids=no
 9=Objective One: Destroy the dams any way possible.
 
 [Basic]
-Name=Destroy Vega's Dam
+Name=GDI 6A: Destroy Vega's Dam
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no
