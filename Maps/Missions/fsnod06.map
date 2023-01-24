@@ -40,18 +40,6 @@ CloakRadiusInCells=15
 [CrateRules]
 WoodCrate=HealBase
 
-[Briefing]
-1=Since CABAL has turned on us we are suffering a communications blackout.
-2=We are forced to try and obtain GDI's EVA technology. There is a small
-3=GDI airbase in this sector. Get your engineer into their radar facility
-4=to steal an EVA unit. Create a distraction to occupy GDI air units while
-5=you steal the EVA unit.@@ We also have a new unit for you: the Mobile
-6=Stealth Generator is now operational. Use it wisely.@ DATA LINK CLOSED.@@
-7=First Objective: Reconnoiter the area to find the GDI base and civilian
-8=towns.@@ Second Objective: Create distractions to draw away the GDI
-9=base's air support.@@ Third Objective: Get an engineer into GDI's radar
-10=facility to steal the EVA unit.
-
 [Basic]
 RequiredAddOn=1
 SpeechSide=Nod

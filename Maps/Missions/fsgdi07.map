@@ -214,13 +214,6 @@ LightRedTint=0.01
 LightGreenTint=0.5
 LightBlueTint=0.01
 
-[Briefing]
-1=We have lost communication with our base outside of Trondheim. Scout the
-2=area and determine the cause of this interruption. We have no tactical
-3=data on CABAL's forces in that area and we need information.@ END
-4=TRANSMISSION.@@ First Objective: Warn the local civilians of the CABAL
-5=threat.@@ Second Objective: Establish a base and destroy CABAL's forces.
-
 [Basic]
 RequiredAddOn=1
 SpeechSide=GDI

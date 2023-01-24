@@ -50,20 +50,6 @@ IonStorms=no
 Meteorites=no
 Visceroids=no
 
-[Briefing]
-1=While GDI forces have been diverted to defend civilians, you are to lead
-2=an elite strike force to assassinate the mutant leader Tratos. Our new
-3=limpet mines will help you locate Tratos within his fortified base. Once
-4=located you must devise a way to reach him. GDI will have considerable
-5=protection for Tratos as he is their last hope at countering the Tiberium
-6=onslaught. Destroying their power supply should neutralize the firestorm
-7=defense system, and an effective air strike should deal with the sensor
-8=arrays.@@ Do not fail: this mission is integral to the future of the
-9=Brotherhood of Nod.@ DATA LINK CLOSED.@@ First Objective: Attach limpet
-10=mines to GDI units to penetrate the base and locate Tratos.@@ Second
-11=Objective: Deactivate the firestorm defense system and neutralize the
-12=sensor arrays.@@ Third Objective: Assassinate Tratos.
-
 [Basic]
 RequiredAddOn=1
 SpeechSide=Nod

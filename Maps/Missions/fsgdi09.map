@@ -181,16 +181,6 @@ IonStorms=no
 Meteorites=no
 Visceroids=no
 
-[Briefing]
-1=We've tracked down CABAL and are ready to engage his forces on all fronts.
-2=This is an all-out assault. Nod forces have reluctantly agreed to a
-3=temporary cease-fire and are launching their own simultaneous offensive
-4=against CABAL. Destruction of the core is essential to our victory.@ END
-5=TRANSMISSION.@@ First Objective: Build a base and repel initial
-6=attacks.@@ Second Objective: Capture the 3 control stations to shut down
-7=the laser fences and firestorm defense system protecting CABAL.@@ Third
-8=Objective: Destroy CABAL's Core.@
-
 [Basic]
 RequiredAddOn=1
 SpeechSide=GDI

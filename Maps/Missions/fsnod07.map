@@ -127,14 +127,6 @@ IonStorms=no
 Meteorites=no
 Visceroids=no
 
-[Briefing]
-1=Scorched earth, plain and simple. Locate and destroy all cybernetic forces
-2=in the area. The base has a web of laser fences protecting it and CABAL's
-3=computer core.@ DATA LINK CLOSED.@@ First Objective: Repair the bridges
-4=to allow for reinforcements.@@ Second Objective: Capture the command
-5=station to shut down the laser fencing surrounding CABAL's core.@@ Third
-6=Objective: Destroy CABAL's base and all defenses.
-
 [Basic]
 RequiredAddOn=1
 SpeechSide=GDI

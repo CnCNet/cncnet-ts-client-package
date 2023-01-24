@@ -144,17 +144,6 @@ Strength=250
 VeinholeShrinkRate=50
 TiberiumHeal=.020
 
-[Briefing]
-1=The second piece of the Tacitus is rumored to be held inside an ancient
-2=temple outside of La Paz, Bolivia. Ghoststalker and one of our
-3=archaeologists will assist you in locating the temple and retrieving the
-4=Tacitus.@ We also have a new unit for you to test: it's called the
-5=Juggernaut and is our new long-range artillery unit. Be advised: this
-6=area is completely uncharted.@ END TRANSMISSION.@@ First Objective:
-7=Reconnoiter the area and identify the Temple of the Tacitus.@@ Second
-8=Objective: Recover the Tacitus from the temple and proceed to the
-9=designated airlift zone.
-
 [Basic]
 RequiredAddOn=1
 SpeechSide=GDI

@@ -209,16 +209,6 @@ IonLightningFrequency=10
 IonLightningRandomness=10
 IonLightningDamage=5
 
-[Briefing]
-1=Prior to our main assault on CABAL, we need to slow down his production
-2=capabilities. CABAL is harvesting Tiberium heavily in Eastern Africa.
-3=Proceed there and eliminate CABAL's harvesting facilities. Our forces are
-4=scattered at this time and we can only afford to provide you with a small
-5=strike force.@@ Use the new Fist of Nod mobile production facility to
-6=build up an effective strike force and crush them.@ DATA LINK CLOSED.@@
-7=First Objective: Save the Civilians and their town from CABAL's siege.@@
-8=Second Objective: Disrupt and prevent CABAL's Tiberium harvesting.
-
 [Basic]
 RequiredAddOn=1
 SpeechSide=GDI

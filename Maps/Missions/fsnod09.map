@@ -165,16 +165,6 @@ IonStorms=no
 Meteorites=no
 Visceroids=no
 
-[Briefing]
-1=This is it Commander! Take out CABAL fast and hard: No mercy and no
-2=surrender. Find a way to get inside his defenses and take out the core.
-3=GDI forces are distracting CABAL and now is the perfect time to crush
-4=CABAL once and for all.@ DATA LINK CLOSED.@@ First Objective: Build your
-5=base and survive the initial onslaught from CABAL.@@ Second Objective:
-6=Capture the 3 control stations to shut down the laser fences and
-7=firestorm defense system protecting CABAL.@@ Third Objective: Destroy
-8=CABAL's core.
-
 [Basic]
 RequiredAddOn=1
 SpeechSide=GDI
