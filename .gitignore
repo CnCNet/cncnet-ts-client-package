@@ -17,6 +17,7 @@ Maps/Custom/*.png
 
 Map Editor/FinalSun.ini
 Map Editor/finalsunlog.txt
+Map Editor/*.log
 
 Client/
 QM/
