@@ -8,7 +8,7 @@
 7=First Objective: Warn the local civilians of
 8=the CABAL threat.@@
 9=Second Objective: Establish a base and
-10=destroy CABAL’s forces.
+10=destroy CABAL's forces.
 
 [SpecialFlags]
 TiberiumGrows=no
@@ -219,7 +219,7 @@ LightBlueTint=0.01
 2=area and determine the cause of this interruption. We have no tactical
 3=data on CABAL's forces in that area and we need information.@ END
 4=TRANSMISSION.@@ First Objective: Warn the local civilians of the CABAL
-5=threat.@@ Second Objective: Establish a base and destroy CABAL’s forces.
+5=threat.@@ Second Objective: Establish a base and destroy CABAL's forces.
 
 [Basic]
 RequiredAddOn=1

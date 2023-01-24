@@ -12,7 +12,7 @@
 11=Second Objective: Capture the 3 control stations
 12=to shut down the laser fences and firestorm
 13=defense system protecting CABAL.@@
-14=Third Objective: Destroy CABAL’s Core.@
+14=Third Objective: Destroy CABAL's Core.@
 
 [General]
 MinimumAIDefensiveTeams=2,2,2
@@ -189,7 +189,7 @@ Visceroids=no
 5=TRANSMISSION.@@ First Objective: Build a base and repel initial
 6=attacks.@@ Second Objective: Capture the 3 control stations to shut down
 7=the laser fences and firestorm defense system protecting CABAL.@@ Third
-8=Objective: Destroy CABAL’s Core.@
+8=Objective: Destroy CABAL's Core.@
 
 [Basic]
 RequiredAddOn=1
