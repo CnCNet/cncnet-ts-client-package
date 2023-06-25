@@ -1,3 +1,12 @@
+Version 6.05l
+- Added: Quick Match (Credits: xme).
+- Changed: The fix from version 6.00 to prevent units from getting stuck on the beach terraintype has been reverted (Credits: Crimsonum).
+- Fixed: Some minor misc. oversights like incorrect firing offsets, incorrect voice responses, etc. (Credits: Crimsonum).
+- Fixed: Incorrect Start, LoopStart, and LoopEnd values on building animations in art.ini (Credits: Crimsonum).
+- Fixed: Unsupported apostrophe characters in mission briefings have been replaced (Credits: Crimsonum).
+- Fixed: Incorrect or missing TechLevel, Owner and/or Crewed values on deployed vehicles in order to improve Survivor mechanics (Credits: Crimsonum).
+- Fixed: Various debris animations specified a non-existent explosion (Credits: Crimsonum).
+
 Version 6.05k
 - Changed: Mission names have been updated to contain the mission number in the description for save file description clarity (Credits: CCHyper).
 - Fixed: In Nod mission 5 you could lose the game when one of your starting Engineers died, even when you had already produced more Engineers of your own (Credits: Bittah Commander, Crimsonum).
