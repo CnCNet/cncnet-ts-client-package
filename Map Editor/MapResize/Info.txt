@@ -27,6 +27,9 @@ Starkku's MapTool.
 
 Changes:
 
+2023-02-04 (version 1.0.3.0)
+- Parser tweaks.
+
 2020-11-01 (version 1.0.2.0)
 - Save filename options.
 - Option to change map name in [Basic] section.
