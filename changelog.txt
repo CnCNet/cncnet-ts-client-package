@@ -1,3 +1,9 @@
+Version 6.05m
+- Added: Support for 702 waypoints in FinalSun dropdown menus (Credits: E1 Elite).
+- Fixed: Made some changes to the client INIs and folder structure to remove dependency from the default theme (Credit: Mah Boi).
+- Fixed: Replaced all slashes in client INIs from \ to / for cross-platform support (Credit: Mah Boi).
+- Fixed: Adjusted the position of the client's privacy policy notification "Got it" button (Credit: Mah Boi).
+
 Version 6.05l
 - Added: Quick Match (Credits: xme).
 - Changed: The fix from version 6.00 to prevent units from getting stuck on the beach terraintype has been reverted (Credits: Crimsonum).
