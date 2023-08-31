@@ -19,6 +19,7 @@ Version 6.05n
 	- Fixed: Refined UI to keep the buttons always centered
 	- Fixed: Re-declared high DPI support
 - Changed: Updated client second-stage updater to version 1.0.15 (Credits: Starkku, Rans4ckeR, and devo1929 for development; Crimsonum for migration).
+- Fixed: A few paths still pointing to the old TS theme folder (Credit: Crimsonum).
 
 Version 6.05m
 - Added: Support for 702 waypoints in FinalSun dropdown menus (Credits: E1 Elite).
