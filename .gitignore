@@ -20,6 +20,7 @@ Map Editor/finalsunlog.txt
 Map Editor/*.log
 
 Client/
+Debug/
 QM/
 
 client.log
@@ -30,6 +31,7 @@ SAVEGAME.NET
 ddraw.dll
 ddraw.ini
 
+KEYBOARD.INI
 sun.ini
 
 spawn.ini
@@ -42,6 +44,7 @@ except.txt
 mpstats.log
 sync*.txt
 mpstats.txt
+HALLFAME.DAT
 
 _gsdata_
 buffer
