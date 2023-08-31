@@ -1,3 +1,25 @@
+Version 6.05n
+- Changed: Updated client to latest develop version (build #880, commit 0083225) (Credits: Kerbiter, SadPencil, Rans4ckeR, Starkku, MahBoi, ayylmao, devo1929, Rampastring, Belonit, hejiajun107, Crimsonum, and neogrant for client development; Crimsonum for migration and some new textures). Changes include:
+	- Added: Full localization support
+	- Added: Option to add maps into favorites
+	- Fixed: Another instance of cached file would set path trying to create file as directory
+	- Fixed: Improved game lobby launch game button state updating
+	- Fixed: Path for cached files used by settings was incorrect
+	- Fixed: CnCNet options game list panel issues
+	- Fixed: The main menu music track still played after the client had closed
+	- Fixed: The volume level showed as 10 even though it was set to 0
+	- Fixed: Improved cross-platform support
+	- Changed: Reworded privacy notice
+	- Changed: Discord handler is now disposed on client exit
+	- Changed: Updated client updater
+	- Removed: Several obsolete DLL files
+- Changed: Updated client launcher to version 2.0.6 (Credits: Rampastring, Rans4ckeR, neogrant, SadPencil, Kerbiter, Starkku, and devo1929 for development; Crimsonum for migration). Changes include:
+	- Added: .NET7 support
+	- Added: Now prompts the preferred architecture download link
+	- Fixed: Refined UI to keep the buttons always centered
+	- Fixed: Re-declared high DPI support
+- Changed: Updated client second-stage updater to version 1.0.15 (Credits: Starkku, Rans4ckeR, and devo1929 for development; Crimsonum for migration).
+
 Version 6.05m
 - Added: Support for 702 waypoints in FinalSun dropdown menus (Credits: E1 Elite).
 - Fixed: Made some changes to the client INIs and folder structure to remove dependency from the default theme (Credit: Mah Boi).
