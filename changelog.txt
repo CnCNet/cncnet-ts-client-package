@@ -26,7 +26,8 @@ Version 6.06
 - Fixed: Incorrect Start, LoopStart, and LoopEnd values on building animations in art.ini (Credits: Crimsonum).
 - Fixed: Unsupported apostrophe characters in mission briefings have been replaced (Credits: Crimsonum).
 - Fixed: Incorrect or missing TechLevel, Owner and/or Crewed values on deployed vehicles in order to improve Survivor mechanics (Credits: Crimsonum).
-- Fixed: Various debris animations specified a non-existent explosion (Credits: Crimsonum).- Fixed: Made some changes to the client INIs and folder structure to remove dependency from the default theme (Credits: Mah Boi).
+- Fixed: Various debris animations specified a non-existent explosion (Credits: Crimsonum).
+- Fixed: Made some changes to the client INIs and folder structure to remove dependency from the default theme (Credits: Mah Boi).
 - Fixed: Replaced all slashes in client INIs from \ to / for cross-platform support (Credits: Mah Boi).
 - Fixed: Adjusted the position of the client's privacy policy notification "Got it" button (Credits: Mah Boi).
 
