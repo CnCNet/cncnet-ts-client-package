@@ -61,7 +61,7 @@ Visceroids=no
 [Basic]
 NextScenario=Maps\Missions\GDI2A.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=NOD 12B: Illegal Data Transfer
+Name=Nod 12B: Illegal Data Transfer
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no

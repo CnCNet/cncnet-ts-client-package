@@ -95,7 +95,7 @@ Mutant=Special
 [Basic]
 NextScenario=Maps\Missions\GDI 2A.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=NOD 10A: Destroy the Mammoth Mk.II Prototype
+Name=Nod 10A: Destroy the Mammoth Mk.II Prototype
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no

@@ -44,7 +44,7 @@ Visceroids=no
 [Basic]
 NextScenario=Maps\Missions\GDI 2A.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=NOD 9B: Protect the Waste Convoys
+Name=Nod 9B: Protect the Waste Convoys
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no

@@ -67,7 +67,7 @@ Visceroids=no
 [Basic]
 NextScenario=Maps\Missions\GDI2A.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=NOD 9A: Re-establish Nod Presence
+Name=Nod 9A: Re-establish Nod Presence
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no

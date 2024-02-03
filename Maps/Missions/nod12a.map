@@ -97,7 +97,7 @@ Mutant=Special
 [Basic]
 NextScenario=Maps\Missions\GDI 2A.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=NOD 12A: A New Beginning
+Name=Nod 12A: A New Beginning
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=yes

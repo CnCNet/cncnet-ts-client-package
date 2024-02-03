@@ -67,7 +67,7 @@ Visceroids=no
 [Basic]
 NextScenario=Maps\Missions\GDI2A.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=NOD 2: Retaliation
+Name=Nod 2: Retaliation
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no

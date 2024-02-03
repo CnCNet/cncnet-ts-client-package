@@ -165,7 +165,7 @@ Visceroids=no
 [Basic]
 NextScenario=Maps\Missions\GDI2A.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=NOD 6A: Sheep's Clothing
+Name=Nod 6A: Sheep's Clothing
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no

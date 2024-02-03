@@ -70,7 +70,7 @@ Visceroids=no
 [Basic]
 NextScenario=Maps\Missions\GDI2A.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=NOD 8: Villainess in Distress
+Name=Nod 8: Villainess in Distress
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no
