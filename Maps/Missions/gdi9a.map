@@ -119,7 +119,7 @@ MultiplayerOnly=0
 TiberiumGrowthEnabled=yes
 VeinGrowthEnabled=no
 IceGrowthEnabled=no
-TiberiumDeathToVisceroid=yes
+TiberiumDeathToVisceroid=no
 FreeRadar=yes
 InitTime=10000
 

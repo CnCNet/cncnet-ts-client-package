@@ -32,7 +32,43 @@ Version 6.06
 - Fixed: Made some changes to the client INIs and folder structure to remove dependency from the default theme (Credits: Mah Boi).
 - Fixed: Replaced all slashes in client INIs from \ to / for cross-platform support (Credits: Mah Boi).
 - Fixed: Adjusted the position of the client's privacy policy notification "Got it" button (Credits: Mah Boi).
-
+- Fixed: Campaign:
+	- GDI 2: Secure the Region:
+		- Visceroids and Nod are no longer allied to one another.
+		- GDI is no longer allied to Visceroids (you could only attack them by force-firing, but they still attacked you normally).
+	- GDI 3A: Locate and Secure Crash Site
+		- Visceroids and GDI are no longer allied to one another.
+		- Nod is no longer allied to Visceroids (Visceroids already weren't allied to Nod).
+	- GDI 3B: Capture the Train Station:
+		- Nod fired at certain civilians under the shroud when they wandered into firing range.
+	- GDI 4: Defend the Crash Site:
+		- Infantry that die on tiberium no longer turn into visceroids.
+	- GDI 5A: Destroy the Radar Array:
+		- Visceroids and GDI are no longer allied to one another.
+		- Nod no longer attacks civilian buildings.
+		- The "These critters don't look too friendly" speech will no longer play after Nod has already provoked the Tiberian Fiends.
+	- GDI 6B: Destroy Vega's Base:
+		- Nod is no longer allied to Visceroids.
+		- Visceroids are no longer allied to GDI.
+		- Certain Nod units attacked Civilian structures under the shroud.
+	- GDI 7: Recapture Hammerfest Base: 
+		- Visceroids are no longer allied to GDI and Nod and vice-versa.
+		- Your units no longer automatically fire at the defenses of the captured GDI base.
+		- The reinforcements that are dropped off after destroying the SAM-Sites no longer auto-fire at structures of the captured GDI base.
+	- GDI 8: Retrieval of Disrupter Crystals:
+		- Nod is no longer allied to Visceroids (Visceroids already weren't allied to Nod).
+	- GDI 9A: Rescue the Prisoners:
+		- Infantry that die on tiberium no longer turn into visceroids.
+	- GDI 9B: Destroy Chemical Supply Station:
+		- Nod and Mutants are no longer allied to Visceroids (Visceroids already weren't allied to them).
+	- GDI 9C: Mine the Power Grid:
+		- The Tiberian Fiends in the intro no longer rapidly alternate between standing and laying down or glide over the ground while laying down.
+	- GDI 9D: Destroy the Chemical Missile Plant:
+		- Added a missing ramp piece.
+		- GDI, Mutants and Nod are no longer allied to Visceroids (Visceroids already weren't allied to them).
+	- GDI 11: Weather the Storm:
+		- The bottom-left edge of the map no longer looks glitched.
+	
 Version 6.05k
 - Changed: Mission names have been updated to contain the mission number in the description for save file description clarity (Credits: CCHyper).
 - Fixed: In Nod mission 5 you could lose the game when one of your starting Engineers died, even when you had already produced more Engineers of your own (Credits: Bittah Commander, Crimsonum).
