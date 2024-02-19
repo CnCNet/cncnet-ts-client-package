@@ -11,6 +11,10 @@
 10=Objective One: Spy on one of the GDI Comm Centers.@@
 11=Objective Two: Destroy the Mammoth Mark II prototype.
 
+[GARADR]
+Name=Comm Center
+Nominal=yes
+
 [TTNK]
 Crewed=no
 
@@ -95,7 +99,7 @@ Mutant=Special
 [Basic]
 NextScenario=Maps\Missions\GDI 2A.map
 AltNextScenario=Maps\Missions\GDI9C.MAP
-Name=Nod 10A: Destroy the Mammoth Mk.II Prototype
+Name=Nod 10: Destroy the Mammoth Mk.II Prototype
 NewINIFormat=4
 CarryOverCap=0
 EndOfGame=no
@@ -2653,9 +2657,9 @@ LocalSize=2,4,95,90
 1032069=GDI,GASPOT,256,58,80,0,0A536BE0,0,0,1,0,2,None,None,None,0,0
 1032072=GDI,GASPOT,256,143,96,192,0A536BE0,0,0,1,0,1,None,None,None,0,0
 1032075=GDI,GASPOT,256,54,125,64,0A536BE0,0,0,1,0,1,None,None,None,0,0
-1032078=GDI,GAPLUG,256,52,119,0,0A096AE0,1,0,1,0,0,None,None,None,0,0
-1032085=GDI,GAPLUG,256,146,95,0,0A096AE0,1,0,1,0,0,None,None,None,0,0
-1032092=GDI,GAPLUG,256,54,81,0,0A096AE0,1,0,1,0,0,None,None,None,0,0
+1032078=GDI,GARADR,256,52,119,0,0A096AE0,1,0,1,0,0,None,None,None,0,0
+1032085=GDI,GARADR,256,146,95,0,0A096AE0,1,0,1,0,0,None,None,None,0,0
+1032092=GDI,GARADR,256,54,81,0,0A096AE0,1,0,1,0,0,None,None,None,0,0
 1032099=Neutral,INGRNLMP,256,81,65,0,None,0,0,1,0,0,None,None,None,0,0
 1032100=Neutral,INGRNLMP,256,70,154,0,None,0,0,1,0,0,None,None,None,0,0
 1032101=Neutral,INGRNLMP,256,119,126,0,None,0,0,1,0,0,None,None,None,0,0
@@ -2934,7 +2938,7 @@ Name=Weapon Test
 7=1,58
 8=1,59
 9=1,55
-10=1,54
+;10=1,54
 11=3,62
 12=5,25
 13=3,64

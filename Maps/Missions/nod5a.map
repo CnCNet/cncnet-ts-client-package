@@ -2076,7 +2076,7 @@ LocalSize=2,4,84,71
 22=GDI,SMECH,256,66,68,128,Area Guard,None,0,-1,0,-1,1,1
 23=GDI,SMECH,256,50,72,128,Area Guard,None,0,-1,0,-1,0,0
 24=GDI,MMCH,256,49,91,64,Area Guard,None,0,-1,0,-1,0,0
-25=Special,BUS,256,122,54,64,Sleep,None,0,-1,0,-1,0,0
+25=Special,BUS,256,122,54,64,Sleep,01000001,0,-1,0,-1,0,0
 
 [Infantry]
 0=Vega,E1,256,133,87,3,Area Guard,192,None,0,3,0,1,0
@@ -2118,8 +2118,8 @@ LocalSize=2,4,84,71
 36=Vega,E1,256,128,101,3,Area Guard,0,None,0,-1,0,0,0
 37=Vega,E1,256,107,89,3,Area Guard,0,None,0,-1,0,0,0
 38=Vega,E1,256,110,91,4,Area Guard,0,None,0,-1,0,0,0
-39=Vega,E1,256,125,61,2,Area Guard,0,None,0,-1,0,1,0
-40=Vega,E1,256,125,61,3,Area Guard,0,None,0,-1,0,1,0
+39=Vega,E1,256,125,61,2,Guard,0,None,0,-1,0,1,0
+40=Vega,E1,256,125,61,3,Guard,0,None,0,-1,0,1,0
 
 [Structures]
 1026147=Vega,NAPOWR,256,120,104,0,None,0,0,1,0,0,None,None,None,1,0
@@ -2284,6 +2284,7 @@ LocalSize=2,4,84,71
 27=0A50DCA0
 28=082EF870
 29=0ADC1980
+30=01000003
 
 [07565370]
 Name=Patrolling medium mechs
@@ -2504,6 +2505,11 @@ Name=Clear the track
 0=3,62
 1=1,60
 
+[01000003]
+0=3,62
+1=11,5
+Name=Cleared the track
+
 [TaskForces]
 0=082446E0
 1=091C0990
@@ -2692,6 +2698,7 @@ Group=-1
 29=0A512F50
 30=082F4330
 31=08936410
+32=01000002
 
 [08245580]
 Name=Patrolling medium mechs
@@ -3715,6 +3722,38 @@ Waypoint=BJ
 Script=0ADC1980
 TaskForce=09CB1190
 
+[01000002]
+Name=Cleared the track
+Group=-1
+Max=0
+Priority=7
+Waypoint=BK
+TechLevel=0
+VeteranLevel=1
+House=Vega
+Script=01000003
+TaskForce=09CB1190
+Full=no
+Whiner=no
+Droppod=no
+Suicide=no
+Loadable=no
+Prebuild=no
+Annoyance=no
+IonImmune=no
+Recruiter=yes
+Reinforce=no
+Aggressive=no
+Autocreate=no
+GuardSlower=no
+OnTransOnly=no
+AvoidThreats=no
+LooseRecruit=no
+IsBaseDefense=no
+OnlyTargetHouseEnemy=no
+TransportsReturnOnUnload=no
+AreTeamMembersRecruitable=no
+
 [Triggers]
 0732F030=Nod,<none>,Starting reveal,0,1,1,1,0
 0915FF80=GDI,<none>,Light follow,0,1,1,1,0
@@ -3761,6 +3800,7 @@ TaskForce=09CB1190
 0A300060=Nod,<none>,Builds an engineer,0,1,1,1,0
 0892FD80=Vega,<none>,Clear the track,0,1,1,1,0
 0AD41DB0=Train,<none>,Allow crate drop,0,1,1,1,0
+01000000=Vega,<none>,Cleared the track,0,1,1,1,0
 
 [Events]
 0732F030=1,47,0,0
@@ -3808,6 +3848,7 @@ TaskForce=09CB1190
 0A300060=1,21,0,7	;7 refers to ENGINEER index
 0892FD80=1,36,0,21
 0AD41DB0=1,36,0,22
+01000000=1,48,0,0
 
 [Actions]
 0732F030=2,17,0,98,0,0,0,0,CU,17,0,3,0,0,0,0,D
@@ -3855,6 +3896,7 @@ TaskForce=09CB1190
 0A300060=1,54,2,0A6AFBA0,0,0,0,0,A
 0892FD80=1,4,1,08936410,0,0,0,0,A
 0AD41DB0=1,97,0,0,0,0,0,0,A
+01000000=2,54,2,0892FD80,0,0,0,0,A,4,1,01000002,0,0,0,0,A
 
 [Tags]
 0A6AF730=1,Engineers lost,0A6AFBA0
@@ -3900,6 +3942,7 @@ TaskForce=09CB1190
 0A327070=0,Builds an engineer,0A300060
 0892F8A0=0,Clear the track,0892FD80
 0AD41AC0=0,Allow crate drop,0AD41DB0
+01000001=0,Cleared the track (tag),01000000
 
 [AITriggerTypes]
 0A514780=GDI hunt team 1,0A50DF50,GDI,2,0,NAHAND,0100000003000000000000000000000000000000000000000000000000000000,40.000000,10.000000,70.000000,0,0,0,0,<none>,1,1,1
