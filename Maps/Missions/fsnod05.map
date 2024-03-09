@@ -108,7 +108,7 @@ LightBlueTint=0.01
 LightVisibility=2500
 LightIntensity=0.01
 LightRedTint=0.01
-LightGreenTint=0,01
+LightGreenTint=0.01
 LightBlueTint=0.7
 
 [CA0001]

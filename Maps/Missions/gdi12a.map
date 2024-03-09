@@ -66,7 +66,7 @@ WoodCrate=HealBase
 LightVisibility=2000
 LightIntensity=0.01
 LightRedTint=0.01
-LightGreenTint=0,01
+LightGreenTint=0.01
 LightBlueTint=0.7
 
 [INGRNLMP]

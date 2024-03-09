@@ -204,7 +204,7 @@ LightBlueTint=0.001
 LightVisibility=2500
 LightIntensity=0.005
 LightRedTint=0.01
-LightGreenTint=0,01
+LightGreenTint=0.01
 LightBlueTint=0.5
 
 [INGRNLMP]
