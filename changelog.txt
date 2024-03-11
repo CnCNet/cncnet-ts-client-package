@@ -4,6 +4,7 @@ Version 6.06
 - Changed: Updated client to latest develop version (build #880, commit 0083225) (Credits: Kerbiter, SadPencil, Rans4ckeR, Starkku, MahBoi, ayylmao, devo1929, Rampastring, Belonit, hejiajun107, Crimsonum, and neogrant for client development; Crimsonum for migration and some new textures). Changes include:
 	- Added: Full localization support
 	- Added: Option to add maps into favorites
+	- Added: "Stretch Videos" checkbox on the client's Options menu's Display tab.
 	- Changed: Reworded privacy notice
 	- Changed: Discord handler is now disposed on client exit
 	- Changed: Updated client updater
