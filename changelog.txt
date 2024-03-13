@@ -68,6 +68,8 @@ Version 6.06
 	- GDI 9D: Destroy the Chemical Missile Plant:
 		- Added a missing ramp piece.
 		- GDI, Mutants and Nod are no longer allied to Visceroids (Visceroids already weren't allied to them).
+	- GDI 10B: Destroy the Prototype Facility (B)
+		- Removed a floating tile that was visible through the shroud.
 	- GDI 11: Weather the Storm:
 		- The bottom-left edge of the map no longer looks glitched.
 - Fixed: TS Nod Campaign missions (Credits: Bittah Commander):
