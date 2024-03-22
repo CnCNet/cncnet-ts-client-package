@@ -105,6 +105,7 @@ Version 6.06
 		- You didn't lose the game when Jake McNeil died until you lost all Nod units as well.
 		- You now lose the game if Jake McNeil is your only unit left alive.
 		- GDI no longer attacks Jake McNeil after you've captured him.
+- Removed: Lin Kuei Ominae's large Kodiak (https://www.ppmforums.com/topic-41597-page-2).
 
 Version 6.05k
 - Changed: Mission names have been updated to contain the mission number in the description for save file description clarity (Credits: CCHyper).
@@ -132,7 +133,7 @@ Version 6.05f
 Version 6.05e
 - Changed: The client now uses a new icon (Credits: CCHyper).
 - Fixed: The background of the between-mission map selection screen was off-center (Credits: Bittah Commander).
-- Fixed: Several animations used DemandLoad=true when they shouldn't have, which could lead to crashes when running the game with Vinifera.
+- Fixed: Several animations used DemandLoad=true when they shouldn't have, which could lead to "Assertion failed" errors when running the game with Vinifera.
 
 Version 6.05c
 - Fixed: Nod mission 7a "Destroy the Research Facility" crashed whenever the Titan beyond the tunnel was destroyed (Credits: Bittah Commander).
