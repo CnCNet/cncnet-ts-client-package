@@ -3,9 +3,22 @@ FinalSun v1.01 Patched Standalone:
 
 Changelog:
 
+Changes (2024-03-23):
+- Mix loading updated.
+- Palette loading updated.
+
+Changes (2024-02-22):
+- Aqrit's DDraw wrapper placed in main folder to be used by default (From ForWindows10 folder).
+- Included MapResize tool updated to latest version.
+- Crashing clone buttons disabled.
+- Few units sidebar listing corrected.
+
+Changes (2022-12-29): 
+- Support 702 waypoints.
+
 Changes (2022-01-22): 
 - Map size limit UI description changed.
-- Graphics overrides of low btidge overlay, tibtree, fona and others (Credits: Bittah Commander)
+- Graphics overrides of low bridge overlay, tibtree, fona and others (Credits: Bittah Commander)
 - FSP DLL support for max map size and mix override through \MIX\extra(00-99).mix files.
 
 Changes (2021-07-29): 

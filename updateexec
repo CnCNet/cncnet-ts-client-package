@@ -62,12 +62,17 @@ Resources\TS Theme\sortAlphaActive.png
 Resources\TS Theme\sortAlphaInactive.png
 Resources\TS Theme\updatequerybg.png
 Resources\TS Theme\updaterbg.png
+Map Editor\ForWindows10\aqrit.cfg
+Map Editor\ForWindows10\ddraw.dll
+Map Editor\ForWindows10\ddwrapper_readme.html
+Map Editor\ForWindows10\Info.txt
 
 [RenameFolder]
 
 [RenameAndMerge]
 
 [DeleteFolderIfEmpty]
+Map Editor\ForWindows10
 
 [ForceDeleteFolder]
 

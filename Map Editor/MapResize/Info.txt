@@ -18,14 +18,22 @@ Limitations:
 Have to use map editors or CnC Map Renderer for that.
 - It isn't smart enough to check if full tunnel path goes beyond map borders.
 
-Source code : https://github.com/E1Elite/MapResize
-This tool uses code from OpenRA and CnC Map Renderer. OpenRA has updated
-code for map pack encoding/decoding, it was easier to pickup these files from
-Starkku's MapTool.
+Updated source code is included in download package. This tool uses code from OpenRA, MapTool and CnC Map Renderer.
+Hosted at: https://ppmforums.com/topic-55391/mapresize/
+Old Source code : https://github.com/E1Elite/MapResize
 
 ###########################################################
 
 Changes:
+
+2024-02-21 (version 1.0.4.0)
+- Parsing fix: Accept square brackets in text fields.
+- Typelist duplicate handling adapted for RA2/YR.
+- Overlay pack encoding updated.
+- Empty map pack section checks added.
+
+2023-02-04 (version 1.0.3.0)
+- Parser tweaks.
 
 2020-11-01 (version 1.0.2.0)
 - Save filename options.

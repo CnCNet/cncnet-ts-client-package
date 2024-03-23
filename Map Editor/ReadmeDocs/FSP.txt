@@ -8,6 +8,13 @@ FA2sp - https://github.com/secsome/FA2sp
 Launcher - https://github.com/E1Elite/FinalSun
 Syringe.exe (Ares 3.0 for YR) - https://launchpad.net/ares/+download
 
+Changes (2024-03-23):
+- Mix loading updated.
+- Palette loading updated.
+
+Changes (2022-12-29): 
+- Support 702 waypoints.
+
 Changes (2022-01-05): 
 - Allow max map size support like 256x256.
 - Override game content using <FinalSun>\MIX\extraXX.mix
