@@ -1,45 +1,92 @@
-Credits for Rampastring's version of Tiberian Sun:
+Credits for the Tiberian Sun Client package:
 
 People:
-
-Rampastring: Created and compiled the client package, including the new game options and maps, and hacked in new features and bugfixes for the game engine
-Bittah Commander: For editing the FinalSun executable so that it reads files from subdirectories instead of MIX files, for helping with the client's GUI graphics, for compiling the TS package (currently manages the updates)
-Iran: Created the Tiberian Sun spawner, which makes it possible to skip the in-game menu and as a result makes the client possible. Also hacked in new features and bugfixes for the game engine
-dkeeton: Hacked in new features and bugfixes for the game engine
-AlexB: Hacked in new features and bugfixes for the game engine
-FunkyFr3sh: Hacked in new features and bugfixes for the game engine
-CCHyper: Provided various high-resolution images the client's graphics (such as backgrounds and logos), hacked in new features and bugfixes for the game engine and provided other programmers with information on the game engine
-zzattack: Created the CNCMaps Renderer and saved me a bit of time by hosting high-quality map preview images at ra2maps.zzattack.org
-OmegaBolt: Tested early builds of the client package and provided feedback on it
-Aro: Helped with PR
-E1 Elite: Applied the various improvements to version 6.00 that are listed under "E1 Elite's changes (2021-02-21)" in changelog.txt
-tomsons26: Created the graphics for the info panel on the GDI and Nod sidebars.
+    Rampastring:
+        - Created and compiled the initial client packages, including the new game options and maps
+        - Hacked in new features and bugfixes for the game engine
+    Bittah Commander:
+        - Compiles the current TS Client packages and currently manages the updates
+        - Edited the FinalSun executable so that it reads files from subdirectories instead of MIX files
+        - Fixed the positioning of terrain objects and overlay in FinalSun
+        - Helped with the client's GUI graphics
+        - Made various adjustments to the client GUI's INI code (positioning, scaling, adding objects, etc.)
+        - Created SHP art that allows mappers to manually place down individual cells of (properly functional) low bridges
+        - Created SHP art for destroyed bridges in map editors, allowing mappers to placed repairable destroyed bridges
+        - Fixed various issues in TS GDI and Nod Campaign missions, as well as the first Tutorial mission
+    Iran:
+        - Created the Tiberian Sun spawner, which makes it possible to skip the in-game menu and as a result makes the client possible
+        - Hacked in new features and bugfixes for the game engine
+    CCHyper:
+        - Provided various high-resolution images the client's graphics (such as backgrounds, logos and icons)
+        - Hacked in new features and bugfixes for the game engine
+        - Provided other programmers with information on the game engine
+        - Updated mission names to add the mission number to the default saved game names
+    zzattack:
+        - Created the CNCMaps Renderer
+        - Provided high-quality map preview images at ra2maps.zzattack.org
+    OmegaBolt:
+        - Tested early builds of the client package and provided feedback on it
+    Aro:
+        - Helped with PR
+    E1 Elite:
+        - Applied the various improvements to version 6.00 that are listed under "E1 Elite's changes (2021-02-21)" in changelog.txt
+        - Applied various improvements and features to FinalSun through FSP (https://ppmforums.com/topic-47355/finalsun-101-patches)
+    tomsons26:
+        - Created the graphics for the info panel on the GDI and Nod sidebars.
+    Tuc0:
+        - Fixed the wobble bug for units with turrets
+        - Fixed palette colors of several structures
+        - Added a missing frame to the Tiberium Floater
+        - Fixed paved road tile layering issues with building bibshapes
+        - Adjusted the first cell of snow cliffs and water cliff (cliff09.sno, cliff11.sno and wcliff09.sno) to properly connect to clear and clear LAT tiles
+    Crimsonum:
+        - Wrote tool tips for checkboxes and drop-down menus of the Display and Game tabs of the client's options menu
+        - Helped with fixing a faulty lose condition in Nod mission 5
+        - Helped with fixing a faulty reveal trigger in Firestorm GDI mission 07
+        - Migrated the TS Client to second-stage updater to version 1.0.15
+        - Fixed some miscellaneous oversights like incorrect firing offsets, incorrect voice responses, etc.
+        - Fixed incorrect Start, LoopStart, and LoopEnd values on building animations in art.ini
+        - Replaced unsupported apostrophe characters in mission briefings
+        - Fixed incorrect or missing TechLevel, Owner and/or Crewed values on deployed vehicles in order to improve Survivor mechanics
+        - Replaced non-existent explosion that was specified by various debris animations with an existing one
+    Mah Boi:
+        - Made some changes to the client INIs and folder structure to remove dependency on the default theme
+        - Replaced all backslashes (\) in client INIs with forward slashes (/) for cross-platform support
+        - Fixed the position of the client's privacy policy notification "Got it" button
 
 Mappers:
-Aro
-Aurora196
-Crash
-j4m3sb0nd
-Ixith
-Rampastring
+    Aro
+    Aurora196
+    Crash
+    j4m3sb0nd
+    Ixith
+    Rampastring
+    Tuc0
 
 Projects / companies / etc.:
-
-Dawn of the Tiberium Age: For being a development and testing platform for the client
-Twisted Insurrection: For being a development and testing platform for the client
-Mental Omega: For being a testing platform for the client
-CnCNet Yuri's Revenge: For being a testing platform for the client
-Tiberian Sun: UMP Team (Aro, Lin Kuei Ominae, Chriz, Machine, Crimsonum, Revolutionary): For fixing a lot of INI coding related bugs in original Tiberian Sun
-Project Perfect Mod: For hosting classic C&C modding forums
-CnCNet team (dkeeton, FunkyFr3sh, hifi, Iran, neogrant, Rampastring, Tore): For providing an easy-to-use online gaming service for classic Command & Conquer and for hosting this package
-ModDB: For hosting this package
-Westwood Studios: For creating the original game
-Electronic Arts Inc.: For making Tiberian Sun freeware so that I'm able to distribute this package
+    XNA CnCNet Client        : The TS Client interface, which provides access to (auto) updates, multiplayer, skirmish, campaigns and many new game options
+                 Maintainers : Rampastring, Starkku, Kerbiter, Rans4ckeR, devo1929, SadPencil
+    ts-patches               : For providing patches for the game engine to add features, bugfixes and improve stability/performance/gameplay/graphics
+                Contributors : dkeeton, Iran, Rampastring, FunkyFr3sh, CCHyper, AlexB, hifi, E1 Elite
+    Dawn of the Tiberium Age : For being a development and testing platform for the client
+    Twisted Insurrection     : For being a development and testing platform for the client
+    Mental Omega             : For being a testing platform for the client
+    CnCNet Yuri's Revenge    : For being a testing platform for the client
+    Tiberian Sun : UMP       : For fixing a lot of INI coding related bugs in original Tiberian Sun
+                Contributors : Aro, Lin Kuei Ominae, Chriz, Machine, Crimsonum, Revolutionary
+    Project Perfect Mod      : For hosting classic C&C modding forums
+    CnCNet                   : For providing an easy-to-use online gaming service for classic Command & Conquer and for hosting this package
+                Core members : Tore, Rampastring, neogrant, Kerbiter, CCHyper, dkeeton
+    ModDB                    : For hosting this package
+    Westwood Studios         : For creating the original game
+    Electronic Arts Inc.     : For making Tiberian Sun freeware so that we're able to distribute this package
 
 Renderers:
-Aqrit (http://bitpatch.com/) for IE-DDRAW and DDWrapper
-hifi of CnCNet for TS-DDRAW
-DxWnd developers and FunkyFr3sh for DxWnd
+    FunkyFr3sh, Iran and hifi for CnC-DDRAW (https://github.com/FunkyFr3sh/cnc-ddraw)
+    narzoul for DDrawCompat (https://github.com/narzoul/DDrawCompat)
+    dkeeton, FunkyFr3sh and hifi for TS-DDRAW
+    Aqrit (http://bitpatch.com/) for IE-DDRAW and DDWrapper
+    DxWnd developers and FunkyFr3sh for DxWnd
 
 Also thanks to MonoGame's contributors for MonoGame, which the client makes use of.
 
