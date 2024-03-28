@@ -85,8 +85,6 @@ Renderers:
     FunkyFr3sh, Iran and hifi for CnC-DDRAW (https://github.com/FunkyFr3sh/cnc-ddraw)
     narzoul for DDrawCompat (https://github.com/narzoul/DDrawCompat)
     dkeeton, FunkyFr3sh and hifi for TS-DDRAW
-    Aqrit (http://bitpatch.com/) for IE-DDRAW and DDWrapper
-    DxWnd developers and FunkyFr3sh for DxWnd
 
 Also thanks to MonoGame's contributors for MonoGame, which the client makes use of.
 

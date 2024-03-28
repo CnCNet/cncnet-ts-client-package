@@ -23,7 +23,8 @@ Version 6.06
 	- Fixed: Re-declared high DPI support
 - Changed: Updated client second-stage updater to version 1.0.15 (Credits: Starkku, Rans4ckeR, and devo1929 for development; Crimsonum for migration).
 - Changed: The fix from version 6.00 to prevent units from getting stuck on the beach terraintype has been reverted (Credits: Crimsonum).
-- Changed: Updated the CnC-DDRAW from version 4.4.5.0 to 5.7.0.0 (Credits: FunkyFr3sh).
+- Changed: Updated the CnC-DDRAW renderer from version 4.4.5.0 to 6.3.0.0 (Credits: FunkyFr3sh).
+- Changed: Updated the DDrawCompat renderer from version 0.2.1 to 0.5.1 (Credits: narzoul).
 - Changed: The client now displays a different image and message when you start a mission with modified game files.
 - Changed: The FSP version was updated (23-03-2024) to allow FinalSun to load all of its mix files from folders (Credits: E1 Elite).
 - Changed: ECache00.mix and ECache01.mix have been renamed back to Temperat.mix and Snow.mix.
@@ -108,6 +109,7 @@ Version 6.06
 		- You now lose the game if Jake McNeil is your only unit left alive.
 		- GDI no longer attacks Jake McNeil after you've captured him.
 - Removed: Lin Kuei Ominae's large Kodiak (https://www.ppmforums.com/topic-41597-page-2).
+- Removed: The DxWnd, DDWrapper and IE-DDRAW renderers.
 
 Version 6.05k
 - Changed: Mission names have been updated to contain the mission number in the description for save file description clarity (Credits: CCHyper).
