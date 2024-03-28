@@ -28,10 +28,8 @@ Resources\Binaries\OpenGL\OpenTK.dll
 Resources\Binaries\OpenGL\Rampastring.XNAUI.dll
 Resources\Binaries\OpenGL\x64\libopenal.so.1
 Resources\Binaries\OpenGL\x64\libSDL2-2.0.so.0
-Resources\Binaries\OpenGL\x64\SDL2.dll
 Resources\Binaries\OpenGL\x86\libopenal.so.1
 Resources\Binaries\OpenGL\x86\libSDL2-2.0.so.0
-Resources\Binaries\OpenGL\x86\SDL2.dll
 Resources\Binaries\SharpDX.Direct3D11.dll
 Resources\Binaries\SharpDX.Direct3D9.dll
 Resources\Binaries\Windows\Rampastring.XNAUI.dll
