@@ -3,6 +3,12 @@ FinalSun v1.01 Patched Standalone:
 
 Changelog:
 
+Changes (2024-04-27):
+- Adds configurable palette filenames in FSData.ini.
+
+Changes (2024-04-25):
+- Adds OverrideMixes and IncludeMixes sections to FSData.ini.
+
 Changes (2024-03-23):
 - Mix loading updated.
 - Palette loading updated.
