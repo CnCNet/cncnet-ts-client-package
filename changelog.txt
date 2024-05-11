@@ -36,6 +36,7 @@ Version 6.06
 - Fixed: Made some changes to the client INIs and folder structure to remove dependency from the default theme (Credits: Mah Boi).
 - Fixed: Replaced all slashes in client INIs from \ to / for cross-platform support (Credits: Mah Boi).
 - Fixed: Adjusted the position of the client's privacy policy notification "Got it" button (Credits: Mah Boi).
+- Fixed: Ten special characters (most notably the apostrophe) had an excessive gap in front of them in mission briefings (Credits: Bittah Commander).
 - Fixed: Visceroids were disabled in the first Tutorial mission because they were allied to both GDI and Nod (Credits: Bittah Commander).
 - Fixed: TS GDI Campaign missions (Credits: Bittah Commander):
 	- GDI 2: Secure the Region:
