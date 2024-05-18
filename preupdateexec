@@ -1,6 +1,7 @@
 [Rename]
 MIX\ECache00.mix=MIX\Temperat.mix
 MIX\ECache01.mix=MIX\Snow.mix
+MIX\Expand00.mix=MIX\Local.mix
 credits.txt=credits.htm
 
 [Delete]
