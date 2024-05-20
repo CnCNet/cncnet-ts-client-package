@@ -113,6 +113,8 @@ Version 6.06
 		- The edges of the shroud glitched after capturing a GDI caused an area to be revealed.
 	- Nod 04 [FS]: Mutant Extermination:
 		- Mark the beacon on the radar every time the 2nd objective (return the truck to the beacon) is repeated.
+	- Nod 05 [FS]: Escape from CABAL:
+		- A cliff piece didn't properly connect to the water.
 - Removed: Lin Kuei Ominae's large Kodiak (https://www.ppmforums.com/topic-41597-page-2).
 - Removed: The DxWnd, DDWrapper and IE-DDRAW renderers.
 
