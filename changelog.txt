@@ -115,8 +115,11 @@ Version 6.06
 		- Mark the beacon on the radar every time the 2nd objective (return the truck to the beacon) is repeated.
 	- Nod 05 [FS]: Escape from CABAL:
 		- A cliff piece didn't properly connect to the water.
+	- Nod 06 [FS]: The Needs of the Many!
+		- GDI's radar is no longer disabled, but it now instead has Power=0 so that the player won't lose power after capturing it.
 - Removed: Lin Kuei Ominae's large Kodiak (https://www.ppmforums.com/topic-41597-page-2).
 - Removed: The DxWnd, DDWrapper and IE-DDRAW renderers.
+- Known Issue: In "Nod 06 [FS]: The Needs of the Many!" GDI's aircraft don't respond to any of the villages being attacked and this is an unintentional side-effect of guard_mode_patch from ts-patches.
 
 Version 6.05k
 - Changed: Mission names have been updated to contain the mission number in the description for save file description clarity (Credits: CCHyper).
