@@ -118,6 +118,10 @@ Version 6.06
 		- A cliff piece didn't properly connect to the water.
 	- Nod 06 [FS]: The Needs of the Many!
 		- GDI's radar is no longer disabled, but it now instead has Power=0 so that the player won't lose power after capturing it.
+	- Nod 07 [FS]: Determined Retribution
+		- The first reinforcements that you received after fixing the eastern and western bridge were swapped and moved across the map to the end of the other bridge.
+		- The Firestorm Wall and Laser Fence surrounding the CABAL Core were deactivated because they didn't have any power.
+		- You couldn't hear all of CABAL's taunts at the end of the mission if the game speed was higher than "Slow" (20 FPS), so the delay between them has been increased to make sure that they can all be heard at 60 FPS.
 - Removed: Lin Kuei Ominae's large Kodiak (https://www.ppmforums.com/topic-41597-page-2).
 - Removed: The DxWnd, DDWrapper and IE-DDRAW renderers.
 - Known Issue: In "Nod 06 [FS]: The Needs of the Many!" GDI's aircraft don't respond to any of the villages being attacked and this is an unintentional side-effect of guard_mode_patch from ts-patches.
