@@ -37,6 +37,7 @@ Version 6.06
 - Fixed: Ten special characters (most notably the apostrophe) had an excessive gap in front of them in mission briefings (Credits: Bittah Commander).
 - Fixed: Visceroids were disabled in the first Tutorial mission because they were allied to both GDI and Nod (Credits: Bittah Commander).
 - Fixed: The BIGBLUE animation is no longer remapable (it now looks the same as BIGBLUE3) and it no longer changes its colors or brightness after you load a saved game.
+- Fixed: The announcement voice didn't switch from CABAL to EVA in Nod Firestorm missions 07-09 because SpeechSide wasn't working (Credits: Rampastring).
 - Fixed: TS GDI Campaign missions (Credits: Bittah Commander):
 	- GDI 2: Secure the Region:
 		- Visceroids and Nod are no longer allied to one another.
