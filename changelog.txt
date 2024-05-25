@@ -109,6 +109,9 @@ Version 6.06
 		- You didn't lose the game when Jake McNeil died until you lost all Nod units as well.
 		- You now lose the game if Jake McNeil is your only unit left alive.
 		- GDI no longer attacks Jake McNeil after you've captured him.
+- Fixed: FS GDI Campaign missions (Credits: Bittah Commander):
+	- GDI 09 [FS]: Core of the Problem:
+		- Because this map only has AI triggers for Medium difficulty, they have now been enabled for easy and hard difficulty as well to make the AI more active.
 - Fixed: FS Nod Campaign missions (Credits: Bittah Commander):
 	- Nod 03 [FS]: Tratos' Final Act:
 		- The edges of the shroud glitched after capturing a GDI caused an area to be revealed.
@@ -122,6 +125,8 @@ Version 6.06
 		- The first reinforcements that you received after fixing the eastern and western bridge were swapped and moved across the map to the end of the other bridge.
 		- The Firestorm Wall and Laser Fence surrounding the CABAL Core were deactivated because they didn't have any power.
 		- You couldn't hear all of CABAL's taunts at the end of the mission if the game speed was higher than "Slow" (20 FPS), so the delay between them has been increased to make sure that they can all be heard at 60 FPS.
+	- Nod 09 [FS]: Core of the Problem:
+		- Because this map only has AI triggers for Medium difficulty, these have now been enabled for easy and hard difficulty as well to make the AI more active.
 - Removed: Lin Kuei Ominae's large Kodiak (https://www.ppmforums.com/topic-41597-page-2).
 - Removed: The DxWnd, DDWrapper and IE-DDRAW renderers.
 - Known Issue: In "Nod 06 [FS]: The Needs of the Many!" GDI's aircraft don't respond to any of the villages being attacked and this is an unintentional side-effect of guard_mode_patch from ts-patches.
