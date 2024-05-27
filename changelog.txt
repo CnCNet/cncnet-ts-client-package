@@ -112,6 +112,8 @@ Version 6.06
 - Fixed: FS GDI Campaign missions (Credits: Bittah Commander):
 	- GDI 09 [FS]: Core of the Problem:
 		- Because this map only has AI triggers for Medium difficulty, they have now been enabled for easy and hard difficulty as well to make the AI more active.
+		- A piece of an incorrectly placed cliff was visible through the shroud at the start of the mission.
+		- The timings have been adjusted for the Core Defender activation video and CABAL voice line so that the Core Defender won't already have un-deployed by the time those start playing on the "Faster" game speed (60 FPS).
 - Fixed: FS Nod Campaign missions (Credits: Bittah Commander):
 	- Nod 03 [FS]: Tratos' Final Act:
 		- The edges of the shroud glitched after capturing a GDI caused an area to be revealed.
@@ -136,7 +138,7 @@ Version 6.06
 		- Because this map only has AI triggers for Medium difficulty, these have now been enabled for easy and hard difficulty as well to make the AI more active.
 		- The Rocket Infantry that you receive as reinforcements at the start now scatter after spawning, instead of standing on the same sub-cell and overlapping one another.
 		- Multiple of CABAL's bases (including all Obelisks of Light on the map and most SAM-Sites) started with insufficient power to function, so 2 Advanced Power Plants were added to compensate.
-		- The timings have been adjusted for the Core Defender activation video and CABAL voice line so that the Core Defender won't already have un-deployed by the time those start playing when playing on the "Faster" game speed (60 FPS).
+		- The timings have been adjusted for the Core Defender activation video and CABAL voice line so that the Core Defender won't already have un-deployed by the time those start playing on the "Faster" game speed (60 FPS).
 - Removed: Lin Kuei Ominae's large Kodiak (https://www.ppmforums.com/topic-41597-page-2).
 - Removed: The DxWnd, DDWrapper and IE-DDRAW renderers.
 - Known Issue: In "Nod 06 [FS]: The Needs of the Many!" GDI's aircraft don't respond to any of the villages being attacked and this is an unintentional side-effect of guard_mode_patch from ts-patches.
