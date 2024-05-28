@@ -110,6 +110,8 @@ Version 6.06
 		- You now lose the game if Jake McNeil is your only unit left alive.
 		- GDI no longer attacks Jake McNeil after you've captured him.
 - Fixed: FS GDI Campaign missions (Credits: Bittah Commander):
+	- GDI 08 [FS]: Factory Recall:
+		- Moving a unit onto one of the cells next to the walls surrounding imprisoned civilians now causes alternating voice lines to play of the civilians calling out for help.
 	- GDI 09 [FS]: Core of the Problem:
 		- Because this map only has AI triggers for Medium difficulty, they have now been enabled for easy and hard difficulty as well to make the AI more active.
 		- A piece of an incorrectly placed cliff was visible through the shroud at the start of the mission.
