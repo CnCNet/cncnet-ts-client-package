@@ -1,24 +1,25 @@
 Version 6.06
 - Added: Quick Match (Credits: xme).
 - Added: Support for 702 waypoints in FinalSun dropdown menus (Credits: E1 Elite).
+- Added: Veteran Balance Patch v2.50 is now included as a game option in skirmish and multiplayer.
 - Changed: Updated client to latest develop version (build #880, commit 0083225) (Credits: Kerbiter, SadPencil, Rans4ckeR, Starkku, MahBoi, ayylmao, devo1929, Rampastring, Belonit, hejiajun107, Crimsonum, and neogrant for client development; Crimsonum for migration and some new textures). Changes include:
-	- Added: Full localization support
-	- Added: Option to add maps into favorites
+	- Added: Full localization support.
+	- Added: Option to add maps into favorites.
 	- Added: "Stretch Videos" checkbox on the client's Options menu's Display tab.
-	- Changed: Reworded privacy notice
-	- Changed: Discord handler is now disposed on client exit
-	- Changed: Updated client updater
-	- Fixed: Another instance of cached file would set path trying to create file as directory
-	- Fixed: Improved game lobby launch game button state updating
-	- Fixed: Path for cached files used by settings was incorrect
-	- Fixed: CnCNet options game list panel issues
-	- Fixed: The main menu music track still played after the client had closed
-	- Fixed: The volume level showed as 10 even though it was set to 0
-	- Fixed: Improved cross-platform support
-	- Removed: Several obsolete DLL files
+	- Changed: Reworded privacy notice.
+	- Changed: Discord handler is now disposed on client exit.
+	- Changed: Updated client updater.
+	- Fixed: Another instance of cached file would set path trying to create file as directory.
+	- Fixed: Improved game lobby launch game button state updating.
+	- Fixed: Path for cached files used by settings was incorrect.
+	- Fixed: CnCNet options game list panel issues.
+	- Fixed: The main menu music track still played after the client had closed.
+	- Fixed: The volume level showed as 10 even though it was set to 0.
+	- Fixed: Improved cross-platform support.
+	- Removed: Several obsolete DLL files.
 - Changed: Updated client launcher to version 2.0.6 (Credits: Rampastring, Rans4ckeR, neogrant, SadPencil, Kerbiter, Starkku, and devo1929 for development; Crimsonum for migration). Changes include:
-	- Fixed: Refined UI to keep the buttons always centered
-	- Fixed: Re-declared high DPI support
+	- Fixed: Refined UI to keep the buttons always centered.
+	- Fixed: Re-declared high DPI support.
 - Changed: Updated client second-stage updater to version 1.0.15 (Credits: Starkku, Rans4ckeR, and devo1929 for development; Crimsonum for migration).
 - Changed: The fix from version 6.00 to prevent units from getting stuck on the beach terraintype has been reverted (Credits: Crimsonum).
 - Changed: Updated the CnC-DDRAW renderer from version 4.4.5.0 to 6.3.0.0 (Credits: FunkyFr3sh).
