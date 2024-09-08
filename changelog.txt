@@ -94,23 +94,26 @@ Version 6.06
 		- Tratos now spawns with green colors and changes to red only after you capture him.
 		- The mutants will no longer fire at Tratos when he surrenders.
 		- The edge of the srhoud surrounding the bottom Light Tower no longer looks blocky at the start of the mission.
-	- Nod 6C: Locate and Capture Umagon (B)
+	- Nod 6C: Locate and Capture Umagon (B):
 		- It was possible to win the mission by destroying the first train after Umagon was already unloaded from it.
 		- Destroying the last train after Umagon has already boarded it no longer causes you to lose the mission.
-	- Nod 9A: Re-establish Nod Presence
+	- Nod 9A: Re-establish Nod Presence:
 		- Nod is no longer allied to Visceroids (Visceroids already weren't allied to Nod).
-	- Nod 9B: Protect the Waste Convoys
+	- Nod 9B: Protect the Waste Convoys:
 		- You can no longer select and control the weed eaters once they start moving to exit the map.
 		- An out of place cliff corner has been removed.
 		- The screen is now positioned on your starting units at the start of the mission, instead of in the shrouded center of the map.
-	- Nod 10:
+	- Nod 10: Destroy the Mammoth Mk.II Prototype:
 		- The mission number was changed from "10A" to just "10" because it's too long for the default saved game name otherwise and no "10B" exists anyhow.
 		- The Upgrade Centers (referred to as Comm Centers in the briefing) that you need to infiltrate have been replaced with Radars.
 		- During the weapon test sequence the Mammoth Mk.II could end up indefinitely firing at the ground, leaving the mission in a permanently locked state.
-	- Nod 11:
+	- Nod 11: Capture Jake McNeil:
 		- You didn't lose the game when Jake McNeil died until you lost all Nod units as well.
 		- You now lose the game if Jake McNeil is your only unit left alive.
 		- GDI no longer attacks Jake McNeil after you've captured him.
+	- Nod 12A: A New Beginning:
+		- The ICBM Launchers jumped up by a cell when you deployed them and then disappeared after you un-deployed them again, causing you to fail the mission.
+	
 - Fixed: FS GDI Campaign missions (Credits: Bittah Commander):
 	- GDI 08 [FS]: Factory Recall:
 		- Moving a unit onto one of the cells next to the walls surrounding imprisoned civilians now causes alternating voice lines to play of the civilians calling out for help.
