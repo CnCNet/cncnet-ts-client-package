@@ -40,6 +40,8 @@ Version 6.06
 - Fixed: The BIGBLUE animation is no longer remapable (it now looks the same as BIGBLUE3) and it no longer changes its colors or brightness after you load a saved game.
 - Fixed: The announcement voice didn't switch from CABAL to EVA in Nod Firestorm missions 07-09 because SpeechSide wasn't working (Credits: Rampastring).
 - Fixed: Docked aircraft failed to follow scripted actions (Credits: Rampastring).
+- Fixed: A few global medium AI triggers had incorrect teams and/or conditions (Credits: Crimsonum).
+- Fixed: Incorrect tech level on various Firestorm global AI triggers (Credits: Crimsonum).
 - Fixed: TS GDI Campaign missions (Credits: Bittah Commander):
 	- GDI 2: Secure the Region:
 		- Visceroids and Nod are no longer allied to one another.
