@@ -15,9 +15,9 @@ Maps/Custom/*.zip
 Maps/Custom/*.map
 Maps/Custom/*.png
 
-Map Editor/FinalSun.ini
-Map Editor/finalsunlog.txt
-Map Editor/*.log
+Map Editor/FinalSun/FinalSun.ini
+Map Editor/FinalSun/finalsunlog.txt
+Map Editor/FinalSun/*.log
 
 Client/
 Debug/

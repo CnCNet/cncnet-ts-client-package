@@ -5,12 +5,126 @@ MIX\Expand00.mix=MIX\Local.mix
 credits.txt=credits.htm
 
 [Delete]
+Map Editor\aqrit.cfg
+Map Editor\ddraw.dll
+Map Editor\FinalSun.dat
+Map Editor\FinalSun.exe
+Map Editor\FinalSun.ini
+Map Editor\finalsunlog.txt
+Map Editor\FSData.ini
+Map Editor\FSLanguage.ini
+Map Editor\FSP.dll
+Map Editor\FSP.log
+Map Editor\FSunLib.dll
+Map Editor\Map Editor.bat
+Map Editor\Map Renderer.bat
+Map Editor\marble.mix
+Map Editor\StdMapTS.ini
+Map Editor\Syringe.exe
+Map Editor\syringe.log
+Map Editor\tips.deu
+Map Editor\tips.eng
+Map Editor\tips.nl
+Map Editor\tips.swe
+Map Editor\_battle.ini
+Map Editor\AmbCalc\AmbCalc.exe
+Map Editor\AmbCalc\AmbCalc.txt
+Map Editor\Help\index.htm
+Map Editor\Help\content\edito.htm
+Map Editor\Help\content\editt.htm
+Map Editor\Help\content\faq.htm
+Map Editor\Help\content\formats.css
+Map Editor\Help\content\left.htm
+Map Editor\Help\content\license.htm
+Map Editor\Help\content\main.htm
+Map Editor\Help\content\maptutorial.htm
+Map Editor\Help\content\requirements.htm
+Map Editor\Help\content\sunedit.htm
+Map Editor\Help\content\triggers.htm
+Map Editor\Help\content\tteam.htm
+Map Editor\Help\content\tutbridge.htm
+Map Editor\Help\content\tutconv.htm
+Map Editor\Help\content\tutlight.htm
+Map Editor\Help\content\tutmp.htm
+Map Editor\Help\content\tutsize.htm
+Map Editor\Help\content\tutsp.htm
+Map Editor\Help\content\tutt.htm
+Map Editor\Help\content\tuttrig1.htm
+Map Editor\Help\content\tuttrig2.htm
+Map Editor\Help\content\tuttrig3.htm
+Map Editor\Help\content\tuttrig4.htm
+Map Editor\Help\content\tuttrig5.htm
+Map Editor\Help\content\tuttun.htm
+Map Editor\Help\content\tutwayp1.htm
+Map Editor\Help\content\userinterface.htm
+Map Editor\Help\content\whatsthis.htm
+Map Editor\Help\content\pics\bar.jpg
+Map Editor\Help\content\pics\bar2.jpg
+Map Editor\Help\content\pics\cellt.jpg
+Map Editor\Help\content\pics\triggers.jpg
+Map Editor\Help\content\pics\tun1.jpg
+Map Editor\Help\content\pics\tun2.jpg
+Map Editor\Help\content\pics\tutorial1_0.jpg
+Map Editor\Help\content\pics\tutorial1_1.jpg
+Map Editor\Help\content\pics\tutorial1_10.jpg
+Map Editor\Help\content\pics\tutorial1_11.jpg
+Map Editor\Help\content\pics\tutorial1_2.jpg
+Map Editor\Help\content\pics\tutorial1_3.jpg
+Map Editor\Help\content\pics\tutorial1_4.jpg
+Map Editor\Help\content\pics\tutorial1_5.jpg
+Map Editor\Help\content\pics\tutorial1_6.jpg
+Map Editor\Help\content\pics\tutorial1_7.jpg
+Map Editor\Help\content\pics\tutorial1_8.jpg
+Map Editor\Help\content\pics\tutorial1_9.jpg
+Map Editor\Help\content\pics\ui.jpg
+Map Editor\Help\content\pics\wayp.jpg
+Map Editor\MapResize\Info.txt
+Map Editor\MapResize\MapResize.exe
+Map Editor\MapResize\NLog.dll
+Map Editor\MIX\extra00.mix
+Map Editor\ReadmeDocs\ddwrapper_readme.html
+Map Editor\ReadmeDocs\FA2spReadme.txt
+Map Editor\ReadmeDocs\FinalSunPatches.txt
+Map Editor\ReadmeDocs\FSP.txt
+Map Editor\ReadmeDocs\readme marble.doc
+Map Editor\ReadmeDocs\readme.txt
+Map Editor\Scripts\Add Reveal Map Debug Trigger.fscript
+Map Editor\Scripts\After Glow.fscript
+Map Editor\Scripts\Create Afternoon Lighting.fscript
+Map Editor\Scripts\Create Evening Lighting.fscript
+Map Editor\Scripts\Create Morning Lighting.fscript
+Map Editor\Scripts\Create Night Lighting.fscript
+Map Editor\Scripts\Day Night Loop (TS) sno.fscript
+Map Editor\Scripts\Day-Night Loop.fscript
+Map Editor\Scripts\Enlarge Map by 100x100.fscript
+Map Editor\Scripts\Enlarge Map by 50x50.fscript
+Map Editor\Scripts\InVisLmps.fscript
+Map Editor\Scripts\List general map stats.fscript
+Map Editor\Scripts\List Objects.fscript
+Map Editor\Scripts\ListFilesInDirectory.exe
+Map Editor\Scripts\Make all aircraft recruitable.fscript
+Map Editor\Scripts\Make all infantry recruitable.fscript
+Map Editor\Scripts\Make all units recruitable.fscript
+Map Editor\Scripts\MP Move 4 starting points into corners.fscript
+Map Editor\Scripts\output.txt
+Map Editor\Scripts\Random Aircraft facing.fscript
+Map Editor\Scripts\Random Infantry Facing.fscript
+Map Editor\Scripts\Random Unit Facing.fscript
+Map Editor\Scripts\Resize.fscript
 
 [RenameFolder]
 
 [RenameAndMerge]
 
 [DeleteFolderIfEmpty]
+Map Editor\AmbCalc
+Map Editor\Help\content\pics
+Map Editor\Help\content
+Map Editor\Help\
+Map Editor\MapResize
+Map Editor\MIX
+Map Editor\ReadmeDocs
+Map Editor\Scripts
 
 [ForceDeleteFolder]
 
