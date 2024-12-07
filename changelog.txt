@@ -29,6 +29,8 @@ Version 6.66
 - Changed: The FSP version was updated (23-03-2024) to allow FinalSun to load all of its mix files from folders (Credits: E1 Elite).
 - Changed: ECache00.mix and ECache01.mix have been renamed back to Temperat.mix and Snow.mix.
 - Changed: The buttons from the "Extra" menu have been moved to the bottom of the main menu and were scaled down (Credits: Bittah Commander).
+- Changed: All SHPs from IsoTemp.mix/IsoSnow.mix have been moved to Temperat.mix/Snow.mix and DemandLoad, DemandLoadBuildup and FreeBuildup have been removed from everything in Art.ini (Credits: Bittah Commander).
+- Changed: Ammo01.shp, wake1.shp and wake2.shp have been moved from Tem.mix/Sno.mix to Temperat.mix/Snow.mix (Credits: Bittah Commander).
 - Fixed: Some minor misc. oversights like incorrect firing offsets, incorrect voice responses, etc. (Credits: Crimsonum).
 - Fixed: Incorrect Start, LoopStart, and LoopEnd values on building animations in art.ini (Credits: Crimsonum).
 - Fixed: Unsupported apostrophe characters in mission briefings have been replaced (Credits: Crimsonum).
