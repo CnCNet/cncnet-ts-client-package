@@ -1,9 +1,9 @@
-Version 6.66
+Version 7.00
 - Added: Quick Match (Credits: xme).
 - Added: Support for 702 waypoints in FinalSun dropdown menus (Credits: E1 Elite).
 - Added: Veteran Balance Patch v2.50 is now included as a game option in skirmish and multiplayer.
 - Added: World Altering Editor has been added as the default map editor (Credits: Rampastring, ZivDero, MortonPL, Shush, Starkku, Crimsonum, Bittah Commander).
-- Changed: Updated client to latest develop version (build #880, commit 0083225) (Credits: Kerbiter, SadPencil, Rans4ckeR, Starkku, MahBoi, ayylmao, devo1929, Rampastring, Belonit, hejiajun107, Crimsonum, and neogrant for client development; Crimsonum for migration and some new textures). Changes include:
+- Changed: Updated XNA CnCNet Client to version 2.11.2.0 (Credits: Kerbiter, SadPencil, Rans4ckeR, Starkku, MahBoi, ayylmao, devo1929, Rampastring, Belonit, hejiajun107, Crimsonum, and neogrant for client development; Crimsonum for migration and some new textures). Changes include:
 	- Added: Full localization support.
 	- Added: Option to add maps into favorites.
 	- Added: "Stretch Videos" checkbox on the client's Options menu's Display tab.
