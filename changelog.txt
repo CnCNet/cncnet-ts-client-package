@@ -4,7 +4,7 @@ Version 7.00
 - Added: Veteran Balance Patch v2.50 is now included as a game option in skirmish and multiplayer.
 - Added: World Altering Editor has been added as the default map editor (Credits: Rampastring, ZivDero, MortonPL, Shush, Starkku, Crimsonum, Bittah Commander).
 - Added: A Russian language option for the client (Credits: mah_boi).
-- Changed: Updated XNA CnCNet Client to version 2.11.2.0 (Credits: Kerbiter, SadPencil, Rans4ckeR, Starkku, MahBoi, ayylmao, devo1929, Rampastring, Belonit, hejiajun107, Crimsonum, and neogrant for client development; Crimsonum for migration and some new textures). Changes include:
+- Changed: Updated XNA CnCNet Client to version 2.11.3.0 (Credits: Kerbiter, SadPencil, Rans4ckeR, Starkku, MahBoi, ayylmao, devo1929, Rampastring, Belonit, hejiajun107, Crimsonum, and neogrant for client development; Crimsonum for migration and some new textures). Changes include:
 	- Added: Full localization support.
 	- Added: Option to add maps into favorites.
 	- Added: "Stretch Videos" checkbox on the client's Options menu's Display tab.
