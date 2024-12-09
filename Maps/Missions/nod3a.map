@@ -48,9 +48,6 @@ IonStorms=no
 Meteorites=no
 Visceroids=no
 
-[Briefing]
-
-
 [Basic]
 NextScenario=Maps\Missions\GDI2A.map
 AltNextScenario=Maps\Missions\GDI9C.MAP

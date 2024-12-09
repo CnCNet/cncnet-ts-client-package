@@ -32,6 +32,7 @@ LightGreenTint=0.05
 LightBlueTint=0.01
 
 [HMEC]
+Nominal=yes
 TechLevel=-1
 
 [MCV]
@@ -71,9 +72,6 @@ LightBlueTint=0.01
 
 [4TNK]
 Crewed=no
-
-[HMEC]
-Nominal=yes
 
 [SpecialFlags]
 TiberiumGrows=yes
