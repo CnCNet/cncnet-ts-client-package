@@ -48,6 +48,7 @@ Version 7.00
 - Fixed: Docked aircraft failed to follow scripted actions (Credits: Rampastring).
 - Fixed: A few global medium AI triggers had incorrect teams and/or conditions (Credits: Crimsonum).
 - Fixed: Incorrect tech level on various Firestorm global AI triggers (Credits: Crimsonum).
+- Fixed: Trees would appear as their shadow frame in blue colors whenever they happened to end up with exactly 1 HP remaining of their health (Credits: E1 Elite).
 - Fixed: TS GDI Campaign missions (Credits: Bittah Commander):
 	- GDI 2: Secure the Region:
 		- Visceroids and Nod are no longer allied to one another.
