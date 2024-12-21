@@ -1,9 +1,0 @@
-# Ignore everything in this directory
-*
-
-# But do not ignore .gitignore file itself
-!.gitignore
-
-# Do not ignore the files we want to track
-!UpdateMirrors.ini
-!MapEditorLauncher.exe
