@@ -26,8 +26,8 @@ Version 7.00
 	- Added: Unblock Internet files on startup.
 	- Changed: New WPF-based message box with high DPI support and auto resizing.
 - Changed: The fix from version 6.00 to prevent units from getting stuck on the beach terraintype has been reverted (Credits: Crimsonum).
-- Changed: Updated the CnC-DDRAW renderer from version 4.4.5.0 to 6.3.0.0 (Credits: FunkyFr3sh).
-- Changed: Updated the DDrawCompat renderer from version 0.2.1 to 0.5.1 (Credits: narzoul).
+- Changed: Updated the CnC-DDRAW renderer from version 4.4.5.0 to 7.0 (Credits: FunkyFr3sh).
+- Changed: Updated the DDrawCompat renderer from version 0.2.1 to 0.5.4 (Credits: narzoul).
 - Changed: The client now displays a different image and message when you start a mission with modified game files.
 - Changed: The FSP version was updated (23-03-2024) to allow FinalSun to load all of its mix files from folders (Credits: E1 Elite).
 - Changed: ECache00.mix and ECache01.mix have been renamed back to Temperat.mix and Snow.mix.
@@ -59,7 +59,7 @@ Version 7.00
 	- GDI 2: Secure the Region:
 		- Visceroids and Nod are no longer allied to one another.
 		- GDI is no longer allied to Visceroids (you could only attack them by force-firing, but they still attacked you normally).
-	- GDI 3A: Locate and Secure Crash Site
+	- GDI 3A: Locate and Secure Crash Site:
 		- Visceroids and GDI are no longer allied to one another.
 		- Nod is no longer allied to Visceroids (Visceroids already weren't allied to Nod).
 	- GDI 3B: Capture the Train Station:
@@ -89,7 +89,7 @@ Version 7.00
 	- GDI 9D: Destroy the Chemical Missile Plant:
 		- Added a missing ramp piece.
 		- GDI, Mutants and Nod are no longer allied to Visceroids (Visceroids already weren't allied to them).
-	- GDI 10B: Destroy the Prototype Facility (B)
+	- GDI 10B: Destroy the Prototype Facility (B):
 		- Removed a floating tile that was visible through the shroud.
 	- GDI 11: Weather the Storm:
 		- The bottom-left edge of the map no longer looks glitched.
@@ -108,7 +108,7 @@ Version 7.00
 		- Visceroids and Nod are no longer allied to one another.
 		- Tratos now spawns with green colors and changes to red only after you capture him.
 		- The mutants will no longer fire at Tratos when he surrenders.
-		- The edge of the srhoud surrounding the bottom Light Tower no longer looks blocky at the start of the mission.
+		- The edge of the shroud surrounding the bottom Light Tower no longer looks blocky at the start of the mission.
 	- Nod 6C: Locate and Capture Umagon (B):
 		- It was possible to win the mission by destroying the first train after Umagon was already unloaded from it.
 		- Destroying the last train after Umagon has already boarded it no longer causes you to lose the mission.
@@ -138,14 +138,15 @@ Version 7.00
 		- The timings have been adjusted for the Core Defender activation video and CABAL voice line so that the Core Defender won't already have un-deployed by the time those start playing on the "Faster" game speed (60 FPS).
 - Fixed: FS Nod Campaign missions (Credits: Bittah Commander):
 	- Nod 03 [FS]: Tratos' Final Act:
-		- The edges of the shroud glitched after capturing a GDI caused an area to be revealed.
+		- The edges of the shroud glitched after capturing a GDI radar caused an area to be revealed.
 	- Nod 04 [FS]: Mutant Extermination:
 		- Mark the beacon on the radar every time the 2nd objective (return the truck to the beacon) is repeated.
 	- Nod 05 [FS]: Escape from CABAL:
 		- A cliff piece didn't properly connect to the water.
-	- Nod 06 [FS]: The Needs of the Many!
+	- Nod 06 [FS]: The Needs of the Many!:
+		- GDI's aircraft didn't respond to any of the villages being attacked.
 		- GDI's radar is no longer disabled, but it now instead has Power=0 so that the player won't lose power after capturing it.
-	- Nod 07 [FS]: Determined Retribution
+	- Nod 07 [FS]: Determined Retribution:
 		- The first reinforcements that you received after fixing the eastern and western bridge were swapped and moved across the map to the end of the other bridge.
 		- The Firestorm Wall and Laser Fence surrounding the CABAL Core were deactivated because they didn't have any power.
 		- You couldn't hear all of CABAL's taunts at the end of the mission if the game speed was higher than "Slow" (20 FPS), so the delay between them has been increased to make sure that they can all be heard at 60 FPS.
@@ -163,7 +164,6 @@ Version 7.00
 		- The timings have been adjusted for the Core Defender activation video and CABAL voice line so that the Core Defender won't already have un-deployed by the time those start playing on the "Faster" game speed (60 FPS).
 - Removed: Lin Kuei Ominae's large Kodiak (https://www.ppmforums.com/topic-41597-page-2).
 - Removed: The DxWnd, DDWrapper and IE-DDRAW renderers.
-- Known Issue: In "Nod 06 [FS]: The Needs of the Many!" GDI's aircraft don't respond to any of the villages being attacked and this is an unintentional side-effect of guard_mode_patch from ts-patches.
 
 Version 6.05k
 - Changed: Mission names have been updated to contain the mission number in the description for save file description clarity (Credits: CCHyper).
