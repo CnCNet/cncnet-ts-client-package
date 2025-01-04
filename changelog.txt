@@ -1,3 +1,13 @@
+Version 7.01
+- Changed: Updated XNA CnCNet Client to version 2.11.6.0 (Credits: neogrant, SadPencil, mah_boi, Starkku). Changes include:
+    - Added: Right click context menu in game listings.
+    - Added: You can now indicate what player skill level you would like to join your game when hosting a game.
+    - Fixed: An inconsistency occurs about map filename causes a desync. OriginalFilename is now only written for non-multiplayer games.
+    - Fixed: There was an error when upgrading the client with some files being read-only. The read-only property is now removed before deleting files.
+    - Fixed: Game lobbies weren't always created properly when a translation was loaded.
+    - Fixed: The private messaging window was not being initialized for the multiplayer game lobby.
+    - Fixed: Read-only files couldn't be copied during the 2nd stage of an update.
+	
 Version 7.00
 - Added: Quick Match (Credits: xme).
 - Added: Support for 702 waypoints in FinalSun dropdown menus (Credits: E1 Elite).
