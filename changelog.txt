@@ -7,7 +7,9 @@ Version 7.01
     - Fixed: Game lobbies weren't always created properly when a translation was loaded.
     - Fixed: The private messaging window was not being initialized for the multiplayer game lobby.
     - Fixed: Read-only files couldn't be copied during the 2nd stage of an update.
-	
+- Changed: Updated client launcher to version 2.0.9 (Credits: SadPencil, mah_boi). Changes include:
+    - Fixed: There was an error when unblocking a read-only file. Now the launcher will disable read-only property for files before unblocking them.
+
 Version 7.00
 - Added: Quick Match (Credits: xme).
 - Added: Support for 702 waypoints in FinalSun dropdown menus (Credits: E1 Elite).
