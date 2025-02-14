@@ -12,6 +12,9 @@ Version 7.02
     - Fixed: Map information labels not being updated in certain cases.
     - Fixed: Issues when running 2.11.0.0+ in Wine.
     - Fixed: PickRandomMap not working with Favourited map list.
+- Fixed: Nod 08 [FS]: Harvester Hunting (Credits: Bittah Commander):
+	- CABAL's bases didn't have enough power for the structures that were built later on.
+	- Two fail-safe triggers were added to make the player win the mission in case the original win trigger fails.
 
 Version 7.01
 - Changed: Updated XNA CnCNet Client to version 2.11.6.0 (Credits: neogrant, SadPencil, mah_boi, Starkku). Changes include:
