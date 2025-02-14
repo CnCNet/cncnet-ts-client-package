@@ -1,3 +1,18 @@
+Version 7.02
+- Changed: Updated XNA CnCNet Client to version 2.11.7.0 (Credits: neogrant, SadPencil, MortonPL, 11EJDE11, mah_boi, remgodow). Changes include:
+    - Added: Show map preview in game preview.
+    - Added: Allow disabling specific sides for human or AI players only.
+    - Added: Allow user-defined network settings via NetworkDefinitions.local.ini.
+    - Fixed: Height of game info panel.
+    - Fixed: Buggy TS compatibility message box text.
+    - Fixed: Incorrect hash calculation for files in nested directories.
+    - Fixed: Search untranslated map name when loading preview.
+    - Fixed: Crash when clicking favorite button while no map is selected.
+    - Fixed: Skirmish lobby selecting wrong map when the list is sorted.
+    - Fixed: Map information labels not being updated in certain cases.
+    - Fixed: Issues when running 2.11.0.0+ in Wine.
+    - Fixed: PickRandomMap not working with Favourited map list.
+
 Version 7.01
 - Changed: Updated XNA CnCNet Client to version 2.11.6.0 (Credits: neogrant, SadPencil, mah_boi, Starkku). Changes include:
     - Added: Right click context menu in game listings.
