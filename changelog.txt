@@ -1,5 +1,7 @@
 Version 7.03
- - Fixed: The height of the chatbox persisted after joining a CnCNet or LAN game lobby, leaving that game lobby, and then hosting your own game lobby (Credits: Bittah Commander).
+ - Fixed: Client GUI issues (Credits: Bittah Commander):
+	- The height of the chatbox persisted after joining a CnCNet or LAN game lobby, leaving that game lobby, and then hosting your own game lobby.
+	- The items in the CnCNet/LAN Game Lobby's player panel weren't aligned and spaced apart properly.
  - Fixed: Issues on Skirmish maps (Credits: Bittah Commander):
 	- Grand Canyon: Fixed a visual shore issue.
 	- A River Runs Near It: Fixed some visual shore issues and removed an unrepairable invisible destroyed bridge.
