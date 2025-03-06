@@ -1,11 +1,3 @@
-Version 7.03
- - Fixed: Client GUI issues (Credits: Bittah Commander):
-	- The height of the chatbox persisted after joining a CnCNet or LAN game lobby, leaving that game lobby, and then hosting your own game lobby.
-	- The items in the CnCNet/LAN Game Lobby's player panel weren't aligned and spaced apart properly.
- - Fixed: Issues on Skirmish maps (Credits: Bittah Commander):
-	- Grand Canyon: Fixed a visual shore issue.
-	- A River Runs Near It: Fixed some visual shore issues and removed an unrepairable invisible destroyed bridge.
-
 Version 7.02
 - Changed: Updated XNA CnCNet Client to version 2.11.7.0 (Credits: neogrant, SadPencil, MortonPL, 11EJDE11, mah_boi, remgodow). Changes include:
     - Added: Show map preview in game preview.
@@ -20,6 +12,13 @@ Version 7.02
     - Fixed: Map information labels not being updated in certain cases.
     - Fixed: Issues when running 2.11.0.0+ in Wine.
     - Fixed: PickRandomMap not working with Favourited map list.
+ - Fixed: Client GUI issues (Credits: Bittah Commander):
+	- The height of the chatbox persisted after joining a CnCNet or LAN game lobby, leaving that game lobby, and then hosting your own game lobby.
+	- The items in the CnCNet/LAN Game Lobby's player panel weren't aligned and spaced apart properly.
+	- The borders of the game creation window didn't match up with the window's actual height.
+ - Fixed: Issues on Skirmish maps (Credits: Bittah Commander):
+	- Grand Canyon: Fixed a visual shore issue.
+	- A River Runs Near It: Fixed some visual shore issues and removed an unrepairable invisible destroyed bridge.
 - Fixed: Nod 08 [FS]: Harvester Hunting (Credits: Bittah Commander):
 	- CABAL's bases didn't have enough power for the structures that were built later on.
 	- Two fail-safe triggers were added to make the player win the mission in case the original win trigger fails.
