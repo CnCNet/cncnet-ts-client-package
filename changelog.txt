@@ -1,4 +1,5 @@
 Version 7.03
+- Added: The launch animation for the Missile Silo (Credits: Bittah Commander).
 - Changed: The background and remapable colors of palettes were replaced with conversion-friendly colors (Credits: Bittah Commander).
 
 Version 7.02
