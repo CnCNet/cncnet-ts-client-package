@@ -1,6 +1,7 @@
 Version 7.03
 - Added: The launch animation for the Missile Silo (Credits: Bittah Commander).
 - Changed: The background and remapable colors of palettes were replaced with conversion-friendly colors (Credits: Bittah Commander).
+- Fixed: Elite aircraft no longer self-heal when the Veteran Balance Patch is enabled, because this caused them to become indestructible when they were shot down.
 
 Version 7.02
 - Changed: Updated XNA CnCNet Client to version 2.11.7.0 (Credits: neogrant, SadPencil, MortonPL, 11EJDE11, mah_boi, remgodow). Changes include:
