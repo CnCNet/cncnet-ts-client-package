@@ -1,5 +1,6 @@
 [GARADR]
 Nominal=yes
+Capturable=no
 
 [CIV1]
 Infiltrate=yes

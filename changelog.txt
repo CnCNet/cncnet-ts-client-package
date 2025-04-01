@@ -2,6 +2,7 @@ Version 7.03
 - Added: The launch animation for the Missile Silo (Credits: Bittah Commander).
 - Changed: The background and remapable colors of palettes were replaced with conversion-friendly colors (Credits: Bittah Commander).
 - Fixed: Elite aircraft no longer self-heal when the Veteran Balance Patch is enabled, because this caused them to become indestructible when they were shot down.
+- Fixed: Nod 4B: Blackout: Capturing the radar instead of destroying it would cause the player to start the "Nod 4A: Eviction Notice" mission as-if the Nod 4B mission was skipped (Credits: Bittah Commander).
 
 Version 7.02
 - Changed: Updated XNA CnCNet Client to version 2.11.7.0 (Credits: neogrant, SadPencil, MortonPL, 11EJDE11, mah_boi, remgodow). Changes include:
