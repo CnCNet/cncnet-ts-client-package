@@ -4,6 +4,7 @@ Version 7.03
 - Fixed: Elite aircraft no longer self-heal when the Veteran Balance Patch is enabled, because this caused them to become indestructible when they were shot down.
 - Fixed: GDI 6A: Destroy Vega's Dam: Directly destroying the dams instead of doing so by destroying the regulators would cause the player to start the "GDI 6B: Destroy Vega's Base" mission as-if the GDI 6A mission was skipped (Credits: Bittah Commander).
 - Fixed: Nod 4B: Blackout: Capturing the radar instead of destroying it would cause the player to start the "Nod 4A: Eviction Notice" mission as-if the Nod 4B mission was skipped (Credits: Bittah Commander).
+- Fixed: Nod 10: Destroy the Mammoth Mk.II Prototype: Infiltrating a Comm Center would cause the whole GDI base to be revealed instead of only the Mammoth Mk. II testing site (Credits: Bittah Commander).
 
 Version 7.02
 - Changed: Updated XNA CnCNet Client to version 2.11.7.0 (Credits: neogrant, SadPencil, MortonPL, 11EJDE11, mah_boi, remgodow). Changes include:
