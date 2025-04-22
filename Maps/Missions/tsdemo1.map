@@ -49,8 +49,8 @@ Visceroids=no
 [Basic]
 RequiredAddOn=0
 SpeechSide=GDI
-NextScenario=Maps\Missions\tsdemo2.map
-AltNextScenario=Maps\Missions\tsdemo2.map
+NextScenario=Maps/Missions/tsdemo2.map
+AltNextScenario=Maps/Missions/tsdemo2.map
 Name=Tutorial 1: Initiation
 NewINIFormat=4
 CarryOverCap=0

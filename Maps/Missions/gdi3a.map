@@ -34,8 +34,8 @@ Visceroids=no
 7=Objective Two: Capture any Nod Technology Centers.
 
 [Basic]
-NextScenario=Maps\Missions\scg05eb.map
-AltNextScenario=Maps\Missions\GDI9C.MAP
+NextScenario=Maps/Missions/scg05eb.map
+AltNextScenario=Maps/Missions/GDI9C.MAP
 Name=GDI 3A: Locate and Secure Crash Site
 NewINIFormat=4
 CarryOverCap=0

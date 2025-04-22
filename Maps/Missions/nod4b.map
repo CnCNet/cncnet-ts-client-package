@@ -52,8 +52,8 @@ Visceroids=no
 5=Objective One: Locate and destroy the GDI Radar Facility before the ion storm ends.
 
 [Basic]
-NextScenario=Maps\Missions\GDI2A.map
-AltNextScenario=Maps\Missions\GDI9C.MAP
+NextScenario=Maps/Missions/GDI2A.map
+AltNextScenario=Maps/Missions/GDI9C.MAP
 Name=Nod 4B: Blackout
 NewINIFormat=4
 CarryOverCap=0

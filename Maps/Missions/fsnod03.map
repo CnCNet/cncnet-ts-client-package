@@ -53,7 +53,7 @@ Visceroids=no
 [Basic]
 RequiredAddOn=1
 SpeechSide=Nod
-NextScenario=Maps\Missions\fsnod04.map
+NextScenario=Maps/Missions/fsnod04.map
 Name=Nod 03 [FS]: Tratos' Final Act
 NewINIFormat=4
 CarryOverCap=0

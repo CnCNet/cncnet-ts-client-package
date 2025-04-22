@@ -49,8 +49,8 @@ Mutant=Special
 8=Objective Three: Destroy all Nod forces in the area.
 
 [Basic]
-NextScenario=Maps\Missions\gdi8a.map
-AltNextScenario=Maps\Missions\GDI9C.MAP
+NextScenario=Maps/Missions/gdi8a.map
+AltNextScenario=Maps/Missions/GDI9C.MAP
 Name=GDI 7: Recapture Hammerfest Base
 NewINIFormat=4
 CarryOverCap=0

@@ -163,8 +163,8 @@ Visceroids=no
 7=Objective Two: Use GDI units to destroy the mutant's base.
 
 [Basic]
-NextScenario=Maps\Missions\GDI2A.map
-AltNextScenario=Maps\Missions\GDI9C.MAP
+NextScenario=Maps/Missions/GDI2A.map
+AltNextScenario=Maps/Missions/GDI9C.MAP
 Name=Nod 6A: Sheep's Clothing
 NewINIFormat=4
 CarryOverCap=0

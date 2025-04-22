@@ -63,8 +63,8 @@ Visceroids=no
 9=construct a base. You are to destroy the Manufacturing Facility at this time.
 
 [Basic]
-NextScenario=Maps\Missions\GDI2A.map
-AltNextScenario=Maps\Missions\GDI9C.MAP
+NextScenario=Maps/Missions/GDI2A.map
+AltNextScenario=Maps/Missions/GDI9C.MAP
 Name=GDI 10A: Destroy the Prototype Facility (A)
 NewINIFormat=4
 CarryOverCap=0

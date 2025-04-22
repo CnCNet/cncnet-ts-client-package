@@ -33,8 +33,8 @@ Meteorites=no
 Visceroids=yes
 
 [Basic]
-NextScenario=Maps\Missions\GDI2A.map
-AltNextScenario=Maps\Missions\GDI9C.MAP
+NextScenario=Maps/Missions/GDI2A.map
+AltNextScenario=Maps/Missions/GDI9C.MAP
 Name=GDI 9C: Mine the Power Grid
 NewINIFormat=4
 CarryOverCap=0

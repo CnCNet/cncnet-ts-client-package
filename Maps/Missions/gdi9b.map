@@ -60,8 +60,8 @@ Meteorites=no
 Visceroids=no
 
 [Basic]
-NextScenario=Maps\Missions\GDI9D.MAP
-AltNextScenario=Maps\Missions\GDI9C.MAP
+NextScenario=Maps/Missions/GDI9D.MAP
+AltNextScenario=Maps/Missions/GDI9C.MAP
 Name=GDI 9B: Destroy Chemical Supply Station
 NewINIFormat=4
 CarryOverCap=0

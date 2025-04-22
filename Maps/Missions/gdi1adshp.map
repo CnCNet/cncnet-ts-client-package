@@ -26,8 +26,8 @@ Visceroids=no
 7=Objective Three: Destroy all Nod forces.
 
 [Basic]
-NextScenario=Maps\Missions\GDI2A.map
-AltNextScenario=Maps\Missions\GDI9C.MAP
+NextScenario=Maps/Missions/GDI2A.map
+AltNextScenario=Maps/Missions/GDI9C.MAP
 Name=GDI 1: Reinforce Phoenix Base
 NewINIFormat=4
 CarryOverCap=0

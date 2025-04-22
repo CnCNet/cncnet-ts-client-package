@@ -35,8 +35,8 @@ Visceroids=no
 5=Objective Two: Prevent Nod from destroying the UFO.
 
 [Basic]
-NextScenario=Maps\Missions\scg05eb.map
-AltNextScenario=Maps\Missions\GDI9C.MAP
+NextScenario=Maps/Missions/scg05eb.map
+AltNextScenario=Maps/Missions/GDI9C.MAP
 Name=GDI 4: Defend the Crash Site
 NewINIFormat=4
 CarryOverCap=0

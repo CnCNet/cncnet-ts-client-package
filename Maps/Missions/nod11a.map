@@ -113,8 +113,8 @@ Meteorites=no
 Visceroids=no
 
 [Basic]
-NextScenario=Maps\Missions\nod11a.map
-AltNextScenario=Maps\Missions\GDI9C.MAP
+NextScenario=Maps/Missions/nod11a.map
+AltNextScenario=Maps/Missions/GDI9C.MAP
 Name=Nod 11: Capture Jake McNeil
 NewINIFormat=4
 CarryOverCap=0

@@ -265,8 +265,8 @@ Visceroids=no
 [Basic]
 RequiredAddOn=1
 SpeechSide=GDI
-NextScenario=Maps\Missions\FSGDI04.MAP
-AltNextScenario=Maps\Missions\GDI9C.MAP
+NextScenario=Maps/Missions/FSGDI04.MAP
+AltNextScenario=Maps/Missions/GDI9C.MAP
 Name=GDI 03 [FS]: Quell the Civilian Riot
 NewINIFormat=4
 CarryOverCap=0

@@ -86,8 +86,8 @@ Meteorites=no
 Visceroids=no
 
 [Basic]
-NextScenario=Maps\Missions\GDI 2A.map
-AltNextScenario=Maps\Missions\GDI9C.MAP
+NextScenario=Maps/Missions/GDI 2A.map
+AltNextScenario=Maps/Missions/GDI9C.MAP
 Name=GDI 9A: Rescue the Prisoners
 NewINIFormat=4
 CarryOverCap=0

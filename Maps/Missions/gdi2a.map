@@ -50,8 +50,8 @@ Visceroids=no
 10=Objective Three: Destroy the Nod base.
 
 [Basic]
-NextScenario=Maps\Missions\GDI2A.map
-AltNextScenario=Maps\Missions\GDI9C.MAP
+NextScenario=Maps/Missions/GDI2A.map
+AltNextScenario=Maps/Missions/GDI9C.MAP
 Name=GDI 2: Secure the Region
 NewINIFormat=4
 CarryOverCap=0

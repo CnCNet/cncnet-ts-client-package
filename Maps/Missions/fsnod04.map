@@ -119,8 +119,8 @@ Visceroids=yes
 [Basic]
 RequiredAddOn=1
 SpeechSide=Nod
-NextScenario=Maps\Missions\FSNOD05.MAP
-AltNextScenario=Maps\Missions\GDI9C.MAP
+NextScenario=Maps/Missions/FSNOD05.MAP
+AltNextScenario=Maps/Missions/GDI9C.MAP
 Name=Nod 04 [FS]: Mutant Extermination
 NewINIFormat=4
 CarryOverCap=0

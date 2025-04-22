@@ -77,8 +77,8 @@ Meteorites=no
 Visceroids=no
 
 [Basic]
-NextScenario=Maps\Missions\GDI3A.map
-AltNextScenario=Maps\Missions\GDI9C.MAP
+NextScenario=Maps/Missions/GDI3A.map
+AltNextScenario=Maps/Missions/GDI9C.MAP
 Name=GDI 3B: Capture the Train Station
 NewINIFormat=4
 CarryOverCap=0

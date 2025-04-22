@@ -186,8 +186,8 @@ Visceroids=no
 [Basic]
 RequiredAddOn=1
 SpeechSide=Nod
-NextScenario=Maps\Missions\FSNod02.map
-AltNextScenario=Maps\Missions\FSNod3.map
+NextScenario=Maps/Missions/FSNod02.map
+AltNextScenario=Maps/Missions/FSNod3.map
 Name=Nod 01 [FS]: Operation Reboot
 NewINIFormat=4
 CarryOverCap=0

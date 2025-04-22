@@ -50,8 +50,8 @@ Visceroids=no
 9=and we will be able to capture Umagon.
 
 [Basic]
-NextScenario=Maps\Missions\GDI2A.map
-AltNextScenario=Maps\Missions\GDI9C.MAP
+NextScenario=Maps/Missions/GDI2A.map
+AltNextScenario=Maps/Missions/GDI9C.MAP
 Name=Nod 6C: Locate and Capture Umagon (B)
 NewINIFormat=4
 CarryOverCap=0

@@ -1,7 +1,9 @@
 Version 7.03
 - Added: The launch animation for the Missile Silo (Credits: Bittah Commander).
+- Added: A launcher (TSLauncherUnix.sh) for Linux users.
 - Changed: Updated the DDrawCompat renderer from version 0.5.4 to 0.6.0 (Credits: narzoul).
 - Changed: The background and remapable colors of palettes were replaced with conversion-friendly colors (Credits: Bittah Commander).
+- Fixed: Various file names have been capitalized and instances of \ in paths have been replaced with / to fix Linux compatibility issues (Credits: Bittah Commander).
 - Fixed: Elite aircraft no longer self-heal when the Veteran Balance Patch is enabled, because this caused them to become indestructible when they were shot down.
 - Fixed: GDI 6A: Destroy Vega's Dam: Directly destroying the dams instead of doing so by destroying the regulators would cause the player to start the "GDI 6B: Destroy Vega's Base" mission as-if the GDI 6A mission was skipped (Credits: Bittah Commander).
 - Fixed: Nod 4B: Blackout: Capturing the radar instead of destroying it would cause the player to start the "Nod 4A: Eviction Notice" mission as-if the Nod 4B mission was skipped (Credits: Bittah Commander).

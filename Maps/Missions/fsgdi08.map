@@ -195,8 +195,8 @@ Visceroids=no
 [Basic]
 RequiredAddOn=1
 SpeechSide=GDI
-NextScenario=Maps\Missions\FSGDI09.map
-AltNextScenario=Maps\Missions\FSNod3.map
+NextScenario=Maps/Missions/FSGDI09.map
+AltNextScenario=Maps/Missions/FSNod3.map
 Name=GDI 08 [FS]: Factory Recall
 NewINIFormat=4
 CarryOverCap=0

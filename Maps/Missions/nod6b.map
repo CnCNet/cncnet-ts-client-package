@@ -69,8 +69,8 @@ Visceroids=no
 9=the medical colony before Umagon, the Mutant, can escape.
 
 [Basic]
-NextScenario=Maps\Missions\GDI2A.map
-AltNextScenario=Maps\Missions\GDI9C.MAP
+NextScenario=Maps/Missions/GDI2A.map
+AltNextScenario=Maps/Missions/GDI9C.MAP
 Name=Nod 6B: Locate and Capture Umagon (A)
 NewINIFormat=4
 CarryOverCap=0

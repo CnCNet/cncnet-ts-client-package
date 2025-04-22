@@ -64,8 +64,8 @@ Meteorites=no
 Visceroids=no
 
 [Basic]
-NextScenario=Maps\Missions\GDI2A.map
-AltNextScenario=Maps\Missions\GDI9C.MAP
+NextScenario=Maps/Missions/GDI2A.map
+AltNextScenario=Maps/Missions/GDI9C.MAP
 Name=GDI 11: Weather the Storm
 NewINIFormat=4
 CarryOverCap=0

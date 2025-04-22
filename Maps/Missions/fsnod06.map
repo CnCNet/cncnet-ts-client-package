@@ -46,7 +46,7 @@ WoodCrate=HealBase
 [Basic]
 RequiredAddOn=1
 SpeechSide=Nod
-NextScenario=Maps\Missions\FSNOD07.map
+NextScenario=Maps/Missions/FSNOD07.map
 Name=Nod 06 [FS]: The Needs of the Many!
 NewINIFormat=4
 CarryOverCap=0

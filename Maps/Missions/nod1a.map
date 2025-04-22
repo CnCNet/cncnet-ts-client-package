@@ -49,7 +49,7 @@ Meteorites=no
 Visceroids=no
 
 [Basic]
-NextScenario=Maps\Missions\GDI2A.map
+NextScenario=Maps/Missions/GDI2A.map
 Name=Nod 1: The Messiah Returns
 NewINIFormat=4
 CarryOverCap=0

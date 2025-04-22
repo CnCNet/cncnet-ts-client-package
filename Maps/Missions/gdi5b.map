@@ -53,8 +53,8 @@ Visceroids=no
 8=Objective Three: Destroy the Nod base and test facility.
 
 [Basic]
-NextScenario=Maps\Missions\scg06ea.map
-AltNextScenario=Maps\Missions\GDI9C.MAP
+NextScenario=Maps/Missions/scg06ea.map
+AltNextScenario=Maps/Missions/GDI9C.MAP
 Name=GDI 5B: Rescue Tratos (A)
 NewINIFormat=4
 CarryOverCap=0

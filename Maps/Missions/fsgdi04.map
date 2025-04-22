@@ -69,7 +69,7 @@ Visceroids=no
 [Basic]
 RequiredAddOn=1
 SpeechSide=GDI
-NextScenario=Maps\Missions\fsgdi05.map
+NextScenario=Maps/Missions/fsgdi05.map
 Name=GDI 04 [FS]: In the Box
 NewINIFormat=4
 CarryOverCap=0
