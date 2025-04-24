@@ -1,3 +1,6 @@
+Version 7.04
+- Fixed: GDI 9A: Rescue the Prisoners: Replaced an incorrect cliff piece (Credits: Bittah Commander).
+
 Version 7.03
 - Added: The launch animation for the Missile Silo (Credits: Bittah Commander).
 - Added: A launcher (TSLauncherUnix.sh) for Linux users.
