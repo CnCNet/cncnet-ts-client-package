@@ -1,4 +1,5 @@
 Version 7.04
+- Fixed: The components (music and videos) couldn't be downloaded through the Options menu (Credits: Bittah Commander).
 - Fixed: GDI 9A: Rescue the Prisoners: Replaced an incorrect cliff piece (Credits: Bittah Commander).
 
 Version 7.03
