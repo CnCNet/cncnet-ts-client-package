@@ -1,4 +1,7 @@
 Version 7.04
+- Fixed: The "Smarter Harvesters" patch was disabled in order to prevent harvesters from randomly becoming idle.
+
+Version 7.04
 - Changed: Updated XNA CnCNet Client to version 2.11.8.0 (https://github.com/CnCNet/xna-cncnet-client/releases/tag/2.11.8.0) (Credits: neogrant, Kerbiter, 11EJDE11).
 - Fixed: The components (music and videos) couldn't be downloaded through the Options menu (Credits: Bittah Commander).
 - Fixed: GDI 9A: Rescue the Prisoners: Replaced an incorrect cliff piece (Credits: Bittah Commander).
