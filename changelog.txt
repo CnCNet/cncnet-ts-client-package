@@ -1,4 +1,5 @@
 Version 7.04
+- Added: You can now select the "Vinifera Beta" and "Dev" update channels on the Updater tab of the Options menu.
 - Fixed: The "Smarter Harvesters" patch was disabled in order to prevent harvesters from randomly becoming idle.
 
 Version 7.04
