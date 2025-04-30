@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "clientogl/2.11.8-rc0001": {
+      "clientogl/2.11.8": {
         "dependencies": {
           "ClientUpdater": "1.0.0",
           "DTAConfig": "1.0.0",
@@ -738,7 +738,7 @@
     }
   },
   "libraries": {
-    "clientogl/2.11.8-rc0001": {
+    "clientogl/2.11.8": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
