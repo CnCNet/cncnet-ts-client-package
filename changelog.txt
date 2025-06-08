@@ -1,3 +1,6 @@
+Version 7.06
+- Changed: Updated XNA CnCNet Client to version 2.12.4 (https://github.com/CnCNet/xna-cncnet-client/releases/tag/2.12.4) (Credits: SadPencil, mah_boi).
+
 Version 7.05
 - Added: You can now select the "Vinifera Beta" and "Dev" update channels on the Updater tab of the Options menu.
 - Changed: Updated XNA CnCNet Client to version 2.12.3 (https://github.com/CnCNet/xna-cncnet-client/releases/tag/2.12.3) (Credits: neogrant, SadPencil, mah_boi, 11EJDE11, Danku, Rampastring).
