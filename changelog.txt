@@ -1,5 +1,5 @@
 Version 7.06
-- Added: Framework (Marble Madness) tiles for the Ice shore tile set in the map editors (Credits: Bittah Commander).
+- Added: Framework (Marble Madness) tiles for the "Ice shore" and "Ice" tile sets in the map editors (Credits: Bittah Commander, Crimsonum).
 - Changed: Updated XNA CnCNet Client to version 2.12.4 (https://github.com/CnCNet/xna-cncnet-client/releases/tag/2.12.4) (Credits: SadPencil, mah_boi).
 
 Version 7.05
