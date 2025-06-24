@@ -1,6 +1,6 @@
 Version 7.06
 - Added: Framework (Marble Madness) tiles for the "Ice shore" and "Ice" tile sets in the map editors (Credits: Bittah Commander, Crimsonum).
-- Changed: Updated XNA CnCNet Client to version 2.12.4 (https://github.com/CnCNet/xna-cncnet-client/releases/tag/2.12.4) (Credits: SadPencil, mah_boi).
+- Changed: Updated XNA CnCNet Client to version 2.12.5 (https://github.com/CnCNet/xna-cncnet-client/releases/tag/2.12.4) (Credits: SadPencil, mah_boi).
 
 Version 7.05
 - Added: You can now select the "Vinifera Beta" and "Dev" update channels on the Updater tab of the Options menu.
