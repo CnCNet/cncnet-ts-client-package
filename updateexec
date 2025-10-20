@@ -215,6 +215,21 @@ Map Renderer\OpenTK.dll.config
 Map Renderer\README.html
 Map Renderer\tstunnelwithtop.mix
 
+Resources\Binaries\Windows\DTAConfig.dll
+Resources\Binaries\Windows\DTAConfig.pdb
+Resources\Binaries\OpenGL\DTAConfig.dll
+Resources\Binaries\OpenGL\DTAConfig.pdb
+Resources\Binaries\XNA\DTAConfig.dll
+Resources\Binaries\XNA\DTAConfig.pdb
+Resources\BinariesNET8\Windows\DTAConfig.dll
+Resources\BinariesNET8\Windows\DTAConfig.pdb
+Resources\BinariesNET8\OpenGL\DTAConfig.dll
+Resources\BinariesNET8\OpenGL\DTAConfig.pdb
+Resources\BinariesNET8\UniversalGL\DTAConfig.dll
+Resources\BinariesNET8\UniversalGL\DTAConfig.pdb
+Resources\BinariesNET8\XNA\DTAConfig.dll
+Resources\BinariesNET8\XNA\DTAConfig.pdb
+
 [RenameFolder]
 
 [RenameAndMerge]
