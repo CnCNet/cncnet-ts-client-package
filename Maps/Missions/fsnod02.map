@@ -1,3 +1,10 @@
+[155mm]
+Damage=150
+ROF=110
+
+[ARTYHE]
+Verses=100%,85%,68%,35%,35%
+
 [Briefing]
 1=The first step in our Tiberium evolution requires
 2=the fertilization of the land with new indigenous

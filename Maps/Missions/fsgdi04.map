@@ -1,3 +1,10 @@
+[155mm]
+Damage=150
+ROF=110
+
+[ARTYHE]
+Verses=100%,85%,68%,35%,35%
+
 [Briefing]
 1=CABAL's core is believed to be in this area. Using
 2=an engineer, infiltrate and capture the core.

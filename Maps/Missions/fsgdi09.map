@@ -1,3 +1,10 @@
+[155mm]
+Damage=150
+ROF=110
+
+[ARTYHE]
+Verses=100%,85%,68%,35%,35%
+
 [Briefing]
 1=We've tracked down CABAL and are ready to
 2=engage his forces on all fronts. This is

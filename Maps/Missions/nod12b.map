@@ -1,3 +1,10 @@
+[155mm]
+Damage=150
+ROF=110
+
+[ARTYHE]
+Verses=100%,85%,68%,35%,35%
+
 [Briefing]
 1=GDI has stored the firing codes for its Ion Cannon in three separate Comm centers.
 2=The centers are isolated in a valley and poorly guarded. We do not have the forces

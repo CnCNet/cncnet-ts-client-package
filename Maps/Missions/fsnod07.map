@@ -1,3 +1,10 @@
+[155mm]
+Damage=150
+ROF=110
+
+[ARTYHE]
+Verses=100%,85%,68%,35%,35%
+
 [Briefing]
 1=Scorched earth, plain and simple. Locate and
 2=destroy all cybernetic forces in the area. The

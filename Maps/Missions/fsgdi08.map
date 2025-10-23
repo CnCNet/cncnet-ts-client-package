@@ -1,3 +1,10 @@
+[155mm]
+Damage=150
+ROF=110
+
+[ARTYHE]
+Verses=100%,85%,68%,35%,35%
+
 [Briefing]
 1=GDI scientists have reprogrammed a NOD cyborg
 2=and have implanted a virus designed for release

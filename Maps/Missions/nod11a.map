@@ -1,3 +1,10 @@
+[155mm]
+Damage=150
+ROF=110
+
+[ARTYHE]
+Verses=100%,85%,68%,35%,35%
+
 [Briefing]
 1=Jake McNeil, brother of one of GDI's commanders, will be leading an inspection
 2=tour to a small GDI outpost in this area. His knowledge of GDI activities could

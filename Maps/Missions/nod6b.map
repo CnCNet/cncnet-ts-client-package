@@ -1,3 +1,6 @@
+[ARTYHE]
+Verses=100%,85%,68%,35%,35%
+
 [General]
 TeamDelays=1350,1350,2550
 MinimumAIDefensiveTeams=1,1,1
@@ -11,6 +14,8 @@ Nominal=yes
 TechLevel=-1
 
 [155mm]
+Damage=150
+ROF=110
 Range=25
 
 [NAHPAD]

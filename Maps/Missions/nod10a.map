@@ -1,3 +1,10 @@
+[155mm]
+Damage=150
+ROF=110
+
+[ARTYHE]
+Verses=100%,85%,68%,35%,35%
+
 [Briefing]
 1=GDI is set to test the prototype of their new weapon, the Mammoth Mark II.
 2=It is vital that we sabotage their production of this monster as soon as

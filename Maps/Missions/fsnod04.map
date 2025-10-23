@@ -1,3 +1,10 @@
+[155mm]
+Damage=150
+ROF=110
+
+[ARTYHE]
+Verses=100%,85%,68%,35%,35%
+
 [Briefing]
 1=The mutant vermin have once again made themselves
 2=known to us. They have stolen the Tacitus that I...we

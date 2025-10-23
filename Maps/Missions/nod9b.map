@@ -1,3 +1,10 @@
+[155mm]
+Damage=150
+ROF=110
+
+[ARTYHE]
+Verses=100%,85%,68%,35%,35%
+
 [Briefing]
 1=The road through this sector is a vital supply link. If a foothold is firmly
 2=established and a Tiberium Waste Facility is built, Nod chemical missiles can

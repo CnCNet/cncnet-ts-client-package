@@ -1,3 +1,10 @@
+[155mm]
+Damage=150
+ROF=110
+
+[ARTYHE]
+Verses=100%,85%,68%,35%,35%
+
 [Briefing]
 1=The alien craft is located in this region. FIND IT! The area is infested
 2=with GDI, so stealth would be to your advantage. Once the craft is located

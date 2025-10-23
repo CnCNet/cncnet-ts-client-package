@@ -1,3 +1,10 @@
+[155mm]
+Damage=150
+ROF=110
+
+[ARTYHE]
+Verses=100%,85%,68%,35%,35%
+
 [Briefing]
 1=Nod's main chemical missile plant is located in this area. It is responsible
 2=for the large amount of Tiberium poisoning and accelerated mutations of wildlife

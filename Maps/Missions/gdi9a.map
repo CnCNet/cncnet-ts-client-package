@@ -1,3 +1,10 @@
+[155mm]
+Damage=150
+ROF=110
+
+[ARTYHE]
+Verses=100%,85%,68%,35%,35%
+
 [Briefing]
 1=Umagon has requested help to rescue her people from a Nod prison.
 2=The prison is located on an island to the east. Nod has a strong force

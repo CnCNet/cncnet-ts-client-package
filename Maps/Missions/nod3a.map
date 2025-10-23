@@ -1,3 +1,10 @@
+[155mm]
+Damage=150
+ROF=110
+
+[ARTYHE]
+Verses=100%,85%,68%,35%,35%
+
 [Briefing]
 1=The Infidel, Hassan, has been tracked to this region of Cairo. Build a base
 2=and eliminate this would-be pharaoh, the pretender to Kane's throne.@@

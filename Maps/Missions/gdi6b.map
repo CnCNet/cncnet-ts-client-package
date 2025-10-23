@@ -1,3 +1,10 @@
+[155mm]
+Damage=150
+ROF=110
+
+[ARTYHE]
+Verses=100%,85%,68%,35%,35%
+
 [Briefing]
 1=Vega's base of operations is in the area. It is heavily guarded by SAM
 2=sites, and a secondary outpost provides reinforcements. Destroy all Nod

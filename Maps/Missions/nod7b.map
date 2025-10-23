@@ -1,3 +1,10 @@
+[155mm]
+Damage=150
+ROF=110
+
+[ARTYHE]
+Verses=100%,85%,68%,35%,35%
+
 [Briefing]
 1=Nod forces were recently forced out of this area. However, spies report that
 2=the Nod bio-toxin facility has not yet been destroyed by GDI troops. The Cyborg

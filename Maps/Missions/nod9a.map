@@ -1,3 +1,10 @@
+[155mm]
+Damage=150
+ROF=110
+
+[ARTYHE]
+Verses=100%,85%,68%,35%,35%
+
 [Briefing]
 1=The Nod base in this sector has been overrun by Tiberium life forms.
 2=Weedeaters have proven to be effective against the Tiberium creatures, but we

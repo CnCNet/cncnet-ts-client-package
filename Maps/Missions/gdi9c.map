@@ -1,3 +1,10 @@
+[155mm]
+Damage=150
+ROF=110
+
+[ARTYHE]
+Verses=100%,85%,68%,35%,35%
+
 [Briefing]
 1=If the upcoming GDI attack on the missile sites is to succeed, C4 must be
 2=planted at all six power stations. The power grid is well protected, but the

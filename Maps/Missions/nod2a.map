@@ -1,3 +1,10 @@
+[155mm]
+Damage=150
+ROF=110
+
+[ARTYHE]
+Verses=100%,85%,68%,35%,35%
+
 [Briefing]
 1=Hassan spreads his propaganda to the Brotherhood through a nearby TV station.
 2=With the Brotherhood in chaos, the opportunity to divide Hassan from his

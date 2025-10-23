@@ -1,3 +1,10 @@
+[155mm]
+Damage=150
+ROF=110
+
+[ARTYHE]
+Verses=100%,85%,68%,35%,35%
+
 [Briefing]
 1=The Kodiak was lost en route to the Philadelphia.
 2=We believe it has crashed somewhere in the area.
