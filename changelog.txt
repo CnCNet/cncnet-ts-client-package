@@ -1,4 +1,7 @@
 Version 7.06
+- Changed: Nod 08 [FS]: Harvester Hunting: Tiberium lifeforms no longer attack CABAL and vice-versa (Credits: Bittah Commander).
+
+Version 7.06
 - Added: Framework (Marble Madness) tiles for the "Ice shore" and "Ice" tile sets in the map editors (Credits: Bittah Commander, Crimsonum).
 - Changed: Updated XNA CnCNet Client to version 2.12.13 (https://github.com/CnCNet/xna-cncnet-client/releases) (Credits: SadPencil, mah_boi, Starkku, Kerbiter, 11EJDE11, ApocBruh, CO2-code).
 - Fixed: The Artillery now does more damage and has a slower rate of fire in singleplayer missions than in skirmish/multiplayer again (Credits: Bittah Commander).
