@@ -1,6 +1,11 @@
 [Rename]
 
 [Delete]
+; 2.12.16 (auto-generated entries for removed/renamed files)
+
+
+; end entries
+
 INI\battlefs.ini
 INI\MPMaps.pkt
 INI\theme01.ini
@@ -241,3 +246,4 @@ Map Editor\ForWindows10
 Map Renderer
 
 [ForceDeleteFolder]
+
