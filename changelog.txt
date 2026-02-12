@@ -1,4 +1,5 @@
 Version 7.06
+- Changed: Updated XNA CnCNet Client to version 2.12.18 (https://github.com/CnCNet/xna-cncnet-client/releases) (Credits: SadPencil, mah_boi, Starkku, Kerbiter, 11EJDE11).
 - Changed: Nod 08 [FS]: Harvester Hunting: Tiberium lifeforms no longer attack CABAL and vice-versa (Credits: Bittah Commander).
 
 Version 7.06
