@@ -1,6 +1,7 @@
 Version 7.07
 - Changed: Updated XNA CnCNet Client to version 2.12.18 (https://github.com/CnCNet/xna-cncnet-client/releases) (Credits: SadPencil, mah_boi, Starkku, Kerbiter, 11EJDE11).
 - Changed: Nod 08 [FS]: Harvester Hunting: Tiberium lifeforms no longer attack CABAL and vice-versa (Credits: Bittah Commander).
+- Fixed: Nod 4A: Eviction Notice: Added a fail-safe for an uncommon issue where the mission wouldn't end after all GDI objects had already been destroyed (Credits: Bittah Commander).
 - Fixed: Nod 11: Capture Jake McNeil: The Subterranean APC wouldn't show up when an Amphibious APC transported Jake too close to the extraction point while that APC was still colored red (Credits: Bittah Commander).
 
 Version 7.06
