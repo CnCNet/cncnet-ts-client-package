@@ -1,3 +1,7 @@
+Version 7.08
+- Fixed: Reverted an unintentional change in the previous patch that increased the damage of the artillery.
+- Fixed: Enabling the Veteran Balance Patch caused veins to grow extremely fast.
+
 Version 7.07
 - Changed: Updated XNA CnCNet Client to version 2.12.18 (https://github.com/CnCNet/xna-cncnet-client/releases) (Credits: SadPencil, mah_boi, Starkku, Kerbiter, 11EJDE11).
 - Changed: Nod 08 [FS]: Harvester Hunting: Tiberium lifeforms no longer attack CABAL and vice-versa (Credits: Bittah Commander).
