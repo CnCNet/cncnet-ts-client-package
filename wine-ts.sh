@@ -1,1 +1,3 @@
-wine Game.exe $*
+#!/bin/sh
+
+wine game.exe -SPAWN $*

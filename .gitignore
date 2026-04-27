@@ -39,6 +39,7 @@ ddraw.ini
 
 KEYBOARD.INI
 sun.ini
+SUN.ini
 
 spawn.ini
 spawnmap.ini
@@ -46,6 +47,7 @@ spawnSG.ini
 stats.dmp
 statistics.dat
 ts.log
+TS.log
 except.txt
 mpstats.log
 sync*.txt
@@ -62,3 +64,6 @@ Movies02.mix
 Movies03.mix
 
 Language.dll
+
+wineprefix
+

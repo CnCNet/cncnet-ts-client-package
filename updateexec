@@ -1,6 +1,16 @@
 [Rename]
 
 [Delete]
+; 2.12.17 (auto-generated entries for removed/renamed files)
+Resources\Binaries\OpenGL\System.Private.Uri.dll
+Resources\Binaries\Windows\System.Private.Uri.dll
+Resources\BinariesNET8\OpenGL\System.Text.Json.dll
+Resources\BinariesNET8\UniversalGL\System.Text.Json.dll
+Resources\BinariesNET8\Windows\System.Text.Json.dll
+Resources\BinariesNET8\XNA\System.Text.Json.dll
+
+; end entries
+
 INI\battlefs.ini
 INI\MPMaps.pkt
 INI\theme01.ini
@@ -200,6 +210,7 @@ Resources\TS Theme\MainMenu\statistics_c.png
 Resources\TS Theme\MainMenu\title.png
 Resources\TS Theme\MainMenu\tsfback.png
 Resources\TS Theme\MainMenu\tstback.png
+Resources\lobbymusic.wav
 
 Map Renderer\changelog.txt
 Map Renderer\CNCMaps.Engine.dll
@@ -241,4 +252,5 @@ Map Editor\ForWindows10
 Map Renderer
 
 [ForceDeleteFolder]
+
 
