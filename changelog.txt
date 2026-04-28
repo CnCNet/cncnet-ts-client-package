@@ -649,11 +649,44 @@ Version 3.58 (August 10, 2015):
 - The old, unused Tiberian Dawn / Red Alert unit voxels in Expand00.mix now have entries in Art.ini for modders (Credits: Bittah Commander)
 
 Version 3.57 (August 9, 2015):
-- Implemented bugfixes from Aro's Tiberian Sun: UMP (Credits: Bittah Commander)
-  - Fixes various, mostly graphics-related bugs in Tiberian Sun like missing building animations
-  - UMP Credits: Aro, Lin Kuei Ominae, Chriz, Machine, Crimsonum, Revolutionary
+- Implemented bug fixes from Tiberian Sun: UMP (Credits: Aro, Lin Kuei Ominae, Chriz, Machine, Crimsonum, Revolutionary, Bittah Commander):
+	- Fixed Nod War Factory animation
+	- Fixed Silo animation
+	- Fixed Secondary Hand of Nod animation (Flashing pixels on the antenna)
+	- Fixed Secondary GDI Barracks animation (Flashing pixels on the antenna)
+	- Fixed several animations on the Civilian Array
+	- Fixed several GAPLUG animations
+	- Partially fixed Dam animations (Not completely fixed)
+	- Fixed Proton projectile animation
+	- Fixed Disc grenade animation
+	- Fixed Harvesting animation
+	- Fixed palette color issue of the "CANISTER" debris
+	- Fixed Harvester Dumping animation
+	- Fixed Animation errors on GDI Tech Center
+	- Fixed Animation errors on Nod Tech Center
+	- Fixed GDI Radar damage Animations
+	- Fixed Nod Stealth Generator damage Animations
+	- Fixed Armor Upgrade Crate; it now increases strength (HP) instead of decreasing it
+	- Fixed waterfall animations
+	- Fixed RPG Turret Frames
+	- Fixed Component Tower animation
+	- Fixed Nod Power Plant animation issues (overlapping)
+	- Fixed Obelisk charging animation for Tiberian Sun (Already fixed in Firestorm)
+	- Fixed Silo damage fill animation
+	- Added Entries to some Unused items in the mix files
+	- Both Tiberian Sun and Firestorm campaign maps are compatible with the UMP
+	- Firestorm Wall animation no longer shows through buildings
+	- Laser Fence Post animation no longer shows through buildings
+	- Nod Pyramid animation no longer shows through buildings
+	- GDI Kodiak animation no longer shows through buildings
+	- Tiberium Waste Facility animation no longer shows through buildings
+	- Nod Montauk animation no longer shows through buildings
+	- Multi-Missile crates now show a Multi-Missile animation (instead of a Chemical Missile animation)
+	- Fixed firing animations of Mutants
+	- The Titan's muzzle flash and targeting laser now properly originate from the Titans barrel
+	- Added Umagon's voice lines to Mutant Soldier
 - Updated the look of social media buttons in the CnCNet lobby (Credits: Bittah Commander)
-- Fixed the Cyborg Reaper death animation so the unit can no longer be killed continously while the anim is playing (it could be farmed for endless XP) (Credits: Bittah Commander)
+- Fixed the Cyborg Reaper's death animation so that all units that attack it during the animation no longer instantly receive XP for veterancy or spawn tiberium (Credits: Bittah Commander)
 
 Version 3.56 (August 7, 2015):
 - Fixed another common Internal Error when starting a game
