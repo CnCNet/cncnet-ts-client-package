@@ -1,6 +1,19 @@
 [Rename]
 
 [Delete]
+; 2.13.0 (auto-generated entries for removed/renamed files)
+Resources\Binaries\Windows\Ude.NetStandard.dll
+Resources\Binaries\XNA\Ude.NetStandard.dll
+Resources\BinariesNET8\UniversalGL\Ude.NetStandard.dll
+Resources\BinariesNET8\Windows\Ude.NetStandard.dll
+Resources\BinariesNET8\XNA\Ude.NetStandard.dll
+
+Resources\Binaries\OpenGL\Ude.NetStandard.dll	Resources\Binaries\Ude.NetStandard.dll
+Resources\Binaries\steam_api64.dll	Resources\Binaries\x64\steam_api64.dll
+Resources\BinariesNET8\steam_api64.dll	Resources\BinariesNET8\OpenGL\runtimes\win-x64\native\steam_api64.dll
+Resources\BinariesNET8\OpenGL\Ude.NetStandard.dll	Resources\BinariesNET8\Ude.NetStandard.dll
+; end entries
+
 ; 2.12.17 (auto-generated entries for removed/renamed files)
 Resources\Binaries\OpenGL\System.Private.Uri.dll
 Resources\Binaries\Windows\System.Private.Uri.dll
@@ -252,5 +265,6 @@ Map Editor\ForWindows10
 Map Renderer
 
 [ForceDeleteFolder]
+
 
 
