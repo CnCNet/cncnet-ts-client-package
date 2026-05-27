@@ -4,6 +4,7 @@ Version 7.08
 - Fixed: Enabling the Veteran Balance Patch caused veins to grow extremely fast.
 - Fixed: The Ion Storm ambient track didn't play when the music was uninstalled.
 - Fixed: The OK and Cancel buttons overlapped in the password input window of the CnCNet and LAN lobby.
+- Fixed: Nod 3A: Destroy Hassan's Temple: The mission ended instantly (before you could see Hassan getting captured) when you destroyed all of Hassan's other structures before destroying (or capturing) the Pyramid (Credits: Bittah Commander).
 
 Version 7.07
 - Changed: Updated XNA CnCNet Client to version 2.12.18 (https://github.com/CnCNet/xna-cncnet-client/releases) (Credits: SadPencil, mah_boi, Starkku, Kerbiter, 11EJDE11).
