@@ -4,6 +4,7 @@ Version 7.08
 - Fixed: Enabling the Veteran Balance Patch caused veins to grow extremely fast.
 - Fixed: The Ion Storm ambient track didn't play when the music was uninstalled.
 - Fixed: The OK and Cancel buttons overlapped in the password input window of the CnCNet and LAN lobby.
+- Fixed: GDI 3A: Capture the Train Station: It was possible to get soft-locked if after beating GDI 3B, the laser turrets destroyed the train's locomoative too quick in the intro (Credits: Bittah Commander).
 - Fixed: Nod 3A: Destroy Hassan's Temple: The mission ended instantly (before you could see Hassan getting captured) when you destroyed all of Hassan's other structures before destroying (or capturing) the Pyramid (Credits: Bittah Commander).
 - Fixed: Nod 4B: Blackout: Prevented a theoretical soft-lock where the player would no longer be able to win if GDI's radar is destroyed by incidental damage such as flames or an ion storm strike.
 - Fixed: Nod 7A: Destroy the GDI Research Facility: There was a cell of land in the middle of the water in the upper-left corner of the map.
