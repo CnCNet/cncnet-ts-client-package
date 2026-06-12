@@ -1,4 +1,5 @@
 Version 7.08
+- Added: Multiplayer game lobby now have an "Auto Accept" checkbox, that players can tick in order to not have to click the "Accept" button again whenever the host changes a game option.
 - Changed: Updated XNA CnCNet Client to version 2.13.0 (https://github.com/CnCNet/xna-cncnet-client/releases) (Credits: SadPencil, Starkku, Kerbiter, 11EJDE11, Rampastring, rds1983, Flactine, BlackgamerzVN, ApocBruh).
 - Changed: The background of the in-game options menu was extended to cover the full size of larger windows such as the sound options window (Credits: Bittah Commander).
 - Fixed: Reverted an unintentional change in the previous patch that increased the damage of the artillery.
