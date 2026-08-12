@@ -10,9 +10,9 @@
       <setting name="windowlocation" serializeAs="String">40, 40</setting>
       <setting name="outputjpg" serializeAs="String">False</setting>
       <setting name="outputjpgq" serializeAs="String">90</setting>
-      <setting name="outputpng" serializeAs="String">True</setting>
+      <setting name="outputpng" serializeAs="String">False</setting>
       <setting name="outputpngq" serializeAs="String">6</setting>
-      <setting name="outputthumb" serializeAs="String">False</setting>
+      <setting name="outputthumb" serializeAs="String">True</setting>
       <setting name="thumbpreserveaspect" serializeAs="String">True</setting>
       <setting name="thumbdimensions" serializeAs="String">800,0</setting>
       <setting name="thumbpng" serializeAs="String">True</setting>

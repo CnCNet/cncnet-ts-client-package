@@ -3,8 +3,8 @@
   <Name>Tiberian Sun Client</Name>
   <Engine>Firestorm</Engine>
   <Directories>
-    <string>..\INI</string>
-    <string>..\MIX</string>
+    <string>../../INI</string>
+    <string>../../MIX</string>
   </Directories>
   <ExtraMixes>
     <string>tstunnelwithtop.mix</string>
@@ -14,6 +14,7 @@
       <Type>Temperate</Type>
       <Mixes>
         <string>isotemp.mix</string>
+        <string>Temperat.mix</string>
       </Mixes>
       <TheaterIni>temperat.ini</TheaterIni>
       <Extension>.tem</Extension>
@@ -26,6 +27,7 @@
       <Type>Snow</Type>
       <Mixes>
         <string>isosnow.mix</string>
+        <string>Snow.mix</string>
       </Mixes>
       <TheaterIni>snow.ini</TheaterIni>
       <Extension>.sno</Extension>
