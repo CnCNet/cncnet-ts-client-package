@@ -254,6 +254,11 @@ Resources\BinariesNET8\UniversalGL\DTAConfig.pdb
 Resources\BinariesNET8\XNA\DTAConfig.dll
 Resources\BinariesNET8\XNA\DTAConfig.pdb
 
+qres.dat
+qres32.dll
+Resources\qres license.txt
+INI\Sound01.ini
+
 [RenameFolder]
 
 [RenameAndMerge]

@@ -1,0 +1,23 @@
+/*******************************************************************************
+ *                                O P E N  T S
+ *******************************************************************************
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * Copyright 2026 OpenTS contributors
+ *
+ * See LICENSE.md for applicable additional terms and warranty disclaimers.
+ ******************************************************************************/
+
+
+/* Applies to every screen while GDI is the player's side. These repeat the defaults. */
+
+/* The objectives screen's text. */
+.line.fade
+{
+	color: #78d4b8;
+	font-effect: outline(3dp #78d4b8);
+}
+
+.line.ink
+{
+	color: #20d460;
+}

@@ -1,0 +1,25 @@
+<!--
+	*************************************************************************
+	                              O P E N  T S
+	*************************************************************************
+	SPDX-License-Identifier: GPL-3.0-or-later
+	Copyright 2026 OpenTS contributors
+
+	See LICENSE.md for applicable additional terms and warranty disclaimers.
+-->
+<rml>
+<head>
+	<title>Restate</title>
+	<link type="text/rcss" href="kit.rcss"/>
+	<link type="text/rcss" href="restate.rcss"/>
+</head>
+<body data-model="restate">
+	<div id="frame">
+		<div id="box"><div id="page"></div></div>
+		<button id="more" data-visible="more" data-event-click="queue('more')">[[TXT_MORE]]</button>
+		<button id="resume" data-visible="done" data-class-paired="video" data-event-click="queue('resume')">[[TXT_RESUME_MISSION]]</button>
+		<button id="video" data-visible="done &amp;&amp; video" data-event-click="queue('video')">[[TXT_VIDEO]]</button>
+	</div>
+	<div id="skip" data-visible="typing" data-event-click="queue('skip')"></div>
+</body>
+</rml>

@@ -1,0 +1,114 @@
+/*******************************************************************************
+ *                                O P E N  T S
+ *******************************************************************************
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * Copyright 2026 OpenTS contributors
+ *
+ * See LICENSE.md for applicable additional terms and warranty disclaimers.
+ ******************************************************************************/
+
+
+/* Black around the centered 640 by 400 picture. */
+body
+{
+	background-color: #000000;
+}
+
+#frame
+{
+	position: absolute;
+	width: 640dp;
+	height: 400dp;
+	decorator: image(score.pcx);
+}
+
+#box
+{
+	position: absolute;
+	left: 110dp;
+	top: 60dp;
+	width: 420dp;
+	height: 280dp;
+	text-align: center;
+}
+
+/* Centered by its widest line, set flush left, and sized to break lines as the old font did. */
+#page
+{
+	display: inline-block;
+	text-align: left;
+	font-family: fullfnt;
+	font-size: 13dp;
+	letter-spacing: 1dp;
+}
+
+.line
+{
+	height: 20dp;
+	line-height: 20dp;
+	white-space: pre;
+	visibility: hidden;
+}
+
+/* White blob, pale blob, then text, in GDI's colors; side style sheets replace them. */
+.line.blob, .line.fade, .line.ink
+{
+	visibility: visible;
+}
+
+.line.blob
+{
+	color: #fcfcfc;
+	font-effect: glow(4dp 1dp 0dp 0dp #fcfcfc);
+}
+
+.line.fade
+{
+	color: #78d4b8;
+	font-effect: outline(3dp #78d4b8);
+}
+
+.line.ink
+{
+	color: #20d460;
+}
+
+#frame button
+{
+	position: absolute;
+	width: 150dp;
+}
+
+#more
+{
+	left: 245dp;
+	top: 340dp;
+}
+
+#resume
+{
+	left: 245dp;
+	top: 360dp;
+}
+
+#resume.paired
+{
+	left: 85dp;
+	top: 348dp;
+}
+
+#video
+{
+	left: 405dp;
+	top: 348dp;
+}
+
+/* A click here finishes a fading page. */
+#skip
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
