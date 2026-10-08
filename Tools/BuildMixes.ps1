@@ -119,16 +119,79 @@ function Get-ArchiveFolders([string]$Path)
     }
 }
 
+function New-XccDatabase([string[]]$Names)
+{
+    # XCC local database: 32-byte signature, size/type/version, game/count, then names.
+    [Array]::Sort($Names, [StringComparer]::Ordinal)
+    $size = 52L
+
+    foreach ($name in $Names)
+    {
+        $size += [Text.Encoding]::ASCII.GetByteCount($name) + 1
+    }
+
+    if ($size -gt [int32]::MaxValue)
+    {
+        throw 'The XCC filename database exceeds the format size limit.'
+    }
+
+    $stream = New-Object IO.MemoryStream
+    $writer = New-Object IO.BinaryWriter($stream)
+
+    try
+    {
+        $writer.Write([Text.Encoding]::ASCII.GetBytes('XCC by Olaf van der Spek'))
+        $writer.Write([byte[]]@(0x1a, 0x04, 0x17, 0x27, 0x10, 0x19, 0x80, 0x00))
+        $writer.Write([int32]$size)
+        $writer.Write([int32]0) # Local database type
+        $writer.Write([int32]0) # Format version
+        $writer.Write([int32]2) # XCC game_ts
+        $writer.Write([int32]$Names.Count)
+
+        foreach ($name in $Names)
+        {
+            $writer.Write([Text.Encoding]::ASCII.GetBytes($name))
+            $writer.Write([byte]0)
+        }
+
+        $writer.Flush()
+
+        return ,$stream.ToArray()
+    }
+    finally
+    {
+        $writer.Dispose()
+        $stream.Dispose()
+    }
+}
+
 function New-MixArchive([string]$Directory)
 {
     $members = @()
     $ids = @{}
     $totalSize = 0L
+    $databaseName = 'local mix database.dat'
+    $databaseId = [TscMixId]::ForName($databaseName)
+    $databaseNames = New-Object 'Collections.Generic.List[string]'
+    $databaseNames.Add($databaseName)
 
     foreach ($entry in Get-ChildItem -LiteralPath $Directory -Force | Sort-Object Name)
     {
         Assert-RegularPath $entry.FullName
+
+        # The database is generated; .gitkeep only preserves empty source folders.
+        if (-not $entry.PSIsContainer -and
+            ($entry.Name -eq $databaseName -or $entry.Name -eq '.gitkeep'))
+        {
+            continue
+        }
+
         $id = [TscMixId]::ForName($entry.Name)
+
+        if ($id -eq $databaseId)
+        {
+            throw "Source member '$($entry.Name)' uses the reserved XCC database ID."
+        }
 
         if ($ids.ContainsKey($id))
         {
@@ -153,7 +216,17 @@ function New-MixArchive([string]$Directory)
 
         $members += [pscustomobject]@{ Id = $id; Data = $data }
         $totalSize += $data.LongLength
+
+        # ID-only placeholders have no recoverable filename for XCC to hash.
+        if (-not $entry.Name.StartsWith('_id_', [StringComparison]::OrdinalIgnoreCase))
+        {
+            $databaseNames.Add($entry.Name.ToLowerInvariant())
+        }
     }
+
+    [byte[]]$database = New-XccDatabase $databaseNames.ToArray()
+    $members += [pscustomobject]@{ Id = $databaseId; Data = $database }
+    $totalSize += $database.LongLength
 
     if ($members.Count -gt [int16]::MaxValue -or $totalSize -gt [int32]::MaxValue)
     {
