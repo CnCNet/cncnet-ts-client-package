@@ -1,2 +1,5 @@
 scores.mix filter=lfs diff=lfs merge=lfs -text
 scores01.mix filter=lfs diff=lfs merge=lfs -text
+
+# Preserve original game asset bytes and line endings
+/MixSource/** -text

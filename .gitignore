@@ -68,3 +68,13 @@ Language.dll
 wineprefix
 
 *.ffs_*
+
+# Game MIX archives are generated from MixSource
+/MIX/*.[mM][iI][xX]
+
+# Temporary build and test files
+.mix-build-*/
+
+# Track every archive member, including names ignored elsewhere
+!/MixSource/
+!/MixSource/**
