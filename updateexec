@@ -254,13 +254,6 @@ Resources\BinariesNET8\UniversalGL\DTAConfig.pdb
 Resources\BinariesNET8\XNA\DTAConfig.dll
 Resources\BinariesNET8\XNA\DTAConfig.pdb
 
-qres.dat
-qres32.dll
-Resources\qres license.txt
-INI\Sound01.ini
-Resources\ZLIB.License.txt
-Resources\ZLIB.Ms-PL.txt
-
 ddraw.dll
 ddraw.ini
 Resources/ts-ddraw.dll
@@ -271,6 +264,14 @@ Resources/cnc-ddraw.ini
 Resources/ddraw_nohw.dll
 Resources/ddrawcompat.dll
 Resources/ddrawcompat.ini
+qres.dat
+qres32.dll
+Resources\qres license.txt
+INI\Sound01.ini
+Resources\ZLIB.License.txt
+Resources\ZLIB.Ms-PL.txt
+Resources\Default Theme\MainMenu\vinifera.png
+Resources\Default Theme\MainMenu\vinifera_c.png
 
 [RenameFolder]
 
