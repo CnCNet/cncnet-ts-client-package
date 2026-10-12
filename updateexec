@@ -259,6 +259,17 @@ qres32.dll
 Resources\qres license.txt
 INI\Sound01.ini
 
+ddraw.dll
+ddraw.ini
+Resources/ts-ddraw.dll
+Resources/ts-ddraw.ini
+Resources/ts-ddraw-gdi.ini
+Resources/cnc-ddraw.dll
+Resources/cnc-ddraw.ini
+Resources/ddraw_nohw.dll
+Resources/ddrawcompat.dll
+Resources/ddrawcompat.ini
+
 [RenameFolder]
 
 [RenameAndMerge]
