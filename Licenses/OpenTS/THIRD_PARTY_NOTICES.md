@@ -1,0 +1,34 @@
+# Third-party notices
+
+OpenTS binaries include software from the following projects. Each project
+remains under its own license and copyright notices.
+
+| Project                                                            | Use                                       | License      |
+| ------------------------------------------------------------------ | ----------------------------------------- | ------------ |
+| [bgfx](https://github.com/bkaradzic/bgfx)                          | Rendering                                 | BSD 2-Clause |
+| [bx](https://github.com/bkaradzic/bx)                              | Foundation library used by bgfx           | BSD 2-Clause |
+| [bimg](https://github.com/bkaradzic/bimg)                          | Image and texture processing used by bgfx | BSD 2-Clause |
+| [DirectX-Headers](https://github.com/microsoft/DirectX-Headers)    | Direct3D API headers used by bgfx         | MIT          |
+| [tinystl](https://github.com/mendsley/tinystl)                     | Containers used internally by bgfx        | BSD 2-Clause |
+| [astc-encoder](https://github.com/ARM-software/astc-encoder)       | ASTC texture processing used by bimg      | Apache-2.0   |
+| [OpenGL Registry](https://github.com/KhronosGroup/OpenGL-Registry) | OpenGL API headers used by bgfx           | MIT          |
+| [Vulkan Headers](https://github.com/KhronosGroup/Vulkan-Headers)   | Vulkan API headers used by bgfx           | Apache-2.0   |
+| [miniaudio](https://github.com/mackron/miniaudio)                  | Audio device output, resampling, and WAV, FLAC, and MP3 decoding | MIT-0 or Unlicense |
+| [stb_vorbis](https://github.com/nothings/stb)                      | Ogg Vorbis decoding, bundled with miniaudio | MIT or Unlicense |
+| [LZO](https://www.oberhumer.com/opensource/lzo/)                   | LZO1X compression for maps, saves, and network blocks | GPL-2.0-or-later |
+| [RmlUi](https://github.com/mikke89/RmlUi)                          | User interface documents, styling, and layout | MIT |
+| [robin_hood](https://github.com/martinus/robin-hood-hashing)       | Hash map bundled with RmlUi               | MIT          |
+| [itlib](https://github.com/iboB/itlib)                             | Containers bundled with RmlUi             | MIT          |
+| [FreeType](https://freetype.org)                                   | Font rasterization used by RmlUi          | FTL          |
+| [zlib](https://zlib.net)                                           | Compressed font support, bundled with FreeType | zlib |
+| [Dear ImGui](https://github.com/ocornut/imgui)                     | Developer overlays                        | MIT          |
+| [stb](https://github.com/nothings/stb)                             | Rectangle packing, text editing, and TrueType headers bundled with Dear ImGui | MIT or Unlicense |
+| [stb_image](https://github.com/nothings/stb)                       | PNG and TGA decoding for the UI, bundled with bimg | MIT or Unlicense |
+| [SDL](https://github.com/libsdl-org/SDL)                           | Window, events, and keyboard and mouse input | zlib      |
+| [yuv2rgb](https://github.com/descampsa/yuv2rgb)                    | YUV conversion bundled with SDL           | BSD 3-Clause |
+| [fdlibm](https://www.netlib.org/fdlibm/)                           | Math routines bundled with SDL            | fdlibm       |
+| [Arimo](https://github.com/googlefonts/arimo)                      | The UI font                               | OFL-1.1      |
+
+The source checkout keeps the license texts under `thirdparty/`. Binary
+packages reproduce the license texts for the components used by OpenTS under
+`Licenses/OpenTS/ThirdParty/`.

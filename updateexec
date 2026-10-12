@@ -258,6 +258,8 @@ qres.dat
 qres32.dll
 Resources\qres license.txt
 INI\Sound01.ini
+Resources\ZLIB.License.txt
+Resources\ZLIB.Ms-PL.txt
 
 ddraw.dll
 ddraw.ini
