@@ -256,14 +256,14 @@ Resources\BinariesNET8\XNA\DTAConfig.pdb
 
 ddraw.dll
 ddraw.ini
-Resources/ts-ddraw.dll
-Resources/ts-ddraw.ini
-Resources/ts-ddraw-gdi.ini
-Resources/cnc-ddraw.dll
-Resources/cnc-ddraw.ini
-Resources/ddraw_nohw.dll
-Resources/ddrawcompat.dll
-Resources/ddrawcompat.ini
+Resources\ts-ddraw.dll
+Resources\ts-ddraw.ini
+Resources\ts-ddraw-gdi.ini
+Resources\cnc-ddraw.dll
+Resources\cnc-ddraw.ini
+Resources\ddraw_nohw.dll
+Resources\ddrawcompat.dll
+Resources\ddrawcompat.ini
 qres.dat
 qres32.dll
 Resources\qres license.txt
@@ -272,6 +272,8 @@ Resources\ZLIB.License.txt
 Resources\ZLIB.Ms-PL.txt
 Resources\Default Theme\MainMenu\vinifera.png
 Resources\Default Theme\MainMenu\vinifera_c.png
+MIX\SCORES.MIX
+MIX\SCORES01.MIX
 
 [RenameFolder]
 
