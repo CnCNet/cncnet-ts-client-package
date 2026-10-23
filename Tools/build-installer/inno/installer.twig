@@ -1,0 +1,1566 @@
+; =============================================================================
+; CnCNet Tiberian Sun client installer
+;
+; Install scope: per-user by default (no elevation needed). At startup the
+; user can opt into an all-users install (UAC prompt). The machine-wide
+; dependency installers only run for all-users (elevated) installs.
+;
+; This is the source template. The build renders it to installer.iss (Twig,
+; "npm run build-installer") - edit this file, never the generated output.
+; =============================================================================
+
+#define public Dependency_NoExampleSetup
+; Dependency_CustomExecute hook: runs dependency installers from Inno's temp
+; directory instead of the installer's launch directory (the library's
+; default). The DirectX web setup in particular creates a "$tmp" subfolder
+; in its working directory to extract its redistributables into, which would
+; otherwise be left behind in the folder the user launched the installer
+; from. Inno's temp directory is deleted automatically when the install
+; finishes. The value must be a quoted preprocessor string (an unquoted
+; identifier would be evaluated as a reference to another preprocessor
+; constant).
+#define public Dependency_CustomExecute 'Dependency_RunWithTempWorkingDir'
+
+[Code]
+// Dependency_CustomExecute hook implementation (declared before the library's
+// Dependency_Install below, which calls it; Inno's Pascal script is
+// order-sensitive, so the implementation lives in this preamble).
+function Dependency_RunWithTempWorkingDir(const FilePath, Parameters: String; var ResultCode: Integer): Boolean;
+begin
+  Result := ShellExec('', FilePath, Parameters, ExpandConstant('{tmp}'), SW_SHOWNORMAL, ewWaitUntilTerminated, ResultCode);
+end;
+
+#include "libs/InnoDependencyInstaller/CodeDependencies.iss"
+#include "libs/ISTheme/ISTheme.iss"
+#include "libs/TSunmix/TSunmix.iss"
+
+[CustomMessages]
+AccessDenied=Access to: %1 denied. %n Please choose a different directory or restart the installer as administrator (right-click the installer and choose "Run as administrator"). %n If the installer already runs elevated, make sure your Anti-Virus program does not block the installer (turn it off temporarily if you do not know how to configure it)
+InstallingApp=Installing %1, this may take several minutes...
+NotAPatchError=An existing Tiberian Sun game was detected in the selected folder. %n%n CnCNet Tiberian Sun is a complete client, not a patch for the game, and cannot be installed into a folder that contains the original game. %n%n Please select a different folder. (Upgrading a previous CnCNet Tiberian Sun client install is not affected.)
+GameInstallDetected=Previous Tiberian Sun installation has been detected in: %n%n %1 %n%nDo you want the installer to copy the movies from there? The installer will then download only about 52 MB of restored movies instead of all of them.
+PerUserMissingDeps=The following required runtimes are missing:%n%n %1 %n%nThey are machine-wide components and cannot be installed for a single user.%n%nElevate now to install for all users and have them installed automatically? Choosing No continues the per-user install and leaves them missing.
+PerUserMissingDepsFailed=Elevation failed, so the following required runtimes could not be installed - they require administrator rights:%n%n %1 %n%nPlease install them using an administrator account (each URL above points to the exact download) and then run this installer again - it will detect them and complete the setup. The per-user install continues for now, but the listed runtimes will remain missing.
+Agree=&I Agree
+DownloadingFiles=Downloading files
+DownloadingFilesDescription=The following files will be downloaded before the installation starts. Depending on your internet connection, this may take a while.
+
+[Setup]
+AppId={{ '{{' ~ app.appId ~ '}}' }}
+AppName={{ app.name }}
+AppVersion={{ app.version }}
+AppVerName={{ app.versionName }}
+AppPublisher={{ app.publisher }}
+AppPublisherURL={{ app.publisherUrl }}
+AppSupportURL={{ app.supportUrl }}
+AppUpdatesURL={{ app.updatesUrl }}
+VersionInfoVersion=0.0.0.0
+VersionInfoTextVersion={{ app.version }}
+VersionInfoProductName={{ app.name }}
+VersionInfoDescription={{ app.description }}
+DirExistsWarning=no
+DefaultDirName={code:GetDefaultDir}
+DisableProgramGroupPage=yes
+DisableReadyPage=no
+DisableWelcomePage=yes
+AllowNoIcons=yes
+OutputBaseFilename={{ outputBaseFilename }}
+Compression=lzma2/max
+SolidCompression=yes
+UsePreviouslanguage=no
+CreateUninstallRegKey=yes
+UsePreviousAppDir=no
+UsePreviousGroup=no
+SourceDir={{ innoPath }}
+OutputDir={{ outputDir }}
+SetupIconFile={{ setupIconFile }}
+AppendDefaultDirName=no
+ShowLanguageDialog=no
+LicenseFile={{ licenseFile }}
+ArchitecturesInstallIn64BitMode=x64compatible
+UsedUserAreasWarning=no
+SetupLogging=yes
+; Per-user (current user) install by default: no elevation is needed, and
+; non-administrators can install without any extra step. At startup the
+; user is offered the chance to install for all users instead (UAC prompt);
+; "dialog commandline" also allows /ALL and /LOW command line overrides for
+; scripted installs.
+;
+; All-users installs go to the legacy C:\Westwood\ts-client location with
+; common Start Menu / public desktop shortcuts. Per-user installs go to
+; %LocalAppData%\Programs with per-user shortcuts (unless a previous client
+; install is at the legacy location, see GetDefaultDir).
+;
+; The .NET / VC++ / DirectX dependency installers are machine-wide and
+; require elevation, so they only run for all-users (elevated) installs -
+; see InitializeSetup below.
+PrivilegesRequired=lowest
+PrivilegesRequiredOverridesAllowed=dialog commandline
+; ArchiveExtraction must be "full" (the default) because the [Files] section
+; uses the extractarchive flag for the restored-movies archive. "basic" would
+; be smaller but does not support extraction at install time.
+
+[Languages]
+Name: "english"; MessagesFile: "compiler:Default.isl"
+
+[Tasks]
+Name: "Installmov"; Description: "Download and install movies (1.4 GB)"; GroupDescription: "Music and movies"
+
+[InstallDelete]
+{% for file in installDeleteFiles %}
+Type: filesandordirs; Name: "{app}\{{ file }}"
+{% endfor %}
+; Leftover extraction folder of the DirectX web setup from older versions of
+; this installer (it used to create "$tmp" in the app directory)
+Type: filesandordirs; Name: "{app}\$tmp"
+
+[Files]
+; Installer theming resources (used at runtime, not installed)
+Source: "Resources\TiberianSunWizardFormBackground.bmp"; DestName: "WizardFormBackground.bmp"; Flags: dontcopy
+Source: "Resources\TiberianSunInnerPageBackground.bmp"; DestName: "InnerPageBackground.bmp"; Flags: dontcopy
+Source: "Resources\TiberianSunPageBackground.bmp"; DestName: "PageBackground.bmp"; Flags: dontcopy
+Source: "Resources\WritePermissionTestFile.txt"; Flags: dontcopy
+
+; Main client package (referenced by absolute path; critical files are also
+; listed explicitly below so the compile fails if any of them is missing)
+Source: "{{ sourceDir }}\*"; DestDir: "{app}"; Excludes: "{{ excludedInstallerFiles | join(',') }}"; Flags: recursesubdirs ignoreversion overwritereadonly sortfilesbyextension
+Source: "{{ sourceDir }}\version"; DestDir: "{app}";
+Source: "{{ sourceDir }}\TiberianSun.exe"; DestDir: "{app}";
+Source: "{{ sourceDir }}\game.exe"; DestDir: "{app}";
+; X3DAudio1_7.dll (the XNA renderer's audio engine) is deliberately NOT
+; bundled: the XNA 4.0 Refresh redist (RegisterDependencies) installs it
+; machine-wide, and a per-user install without the redist is surfaced by
+; the missing-dependencies dialogs instead of shipping a DLL.
+
+; Tiberian Sun Movies (no existing install in use): downloaded to the temp
+; directory in the "Preparing to install" step (see prepareToInstall below,
+; on a download page with a real per-file progress bar), then installed from
+; there.
+{% for movie in movies %}
+Source: "{tmp}\{{ movie.file }}"; DestDir: "{app}\MIX"; DestName: "{{ movie.file }}"; Check: DownloadFullMovies; Flags: external skipifsourcedoesntexist ignoreversion
+{% endfor %}
+
+; Movies copied from a detected existing TS install (decrypted .mix.d files)
+Source: {code:GetMovieSourceDir}\Movies01.mix; DestDir: "{app}\MIX"; DestName: "Movies01.mix.d"; Check: UseDetectedMovies; Flags: external skipifsourcedoesntexist deleteafterinstall; AfterInstall: HandleMovies('Movies01');
+Source: {code:GetMovieSourceDir}\Movies02.mix; DestDir: "{app}\MIX"; DestName: "Movies02.mix.d"; Check: UseDetectedMovies; Flags: external skipifsourcedoesntexist deleteafterinstall; AfterInstall: HandleMovies('Movies02');
+Source: {code:GetMovieSourceDir}\Movies03.mix; DestDir: "{app}\MIX"; DestName: "Movies03.mix.d"; Check: UseDetectedMovies; Flags: external skipifsourcedoesntexist deleteafterinstall; AfterInstall: HandleMovies('Movies03');
+; Restored-movies archive: downloaded to the temp directory in the
+; "Preparing to install" step (with a real progress bar), then extracted
+; into {app}\MIX during the install phase (native Inno Setup 7 extraction).
+Source: "{tmp}\{{ extraMovies.file }}"; DestDir: "{app}\MIX"; Check: UseDetectedMovies; Flags: external extractarchive skipifsourcedoesntexist ignoreversion
+
+[Icons]
+; All-users (elevated) installs: common Start Menu (Start Menu > CnCNet >
+; <app name>) and the public desktop. WizardNoIcons honors the wizard's
+; "Don't create any icons for this application" checkbox (AllowNoIcons=yes),
+; like the legacy ts-client-installer does.
+Name: "{commonprograms}\CnCNet\{{ app.name }}"; Filename: "{app}\TiberianSun.exe"; Check: IsUserAnAdmin and not RunsOnWine and not WizardNoIcons
+Name: "{commondesktop}\{{ app.name }}"; Filename: "{app}\TiberianSun.exe"; Check: IsUserAnAdmin and not RunsOnWine and not WizardNoIcons
+; Per-user installs: the user's own Start Menu and desktop.
+Name: "{autoprograms}\CnCNet\{{ app.name }}"; Filename: "{app}\TiberianSun.exe"; Check: not IsUserAnAdmin and not RunsOnWine and not WizardNoIcons
+Name: "{userdesktop}\{{ app.name }}"; Filename: "{app}\TiberianSun.exe"; Check: not IsUserAnAdmin and not RunsOnWine and not WizardNoIcons
+; Under Wine the Windows shortcuts are not useful (like the Yuri's Revenge
+; installer), so they are skipped there.
+Name: "{app}\Uninstall {{ app.name }}"; Filename: "{uninstallexe}"
+
+[Run]
+Filename: "{app}\TiberianSun.exe"; WorkingDir: "{app}"; Description: "{cm:LaunchProgram,{{ app.name }}}"; Flags: nowait postinstall skipifsilent runascurrentuser
+
+[UninstallDelete]
+Type: files; Name: "{app}\version_u"
+Type: files; Name: "{app}\version_cc"
+Type: files; Name: "{app}\stats.dmp"
+Type: files; Name: "{app}\spawn.ini"
+Type: files; Name: "{app}\spawnmap.ini"
+Type: files; Name: "{app}\spawnSG.ini"
+Type: files; Name: "{app}\HALLFAME.DAT"
+Type: files; Name: "{app}\ts.log"
+Type: files; Name: "{app}\except.txt"
+; Leftover decrypted movie files from an interrupted install
+Type: files; Name: "{app}\MIX\*.mix.d"
+Type: files; Name: "{app}\mpstats.log"
+Type: files; Name: "{app}\mpstats.txt"
+Type: files; Name: "{app}\sync*.txt"
+Type: files; Name: "{app}\_gsdata_"
+Type: files; Name: "{app}\buffer"
+Type: files; Name: "{app}\sun.ini"
+Type: files; Name: "{app}\SUN.ini"
+Type: files; Name: "{app}\KEYBOARD.INI"
+Type: files; Name: "{app}\SAVEGAME.NET"
+Type: filesandordirs; Name: "{app}\QM"
+Type: filesandordirs; Name: "{app}\Client"
+; Leftover extraction folder of the DirectX web setup from older versions of
+; this installer
+Type: filesandordirs; Name: "{app}\$tmp"
+Type: files; Name: "{app}\MIX\Movies01.mix"
+Type: files; Name: "{app}\MIX\Movies02.mix"
+Type: files; Name: "{app}\MIX\Movies03.mix"
+Type: files; Name: "{app}\MIX\Expand00.mix"
+Type: dirifempty; Name: "{app}\MIX"
+
+[Registry]
+; Wine: force the bundled DirectDraw wrapper for the game (ported)
+Root: HKCU; Subkey: "Software\Wine\AppDefaults\game.exe\DllOverrides"; ValueType: string; ValueName: "ddraw"; ValueData: "native, builtin"; Check: RunsOnWine
+; Enable long path support (Windows 10 1607+). Only possible (and only
+; relevant) for elevated all-users installs; noerror guards the write.
+Root: HKLM; Subkey: "SYSTEM\CurrentControlSet\Control\FileSystem"; ValueType: dword; ValueName: "LongPathsEnabled"; ValueData: 1; Check: IsUserAnAdmin; Flags: noerror; MinVersion: 10.0.14393
+
+[Code]
+const
+  WritePermissionTestFile = 'WritePermissionTestFile.txt';
+  GameRegKey = 'Software\Westwood\Tiberian Sun';
+  WOW6432GameRegKey = 'Software\WOW6432Node\Westwood\Tiberian Sun';
+  SteamGameFolder = 'Command & Conquer Tiberian Sun';
+  // Largest total the overall progress bar can represent in its native
+  // (byte) units before we switch to megabyte units (see
+  // MoviesOverallBarScale); the bar's Max is 32-bit.
+  MoviesOverallBarByteLimit = 2000000000;
+
+var
+  GameDetected: Boolean;
+  DetectedInstallPath: String;
+  DetectionDone: Boolean;
+  DetectedMoviesAnswer: Boolean;
+  // Titles of the machine-wide dependencies that are missing and cannot be
+  // installed automatically in a per-user install (see InitializeSetup).
+  PerUserMissingDeps: String;
+  // Download page (TDownloadWizardPage) on which the movie files are
+  // downloaded (created in InitializeWizard; the same page type
+  // InnoDependencyInstaller uses for its dependency downloads).
+  MoviesDownloadPage: TDownloadWizardPage;
+  // IDP-style (InnoDownloadPlugin) layout of that page, created by
+  // MoviesLayout (called from InitializeWizard) and updated by the
+  // MoviesDownloadProgress callback; see MoviesLayout's comment for the
+  // full diagram, the repurposed built-in controls and the
+  // ISTheme.ReplaceLabel rationale.
+  MoviesTitleLabel: TNewStaticText;
+  MoviesDescriptionLabel: TNewStaticText;
+  MoviesTotalCaptionLabel: TNewStaticText;
+  MoviesTotalValueLabel: TNewStaticText;
+  MoviesCurrentCaptionLabel: TNewStaticText;
+  MoviesCurrentValueLabel: TNewStaticText;
+  MoviesFileCaptionLabel: TNewStaticText;
+  MoviesOverallBar: TNewProgressBar;
+  MoviesSpeedLabel: TNewStaticText;
+  MoviesSpeedValueLabel: TNewStaticText;
+  MoviesStatusLabel: TNewStaticText;
+  MoviesStatusValueLabel: TNewStaticText;
+  MoviesElapsedLabel: TNewStaticText;
+  MoviesElapsedValueLabel: TNewStaticText;
+  MoviesRemainingLabel: TNewStaticText;
+  MoviesRemainingValueLabel: TNewStaticText;
+  // Bytes of the movie files preceding the one currently downloading, set
+  // before each download starts; the callback adds the current file's
+  // received bytes on top of it to position the overall bar.
+  MoviesBytesBase: Int64;
+  // Total bytes of the current download session (all its files), used for
+  // the "Total progress" value, the remaining-time estimate and the overall
+  // bar sizing (set by MoviesPrepareProgress).
+  MoviesSessionTotal: Int64;
+  // Size in bytes of the file currently downloading (known from
+  // constants.ts), used for the "Current file" value while the engine has
+  // not reported the file size yet (ProgressMax = 0).
+  MoviesCurrentFileSize: Int64;
+  // GetTickCount at the start of the session (the first file), for the
+  // elapsed-time row.
+  MoviesSessionStartTick: Longword;
+  // Divisor applied to the overall bar's Max/Position: 1 (bytes) normally,
+  // 1048576 (megabytes) when the session total would overflow the bar's
+  // 32-bit Max (see MoviesOverallBarByteLimit).
+  MoviesOverallBarScale: Int64;
+  // Download speed measurement state, only touched by the
+  // MoviesDownloadProgress callback (main thread); see its comment for
+  // the cumulative-average speed and 1 Hz refresh semantics.
+  MoviesFileStartTick: Longword;
+  MoviesLastSpeedTick: Longword;
+  MoviesLastBytes: Int64;
+
+// ===================================================================== Wine
+
+function GetCurrentProcess(): THandle;
+  external 'GetCurrentProcess@kernel32.dll';
+function GetModuleHandleA(lpLibFileName: PAnsiChar): THandle;
+  external 'GetModuleHandleA@kernel32.dll stdcall';
+function GetProcAddress(Module: THandle; ProcName: PAnsiChar): Longword;
+  external 'GetProcAddress@kernel32.dll stdcall';
+function IsWow64Process(hProcess: THandle; var Wow64Flag: Boolean): Boolean;
+  external 'IsWow64Process@kernel32.dll stdcall';
+function IsDebuggerPresent(): Boolean;
+  external 'IsDebuggerPresent@kernel32.dll stdcall';
+
+// ShellExecute (ANSI entry point) imported directly to request elevation.
+// The built-in script function ShellExec() cannot be used for this: when the
+// target file is setup's own executable (our {srcexe} relaunch) and the
+// install step has not started yet, Inno's script layer short-circuits the
+// call in IsProtectedSrcExe (Setup.ScriptFunc.HelperFunc.pas) and reports
+// ERROR_ACCESS_DENIED (5) WITHOUT any shell call at all - so
+// ShellExec('runas', '{srcexe}', ...) never elevates and no UAC prompt is
+// ever shown. A direct ShellExecute call with the 'runas' verb goes through
+// the standard elevation path and does show the UAC consent prompt.
+// All installer paths and the relaunch command line are ASCII, so the ANSI
+// entry point (ShellExecuteA) with PAnsiChar parameters is the correct match
+// (same marshaling pattern as GetModuleHandleA/GetProcAddress above).
+//
+// Return contract: > 32 = success (an HINSTANCE pseudo-handle, e.g. 0x2A);
+// <= 32 = an SE_ERR_* code (5 = access denied / user cancelled the UAC prompt).
+// The call blocks until the user makes the UAC decision.
+function ShellExecuteA(hWnd: Integer; Operation: PAnsiChar; Filename: PAnsiChar; Parameters: PAnsiChar; Directory: PAnsiChar; nShow: Integer): Integer;
+  external 'ShellExecuteA@shell32.dll stdcall';
+
+// Terminates this process (kernel32 ExitProcess, never returns). Used to
+// close the per-user instance once the elevated instance has taken over:
+// per Inno's docs, Abort() called from NextButtonClick only escapes the
+// current execution path and does NOT exit Setup, which would leave this
+// wizard window open behind the elevated one. Setup's log writes are
+// unbuffered direct WriteFile calls (TTextFileWriter -> WriteBuffer), so
+// terminating without finalization loses nothing.
+function ExitProcess(ExitCode: Integer): Integer;
+  external 'ExitProcess@kernel32.dll stdcall';
+
+// True when the current process is running elevated (UAC). Used to decide
+// the install scope: PrivilegesRequired=lowest plus the startup scope
+// dialog means an elevated process installs for all users, a non-elevated
+// one installs for the current user.
+//
+// Note: the shell32 import must be wrapped in a named function rather than
+// declared as a bare "external". Inno's expression engine (Check:,
+// BeforeInstall:, AfterInstall:) resolves script functions by name via the
+// VM's GetProc, and bare DLL imports are stored without a name, so using a
+// bare external in a Check: expression fails at install time with
+// "Internal error: Expression error 'Script error: Could not call proc.'".
+function ShellIsUserAnAdmin(): Boolean;
+  external 'IsUserAnAdmin@shell32.dll stdcall';
+function IsUserAnAdmin(): Boolean;
+begin
+  Result := ShellIsUserAnAdmin();
+end;
+
+function RunsOnWine(): boolean;
+var
+  A: Array[0..3] of String;
+  C: THandle;
+  D: Longword;
+  E: Longword;
+  F: Longword;
+  I: Integer;
+  Wow64: Boolean;
+begin
+  Result := false;
+
+  if (ParamCount() > 0) then
+  begin
+    A[0] := '/wine';
+    A[1] := '/WINE';
+    A[2] := '/WINEDEBUG=';
+    A[3] := '/WINEDLLOVERRIDES=';
+
+    for I := 1 to ParamCount() do
+    begin
+      if (ParamStr(I) = A[0]) or (ParamStr(I) = A[1]) then
+      begin
+        Result := true;
+        Exit;
+      end;
+
+      if (Pos(A[2], ParamStr(I)) = 1) or (Pos(A[3], ParamStr(I)) = 1) then
+      begin
+        Result := true;
+        Exit;
+      end;
+    end;
+  end;
+
+  if IsDebuggerPresent() then
+  begin
+    Result := true;
+    Exit;
+  end;
+
+  if not IsWow64Process(GetCurrentProcess(), Wow64) then Exit;
+
+  D := GetProcAddress(GetModuleHandleA('kernel32.dll'), 'wine_get_version');
+  E := GetProcAddress(GetModuleHandleA('kernel32.dll'), 'wine_get_buildstring');
+  F := GetProcAddress(GetModuleHandleA('kernel32.dll'), 'wine_get_version_nodebug');
+
+  if ((D <> 0) or (E <> 0) or (F <> 0)) then
+  begin
+    Result := true;
+    Exit;
+  end;
+
+  if FileExists(ExpandConstant('{win}') + '\wine') then
+  begin
+    Result := true;
+    Exit;
+  end;
+
+  if FileExists(ExpandConstant('{sys}') + '\wine') then
+  begin
+    Result := true;
+    Exit;
+  end;
+
+  C := GetModuleHandleA('ntdll.dll');
+
+  if (C <> 0) then
+  begin
+    D := GetProcAddress(C, 'wine_get_version');
+    E := GetProcAddress(C, 'wine_get_buildstring');
+    F := GetProcAddress(C, 'wine_get_version_nodebug');
+
+    if ((D <> 0) or (E <> 0) or (F <> 0)) then
+      Result := true;
+  end;
+end;
+
+// ================================================== Existing install lookup
+
+// Parses Steam's config.vdf and returns the Steam library roots
+// (the "BaseInstallFolder_N" values). Ported from the legacy
+// ts-client-installer (Shared.iss), which used this format correctly.
+function ParseSteamConfig(FileName: String; var Paths: TArrayOfString): Boolean;
+var
+  Lines: TArrayOfString;
+  I: Integer;
+  Line: String;
+  P: Integer;
+  Key: String;
+  Value: String;
+  Count: Integer;
+  BaseInstallFolderKeyPrefix: String;
+begin
+  BaseInstallFolderKeyPrefix := 'BaseInstallFolder_';
+  Result := LoadStringsFromFile(FileName, Lines);
+  Count := 0;
+
+  if not Result then Exit;
+
+  for I := 0 to GetArrayLength(Lines) - 1 do
+  begin
+    Line := Trim(Lines[I]);
+
+    if Copy(Line, 1, 1) <> '"' then
+      Continue;
+
+    Delete(Line, 1, 1);
+    P := Pos('"', Line);
+
+    if P = 0 then
+      Continue;
+
+    Key := Trim(Copy(Line, 1, P - 1));
+    Line := Trim(Copy(Line, P + 1, Length(Line) - P));
+
+    if CompareText(Copy(Key, 1, Length(BaseInstallFolderKeyPrefix)), BaseInstallFolderKeyPrefix) <> 0 then
+      Continue;
+
+    if Copy(Line, 1, 1) <> '"' then
+      Continue;
+
+    Delete(Line, 1, 1);
+    P := Pos('"', Line);
+
+    if P = 0 then
+      Continue;
+
+    Value := Trim(Copy(Line, 1, P - 1));
+    StringChange(Value, '\\', '\');
+
+    Count := Count + 1;
+    SetArrayLength(Paths, Count);
+    Paths[Count - 1] := Value;
+  end;
+end;
+
+// Returns the Steam installation directory (registry first, then the
+// default install location).
+function GetSteamPath(): String;
+var
+  SteamPath: String;
+begin
+  Result := '';
+
+  SteamPath := ExpandConstant('{reg:HKLM\SOFTWARE\Valve\Steam,SteamPath|}');
+  if (SteamPath = '') or (not DirExists(SteamPath)) then
+    SteamPath := ExpandConstant('{reg:HKLMA64\SOFTWARE\Valve\Steam,SteamPath|}');
+
+  if (SteamPath = '') or (not DirExists(SteamPath)) then
+    SteamPath := ExpandConstant('{reg:HKCU\SOFTWARE\Valve\Steam,SteamPath|}');
+
+  if (SteamPath = '') or (not DirExists(SteamPath)) then
+    SteamPath := ExpandConstant('{pf}\Steam');
+
+  if DirExists(SteamPath) then
+    Result := SteamPath;
+end;
+
+// Detects an existing Tiberian Sun install (registry, then Steam library
+// folders, then the classic C:\Westwood\SUN location). The detected path is
+// used both as the installer's default directory and as the source for
+// copying movies from.
+procedure DetectExistingInstall();
+var
+  InstallPath: String;
+  SteamPath: String;
+  SteamConfig: String;
+  SteamLibs: TArrayOfString;
+  i: Integer;
+begin
+  if DetectionDone then Exit;
+  DetectionDone := True;
+  GameDetected := False;
+  DetectedInstallPath := 'C:\Westwood\SUN';
+
+  // 1. Registry (original install path)
+  if RegQueryStringValue(HKLM, GameRegKey, 'installpath', InstallPath) or
+     RegQueryStringValue(HKLM, WOW6432GameRegKey, 'installpath', InstallPath) then
+  begin
+    InstallPath := ExtractFilePath(InstallPath);
+    if FileExists(InstallPath + 'game.exe') then
+    begin
+      DetectedInstallPath := InstallPath;
+      GameDetected := True;
+      Exit;
+    end;
+  end;
+
+  // 2. Steam library folders
+  SteamPath := GetSteamPath();
+  if (SteamPath <> '') then
+  begin
+    SetArrayLength(SteamLibs, 0);
+    SteamConfig := SteamPath + '\steamapps\config\config.vdf';
+
+    if FileExists(SteamConfig) then
+    begin
+      if ParseSteamConfig(SteamConfig, SteamLibs) then
+      begin
+        // The main Steam library (SteamPath) is not listed in config.vdf.
+        i := GetArrayLength(SteamLibs);
+        SetArrayLength(SteamLibs, i + 1);
+        SteamLibs[i] := SteamPath;
+      end;
+    end;
+
+    for i := 0 to Length(SteamLibs) - 1 do
+    begin
+      if FileExists(SteamLibs[i] + '\steamapps\common\' + SteamGameFolder + '\game.exe') then
+      begin
+        DetectedInstallPath := SteamLibs[i] + '\steamapps\common\' + SteamGameFolder;
+        GameDetected := True;
+        Exit;
+      end;
+    end;
+  end;
+
+  // 3. Classic install location
+  if FileExists('C:\Westwood\SUN\game.exe') then
+  begin
+    DetectedInstallPath := 'C:\Westwood\SUN';
+    GameDetected := True;
+  end;
+end;
+
+// Default install directory.
+//
+// All-users (elevated) installs go to the legacy C:\Westwood\ts-client
+// location. Per-user installs default to %LocalAppData%\Programs - except
+// when a previous client install is at the legacy location, in which case
+// the upgrade happens in place. The write-permission test on the
+// select-dir page (NextButtonClick) still verifies the directory is
+// writable for this user, so a locked-down legacy location is caught
+// before the install starts.
+//
+// The detected existing game install is deliberately NOT the default
+// directory: this client is not a patch and must not be installed into a
+// folder that already contains a game (enforced in NextButtonClick). The
+// detected install is only used as the source for copying movies from.
+function GetDefaultDir(Param: String): String;
+begin
+  if (IsUserAnAdmin()) or (FileExists('C:\Westwood\ts-client\TiberianSun.exe')) then
+  begin
+    Result := 'C:\Westwood\ts-client';
+    Exit;
+  end;
+
+  Result := ExpandConstant('{userpf}\CnCNet Tiberian Sun');
+end;
+
+function GetMovieSourceDir(Param: String): String;
+begin
+  DetectExistingInstall();
+  Result := DetectedInstallPath;
+end;
+
+// ================================================================== Movies
+
+function UseDetectedMovies(): Boolean;
+begin
+  Result := DetectedMoviesAnswer;
+end;
+
+// The full-size Tiberian Sun Movies are downloaded (see the [Files] section) when
+// the movies task is selected and the movies of a detected existing install
+// are not used instead.
+function DownloadFullMovies(): Boolean;
+begin
+  Result := WizardIsTaskSelected('Installmov') and (not DetectedMoviesAnswer);
+end;
+
+// Decides whether to copy the movies from a detected existing install (then
+// only the small restored-movies archive is downloaded, see the [Files]
+// section) or to download the full movies (when the Installmov task is
+// selected). In silent installs no prompt is shown: the movies of a detected
+// existing install are used when one is found and the Installmov task is
+// selected, otherwise the full movies are downloaded when the task is
+// selected. (Without the task selection a silent install installs no movies
+// at all, mirroring the interactive flow's default.)
+function PrepareMovies(): Boolean;
+begin
+  if WizardSilent then
+  begin
+    DetectedMoviesAnswer := GameDetected and WizardIsTaskSelected('Installmov');
+    Exit;
+  end;
+
+  if GameDetected then
+    DetectedMoviesAnswer :=
+      (MsgBox(FmtMessage(ExpandConstant('{cm:GameInstallDetected}'), [DetectedInstallPath]), mbConfirmation, MB_YESNO) = IDYES);
+
+  Result := True;
+end;
+
+// ------------------------------------------------------------------ Download
+
+// Movie file metadata (generated from the movies array in constants.ts, the
+// single source of truth for the movie URLs and filenames; the [Files]
+// section is generated from the same array).
+function GetMovieUrl(const Index: Integer): String;
+begin
+  case Index of
+  {% for movie in movies %}
+    {{ loop.index0 }}: Result := '{{ movie.url }}';
+  {% endfor %}
+  else
+    Result := '';
+  end;
+end;
+
+function GetMovieFile(const Index: Integer): String;
+begin
+  case Index of
+  {% for movie in movies %}
+    {{ loop.index0 }}: Result := '{{ movie.file }}';
+  {% endfor %}
+  else
+    Result := '';
+  end;
+end;
+
+// Restored-movies archive metadata (generated from extraMovies).
+function GetExtraMoviesUrl(): String;
+begin
+  Result := '{{ extraMovies.url }}';
+end;
+
+function GetExtraMoviesFile(): String;
+begin
+  Result := '{{ extraMovies.file }}';
+end;
+
+// Movie file sizes in bytes (generated from the sizeKB values in
+// constants.ts - the same values the [Files] section reports as the
+// download size). Used to size the overall progress bar and to position
+// it per file.
+function GetMovieSize(const Index: Integer): Int64;
+begin
+  case Index of
+  {% for movie in movies %}
+    {{ loop.index0 }}: Result := {{ movie.sizeKB * 1024 }};
+  {% endfor %}
+  else
+    Result := 0;
+  end;
+end;
+
+function GetExtraMoviesSize(): Int64;
+begin
+  Result := {{ extraMovies.sizeKB * 1024 }};
+end;
+
+// GetTickCount is not part of Inno's script function set (the other
+// kernel32 externals above show that bare externals work fine in plain
+// script code).
+function GetTickCount(): Longword;
+  external 'GetTickCount@kernel32.dll stdcall';
+
+// Human-readable download speed (IDP's formatspeed): integral KB/s below
+// 1 MiB/s, one-decimal MB/s below 10 MiB/s, integral MB/s above (binary
+// units; Format gives the locale-aware decimal separator).
+function MoviesFormatSpeed(const BytesPerSecond: Double): String;
+begin
+  if BytesPerSecond < 1048576 then
+    Result := IntToStr(Trunc(BytesPerSecond / 1024.0)) + ' KB/s'
+  else if BytesPerSecond < 10485760 then
+    Result := Format('%.1f MB/s', [BytesPerSecond / 1048576.0])
+  else
+    Result := IntToStr(Trunc(BytesPerSecond / 1048576.0)) + ' MB/s';
+end;
+
+// Human-readable byte count (IDP's formatsize): integral KB below 1 MiB,
+// two-decimal MB below 1 GiB, two-decimal GB above (binary units; Format
+// gives the locale-aware decimal separator).
+function MoviesFormatSize(const Bytes: Int64): String;
+begin
+  if Bytes < 1048576 then
+    Result := IntToStr(Bytes div 1024) + ' KB'
+  else if Bytes < 1073741824 then
+    Result := Format('%.2f MB', [Bytes / 1048576.0])
+  else
+    Result := Format('%.2f GB', [Bytes / 1073741824.0]);
+end;
+
+// "x of y" pair (IDP's formatsize(ofmsg, size1, size2) overload): the unit
+// is picked from the total and both values use it with two decimals, so
+// the two halves of the pair never disagree about units.
+function MoviesFormatSizeOf(const Bytes, TotalBytes: Int64): String;
+begin
+  if TotalBytes < 1073741824 then
+    Result := Format('%.2f MB of %.2f MB', [Bytes / 1048576.0, TotalBytes / 1048576.0])
+  else
+    Result := Format('%.2f GB of %.2f GB', [Bytes / 1073741824.0, TotalBytes / 1073741824.0]);
+end;
+
+// hh:mm:ss from whole seconds, hours zero-padded (IDP formats the timer
+// as %02u:%02u:%02u). Delphi's Format('%2.0d') pads with spaces, so the
+// padding is done explicitly.
+function MoviesFormatTime(const Seconds: Int64): String;
+var
+  Hours, Minutes, Secs: Int64;
+begin
+  Hours := Seconds div 3600;
+  Minutes := (Seconds mod 3600) div 60;
+  Secs := Seconds mod 60;
+  if Hours < 10 then
+    Result := '0'
+  else
+    Result := '';
+  Result := Result + IntToStr(Hours) + ':';
+  if Minutes < 10 then
+    Result := Result + '0';
+  Result := Result + IntToStr(Minutes) + ':';
+  if Secs < 10 then
+    Result := Result + '0';
+  Result := Result + IntToStr(Secs);
+end;
+
+// Progress callback passed to CreateDownloadPage. The engine runs the HTTP
+// download on a worker thread and invokes this on the main thread (while
+// pumping window messages) at most once every 50 ms per file, with the
+// bytes received so far for the current file and the total size of that
+// file (ProgressMax is 0 while the size is still unknown). Returning False
+// would cancel the download, so always return True.
+function MoviesDownloadProgress(const Url, FileName: String; const Progress, ProgressMax: Int64): Boolean;
+var
+  Now: Longword;
+  Speed: Double;
+  Received: Int64;
+  CurrentMax: Int64;
+begin
+  Result := True;
+
+  Now := GetTickCount();
+
+  // A new file (or a retry) starts with a lower byte count than the last
+  // sample; restart the per-file speed clocks (IDP starts a fresh
+  // speedTimer for every file).
+  if Progress < MoviesLastBytes then
+  begin
+    MoviesLastBytes := 0;
+    MoviesFileStartTick := Now;
+    MoviesLastSpeedTick := Now;
+  end;
+  MoviesLastBytes := Progress;
+
+  // The engine writes the current file name into Msg2Label (the "File:"
+  // row value) on every tick itself; update all the other rows here.
+  Received := MoviesBytesBase + Progress;
+  if ProgressMax > 0 then
+    CurrentMax := ProgressMax
+  else
+    CurrentMax := MoviesCurrentFileSize;
+
+  MoviesOverallBar.Position := Received div MoviesOverallBarScale;
+  MoviesTotalValueLabel.Caption := MoviesFormatSizeOf(Received, MoviesSessionTotal);
+  MoviesCurrentValueLabel.Caption := MoviesFormatSizeOf(Progress, CurrentMax);
+  MoviesStatusValueLabel.Caption := 'Downloading...';
+  MoviesElapsedValueLabel.Caption := MoviesFormatTime((Now - MoviesSessionStartTick) div 1000);
+
+  // Speed and remaining time, refreshed at most once a second (IDP's
+  // speedTimer(1000) - not on every progress tick). The speed is the
+  // cumulative average for the file currently downloading, so each
+  // per-second step is stable, and the 1 Hz cadence keeps the rows from
+  // flickering on every ~50 ms tick.
+  if Now >= MoviesLastSpeedTick + 1000 then
+  begin
+    MoviesLastSpeedTick := Now;
+    if Now > MoviesFileStartTick then
+      Speed := Progress * 1000.0 / (Now - MoviesFileStartTick)
+    else
+      Speed := 0;
+    if Speed > 0 then
+    begin
+      MoviesSpeedValueLabel.Caption := MoviesFormatSpeed(Speed);
+      // Remaining (IDP): the session's remaining bytes at this average
+      // speed. Speed is in bytes/second, so (bytes / bytes-per-second) is
+      // already seconds - no unit conversion.
+      if Received < MoviesSessionTotal then
+        MoviesRemainingValueLabel.Caption := MoviesFormatTime(Trunc((MoviesSessionTotal - Received) / Speed))
+      else
+        MoviesRemainingValueLabel.Caption := '-';
+    end
+    else
+    begin
+      MoviesSpeedValueLabel.Caption := '-';
+      MoviesRemainingValueLabel.Caption := '-';
+    end;
+  end;
+end;
+
+// Sizes the overall bar and resets the per-row state before a download (or
+// the next file of a multi-file download) starts.
+procedure MoviesPrepareProgress(const BaseBytes, TotalBytes, FileSize: Int64);
+begin
+  MoviesBytesBase := BaseBytes;
+  MoviesSessionTotal := TotalBytes;
+  MoviesCurrentFileSize := FileSize;
+  MoviesLastBytes := 0;
+  MoviesFileStartTick := GetTickCount();
+  MoviesLastSpeedTick := GetTickCount();
+  if BaseBytes = 0 then
+    MoviesSessionStartTick := GetTickCount();
+
+  // The overall bar's Max is 32-bit, so when the session total approaches
+  // that limit, switch the bar to megabyte units (Max and Position are
+  // scaled by the same factor, so the ratio is unchanged).
+  if TotalBytes > MoviesOverallBarByteLimit then
+    MoviesOverallBarScale := 1048576
+  else
+    MoviesOverallBarScale := 1;
+  MoviesOverallBar.Min := 0;
+  MoviesOverallBar.Max := TotalBytes div MoviesOverallBarScale;
+  MoviesOverallBar.Position := BaseBytes div MoviesOverallBarScale;
+
+  MoviesTotalValueLabel.Caption := MoviesFormatSizeOf(BaseBytes, TotalBytes);
+  MoviesCurrentValueLabel.Caption := MoviesFormatSizeOf(0, FileSize);
+  MoviesSpeedValueLabel.Caption := '-';
+  MoviesStatusValueLabel.Caption := 'Starting...';
+  MoviesElapsedValueLabel.Caption := MoviesFormatTime(0);
+  MoviesRemainingValueLabel.Caption := '-';
+end;
+
+// Sleep alone would freeze the wizard (Inno's Sleep does not process window
+// messages), so pump in 100 ms steps exactly like
+// InnoDependencyInstaller's Dependency_Wait: TDownloadWizardPage.SetText
+// calls ProcessMsgs, which runs Application.ProcessMessages while this page
+// is current (it is, during the retry wait). The file name is passed as
+// Msg2 so the "File:" row keeps showing it during the wait (the engine
+// itself writes it there on each progress tick); the wait reason is shown
+// on the "Status:" row, not in Msg1 (that label is hidden in the IDP
+// layout).
+//
+// Note: a custom PeekMessage/TranslateMessage/DispatchMessage pump was
+// tried first, but newer Windows builds (10.0.26300 verified) no longer
+// export user32.dll's TranslateMessageA/W entry points, so Inno's script
+// engine failed to import the external at script load and the installer
+// died at startup with "Cannot import dll: utf8 user32.dll". The SetText
+// pump avoids any user32 import at all.
+procedure MoviesDownloadWait(const Title, FileName, StatusText: String; const Milliseconds: Integer);
+var
+  Step: Integer;
+begin
+  MoviesStatusValueLabel.Caption := StatusText;
+  for Step := 1 to Milliseconds div 100 do
+  begin
+    MoviesDownloadPage.SetText(Title, FileName);
+    Sleep(100);
+  end;
+end;
+
+// Downloads one movie file (or the restored-movies archive) to the temp
+// directory on the download page: a real per-file progress bar plus a Stop
+// button (TDownloadWizardPage, the same page type InnoDependencyInstaller
+// uses for its dependency downloads) - instead of the generic install
+// progress gauge the [Files] "download" flag produces. The overall
+// (all-files) bar below it is sized for TotalBytes and starts at BaseBytes
+// (the bytes of the files queued before this one).
+//
+// Transient failures are retried with a backoff; afterwards the user can
+// abort the install, retry again, or ignore the file (the install then
+// continues without it; the matching [Files] entry has
+// skipifsourcedoesntexist).
+//
+// Returns True when the file is in the temp directory, or when the user
+// chose to ignore the failure.
+function DownloadMovieFile(const Url, Filename, Title: String; const BaseBytes, TotalBytes, FileSize: Int64): Boolean;
+var
+  Attempt: Integer;
+  Retry: Boolean;
+begin
+  Result := True;
+  MoviesPrepareProgress(BaseBytes, TotalBytes, FileSize);
+  MoviesDownloadPage.Clear;
+  MoviesDownloadPage.Add(Url, Filename, '');
+  // Prefill the "File:" row value (the engine writes the file name into it
+  // on the first progress tick anyway).
+  MoviesDownloadPage.SetText(Title, Filename);
+
+  // break inside try does not leave the loop in Pascal Script, so loop on a flag
+  Attempt := 0;
+  Retry := True;
+  while Retry do
+  begin
+    Retry := False;
+    try
+      MoviesDownloadPage.Download;
+    except
+      if MoviesDownloadPage.AbortedByUser then
+      begin
+        Log('Movie download aborted by user: ' + Title);
+        Result := False;
+      end
+      else
+      begin
+        Log('Movie download failed: ' + Title + ': ' + GetExceptionMessage);
+        Attempt := Attempt + 1;
+        if Attempt <= 3 then
+        begin
+          Log('Retrying movie download (attempt ' + IntToStr(Attempt) + ' of 3): ' + Title);
+          MoviesDownloadWait(Title, Filename, 'Status: Waiting ' + IntToStr(2 * Attempt) + ' s (attempt ' + IntToStr(Attempt) + ' of 3): ' + GetExceptionMessage, 2000 * Attempt);
+          Retry := True;
+        end
+        else
+        begin
+          case SuppressibleMsgBox(AddPeriod(GetExceptionMessage), mbError, MB_ABORTRETRYIGNORE, IDABORT) of
+            IDABORT:
+              Result := False;
+            IDRETRY:
+              begin
+                Attempt := 0;
+                Retry := True;
+              end;
+            IDIGNORE:
+              Log('Movie download ignored, continuing without the file: ' + Title);
+          end;
+        end;
+      end;
+    end;
+  end;
+end;
+
+// Downloads all the full-size Tiberian Sun Movies (one per file, each with its own
+// progress bar, and an overall bar spanning all files). Returns False as
+// soon as a download is aborted.
+function DownloadAllMovies(): Boolean;
+var
+  MovieIndex: Integer;
+  Title: String;
+  TotalBytes: Int64;
+  BaseBytes: Int64;
+begin
+  Result := True;
+  TotalBytes := 0;
+  for MovieIndex := 0 to {{ movies|length }} - 1 do
+  begin
+    TotalBytes := TotalBytes + GetMovieSize(MovieIndex);
+  end;
+
+  BaseBytes := 0;
+  for MovieIndex := 0 to {{ movies|length }} - 1 do
+  begin
+    Title := GetMovieFile(MovieIndex) + ' (' + IntToStr(MovieIndex + 1) + ' of ' + IntToStr({{ movies|length }}) + ')';
+    if not DownloadMovieFile(GetMovieUrl(MovieIndex), GetMovieFile(MovieIndex), Title, BaseBytes, TotalBytes, GetMovieSize(MovieIndex)) then
+    begin
+      Result := False;
+      Break;
+    end;
+    BaseBytes := BaseBytes + GetMovieSize(MovieIndex);
+  end;
+end;
+
+// "Preparing to install" step: downloads the movie files with a real
+// progress bar (TDownloadWizardPage, the same page type InnoDependencyInstaller
+// uses for its dependency downloads), instead of the generic install progress
+// gauge the [Files] "download" flag would produce. The files are downloaded
+// to the temp directory and the [Files] section installs them from there
+// (Inno removes the temp directory when the install finishes).
+//
+// Runs after InnoDependencyInstaller's own PrepareToInstall (the library's
+// [Code] is included first, and same-name event functions run in order),
+// so machine-wide dependencies are downloaded/installed first and the
+// movies afterwards.
+//
+// Returning a non-empty string aborts the install with that message.
+function prepareToInstall(var NeedsRestart: Boolean): String;
+begin
+  Result := '';
+
+  if DownloadFullMovies then
+  begin
+    MoviesDownloadPage.Show;
+    try
+      if not DownloadAllMovies() then
+        Result := 'The download of the Tiberian Sun Movies was stopped.';
+    finally
+      MoviesDownloadPage.Hide;
+    end;
+  end
+  else if UseDetectedMovies then
+  begin
+    MoviesDownloadPage.Show;
+    try
+      if not DownloadMovieFile(GetExtraMoviesUrl(), GetExtraMoviesFile(), 'Restored movies archive', 0, GetExtraMoviesSize(), GetExtraMoviesSize()) then
+        Result := 'The download of the restored movies archive was stopped.';
+    finally
+      MoviesDownloadPage.Hide;
+    end;
+  end;
+end;
+
+// Decrypts one copied (still encrypted) movie mix. The .mix.d source is
+// removed by the deleteafterinstall flag after this runs, so a failure here
+// loses the movie for this install - verify the result and warn (interactive
+// installs) instead of failing silently.
+procedure DecryptMixFile(filename: String);
+var
+  ExitCode: Integer;
+begin
+  if FileExists(ExpandConstant('{app}\MIX\' + filename + '.mix.d')) then
+  begin
+    WizardForm.FilenameLabel.Caption := 'Decrypting ' + filename + '.mix';
+    ExitCode := TSunMixCMD(ExpandConstant('{app}\MIX\'), filename + '.mix.d decrypt -o ' + filename + '.mix');
+    if (ExitCode <> 0) or not FileExists(ExpandConstant('{app}\MIX\' + filename + '.mix')) then
+    begin
+      Log('Decrypting ' + filename + '.mix failed (tsunmix exit code ' + IntToStr(ExitCode) + ').');
+      if not WizardSilent then
+        SuppressibleMsgBox('Could not decrypt ' + filename + '.mix from the existing install. The movie will be missing after installation.', mbError, MB_OK, IDOK);
+    end;
+  end;
+end;
+
+procedure HandleMovies(filename: String);
+begin
+  if DetectedMoviesAnswer then
+  begin
+    DecryptMixFile(filename);
+  end;
+end;
+
+// ============================================================ Dependencies
+
+// True when a DirectX 9 d3dx9 runtime DLL is present in either system
+// directory (on 64-bit systems 32-bit apps use the SysWOW64 copy).
+function HasD3DX9Runtime(): Boolean;
+begin
+  Result := FileExists(ExpandConstant('{sys}\d3dx9_41.dll'))
+       or FileExists(ExpandConstant('{sys}\d3dx9_42.dll'))
+       or FileExists(ExpandConstant('{sys}\d3dx9_43.dll'))
+       or FileExists(ExpandConstant('{sys}\..\SysWOW64\d3dx9_41.dll'))
+       or FileExists(ExpandConstant('{sys}\..\SysWOW64\d3dx9_42.dll'))
+       or FileExists(ExpandConstant('{sys}\..\SysWOW64\d3dx9_43.dll'));
+end;
+
+// True when the XNA 4.0 runtime is already usable: the Refresh redist
+// registers Refresh1Installed under HKLM\SOFTWARE\Microsoft\XNA\Framework\v4.0
+// (the original 4.0 redist registers ...XNA\Framework40), or the 32-bit
+// X3DAudio audio engine DLL is already in a system directory (leftover
+// copies from an uninstalled redist are still loadable by the renderer).
+function IsXNA40Installed(): Boolean;
+begin
+  Result := RegValueExists(HKLM32, 'SOFTWARE\Microsoft\XNA\Framework\v4.0', 'Refresh1Installed')
+       or RegKeyExists(HKLM32, 'SOFTWARE\Microsoft\XNA\Framework40')
+       or FileExists(ExpandConstant('{sys}\X3DAudio1_7.dll'))
+       or FileExists(ExpandConstant('{sys}\..\SysWOW64\X3DAudio1_7.dll'));
+end;
+
+// Registers all machine-wide dependencies. The library only keeps the ones
+// that are actually missing (Dependency_AddIfMissing), so afterwards
+// Dependency_List holds exactly the missing ones.
+procedure RegisterDependencies;
+begin
+  // The launcher stub (TiberianSun.exe, CnCNet.LauncherStub) is a .NET
+  // Framework 4.x app.
+  Dependency_AddDotNet48;
+  // The OpenTS client backends (Resources\BinariesNET8\clientdx etc.) are
+  // .NET 8 WPF apps that require the .NET 8 Desktop Runtime. The launcher
+  // (TiberianSun.exe) is 32-bit and always starts .NET 8 clients with the
+  // x86 dotnet host, finding it only in the 32-bit registry view
+  // (SOFTWARE\dotnet\Setup\InstalledVersions\x86), so force the x86 variant
+  // even for 64-bit setups - the x64 runtime would be useless to the client.
+  Dependency_ForceX86 := true;
+  Dependency_AddDotNet80Desktop;
+  Dependency_ForceX86 := false;
+  // The legacy XNA renderer (Resources\Binaries*\XNA, clientxna.exe) also
+  // needs the XNA 4.0 runtime itself: its assemblies import the X3DAudio
+  // audio engine (X3DAudio1_7.dll), which the XNA 4.0 Refresh
+  // Redistributable (xnafx40_redist.msi, still downloadable from
+  // Microsoft) installs along with XACT, XInput and the d3dx9 runtimes.
+  // Register it before the VC++ 2010 redist below so the VC++ 2010 SP1
+  // CRT build wins. (Per-user installs cannot install it: without the
+  // redist the legacy XNA renderer will not start - the ready page offers
+  // elevation, and if that fails tells the user to install the redist with
+  // an admin account and re-run the installer.)
+  Dependency_AddIfMissing(not IsXNA40Installed(),
+    'xnafx40_refresh_redist.msi',
+    Dependency_PassiveOrQuiet('/passive', '/quiet') + ' /norestart',
+    'XNA Framework 4.0 Refresh Redistributable',
+    'https://download.microsoft.com/download/5/3/a/53a804c8-ec78-43cd-a0f0-2fb4d45603d3/xnafx40_redist.msi',
+    '2b03c130c4bb5f106b9619bea8150201f7e982709cfe9a0ccbde75ff0a83b27',
+    False, False);
+  // The legacy XNA renderer (Resources\Binaries*\XNA, clientxna.exe) is
+  // 32-bit and its XNA 4.0 assemblies import MSVCR100.dll / MSVCP100.dll
+  // (Visual C++ 2010 SP1 Redistributable) at load time, so force the x86
+  // variant of the redistributable even for 64-bit setups. (No binary in
+  // the package needs the newer VC++ runtimes; the OpenGL and DirectX
+  // renderers are fully managed MonoGame / SharpDX.)
+  Dependency_ForceX86 := true;
+  Dependency_AddVC2010;
+  Dependency_ForceX86 := false;
+  // The XNA renderer also imports d3dx9_*.dll (DirectX 9 runtime), which is
+  // missing on some clean Windows installs. The library's Dependency_Add
+  // DirectX helper always installs, so only register it when no d3dx9
+  // runtime is present.
+  if not HasD3DX9Runtime() then
+    Dependency_AddDirectX;
+end;
+
+function InitializeSetup(): Boolean;
+var
+  DependencyIndex: Integer;
+begin
+  RegisterDependencies;
+
+  if IsUserAnAdmin() then
+  begin
+    // All-users (elevated) install: the library downloads and installs
+    // everything still in Dependency_List before the install starts
+    // (Dependency_PrepareToInstall).
+    if GetArrayLength(Dependency_List) > 0 then
+      Log('All-users install: installing missing machine-wide dependencies first.');
+  end
+  else
+  begin
+    // Per-user install: the .NET / VC++ redistributables are machine-wide
+    // installers that require elevation, so they cannot be installed here.
+    // Collect the missing ones for the ready-page warning (WarnMissingDeps)
+    // and unqueue them so the library does not try to install them.
+    for DependencyIndex := 0 to GetArrayLength(Dependency_List) - 1 do
+    begin
+      PerUserMissingDeps := PerUserMissingDeps + '  -  ' + Dependency_List[DependencyIndex].Title + #13#10;
+      if Dependency_List[DependencyIndex].URL <> '' then
+        PerUserMissingDeps := PerUserMissingDeps + '       ' + Dependency_List[DependencyIndex].URL + #13#10;
+    end;
+    SetArrayLength(Dependency_List, 0);
+
+    if PerUserMissingDeps <> '' then
+      Log('Per-user install: missing machine-wide dependencies (cannot be installed without elevation):' + #13#10 + PerUserMissingDeps)
+    else
+      Log('Per-user install: all machine-wide dependencies are already installed.');
+  end;
+
+  Result := true;
+end;
+
+// Warns (on the ready page) that a per-user install would leave the missing
+// machine-wide dependencies uninstalled, and offers to relaunch elevated so
+// the library can install them. "No" continues the per-user install.
+procedure WarnMissingDeps;
+var
+  ResultCode: Integer;
+  CommandLine: String;
+begin
+  if (PerUserMissingDeps = '') or WizardSilent then
+    exit;
+
+  // Default is IDNO: a scripted (/SUPPRESSMSGBOXES) run must not trigger a
+  // UAC prompt - it continues the per-user install instead.
+  if (SuppressibleMsgBox(FmtMessage(ExpandConstant('{cm:PerUserMissingDeps}'), [TrimRight(PerUserMissingDeps)]), mbConfirmation, MB_YESNO, IDNO) <> IDYES) then
+  begin
+    Log('Per-user install continues with missing machine-wide dependencies:' + #13#10 + PerUserMissingDeps);
+    exit;
+  end;
+
+  // Elevate: relaunch this setup elevated (all-users). The elevated instance
+  // re-detects the same missing dependencies and installs them
+  // (InnoDependencyInstaller) before installing the app.
+  CommandLine := '/DIR="' + RemoveBackslashUnlessRoot(WizardDirValue) + '" /LANG="' + ExpandConstant('{language}') + '"';
+  if WizardIsTaskSelected('Installmov') then
+    CommandLine := CommandLine + ' /TASKS="Installmov"';
+  if WizardNoIcons then
+    CommandLine := CommandLine + ' /NOICONS';
+
+  Log('Relaunching elevated: ' + ExpandConstant('{srcexe}') + ' ' + CommandLine);
+  // Elevate via the direct ShellExecuteA call - why not the built-in
+  // ShellExec and the return-value contract are on the declaration above.
+  ResultCode := ShellExecuteA(0, 'runas', ExpandConstant('{srcexe}'), CommandLine, '', SW_SHOWNORMAL);
+  if ResultCode > 32 then
+  begin
+    // The elevated instance takes over; close this one (why not Abort():
+    // see the ExitProcess declaration above).
+    ExitProcess(0);
+  end;
+
+  // Elevation was declined or failed (e.g. this account has no usable
+  // administrator rights): the runtimes cannot be installed without
+  // elevation, so do not continue silently - tell the user exactly what is
+  // missing and where to get it.
+  Log('Elevation failed (code ' + IntToStr(ResultCode) + '); missing machine-wide dependencies:' + #13#10 + PerUserMissingDeps);
+  SuppressibleMsgBox(FmtMessage(ExpandConstant('{cm:PerUserMissingDepsFailed}'), [TrimRight(PerUserMissingDeps)]), mbError, MB_OK, IDOK);
+end;
+
+// ================================================================== Wizard
+
+// IDP-style (InnoDownloadPlugin) layout of the movie download page,
+//
+//   Title (bold)
+//   Description (two lines; hidden when the surface is too short for it)
+//   Total progress      <x of y MB>       caption + right-aligned value
+//   [overall (all-files) progress bar]    full width, 20 high
+//   Current file        <x of y MB>       caption + right-aligned value
+//   [per-file progress bar]               full width, 20 high
+//   File:       <file name>
+//   Speed:      <MB/s>
+//   Status:     <text>
+//   Elapsed time:   <hh:mm:ss>
+//   Remaining time: <hh:mm:ss>
+//
+//   [Stop button - bottom-right, below the last row]
+//
+// The page's own Caption/Description (CreateDownloadPage) never render,
+// because ISTheme.ReplaceLabel hides the form-level labels they update
+// (it clones a static label capturing the caption at init time, so the
+// real labels stay hidden forever) - hence the title and description are
+// drawn as labels on the page surface instead.
+//
+// The built-in controls are repurposed rather than recreated:
+//   Msg1Label   - hidden (the engine's SetText still writes its caption,
+//                 but nothing re-shows it)
+//   Msg2Label   - the "File:" row value (the engine writes the current
+//                 file name into it on every progress tick, and
+//                 ShowProgressControls re-shows it on the first tick, so
+//                 it cannot stay hidden)
+//   ProgressBar - the per-file ("Current file") bar
+//   AbortButton - the "Stop" button, below the last row, bottom-right
+//
+// Coordinates are relative to the page surface, in design pixels scaled
+// with ScaleX/ScaleY (like the built-in controls). The IDP gap scheme:
+// row->bar 2, bar->next row 12, bar->first info row 16, info row pitch
+// 16, last row->button 6; the info row captions sit at x=0 (116 wide)
+// with their values in the column at x=120; the Total/Current values
+// are right-aligned in a 160-wide box 10 from the surface right edge
+// (wide enough for "93.5 MB of 1409.4 MB").
+procedure MoviesLayout();
+var
+  SurfaceWidth, SurfaceHeight, C: Integer;
+  RowHeight, BarHeight, InfoCaptionWidth, ValueColumn, RightMargin, ValueBoxWidth: Integer;
+begin
+  SurfaceWidth := MoviesDownloadPage.SurfaceWidth;
+  SurfaceHeight := MoviesDownloadPage.SurfaceHeight;
+  Log('Movies download page surface: ' + IntToStr(SurfaceWidth) + 'x' + IntToStr(SurfaceHeight));
+
+  RowHeight := ScaleY(14);
+  BarHeight := ScaleY(20);
+  InfoCaptionWidth := ScaleX(116);
+  ValueColumn := ScaleX(120);
+  RightMargin := ScaleX(10);
+  ValueBoxWidth := ScaleX(160);
+
+  // Title (bold).
+  MoviesTitleLabel := TNewStaticText.Create(WizardForm);
+  MoviesTitleLabel.Parent := MoviesDownloadPage.Surface;
+  MoviesTitleLabel.Left := 0;
+  MoviesTitleLabel.Top := 0;
+  MoviesTitleLabel.Width := SurfaceWidth;
+  MoviesTitleLabel.Height := RowHeight;
+  MoviesTitleLabel.Caption := ExpandConstant('{cm:DownloadingFiles}');
+  MoviesTitleLabel.Font.Style := [fsBold];
+
+  // Description (two lines).
+  MoviesDescriptionLabel := TNewStaticText.Create(WizardForm);
+  MoviesDescriptionLabel.Parent := MoviesDownloadPage.Surface;
+  MoviesDescriptionLabel.Left := 0;
+  MoviesDescriptionLabel.Top := ScaleY(16);
+  MoviesDescriptionLabel.Width := SurfaceWidth;
+  MoviesDescriptionLabel.Height := ScaleY(28);
+  MoviesDescriptionLabel.WordWrap := True;
+  MoviesDescriptionLabel.Caption := ExpandConstant('{cm:DownloadingFilesDescription}');
+
+  // Content block top: below the title (14) + gap (16), and below the
+  // description (28) + gap (16) when it fits - the content block (Total
+  // row .. Stop button) is 207 design pixels tall.
+  C := ScaleY(14) + ScaleY(16);
+  MoviesDescriptionLabel.Visible := SurfaceHeight >= C + ScaleY(28 + 16 + 207);
+  if MoviesDescriptionLabel.Visible then
+    C := C + ScaleY(28 + 16);
+
+  // "Total progress" row: caption (IDP W200 at x=0) + the MB value
+  // right-aligned in a 160-wide box 10 from the surface right edge.
+  MoviesTotalCaptionLabel := TNewStaticText.Create(WizardForm);
+  MoviesTotalCaptionLabel.Parent := MoviesDownloadPage.Surface;
+  MoviesTotalCaptionLabel.Left := 0;
+  MoviesTotalCaptionLabel.Top := C;
+  MoviesTotalCaptionLabel.Width := ScaleX(200);
+  MoviesTotalCaptionLabel.Height := RowHeight;
+  MoviesTotalCaptionLabel.Caption := 'Total progress';
+
+  MoviesTotalValueLabel := TNewStaticText.Create(WizardForm);
+  MoviesTotalValueLabel.Parent := MoviesDownloadPage.Surface;
+  MoviesTotalValueLabel.Left := SurfaceWidth - RightMargin - ValueBoxWidth;
+  MoviesTotalValueLabel.Top := C;
+  MoviesTotalValueLabel.Width := ValueBoxWidth;
+  MoviesTotalValueLabel.Height := RowHeight;
+  MoviesTotalValueLabel.Alignment := taRightJustify;
+  MoviesTotalValueLabel.Caption := '';
+
+  // Overall (all-files) progress bar, full width (IDP gap: 2 below the row).
+  MoviesOverallBar := TNewProgressBar.Create(WizardForm);
+  MoviesOverallBar.Parent := MoviesDownloadPage.Surface;
+  MoviesOverallBar.Left := 0;
+  MoviesOverallBar.Top := C + ScaleY(16);
+  MoviesOverallBar.Width := SurfaceWidth;
+  MoviesOverallBar.Height := BarHeight;
+  MoviesOverallBar.Min := 0;
+  MoviesOverallBar.Max := 1;
+  MoviesOverallBar.Position := 0;
+
+  // "Current file" row (IDP gap: 12 below the bar) + value.
+  MoviesCurrentCaptionLabel := TNewStaticText.Create(WizardForm);
+  MoviesCurrentCaptionLabel.Parent := MoviesDownloadPage.Surface;
+  MoviesCurrentCaptionLabel.Left := 0;
+  MoviesCurrentCaptionLabel.Top := C + ScaleY(48);
+  MoviesCurrentCaptionLabel.Width := ScaleX(200);
+  MoviesCurrentCaptionLabel.Height := RowHeight;
+  MoviesCurrentCaptionLabel.Caption := 'Current file';
+
+  MoviesCurrentValueLabel := TNewStaticText.Create(WizardForm);
+  MoviesCurrentValueLabel.Parent := MoviesDownloadPage.Surface;
+  MoviesCurrentValueLabel.Left := SurfaceWidth - RightMargin - ValueBoxWidth;
+  MoviesCurrentValueLabel.Top := C + ScaleY(48);
+  MoviesCurrentValueLabel.Width := ValueBoxWidth;
+  MoviesCurrentValueLabel.Height := RowHeight;
+  MoviesCurrentValueLabel.Alignment := taRightJustify;
+  MoviesCurrentValueLabel.Caption := '';
+
+  // Per-file bar (IDP gap: 2 below the row): the page's built-in
+  // ProgressBar (the engine keeps its position and updates
+  // Style/Max/Position/Visible itself).
+  MoviesDownloadPage.ProgressBar.Left := 0;
+  MoviesDownloadPage.ProgressBar.Top := C + ScaleY(64);
+  MoviesDownloadPage.ProgressBar.Width := SurfaceWidth;
+  MoviesDownloadPage.ProgressBar.Height := BarHeight;
+
+  // "File:" row (IDP gap: 16 below the bar): caption + the built-in
+  // Msg2Label as the value (the engine writes the current file name into
+  // it on every progress tick and re-shows it on the first tick, so it
+  // cannot stay hidden).
+  MoviesFileCaptionLabel := TNewStaticText.Create(WizardForm);
+  MoviesFileCaptionLabel.Parent := MoviesDownloadPage.Surface;
+  MoviesFileCaptionLabel.Left := 0;
+  MoviesFileCaptionLabel.Top := C + ScaleY(100);
+  MoviesFileCaptionLabel.Width := InfoCaptionWidth;
+  MoviesFileCaptionLabel.Height := RowHeight;
+  MoviesFileCaptionLabel.Caption := 'File:';
+
+  MoviesDownloadPage.Msg1Label.Visible := False;
+  MoviesDownloadPage.Msg2Label.Left := ValueColumn;
+  MoviesDownloadPage.Msg2Label.Top := C + ScaleY(100);
+  MoviesDownloadPage.Msg2Label.Width := SurfaceWidth - ValueColumn - RightMargin;
+  MoviesDownloadPage.Msg2Label.Height := RowHeight;
+
+  // Speed / Status / Elapsed time / Remaining time rows (IDP pitch: 16):
+  // caption at x=0 (116 wide) + the value in the column at x=120.
+  MoviesSpeedLabel := TNewStaticText.Create(WizardForm);
+  MoviesSpeedLabel.Parent := MoviesDownloadPage.Surface;
+  MoviesSpeedLabel.Left := 0;
+  MoviesSpeedLabel.Top := C + ScaleY(116);
+  MoviesSpeedLabel.Width := InfoCaptionWidth;
+  MoviesSpeedLabel.Height := RowHeight;
+  MoviesSpeedLabel.Caption := 'Speed:';
+
+  MoviesSpeedValueLabel := TNewStaticText.Create(WizardForm);
+  MoviesSpeedValueLabel.Parent := MoviesDownloadPage.Surface;
+  MoviesSpeedValueLabel.Left := ValueColumn;
+  MoviesSpeedValueLabel.Top := C + ScaleY(116);
+  MoviesSpeedValueLabel.Width := SurfaceWidth - ValueColumn - RightMargin;
+  MoviesSpeedValueLabel.Height := RowHeight;
+  MoviesSpeedValueLabel.Caption := '-';
+
+  MoviesStatusLabel := TNewStaticText.Create(WizardForm);
+  MoviesStatusLabel.Parent := MoviesDownloadPage.Surface;
+  MoviesStatusLabel.Left := 0;
+  MoviesStatusLabel.Top := C + ScaleY(132);
+  MoviesStatusLabel.Width := InfoCaptionWidth;
+  MoviesStatusLabel.Height := RowHeight;
+  MoviesStatusLabel.Caption := 'Status:';
+
+  MoviesStatusValueLabel := TNewStaticText.Create(WizardForm);
+  MoviesStatusValueLabel.Parent := MoviesDownloadPage.Surface;
+  MoviesStatusValueLabel.Left := ValueColumn;
+  MoviesStatusValueLabel.Top := C + ScaleY(132);
+  MoviesStatusValueLabel.Width := SurfaceWidth - ValueColumn - RightMargin;
+  MoviesStatusValueLabel.Height := RowHeight;
+  MoviesStatusValueLabel.Caption := 'Starting...';
+
+  MoviesElapsedLabel := TNewStaticText.Create(WizardForm);
+  MoviesElapsedLabel.Parent := MoviesDownloadPage.Surface;
+  MoviesElapsedLabel.Left := 0;
+  MoviesElapsedLabel.Top := C + ScaleY(148);
+  MoviesElapsedLabel.Width := InfoCaptionWidth;
+  MoviesElapsedLabel.Height := RowHeight;
+  MoviesElapsedLabel.Caption := 'Elapsed time:';
+
+  MoviesElapsedValueLabel := TNewStaticText.Create(WizardForm);
+  MoviesElapsedValueLabel.Parent := MoviesDownloadPage.Surface;
+  MoviesElapsedValueLabel.Left := ValueColumn;
+  MoviesElapsedValueLabel.Top := C + ScaleY(148);
+  MoviesElapsedValueLabel.Width := SurfaceWidth - ValueColumn - RightMargin;
+  MoviesElapsedValueLabel.Height := RowHeight;
+  MoviesElapsedValueLabel.Caption := MoviesFormatTime(0);
+
+  MoviesRemainingLabel := TNewStaticText.Create(WizardForm);
+  MoviesRemainingLabel.Parent := MoviesDownloadPage.Surface;
+  MoviesRemainingLabel.Left := 0;
+  MoviesRemainingLabel.Top := C + ScaleY(164);
+  MoviesRemainingLabel.Width := InfoCaptionWidth;
+  MoviesRemainingLabel.Height := RowHeight;
+  MoviesRemainingLabel.Caption := 'Remaining time:';
+
+  MoviesRemainingValueLabel := TNewStaticText.Create(WizardForm);
+  MoviesRemainingValueLabel.Parent := MoviesDownloadPage.Surface;
+  MoviesRemainingValueLabel.Left := ValueColumn;
+  MoviesRemainingValueLabel.Top := C + ScaleY(164);
+  MoviesRemainingValueLabel.Width := SurfaceWidth - ValueColumn - RightMargin;
+  MoviesRemainingValueLabel.Height := RowHeight;
+  MoviesRemainingValueLabel.Caption := '-';
+
+  // Stop button (the page's built-in AbortButton; its width comes from
+  // the button caption computed by the engine), IDP gap 6 below the last
+  // row, right-aligned 10 from the surface right edge.
+  MoviesDownloadPage.AbortButton.Left := SurfaceWidth - RightMargin - MoviesDownloadPage.AbortButton.Width;
+  MoviesDownloadPage.AbortButton.Top := C + ScaleY(184);
+  MoviesDownloadPage.AbortButton.Height := ScaleY(23);
+end;
+
+procedure InitializeWizard();
+begin
+  DetectExistingInstall();
+
+  WizardForm.SelectDirBrowseLabel.Visible := false;
+  ISTheme();
+
+  // Download page for the movies (hidden until prepareToInstall shows it;
+  // the same page type InnoDependencyInstaller uses for its dependency
+  // downloads, with a real per-file progress bar and a Stop button).
+  // ShowBaseNameInsteadOfUrl makes the engine write the file name (instead
+  // of the download URL) into the "File:" row on every progress tick.
+  MoviesDownloadPage := CreateDownloadPage(
+    ExpandConstant('{cm:DownloadingFiles}'),
+    ExpandConstant('{cm:DownloadingFilesDescription}'),
+    @MoviesDownloadProgress);
+  MoviesDownloadPage.ShowBaseNameInsteadOfUrl := True;
+
+  // IDP-style layout of the page (see MoviesLayout above).
+  MoviesLayout();
+
+  WizardForm.LicenseAcceptedRadio.Checked := True;
+  WizardForm.LicenseAcceptedRadio.Visible := False;
+  WizardForm.LicenseNotAcceptedRadio.Visible := False;
+  WizardForm.LicenseMemo.Height :=
+    WizardForm.LicenseNotAcceptedRadio.Top +
+    WizardForm.LicenseNotAcceptedRadio.Height -
+    WizardForm.LicenseMemo.Top - ScaleY(5);
+end;
+
+function GotWritePermissions(const TestDir: String): Boolean;
+var
+  TestFileName: String;
+begin
+  Result := False;
+
+  TestFileName := TestDir + '\' + WritePermissionTestFile;
+
+  // The target directory does not exist yet at the select-dir stage (Inno
+  // creates it during the install phase), so create it first. If the user
+  // cannot create it, the write test below fails with an access error,
+  // which is exactly the outcome we want to report.
+  if not ForceDirectories(TestDir) then
+    Exit;
+
+  if FileExists(TestFileName) then
+    DeleteFile(TestFileName);
+
+  // Ported from the legacy ts-client-installer (Shared.iss): extract the
+  // bundled test file to the temp dir and copy it to the target directory.
+  // (Inno 7: ExtractTemporaryFile is a statement, so the copy result is
+  // what is checked, exactly like the legacy installer.)
+  ExtractTemporaryFile(WritePermissionTestFile);
+  if CopyFile(ExpandConstant('{tmp}\') + WritePermissionTestFile, TestFileName, True) then
+  begin
+    DeleteFile(TestFileName);
+    Result := True;
+  end;
+end;
+
+function NextButtonClick(CurPage: Integer): Boolean;
+begin
+  Result := True;
+
+  if (CurPage = wpSelectDir) then
+  begin
+    if not GotWritePermissions(ExpandConstant('{app}')) then
+    begin
+      // In silent installs a message box would block the unattended run,
+      // so just report the failure through the abort (it ends up in the
+      // install log).
+      if not WizardSilent then
+        MsgBox(FmtMessage(ExpandConstant('{cm:AccessDenied}'), [ExpandConstant('{app}')]), mbConfirmation, MB_OK);
+      Result := False;
+      Exit;
+    end;
+
+    // This client is not a patch: it must not be installed into a folder
+    // that contains an original Tiberian Sun game install (game.exe), or
+    // the client files would mix with the game files. A folder that ALSO
+    // contains the client launcher (TiberianSun.exe) is a previous CnCNet
+    // client install, and installing over it is the normal in-place
+    // upgrade (see GetDefaultDir), so it is allowed.
+    if FileExists(ExpandConstant('{app}\game.exe')) and
+       (not FileExists(ExpandConstant('{app}\TiberianSun.exe'))) then
+    begin
+      if not WizardSilent then
+        MsgBox(ExpandConstant('{cm:NotAPatchError}'), mbInformation, MB_OK);
+      Result := False;
+      Exit;
+    end;
+  end;
+
+  if (CurPage = wpReady) then
+  begin
+    ForceDirectories(ExpandConstant('{app}'));
+    CreateDir(ExpandConstant('{app}\MIX'));
+    WarnMissingDeps();
+    PrepareMovies();
+  end;
+end;
+
+procedure CurPageChanged(CurPageID: Integer);
+begin
+  if CurPageID = wpSelectDir then
+  begin
+    WizardForm.NextButton.Caption := SetupMessage(msgButtonInstall);
+    WizardForm.BackButton.Visible := False;
+  end;
+
+  if CurPageID = wpLicense then
+    WizardForm.NextButton.Caption := ExpandConstant('{cm:Agree}');
+end;

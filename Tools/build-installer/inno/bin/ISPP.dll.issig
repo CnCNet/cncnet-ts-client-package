@@ -1,0 +1,8 @@
+format issig-v2
+file-name "ISPP.dll"
+file-size 1608096
+file-hash f875ddf920f17dceaaad05280dafd6d5376a1a4111cbd5fe97bfc47c286b5a41
+file-tag ""
+key-id def020edee3c4835fd54d85eff8b66d4d899b22a777353ca4a114b652e5e7a28
+sig-r 32cc3fe7c94ff2028285c17835bba6efa2f5db4b35a1516d8f70ee76c07ee5f8
+sig-s 1eaf33a24b03f4a0663fc55960547356d1a0296b1f09e65240ae0013e316230c

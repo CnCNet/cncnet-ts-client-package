@@ -1,3 +1,5 @@
+.idea/*
+.vscode/*
 MainMenuTheme.bak
 
 DtaverWriter.exe
@@ -74,6 +76,9 @@ wineprefix
 
 # Temporary build and test files
 .mix-build-*/
+
+# Built installer artifact
+/installer-output/
 
 # Track every archive member, including names ignored elsewhere
 !/MixSource/
