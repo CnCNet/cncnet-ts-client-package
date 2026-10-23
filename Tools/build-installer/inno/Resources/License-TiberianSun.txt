@@ -1,0 +1,19 @@
+CnCNet Tiberian Sun Client Beta
+
+This is a unofficial fan made program, CnCNet is not affiliated with Electronic Arts. Trademarks belong to their respective owners.
+
+Command & Conquer™ and Command & Conquer: Tiberian Sun™ are registered trademarks of Electronic Arts, all rights reserved.
+http://www.commandandconquer.com
+
+To be able to continue you must agree to the following:
+
+CnCNet Terms & Conditions: http://cncnet.org/terms-and-conditions
+
+GameSurge Terms of Service: http://gamesurge.net/tos/
+
+The following third-party material is used, please visit the respective websites for all information:
+TSunmix by Ivo Hálecek: https://code.google.com/archive/p/tsunmix/
+Inno Setup 7.1.0 by Jordan Russell https://jrsoftware.org/
+
+For more information and credits visit the GitHub Repo
+https://github.com/CnCNet/cncnet-ts-client-package
