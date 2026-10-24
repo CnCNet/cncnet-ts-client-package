@@ -1744,7 +1744,7 @@ Size=0,0,250,125
 01000000=1,44,0,120,0,0,0,0,A
 
 [Basic]
-Name=Intoxication (2-6)
+Name=Intoxication
 Percent=0
 GameMode=standard
 HomeCell=98

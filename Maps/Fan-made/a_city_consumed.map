@@ -2422,7 +2422,7 @@ Name=shiners attack 4
 01000105=1,80,1,01000100,0,0,0,0,S
 
 [Basic]
-Name=A City Consumed (2-4)
+Name=A City Consumed
 Percent=0
 GameMode=standard
 HomeCell=98

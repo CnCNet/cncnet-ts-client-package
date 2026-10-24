@@ -3435,7 +3435,7 @@ AreTeamMembersRecruitable=yes
 01000180=1,80,1,01000177,0,0,0,0,M
 
 [Basic]
-Name=FS The Hills Have Eyes (2-6)
+Name=FS The Hills Have Eyes
 Percent=0
 GameMode=standard
 HomeCell=98

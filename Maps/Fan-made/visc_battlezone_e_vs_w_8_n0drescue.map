@@ -1091,7 +1091,7 @@ Size=0,0,280,60
 0AF3EF10-G=yes
 
 [Basic]
-Name=Visc Battlezone E vs W [8] ~n0drescue~
+Name=Visc Battlezone E vs W ~n0drescue~
 Percent=0
 GameMode=standard
 HomeCell=98

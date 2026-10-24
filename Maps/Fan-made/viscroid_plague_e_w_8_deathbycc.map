@@ -1127,7 +1127,7 @@ Size=0,0,260,70
 0AF3EF10-G=yes
 
 [Basic]
-Name=Viscroid Plague E W (8) DeathByCC
+Name=Viscroid Plague E W DeathByCC
 Percent=0
 GameMode=standard
 HomeCell=98

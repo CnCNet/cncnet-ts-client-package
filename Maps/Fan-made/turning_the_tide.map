@@ -1183,8 +1183,6 @@ Name=
 AllowedToStartInMultiplayer=no
 
 [APACHE]
-Elite=EliteHarpyClaw
-EliteAbilities=FIREPOWER,SELF_HEAL
 AllowedToStartInMultiplayer=no
 
 [APICK]
@@ -1228,11 +1226,8 @@ AllowedToStartInMultiplayer=no
 
 [ART2]
 Cost=400
-Elite=Elite155mm
 Speed=12
 TechLevel=9
-EliteAbilities=FIREPOWER,STRONGER
-TooBigToFitUnderBridge=true
 AllowedToStartInMultiplayer=no
 
 [ASAPC]
@@ -1587,8 +1582,6 @@ Name=
 118=AORCA
 
 [BGGY]
-Elite=EliteRaiderCannon
-EliteAbilities=FIREPOWER,STRONGER
 AllowedToStartInMultiplayer=no
 
 [BIGBLUE3]
@@ -1607,8 +1600,6 @@ TiberiumToSpawn=2
 AnimationProbability=.003
 
 [BIKE]
-Elite=EliteBikeMissile
-EliteAbilities=FIREPOWER,STRONGER
 AllowedToStartInMultiplayer=no
 
 [BuildingTypes]
@@ -1637,22 +1628,12 @@ LightVisibility=2000
 
 [CYBORG]
 TechLevel=-1
-Trainable=no
 AllowedToStartInMultiplayer=no
 
 [CYC2]
-Elite=EliteCyCannon
-Trainable=yes
-EliteAbilities=SELF_HEAL,FASTER
 AllowedToStartInMultiplayer=no
 
-[CyCannon]
-Speed=35
-
 [DOGGIE]
-Cost=330
-Elite=EliteFiendShard
-EliteAbilities=STRONGER,SELF_HEAL
 AllowedToStartInMultiplayer=no
 
 [DUALPROTON]
@@ -1660,185 +1641,17 @@ ROT=1
 Image=DUALPROTON
 
 [E1]
-Trainable=no
 AllowedToStartInMultiplayer=yes
 
 [E2]
-Trainable=no
 AllowedToStartInMultiplayer=no
 
 [E3]
-Trainable=no
 AllowedToStartInMultiplayer=no
 
 [ELCAD]
 TechLevel=4
 AllowedToStartInMultiplayer=no
-
-[Elite120mm]
-ROF=80
-Anim=GUNFIRE
-Range=8.1
-Speed=90
-Bright=yes
-Damage=84
-Report=120MMF
-Warhead=AP
-Projectile=Invisible
-
-[Elite155mm]
-ROF=110
-Anim=GUNFIRE
-Range=21.60
-Speed=10
-Damage=180
-Lobber=yes
-Report=120MMF
-Warhead=ARTYHE
-Projectile=Ballistic
-MinimumRange=5.00
-
-[Elite90mm]
-ROF=50
-Anim=GUNFIRE
-Range=8.1
-Speed=40
-Bright=yes
-Damage=43
-Report=120MMF
-Warhead=AP
-Projectile=Cannon
-
-[EliteAssaultCannon]
-ROF=25
-Burst=2
-Range=6
-Speed=100
-Damage=37
-Report=TSGUN4
-Warhead=SA
-Projectile=Invisible
-
-[EliteBikeMissile]
-ROF=60
-Range=6
-Speed=30
-Damage=48
-Report=MISL1
-Warhead=AP
-Projectile=HeatSeeker
-
-[EliteBomb]
-ROF=10
-Range=5
-Speed=0
-Damage=192
-Floater=yes
-Warhead=ORCAHE
-Projectile=Cannon2
-
-[EliteCyCannon]
-ROF=50
-Range=8.4
-Speed=35
-Damage=180
-Report=scrin5b
-Warhead=PlasmaWH
-Projectile=ProtonBlast
-
-[EliteDragon]
-ROF=50
-Burst=2
-Range=7.2
-Speed=25
-Damage=36
-Report=MISL1
-Warhead=AP
-Projectile=AAHeatSeeker2
-
-[EliteFiendShard]
-ROF=30
-Burst=3
-Range=6
-Speed=25
-Damage=42
-Report=FIEND2
-Warhead=Shard
-Projectile=DogShard
-
-[EliteHarpyClaw]
-ROF=36
-Range=5
-Speed=100
-Damage=72
-Report=CYGUN1
-Warhead=SA
-Projectile=Invisible2
-
-[EliteHellfire]
-ROF=50
-Burst=2
-Range=6
-Speed=30
-Damage=36
-Report=ORCAMIS1
-Warhead=ORCAAP
-Projectile=AAHeatSeeker2
-
-[EliteHoverMissile]
-ROF=68
-Burst=2
-Range=9.6
-Speed=30
-Damage=36
-Report=HOVRMIS1
-Warhead=AP
-Projectile=AAHeatSeeker2
-MinimumRange=2
-
-[EliteLtRail]
-ROF=60
-Anim=GUNFIRE
-Range=7.2
-Speed=100
-Damage=0
-Report=BIGGGUN1
-Warhead=RailShot2
-IsRailgun=true
-Projectile=Invisible
-AmbientDamage=180
-AttachedParticleSystem=SmallRailgunSys
-
-[EliteMechRailgun]
-ROF=60
-Anim=GUNFIRE
-Range=9.6
-Speed=100
-Damage=0
-Report=RAILUSE5
-Warhead=RailShot
-IsRailgun=true
-Projectile=Invisible
-AmbientDamage=300
-AttachedParticleSystem=LargeRailgunSys
-
-[EliteProton]
-ROF=3
-Range=5
-Speed=30
-Damage=24
-Report=scrin5b
-Warhead=AP
-Projectile=ProtonTorpedo
-
-[EliteSlimeAttack]
-ROF=80
-Range=1.56
-Speed=25
-Damage=120
-Report=VICER1
-Warhead=Slimer
-Projectile=Invisible
 
 [FONA01]
 Name=Fona
@@ -1960,18 +1773,6 @@ IsFlammable=no
 SnowOccupationBits=6
 TemperateOccupationBits=7
 
-[GAARTY]
-Elite=Elite155mm
-EliteAbilities=FIREPOWER,STRONGER
-
-[GAGATE_A]
-DeployTime=0.022
-GateCloseDelay=0.044
-
-[GAGATE_B]
-DeployTime=0.022
-GateCloseDelay=0.044
-
 [GALITE]
 Capturable=no
 Repairable=yes
@@ -1980,15 +1781,6 @@ LightBlueTint=0.3
 LightGreenTint=0.3
 LightIntensity=0.05
 LightVisibility=2000
-
-[GAPAVE]
-Adjacent=5
-
-[GAPLUG2]
-Prerequisite=GAPLUG
-
-[GAPLUG3]
-Prerequisite=GAPLUG
 
 [GASPOT]
 AlphaImage=ALTIB
@@ -2002,15 +1794,8 @@ LightVisibility=2000
 [GATECH]
 TechLevel=-1
 
-[GATICK]
-Elite=Elite90mm
-EliteAbilities=FIREPOWER,STRONGER
-
 [GHOST]
-Elite=EliteLtRail
 Speed=5
-Trainable=yes
-EliteAbilities=SELF_HEAL,FASTER
 
 [GRENLAMP]
 LightRedTint=0.01
@@ -2024,20 +1809,15 @@ Stray=2.0
 BaseBias=2
 CloakDelay=.02
 TeamDelays=6,6,6
-VeteranROF=.20
 CloseEnough=2.25
 DamageDelay=1
 FlightLevel=600
 AIHateDelays=6,8,9
 SuspendDelay=2
-VeteranArmor=.20
-VeteranRatio=3.5
-VeteranSpeed=.20
 AIBuildsWalls=yes
 CurleyShuffle=yes
 GameSpeedBias=1
 MissileROTVar=.25
-VeteranCombat=.20
 HealScanRadius=10
 TotalAITeamCap=14,12,10
 MissileSpeedVar=.25
@@ -2138,23 +1918,14 @@ LightVisibility=2000
 322=ATRATOS
 323=ACYBORG
 
-[IonWH]
-Verses=100%,90%,75%,60%,25%
-
 [JUGG]
 TechLevel=-1
 AllowedToStartInMultiplayer=no
 
 [JUMPJET]
-Trainable=no
 AllowedToStartInMultiplayer=no
 
-[LaserFire]
-ROF=46
-
 [MMCH]
-Elite=Elite120mm
-EliteAbilities=FIREPOWER,STRONGER
 AllowedToStartInMultiplayer=no
 
 [MMCH2]
@@ -2232,60 +2003,11 @@ DamageParticleSystems=SparkSys,SmallGreySSys
 TooBigToFitUnderBridge=true
 AllowedToStartInMultiplayer=no
 
-[NAGATE_A]
-DeployTime=0.022
-GateCloseDelay=0.044
-
-[NAGATE_B]
-DeployTime=0.022
-GateCloseDelay=0.044
-
-[NAOBEL]
-Armor=heavy
-Strength=600
-
-[NAWAST]
-Adjacent=5
-Strength=1200
-
 [ORCA]
-Elite=EliteHellfire
-EliteAbilities=FIREPOWER,SELF_HEAL
 AllowedToStartInMultiplayer=no
 
 [ORCAB]
-Elite=EliteBomb
-EliteAbilities=FIREPOWER,SELF_HEAL
 AllowedToStartInMultiplayer=no
-
-[ORCAHE]
-Verses=200%,90%,75%,32%,32%
-
-[Powerups]
-Gas=0,<none>,100
-Pod=1,<none>
-ICBM=1,CHEMISLE
-Unit=0,<none>
-Armor=1,ARMOR,2.0
-Cloak=1,CLOAK
-Money=0,MONEY,2000
-Speed=1,ARMOR,1.7
-Squad=0,<none>
-Napalm=0,<none>,600
-Reveal=0,REVEAL
-Veteran=1,VETERAN,1
-Darkness=0,SHROUDX
-HealBase=0,HEALALL
-IonStorm=0,<none>
-Tiberium=0,<none>
-Explosion=0,<none>,500
-Firepower=1,FIREPOWR,2.0
-Invulnerability=0,ARMOR,1.0
-
-[ProtonBlast]
-Ranged=no
-Proximity=no
-Acceleration=12
 
 [RATREE01]
 Name=Tree
@@ -2474,26 +2196,15 @@ LightIntensity=0.01
 LightVisibility=2000
 
 [SCRIN]
-Elite=EliteProton
-EliteAbilities=FIREPOWER,SELF_HEAL
 AllowedToStartInMultiplayer=no
 
 [SMECH]
-Elite=EliteAssaultCannon
-EliteAbilities=FIREPOWER,STRONGER
 AllowedToStartInMultiplayer=no
 
 [SONIC]
-Trainable=no
 AllowedToStartInMultiplayer=no
 
 [STNK]
-Elite=EliteDragon
-Armour=wood
-Turret=Yes
-Strength=230
-CloakingSpeed=3
-EliteAbilities=STRONGER,SELF_HEAL
 AllowedToStartInMultiplayer=no
 
 [Spawn8]
@@ -2512,10 +2223,6 @@ PlayerControl=no
 MultiplayPassive=false
 
 [TTNK]
-Armor=heavy
-Elite=Elite90mm
-EliteAbilities=FIREPOWER,STRONGER
-TooBigToFitUnderBridge=true
 AllowedToStartInMultiplayer=no
 
 [TerrainTypes]
@@ -2568,10 +2275,6 @@ AllowedToStartInMultiplayer=no
 3=Aboreus
 
 [VISC_LRG]
-Cost=330
-Elite=EliteSlimeAttack
-Trainable=Yes
-EliteAbilities=STRONGER,SELF_HEAL
 AllowedToStartInMultiplayer=no
 
 [VehicleTypes]
@@ -2613,11 +2316,7 @@ AllowedToStartInMultiplayer=no
 250=ANHUNTER
 MNGs5=MONGOOSEMECH
 
-[Vulcan3]
-Damage=11
-
 [WEED]
-ThreatAvoidanceCoefficient=0.00
 AllowedToStartInMultiplayer=no
 
 

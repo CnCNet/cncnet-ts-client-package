@@ -941,7 +941,7 @@ Size=0,0,200,80
 0AF3EF10-G=yes
 
 [Basic]
-Name=Get on my Level [8] "M" E vs W ~nodrescue~
+Name=Get on my Level "M" E vs W ~nodrescue~
 Percent=0
 GameMode=standard
 HomeCell=98

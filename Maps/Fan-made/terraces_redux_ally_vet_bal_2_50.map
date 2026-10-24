@@ -166,10 +166,6 @@ TemperateOccupationBits=7
 Name=Official Tiberian Sun map -- by Nah -- Discord: Nah#4255 610175266047787309
 VeinholeGrowthRate=1
 
-[HMEC]
-Primary=MechRailgun
-Secondary=MammothTusk
-
 [INBLULMP]
 LightRedTint=0.01
 ImmuneToVeins=yes
@@ -200,9 +196,6 @@ LightBlueTint=0.01
 LightGreenTint=1.1
 LightIntensity=.01
 LightVisibility=4000
-
-[NAWAST]
-Adjacent=5
 
 [RATREE01]
 Name=Tree
@@ -378,12 +371,6 @@ RadarColor=0,192,0
 IsFlammable=yes
 SnowOccupationBits=6
 TemperateOccupationBits=4
-
-[SONIC]
-Trainable=no
-
-[STNK]
-Armour=wood
 
 [TerrainTypes]
 45=RATREE01
@@ -2351,7 +2338,7 @@ Size=0,0,318,144
 0AF3EF10-G=yes
 
 [Basic]
-Name=Terraces Redux [Ally][Vet.Bal.2.50]
+Name=Terraces Redux
 Percent=0
 GameMode=Custom Map
 HomeCell=98
@@ -6606,9 +6593,6 @@ IonAmbient=0.250000
 Size=0,0,159,144
 Theater=TEMPERATE
 LocalSize=2,4,155,131
-
-[NAPAVE]
-Adjacent=5
 
 [Neutral]
 IQ=0

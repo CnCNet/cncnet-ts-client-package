@@ -1429,7 +1429,7 @@ Size=0,0,320,90
 0AF3EF10-G=yes
 
 [Basic]
-Name=Giants Of War [8] E vs W ~nodrescue~ "with minimap"
+Name=Giants Of War E vs W ~nodrescue~ "with minimap"
 Percent=0
 GameMode=standard
 HomeCell=98

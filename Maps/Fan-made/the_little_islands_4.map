@@ -467,7 +467,7 @@ Size=0,0,170,85
 01000000=1,16,0,0,0,0,0,0,A
 
 [Basic]
-Name=The Little Islands [4]
+Name=The Little Islands
 Percent=0
 GameMode=standard
 HomeCell=98

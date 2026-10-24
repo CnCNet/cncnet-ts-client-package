@@ -1095,7 +1095,7 @@ Size=0,0,320,60
 0AF3EF10-G=yes
 
 [Basic]
-Name=Visc Domain [8] E vs W ~nodrescue~
+Name=Visc Domain E vs W ~nodrescue~
 Percent=0
 GameMode=standard
 HomeCell=98

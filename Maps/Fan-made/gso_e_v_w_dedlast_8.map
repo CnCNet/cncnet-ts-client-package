@@ -641,7 +641,7 @@ Size=0,0,100,50
 
 
 [Basic]
-Name=GSO E v W - dedlast -(8)
+Name=GSO E v W - dedlast
 Percent=0
 GameMode=standard
 HomeCell=98

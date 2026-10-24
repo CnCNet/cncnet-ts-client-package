@@ -714,7 +714,7 @@ AreTeamMembersRecruitable=yes
 01000027=5,5,1,01000021,0,0,0,0,A,4,1,01000022,0,0,0,0,A,54,2,01000027,0,0,0,0,A,53,2,01000025,0,0,0,0,A,4,1,01000008,0,0,0,0,A
 
 [Basic]
-Name=The Little Islands [4][Transport]
+Name=The Little Islands [Transport]
 Percent=0
 GameMode=standard
 HomeCell=98

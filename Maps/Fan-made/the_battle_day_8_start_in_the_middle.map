@@ -768,7 +768,7 @@ Size=0,0,200,80
 487=SABAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQAEJb1k+bVc9bVc9b1k+EQAA
 
 [Basic]
-Name=The Battle Day [8] start in the middle
+Name=The Battle Day start in the middle
 Percent=0
 GameMode=standard
 HomeCell=98

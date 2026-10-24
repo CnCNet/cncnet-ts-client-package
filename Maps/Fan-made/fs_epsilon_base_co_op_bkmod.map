@@ -553,10 +553,6 @@ Strength=400
 [HARV]
 MovementZone=Destroyer
 
-[HMEC]
-Primary=MechRailgun
-Secondary=MammothTusk
-
 [INGRNLMP]
 LightRedTint=0.01
 LightBlueTint=0.01
@@ -575,9 +571,6 @@ EliteAbilities=FIREPOWER,STRONGER
 [KODIAK]
 Name=
 
-[NAWAST]
-Adjacent=5
-
 [NTPYRA]
 Crewed=no
 Strength=6500
@@ -595,9 +588,6 @@ Strength=210
 
 [SONIC]
 Elite=EliteSonicZap
-
-[STNK]
-Armour=wood
 
 [SUBTANK]
 Strength=300

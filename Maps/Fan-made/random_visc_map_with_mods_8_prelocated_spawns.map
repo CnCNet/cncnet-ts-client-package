@@ -871,7 +871,7 @@ SpreadPercentage=5.00
 0=Riparius
 
 [Basic]
-Name=Random Visc Map with Mods [8] [Prelocated Spawns]
+Name=Random Visc Map with Mods [Prelocated Spawns]
 RandomMap=Yes
 FreeRadar=Yes
 Percent=0

@@ -1043,7 +1043,7 @@ Size=0,0,200,100
 0AF3EF10-G=yes
 
 [Basic]
-Name=TS4FUN (R)  E vs W [8] *nodrescue*
+Name=TS4FUN (R) E vs W *nodrescue*
 Percent=0
 GameMode=standard
 HomeCell=98

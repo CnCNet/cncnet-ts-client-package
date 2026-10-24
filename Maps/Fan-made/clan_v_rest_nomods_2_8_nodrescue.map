@@ -863,7 +863,7 @@ Size=0,0,200,80
 0AF3EF10-G=yes
 
 [Basic]
-Name=Clan V Rest NoMods (2-8) nodrescue
+Name=Clan V Rest NoMods nodrescue
 Percent=0
 GameMode=standard
 HomeCell=98

@@ -1106,7 +1106,7 @@ Size=0,0,240,80
 0AF3EF10-G=yes
 
 [Basic]
-Name=Another Visc Layers E W (8) DeathByCC V3
+Name=Another Visc Layers E W DeathByCC V3
 Percent=0
 GameMode=standard
 HomeCell=98

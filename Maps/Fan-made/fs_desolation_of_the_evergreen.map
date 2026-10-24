@@ -1289,7 +1289,7 @@ Size=0,0,260,70
 01000006=2,93,0,0,0,0,0,0,A,56,0,on,0,0,0,0,A
 
 [Basic]
-Name=Desolation Of The Evergreen (2-4)
+Name=Desolation Of The Evergreen
 Percent=0
 GameMode=standard
 HomeCell=98

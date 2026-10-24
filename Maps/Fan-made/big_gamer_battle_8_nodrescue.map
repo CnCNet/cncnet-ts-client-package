@@ -1273,7 +1273,7 @@ Size=0,0,240,120
 0AF3EF10-G=yes
 
 [Basic]
-Name=Big Gamer Battle [8] nodrescue
+Name=Big Gamer Battle nodrescue
 Percent=0
 GameMode=standard
 HomeCell=98

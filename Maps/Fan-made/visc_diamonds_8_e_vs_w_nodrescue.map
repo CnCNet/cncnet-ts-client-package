@@ -1035,7 +1035,7 @@ Size=0,0,240,60
 0AF3EF10-G=yes
 
 [Basic]
-Name=Visc Diamonds [8] E vs W ~nodrescue~
+Name=Visc Diamonds E vs W ~nodrescue~
 Percent=0
 GameMode=standard
 HomeCell=98

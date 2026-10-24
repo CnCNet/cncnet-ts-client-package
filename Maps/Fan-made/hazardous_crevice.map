@@ -1185,7 +1185,7 @@ AreTeamMembersRecruitable=no
 01000008=1,80,1,01000006,0,0,0,0,K
 
 [Basic]
-Name=Harzardous Crevice (2-5)
+Name=Harzardous Crevice
 Percent=0
 GameMode=standard
 HomeCell=98

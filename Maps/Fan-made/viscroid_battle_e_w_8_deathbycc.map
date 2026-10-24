@@ -867,7 +867,7 @@ Size=0,0,240,50
 0AF3EF10-G=yes
 
 [Basic]
-Name=Viscroid Battle E W (8) DeathByCC
+Name=Viscroid Battle E W DeathByCC
 Percent=0
 GameMode=standard
 HomeCell=98

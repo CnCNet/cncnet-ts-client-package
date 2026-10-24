@@ -1406,7 +1406,7 @@ Size=0,0,156,82
 0AF3EF10-G=yes
 
 [Basic]
-Name=[4] Well of Wealth
+Name=Well of Wealth
 Percent=0
 GameMode=Custom Map
 HomeCell=98
