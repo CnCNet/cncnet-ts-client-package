@@ -14,9 +14,7 @@ AnimationProbability=.003
 
 [APACHE]
 Cost=500
-Elite=EliteHarpyClaw
 Owner=GDI,Nod
-EliteAbilities=FIREPOWER,SELF_HEAL
 
 [APC]
 Cost=400
@@ -24,10 +22,7 @@ Owner=GDI,Nod
 
 [ART2]
 Cost=500
-Elite=Elite155mm
 Owner=GDI,Nod
-EliteAbilities=FIREPOWER,STRONGER
-TooBigToFitUnderBridge=true
 
 [Aboreus]
 Name=Tiberium Aboreus
@@ -44,15 +39,9 @@ SpreadPercentage=.08
 [Animations]
 2121=ALTIB
 
-[AssaultCannon]
-Burst=2
-Damage=31
-
 [BGGY]
 Cost=250
-Elite=EliteRaiderCannon
 Owner=GDI,Nod
-EliteAbilities=FIREPOWER,STRONGER
 
 [BIGBLUE3]
 Name=Blue Tiberium Tree
@@ -71,21 +60,15 @@ AnimationProbability=.003
 
 [BIKE]
 Cost=300
-Elite=EliteBikeMissile
 Owner=GDI,Nod
-EliteAbilities=FIREPOWER,STRONGER
 
 [CYBORG]
 Cost=300
 Owner=GDI,Nod
-Trainable=no
 
 [CYC2]
 Cost=1000
-Elite=EliteCyCannon
 Owner=GDI,Nod
-Trainable=yes
-EliteAbilities=SELF_HEAL,FASTER
 
 [Colors]
 Crazy=69,43,189
@@ -95,28 +78,17 @@ HyundaiPurple=200,235,170
 [CombatDamage]
 IonCannonDamage=900
 
-[CyCannon]
-Speed=35
-
-[DOGGIE]
-Cost=330
-Elite=EliteFiendShard
-EliteAbilities=STRONGER,SELF_HEAL
-
 [E1]
 Cost=60
 Owner=GDI,Nod
-Trainable=no
 
 [E2]
 Cost=100
 Owner=GDI,Nod
-Trainable=no
 
 [E3]
 Cost=125
 Owner=GDI,Nod
-Trainable=no
 
 [EMPulseWeapon]
 ROF=1
@@ -131,171 +103,6 @@ Projectile=PulsPr
 [ENGINEER]
 Cost=300
 Owner=GDI,Nod
-
-[Elite120mm]
-ROF=80
-Anim=GUNFIRE
-Range=8.1
-Speed=90
-Bright=yes
-Damage=84
-Report=120MMF
-Warhead=AP
-Projectile=Invisible
-
-[Elite155mm]
-ROF=110
-Anim=GUNFIRE
-Range=21.60
-Speed=10
-Damage=180
-Lobber=yes
-Report=120MMF
-Warhead=ARTYHE
-Projectile=Ballistic
-MinimumRange=5.00
-
-[Elite90mm]
-ROF=50
-Anim=GUNFIRE
-Range=8.1
-Speed=40
-Bright=yes
-Damage=43
-Report=120MMF
-Warhead=AP
-Projectile=Cannon
-
-[EliteAssaultCannon]
-ROF=25
-Burst=2
-Range=6
-Speed=100
-Damage=37
-Report=TSGUN4
-Warhead=SA
-Projectile=Invisible
-
-[EliteBikeMissile]
-ROF=60
-Range=6
-Speed=30
-Damage=48
-Report=MISL1
-Warhead=AP
-Projectile=HeatSeeker
-
-[EliteBomb]
-ROF=10
-Range=5
-Speed=0
-Damage=192
-Floater=yes
-Warhead=ORCAHE
-Projectile=Cannon2
-
-[EliteCyCannon]
-ROF=50
-Range=8.4
-Speed=35
-Damage=180
-Report=scrin5b
-Warhead=PlasmaWH
-Projectile=ProtonBlast
-
-[EliteDragon]
-ROF=50
-Burst=2
-Range=7.2
-Speed=25
-Damage=36
-Report=MISL1
-Warhead=AP
-Projectile=AAHeatSeeker2
-
-[EliteFiendShard]
-ROF=30
-Burst=3
-Range=6
-Speed=25
-Damage=42
-Report=FIEND2
-Warhead=Shard
-Projectile=DogShard
-
-[EliteHarpyClaw]
-ROF=36
-Range=5
-Speed=100
-Damage=72
-Report=CYGUN1
-Warhead=SA
-Projectile=Invisible2
-
-[EliteHellfire]
-ROF=50
-Burst=2
-Range=6
-Speed=30
-Damage=36
-Report=ORCAMIS1
-Warhead=ORCAAP
-Projectile=AAHeatSeeker2
-
-[EliteHoverMissile]
-ROF=68
-Burst=2
-Range=9.6
-Speed=30
-Damage=36
-Report=HOVRMIS1
-Warhead=AP
-Projectile=AAHeatSeeker2
-MinimumRange=2
-
-[EliteLtRail]
-ROF=60
-Anim=GUNFIRE
-Range=7.2
-Speed=100
-Damage=0
-Report=BIGGGUN1
-Warhead=RailShot2
-IsRailgun=true
-Projectile=Invisible
-AmbientDamage=180
-AttachedParticleSystem=SmallRailgunSys
-
-[EliteMechRailgun]
-ROF=60
-Anim=GUNFIRE
-Range=9.6
-Speed=100
-Damage=0
-Report=RAILUSE5
-Warhead=RailShot
-IsRailgun=true
-Projectile=Invisible
-AmbientDamage=300
-AttachedParticleSystem=LargeRailgunSys
-
-[EliteProton]
-ROF=3
-Range=5
-Speed=30
-Damage=24
-Report=scrin5b
-Warhead=AP
-Projectile=ProtonTorpedo
-
-[EliteSlimeAttack]
-ROF=80
-Range=1.56
-Speed=25
-Damage=120
-Report=VICER1
-Warhead=Slimer
-Projectile=Invisible
 
 [FONA01]
 Name=Fona
@@ -417,10 +224,6 @@ IsFlammable=no
 SnowOccupationBits=6
 TemperateOccupationBits=7
 
-[GAARTY]
-Elite=Elite155mm
-EliteAbilities=FIREPOWER,STRONGER
-
 [GACNST]
 Cost=1250
 Owner=GDI,Nod
@@ -444,14 +247,10 @@ Owner=GDI,Nod
 [GAGATE_A]
 Cost=125
 Owner=GDI,Nod
-DeployTime=0.022
-GateCloseDelay=0.044
 
 [GAGATE_B]
 Cost=125
 Owner=GDI,Nod
-DeployTime=0.022
-GateCloseDelay=0.044
 
 [GAHPAD]
 Cost=250
@@ -460,7 +259,6 @@ Owner=GDI,Nod
 [GAPAVE]
 Cost=35
 Owner=GDI,Nod
-Adjacent=5
 
 [GAPILE]
 Cost=150
@@ -473,12 +271,10 @@ Owner=GDI,Nod
 [GAPLUG2]
 Cost=500
 Owner=GDI,Nod
-Prerequisite=GAPLUG
 
 [GAPLUG3]
 Cost=750
 Owner=GDI,Nod
-Prerequisite=GAPLUG
 
 [GAPOWR]
 Cost=150
@@ -504,10 +300,6 @@ Owner=GDI,Nod
 Cost=750
 Owner=GDI,Nod
 
-[GATICK]
-Elite=Elite90mm
-EliteAbilities=FIREPOWER,STRONGER
-
 [GAVULC]
 Cost=75
 Owner=GDI,Nod
@@ -518,24 +310,16 @@ Owner=GDI,Nod
 
 [GHOST]
 Cost=1000
-Elite=EliteLtRail
 Owner=GDI,Nod
-Trainable=yes
-EliteAbilities=SELF_HEAL,FASTER
 
 [General]
 BuildSpeed=.4
 GrowthRate=2
 VeinDamage=3
-VeteranROF=.20
 BuildupTime=.01
 TunnelSpeed=4
 TiberiumHeal=.05
-VeteranArmor=.20
-VeteranRatio=3.5
-VeteranSpeed=.20
 TiberiumGrows=yes
-VeteranCombat=.20
 MultipleFactory=0.5
 MaxVeinholeGrowth=8000
 VeinholeGrowthRate=1
@@ -548,22 +332,13 @@ Owner=GDI,Nod
 
 [HMEC]
 Cost=1500
-Elite=EliteMechRailgun
 Owner=GDI,Nod
 Primary=MechRailgun
 Secondary=MammothTusk
-Trainable=yes
-EliteAbilities=STRONGER,FASTER
 
 [HVR]
 Cost=450
-Elite=EliteHoverMissile
 Owner=GDI,Nod
-EliteAbilities=FIREPOWER,STRONGER
-
-[Heal]
-Burst=2
-Range=4.5
 
 [HulaHoop]
 AA=yes
@@ -607,20 +382,13 @@ LightGreenTint=1.1
 LightIntensity=.01
 LightVisibility=4000
 
-[IonWH]
-Verses=100%,90%,75%,60%,25%
-
 [JUMPJET]
 Cost=200
 Owner=GDI,Nod
-Trainable=no
 
 [LPST]
 Cost=475
 Owner=GDI,Nod
-
-[LaserFire]
-ROF=46
 
 [MCV]
 Cost=1000
@@ -636,9 +404,7 @@ Owner=GDI,Nod
 
 [MMCH]
 Cost=400
-Elite=Elite120mm
 Owner=GDI,Nod
-EliteAbilities=FIREPOWER,STRONGER
 
 [NAAPWR]
 Cost=250
@@ -647,14 +413,10 @@ Owner=GDI,Nod
 [NAGATE_A]
 Cost=125
 Owner=GDI,Nod
-DeployTime=0.022
-GateCloseDelay=0.044
 
 [NAGATE_B]
 Cost=125
 Owner=GDI,Nod
-DeployTime=0.022
-GateCloseDelay=0.044
 
 [NAHAND]
 Cost=150
@@ -674,9 +436,7 @@ Owner=GDI,Nod
 
 [NAOBEL]
 Cost=750
-Armor=heavy
 Owner=GDI,Nod
-Strength=600
 
 [NAPOST]
 Cost=100
@@ -710,7 +470,6 @@ Owner=GDI,Nod
 Cost=800
 Owner=GDI,Nod
 Adjacent=5
-Strength=1200
 
 [NAWEAP]
 Cost=1000
@@ -718,18 +477,11 @@ Owner=GDI,Nod
 
 [ORCA]
 Cost=500
-Elite=EliteHellfire
 Owner=GDI,Nod
-EliteAbilities=FIREPOWER,SELF_HEAL
 
 [ORCAB]
 Cost=800
-Elite=EliteBomb
 Owner=GDI,Nod
-EliteAbilities=FIREPOWER,SELF_HEAL
-
-[ORCAHE]
-Verses=200%,90%,75%,32%,32%
 
 [PROC]
 Cost=1000
@@ -740,32 +492,6 @@ Owner=GDI,Nod
 
 [Particles]
 28=SlimerToViscPart
-
-[Powerups]
-Gas=0,<none>,100
-Pod=1,<none>
-ICBM=1,CHEMISLE
-Unit=0,<none>
-Armor=1,ARMOR,2.0
-Cloak=1,CLOAK
-Money=0,MONEY,2000
-Speed=1,ARMOR,1.7
-Squad=0,<none>
-Napalm=0,<none>,600
-Reveal=0,REVEAL
-Veteran=1,VETERAN,1
-Darkness=0,SHROUDX
-HealBase=0,HEALALL
-IonStorm=0,<none>
-Tiberium=0,<none>
-Explosion=0,<none>,500
-Firepower=1,FIREPOWR,2.0
-Invulnerability=0,ARMOR,1.0
-
-[ProtonBlast]
-Ranged=no
-Proximity=no
-Acceleration=12
 
 [RATREE01]
 Name=Tree
@@ -969,15 +695,11 @@ Owner=GDI,Nod
 
 [SCRIN]
 Cost=750
-Elite=EliteProton
 Owner=GDI,Nod
-EliteAbilities=FIREPOWER,SELF_HEAL
 
 [SMECH]
 Cost=250
-Elite=EliteAssaultCannon
 Owner=GDI,Nod
-EliteAbilities=FIREPOWER,STRONGER
 
 [SONIC]
 Cost=650
@@ -986,13 +708,8 @@ Trainable=no
 
 [STNK]
 Cost=550
-Elite=EliteDragon
 Owner=GDI,Nod
 Armour=wood
-Turret=Yes
-Strength=230
-CloakingSpeed=3
-EliteAbilities=STRONGER,SELF_HEAL
 
 [SUBTANK]
 Cost=375
@@ -1037,11 +754,7 @@ Owner=GDI,Nod
 
 [TTNK]
 Cost=400
-Armor=heavy
-Elite=Elite90mm
 Owner=GDI,Nod
-EliteAbilities=FIREPOWER,STRONGER
-TooBigToFitUnderBridge=true
 
 [TerrainTypes]
 45=RATREE01
@@ -1100,12 +813,6 @@ Image=None
 Strength=10000000
 IsVeinhole=true
 
-[VISC_LRG]
-Cost=330
-Elite=EliteSlimeAttack
-Trainable=Yes
-EliteAbilities=STRONGER,SELF_HEAL
-
 [VISC_SML]
 Sight=100
 Turret=yes
@@ -1125,9 +832,6 @@ Spread=38330
 GrowthPercentage=.05
 SpreadPercentage=.00
 
-[Vulcan3]
-Damage=11
-
 [WEED]
 Cost=700
 Owner=GDI,Nod
@@ -1137,7 +841,6 @@ Growth=2200
 Spread=2200
 GrowthPercentage=1.00
 SpreadPercentage=5.00
-ThreatAvoidanceCoefficient=0.00
 
 [Warheads]
 25=Shard
@@ -2297,19 +2000,6 @@ AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=yes
 TiberiumDeathToVisceroid=yes
-
-[CnCNet]
-Author=Humble/Skylegend/Xme/NME/Mola/Carnage/Cambria/Trooper/Black/Etc./Etc.
-Website=https://github.com/HumbleTS/Balance-Veteran-Patch/wiki/Balance-Veteran-Summary
-
-[EliteRaiderCannon]
-Anim=MGUN-N,MGUN-NE,MGUN-E,MGUN-SE,MGUN-S,MGUN-SW,MGUN-W,MGUN-NW
-Range=4.8
-Speed=100
-Damage=48
-Report=CHAINGN1
-Warhead=SA
-Projectile=Invisible
 
 [IsoMapPack5]
 1=1AsAIA6AAAEA//8AAAAAAH8AAgD//0MBAACAKCkAgSgrAH4AA+EEfygpAIAoKQCBKCkAgi

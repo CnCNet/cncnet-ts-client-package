@@ -12,15 +12,6 @@ SpawnsTiberium=yes
 TiberiumToSpawn=3
 AnimationProbability=.003
 
-[APACHE]
-Elite=EliteHarpyClaw
-EliteAbilities=FIREPOWER,SELF_HEAL
-
-[ART2]
-Elite=Elite155mm
-EliteAbilities=FIREPOWER,STRONGER
-TooBigToFitUnderBridge=true
-
 [Aboreus]
 Name=Tiberium Aboreus
 Color=Burgandy
@@ -42,12 +33,6 @@ F434TG5=ICCPP_C2
 
 [AssaultCannon]
 ROF=25
-Burst=3
-Damage=16
-
-[BGGY]
-Elite=EliteRaiderCannon
-EliteAbilities=FIREPOWER,STRONGER
 
 [BIGBLUE3]
 Name=Blue Tiberium Tree
@@ -62,10 +47,6 @@ SpawnsTiberium=yes
 LightVisibility=4000
 TiberiumToSpawn=2
 AnimationProbability=.003
-
-[BIKE]
-Elite=EliteBikeMissile
-EliteAbilities=FIREPOWER,STRONGER
 
 [BuildingTypes]
 G434TG1=ICCPP
@@ -89,18 +70,6 @@ Insignificant=yes
 Elite=EliteVulcan3
 EliteAbilities=FIREPOWER,SELF_HEAL
 
-[CYC2]
-Elite=EliteCyCannon
-Trainable=yes
-EliteAbilities=SELF_HEAL,FASTER
-
-[CyCannon]
-Speed=35
-
-[DOGGIE]
-Elite=EliteFiendShard
-EliteAbilities=STRONGER,SELF_HEAL
-
 [DropPodSpecial]
 Name=Drop Pod
 Type=DropPod
@@ -122,50 +91,8 @@ EliteAbilities=FIREPOWER,STRONGER
 Elite=EliteBAZOOKA
 EliteAbilities=FIREPOWER,STRONGER
 
-[Elite120mm]
-ROF=80
-Anim=GUNFIRE
-Range=8.1
-Speed=90
-Bright=yes
-Damage=84
-Report=120MMF
-Warhead=AP
-Projectile=Invisible
-
-[Elite155mm]
-ROF=110
-Anim=GUNFIRE
-Range=21.60
-Speed=10
-Damage=180
-Lobber=yes
-Report=120MMF
-Warhead=ARTYHE
-Projectile=Ballistic
-MinimumRange=5.00
-
 [Elite90mm]
-ROF=50
-Anim=GUNFIRE
 Burst=2
-Range=8.1
-Speed=40
-Bright=true
-Damage=44
-Report=120MMF
-Warhead=AP
-Projectile=Cannon
-
-[EliteAssaultCannon]
-ROF=25
-Burst=3
-Range=6
-Speed=100
-Damage=20
-Report=TSGUN4
-Warhead=SA
-Projectile=Invisible
 
 [EliteBAZOOKA]
 ROF=60
@@ -177,53 +104,6 @@ Warhead=AP
 Projectile=AAHeatSeeker2
 TurboBoost=yes
 
-[EliteBikeMissile]
-ROF=60
-Range=6
-Speed=30
-Damage=48
-Report=MISL1
-Warhead=AP
-Projectile=HeatSeeker
-
-[EliteBomb]
-ROF=10
-Range=5
-Speed=0
-Damage=192
-Floater=yes
-Warhead=ORCAHE
-Projectile=Cannon2
-
-[EliteCyCannon]
-ROF=50
-Range=8.4
-Speed=35
-Damage=180
-Report=scrin5b
-Warhead=PlasmaWH
-Projectile=ProtonBlast
-
-[EliteDragon]
-ROF=50
-Burst=2
-Range=7.2
-Speed=25
-Damage=36
-Report=MISL1
-Warhead=AP
-Projectile=AAHeatSeeker2
-
-[EliteFiendShard]
-ROF=30
-Burst=3
-Range=6
-Speed=25
-Damage=42
-Report=FIEND2
-Warhead=Shard
-Projectile=DogShard
-
 [EliteGrenade]
 ROF=60
 Range=5.4
@@ -232,36 +112,6 @@ Bright=yes
 Damage=48
 Warhead=HE
 Projectile=Lobbed
-
-[EliteHarpyClaw]
-ROF=36
-Range=5
-Speed=100
-Damage=72
-Report=CYGUN1
-Warhead=SA
-Projectile=Invisible2
-
-[EliteHellfire]
-ROF=50
-Burst=2
-Range=6
-Speed=30
-Damage=36
-Report=ORCAMIS1
-Warhead=ORCAAP
-Projectile=AAHeatSeeker2
-
-[EliteHoverMissile]
-ROF=68
-Burst=2
-Range=9.6
-Speed=30
-Damage=36
-Report=HOVRMIS1
-Warhead=AP
-Projectile=AAHeatSeeker2
-MinimumRange=2
 
 [EliteJumpCannon]
 ROF=40
@@ -273,32 +123,6 @@ Report=JUMPJET1
 Warhead=SA
 Projectile=Invisible3
 
-[EliteLtRail]
-ROF=60
-Anim=GUNFIRE
-Range=7.2
-Speed=100
-Damage=0
-Report=BIGGGUN1
-Warhead=RailShot2
-IsRailgun=true
-Projectile=Invisible
-AmbientDamage=180
-AttachedParticleSystem=SmallRailgunSys
-
-[EliteMechRailgun]
-ROF=60
-Anim=GUNFIRE
-Range=9.6
-Speed=100
-Damage=0
-Report=RAILUSE5
-Warhead=RailShot
-IsRailgun=true
-Projectile=Invisible
-AmbientDamage=300
-AttachedParticleSystem=LargeRailgunSys
-
 [EliteMinigun]
 ROF=21
 Range=4.80
@@ -306,24 +130,6 @@ Speed=100
 Damage=10
 Report=INFGUN3,GOSTGUN1,SLVKGUN1
 Warhead=SA
-Projectile=Invisible
-
-[EliteProton]
-ROF=3
-Range=5
-Speed=30
-Damage=24
-Report=scrin5b
-Warhead=AP
-Projectile=ProtonTorpedo
-
-[EliteSlimeAttack]
-ROF=80
-Range=1.56
-Speed=25
-Damage=120
-Report=VICER1
-Warhead=Slimer
 Projectile=Invisible
 
 [EliteSonicZap]
@@ -347,16 +153,6 @@ Report=CYGUN1
 Warhead=SA
 Projectile=Invisible
 
-[GAARTY]
-Elite=Elite155mm
-EliteAbilities=FIREPOWER,STRONGER
-
-[GAPLUG2]
-Prerequisite=GAPLUG
-
-[GAPLUG3]
-Prerequisite=GAPLUG
-
 [GAPOWR]
 Cost=300
 Name=GDI Power Plant
@@ -378,23 +174,11 @@ DamageSmokeOffset=300, 300, 450
 DamageParticleSystems=SparkSys,SmallGreySSys,BigGreySmokeSys
 
 [GATICK]
-Elite=Elite90mm
 Strength=400
-EliteAbilities=FIREPOWER,STRONGER
-
-[GHOST]
-Elite=EliteLtRail
-Trainable=yes
-EliteAbilities=SELF_HEAL,FASTER
 
 [General]
 Name=Giants Jungle Domination -- Official Mod by Holland & bk57
-VeteranROF=.20
 Paratrooper=CYBORG
-VeteranArmor=.20
-VeteranRatio=3.5
-VeteranSpeed=.20
-VeteranCombat=.20
 MaximumQueuedObjects=9
 DropPodInfantryMaximum=12
 DropPodInfantryMinimum=9
@@ -403,23 +187,10 @@ DropPodInfantryMinimum=9
 Cost=1400
 Speed=6
 MovementZone=Destroyer
-EliteAbilities=TIBERIUM_HEAL
-ThreatAvoidanceCoefficient=0.00
 
 [HMEC]
-Elite=EliteMechRailgun
 Primary=MechRailgun
 Secondary=MammothTusk
-Trainable=yes
-EliteAbilities=STRONGER,FASTER
-
-[HVR]
-Elite=EliteHoverMissile
-EliteAbilities=FIREPOWER,STRONGER
-
-[Heal]
-Burst=2
-Range=4.5
 
 [ICCPP]
 Cost=800
@@ -541,28 +312,14 @@ LightGreenTint=0.01
 LightIntensity=0.03
 LightVisibility=1800
 
-[IonWH]
-Verses=100%,90%,75%,60%,25%
-
 [JUMPJET]
 Elite=EliteJumpCannon
 EliteAbilities=FIREPOWER,STRONGER
-
-[LaserFire]
-ROF=46
 
 [MCV]
 Cost=2800
 Sight=10
 Speed=7
-
-[MMCH]
-Elite=Elite120mm
-EliteAbilities=FIREPOWER,STRONGER
-
-[NAOBEL]
-Armor=heavy
-Strength=600
 
 [NAPOWR]
 Cost=300
@@ -582,43 +339,6 @@ ThreatPosed=0
 TogglePower=no
 DamageSmokeOffset=450, 200, 300
 DamageParticleSystems=SparkSys,SmallGreySSys,BigGreySmokeSys
-
-[ORCA]
-Elite=EliteHellfire
-EliteAbilities=FIREPOWER,SELF_HEAL
-
-[ORCAB]
-Elite=EliteBomb
-EliteAbilities=FIREPOWER,SELF_HEAL
-
-[ORCAHE]
-Verses=200%,90%,75%,32%,32%
-
-[Powerups]
-Gas=0,<none>,100
-Pod=1,<none>
-ICBM=1,CHEMISLE
-Unit=0,<none>
-Armor=1,ARMOR,2.0
-Cloak=1,CLOAK
-Money=0,MONEY,2000
-Speed=1,ARMOR,1.7
-Squad=0,<none>
-Napalm=0,<none>,600
-Reveal=0,REVEAL
-Veteran=1,VETERAN,1
-Darkness=0,SHROUDX
-HealBase=0,HEALALL
-IonStorm=0,<none>
-Tiberium=0,<none>
-Explosion=0,<none>,500
-Firepower=1,FIREPOWR,2.0
-Invulnerability=0,ARMOR,1.0
-
-[ProtonBlast]
-Ranged=no
-Proximity=no
-Acceleration=12
 
 [RATREE01]
 Name=Tree
@@ -815,37 +535,17 @@ SpreadPercentage=5.00
 [SAPC]
 Strength=210
 
-[SCRIN]
-Elite=EliteProton
-EliteAbilities=FIREPOWER,SELF_HEAL
-
-[SMECH]
-Elite=EliteAssaultCannon
-EliteAbilities=FIREPOWER,STRONGER
-
 [SONIC]
 Elite=EliteSonicZap
-EliteAbilities=STRONGER,SELF_HEAL
 
 [STNK]
-Elite=EliteDragon
 Armour=wood
-Turret=Yes
-Strength=230
-CloakingSpeed=3
-EliteAbilities=STRONGER,SELF_HEAL
 
 [SUBTANK]
 Strength=300
 
 [SuperWeaponTypes]
 7=DropPodSpecial
-
-[TTNK]
-Armor=heavy
-Elite=Elite90mm
-EliteAbilities=FIREPOWER,STRONGER
-TooBigToFitUnderBridge=true
 
 [TerrainTypes]
 45=RATREE01
@@ -889,19 +589,8 @@ Image=None
 Strength=10000000
 IsVeinhole=true
 
-[VISC_LRG]
-Cost=330
-Elite=EliteSlimeAttack
-Trainable=Yes
-EliteAbilities=STRONGER,SELF_HEAL
-
 [Vulcan3]
 Range=5
-Damage=13
-
-[WEED]
-ThreatAvoidanceCoefficient=0.00
-
 
 [Preview]
 Size=0,0,352,130
@@ -3152,10 +2841,6 @@ TiberiumDeathToVisceroid=no
 178156=01DPD059
 178157=01DPD059
 
-[CnCNet]
-Author=Humble/Skylegend/Xme
-Website=https://github.com/HumbleTS/Balance-Veteran-Patch/wiki/Balance-Veteran-Summary
-
 [CnCNetPreview]
 0=iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAMAAABrrFhUAAAAAXNSR0IArs4c6QAAAARnQU
 1=1BAACxjwv8YQUAAAMAUExURQAAAE1HDqaRdgNAbxQXGlFibaqXgAy6IVZSATsqF1RSStXj
@@ -3455,14 +3140,7 @@ Website=https://github.com/HumbleTS/Balance-Veteran-Patch/wiki/Balance-Veteran-S
 295=xuKQGAzuOWEgDoPG4pzgH4z//8fw82RAl77WhgAAAAAElFTkSuQmCC
 
 [EliteRaiderCannon]
-Anim=MGUN-N,MGUN-NE,MGUN-E,MGUN-SE,MGUN-S,MGUN-SW,MGUN-W,MGUN-NW
 Burst=3
-Range=4.8
-Speed=100
-Damage=16
-Report=CHAINGN1
-Warhead=SA
-Projectile=Invisible
 
 [Events]
 01000000=1,13,0,7200
