@@ -1376,11 +1376,6 @@ Size=0,0,300,105
 1150=FcFEgbXBQqrAS8AkxSUB1IPLR1UBpIHlAFXyAuNkBQcQNEQDhNQjO4cFQAUGtHbmJVRlDa
 1151=TAGkblQAJywAQAFIAEQCSABAAS0nDmRZSxEAAA==
 
-[AllyBySpawnLocation1]
-A=0,1
-B=2,3
-Description=East vs West
-
 [Basic]
 Name=Seaside[2-4p][Ally][Vet.Bal.2.50] 
 HomeCell=98
@@ -1405,7 +1400,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

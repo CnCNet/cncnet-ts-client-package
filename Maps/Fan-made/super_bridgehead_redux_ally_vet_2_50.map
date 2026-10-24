@@ -1792,11 +1792,6 @@ Name=0786DA60-G
 0AA50F20-G=yes
 0AAC5B20-G=yes
 
-[AllyBySpawnLocation1]
-A=0,1,2,3
-B=4,5,6,7
-Description=North vs South
-
 [Basic]
 Name=Super Bridgehead Redux[Ally][Vet.2.50] 
 Percent=0
@@ -1819,7 +1814,6 @@ AltNextScenario=GDI9C.MAP
 MultiplayerOnly=1
 IceGrowthEnabled=no
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=yes

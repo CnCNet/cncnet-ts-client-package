@@ -205,11 +205,6 @@ TemperateOccupationBits=4
 68=RATREE24
 69=RATREE25
 
-[AllyBySpawnLocation1]
-Description=East vs West
-A=1,2
-B=0,3
-
 [INGRNLMP]
 LightRedTint=0.01
 LightBlueTint=0.01
@@ -1412,7 +1407,6 @@ Name=0786DA60-G
 
 [Basic]
 Name=Pit Or Plateau[Ally][Vet.2.50] 
-AllyBySpawnDefault=1
 Percent=0
 GameMode=standard
 InitTime=10000

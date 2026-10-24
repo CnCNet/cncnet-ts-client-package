@@ -511,11 +511,6 @@ Size=0,0,160,52
 246=NRSDxORDdQAkgAUAJIAEABSABAAUgAQAGoAKwBVACoALACVABYAVQAqAAnLABAAUgAUAJU
 247=AKgATAFIACBCLAARAAA=
 
-[AllyBySpawnLocation1]
-A=0,1
-B=2,3
-Description=East vs West
-
 [Basic]
 Name=Offense Defense[Ally][Vet.Bal.2.50] 
 Theme=No theme
@@ -539,7 +534,6 @@ AltNextScenario=GDI9C.MAP
 MultiplayerOnly=1
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=yes

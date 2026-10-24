@@ -1424,14 +1424,8 @@ Name=0786DA60-G
 0AAC5B20-G=yes
 0AF3EF10-G=yes
 
-[AllyBySpawnLocation1]
-A=0,3
-B=1,2
-Description=East vs West
-
 [Basic]
 Name=Crossroads[2-4][Ally][Vet.Bal.2.50] 
-AllyBySpawnDefault=1
 Percent=0
 GameMode=standard
 InitTime=10000

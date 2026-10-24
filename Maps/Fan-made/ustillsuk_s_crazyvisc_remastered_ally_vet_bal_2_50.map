@@ -1076,11 +1076,6 @@ Size=0,0,260,60
 425=QAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAE
 426=ABSABAAUgAQAEJb1k+bVc9bVc9b1k+EQAA
 
-[AllyBySpawnLocation1]
-A=0,2,4,6
-B=1,3,5,7
-Description=East vs West
-
 [Basic]
 Name=UstillSUK's CrazyVisc REMASTERED (Ally)(Vet.Bal.2.50)
 Percent=0
@@ -1106,7 +1101,6 @@ AltNextScenario=
 MultiplayerOnly=yes
 IceGrowthEnabled=yes
 VeinGrowthEnabled=no
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

@@ -1054,11 +1054,6 @@ Size=0,0,200,100
 [Actions]
 01000000=1,16,0,0,0,0,0,0,A
 
-[AllyBySpawnLocation1]
-A=0,3
-B=1,2
-Description=East vs West
-
 [Basic]
 Name=Redemption[Ally][Vet.Bal.2.50] 
 Percent=0
@@ -1084,7 +1079,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=yes

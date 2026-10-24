@@ -937,11 +937,6 @@ Size=0,0,180,90
 552=gAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFI
 553=AEABSABAAUgAQAEJb1k+bVc9bVc9b1k+EQAA
 
-[AllyBySpawnLocation1]
-A=0,1
-B=2,3
-Description=East vs West
-
 [Basic]
 Name=Infected Forest[Ally][Vet.Bal.2.50] 
 Percent=0
@@ -964,7 +959,6 @@ AltNextScenario=GDI9C.MAP
 MultiplayerOnly=1
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

@@ -4,11 +4,6 @@
 [General]
 MaximumQueuedObjects=9
 
-[AllyBySpawnLocation1]
-Description=East vs West
-A=0,1,2,3
-B=4,5,6,7
-
 [Triggers]
 01000000=Neutral,<none>,ExtraSpace,0,1,1,1,0
 01000002=Neutral,<none>,Rules,0,1,1,1,0
@@ -757,7 +752,6 @@ Size=0,0,320,130
 0AF3EF10-G=yes
 
 [Basic]
-AllyBySpawnDefault=1
 Name=Giants Of War [8] E vs W -with rules- -with autoally- -with extra space in 2h- -with 10 queue-
 Percent=0
 GameMode=standard

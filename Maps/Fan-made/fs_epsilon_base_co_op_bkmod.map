@@ -4496,11 +4496,6 @@ Group=-1
 14=Spawn7,ORCATRAN,256,124,85,64,Guard,None,0,0,1,0
 15=Spawn7,ORCATRAN,256,127,85,64,Guard,None,0,0,1,0
 
-[AllyBySpawnLocation1]
-A=0,1,2,3,4,5
-B=6
-Description=Co-op vs AI
-
 [Basic]
 Name=[FS] Epsilon Base | co-op | bkmod
 Percent=0
@@ -4526,7 +4521,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=yes

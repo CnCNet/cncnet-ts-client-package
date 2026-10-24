@@ -773,16 +773,10 @@ Size=0,0,200,80
 485=SABAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAU
 486=gAQAFIAEABSABAAUgAQAFIAEABCW9ZPm1XPW1XPW9ZPhEAAA==
 
-[AllyBySpawnLocation1]
-Description=East vs West
-A=0,2,5,6
-B=1,4,3,7
-
 
 [Basic]
 Name=The Battle Day [8] Auto-Ally- 2 MCVs
 Percent=0
-AllyBySpawnDefault=1
 GameMode=standard
 HomeCell=98
 InitTime=10000

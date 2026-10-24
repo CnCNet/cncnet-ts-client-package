@@ -1301,11 +1301,6 @@ Size=0,0,262,69
 487=AEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSA
 488=BAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSAAJb1k+b1k+bVc9bVc9EQAA
 
-[AllyBySpawnLocation1]
-A=0,2,4,6
-B=1,3,5,7
-Description=East vs West
-
 [Basic]
 Name=UstillSUK's Visc Together As One (Ally)(Vet.Bal.2.50)
 Percent=0
@@ -1331,7 +1326,6 @@ AltNextScenario=
 MultiplayerOnly=yes
 IceGrowthEnabled=no
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=yes

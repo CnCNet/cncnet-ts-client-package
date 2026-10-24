@@ -834,11 +834,6 @@
 830=Neutral,VISC_LRG,256,189,213,64,Guard,None,0,-1,0,-1,1,0
 831=Neutral,VISC_LRG,256,188,214,64,Guard,None,0,-1,0,-1,1,0
 
-[AllyBySpawnLocation1]
-Description=East vs West
-A=0,1,2,3
-B=4,5,6,7
-
 [GAPOWR]
 Power=1100
 
@@ -876,7 +871,6 @@ SpreadPercentage=5.00
 0=Riparius
 
 [Basic]
-AllyBySpawnDefault=1
 Name=Random Visc Map with Mods [8] [Prelocated Spawns]
 RandomMap=Yes
 FreeRadar=Yes

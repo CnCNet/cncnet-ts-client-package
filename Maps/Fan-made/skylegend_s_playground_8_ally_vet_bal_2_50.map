@@ -1722,11 +1722,6 @@ Size=0,0,340,150
 1504=FIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEAB
 1505=SABAAUgAQAFIAEABSABAAQlvWT5tVz0/SVhLSkoRAAA=
 
-[AllyBySpawnLocation1]
-A=0,1,2,3
-B=4,5,6,7
-Description=East vs West
-
 [Basic]
 Name=Skylegend's Playground[8][Ally][Vet.Bal.2.50] 
 Percent=0
@@ -1752,7 +1747,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

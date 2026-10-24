@@ -1584,11 +1584,6 @@ TaskForce=
 01000012=1,27,0,70,0,0,0,0,A
 01000014=1,40,0,0,2,33,185,63,A
 
-[AllyBySpawnLocation1]
-A=0,1,2,3
-B=4,5,6,7
-Description=East vs West
-
 [Basic]
 Name=Armageddon PRO 4 v 4 [Ally]
 Percent=0
@@ -1614,7 +1609,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=no
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

@@ -921,11 +921,6 @@ Size=0,0,240,60
 413=QAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAQlvWT5tVz
 414=1tVz1vWT4RAAA=
 
-[AllyBySpawnLocation1]
-A=0,1,2
-B=3,4,5
-Description=East vs West
-
 [Basic]
 Name=Can U Handle Visc (Ally) (Vet.Bal.2.50) DeathByCC
 Percent=0
@@ -951,7 +946,6 @@ AltNextScenario=
 MultiplayerOnly=yes
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

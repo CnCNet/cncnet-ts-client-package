@@ -1234,11 +1234,6 @@ Size=0,0,180,60
 0AAC5B20-G=yes
 0AF3EF10-G=yes
 
-[AllyBySpawnLocation1]
-A=0,1
-B=2,3
-Description=East vs West
-
 [Basic]
 Name=BBG Super PRO - Tournament [Ally][Vet.Bal.2.50]
 Percent=0
@@ -1264,7 +1259,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=no
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

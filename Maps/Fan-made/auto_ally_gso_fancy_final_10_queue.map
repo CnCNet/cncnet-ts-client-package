@@ -645,11 +645,6 @@ Size=0,0,120,60
 0AAC5B20-G=yes
 0AF3EF10-G=yes
 
-[AllyBySpawnLocation1]
-A=0,1,2,3
-B=4,5,6,7
-Description=East vs West
-
 [Basic]
 Name=(Auto-Ally) GSO Fancy Final 10 queue
 Percent=0
@@ -675,7 +670,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

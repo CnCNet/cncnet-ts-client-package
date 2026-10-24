@@ -1781,11 +1781,6 @@ Size=0,0,234,120
 0AAC5B20-G=yes
 0AF3EF10-G=yes
 
-[AllyBySpawnLocation1]
-A=0,1,2
-B=3,4,5
-Description=North vs South
-
 [Basic]
 Name=Woodland Plains[Ally]Tkragon[Vet.Bal.2.50] 
 Percent=0
@@ -1811,7 +1806,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

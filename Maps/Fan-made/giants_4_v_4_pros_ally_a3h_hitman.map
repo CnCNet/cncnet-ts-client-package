@@ -1478,11 +1478,6 @@ Size=0,0,320,90
 0AAC5B20-G=yes
 0AF3EF10-G=yes
 
-[AllyBySpawnLocation1]
-A=0,1,2,3
-B=4,5,6,7
-Description=Blue Team vs Red Team
-
 [Basic]
 Name=Giants 4 v 4 Pros [Ally] A3H-Hitman
 Percent=0
@@ -1508,7 +1503,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

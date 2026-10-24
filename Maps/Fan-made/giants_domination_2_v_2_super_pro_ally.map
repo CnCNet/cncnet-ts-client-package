@@ -1860,11 +1860,6 @@ Size=0,0,300,130
 TIMERTRIG=1,27,0,70,0,0,0,0,A
 EXTENDTRIG=2,40,0,0,3,5,144,120,A,53,2,01DPD050,0,0,0,0,A
 
-[AllyBySpawnLocation1]
-A=0,2
-B=1,3
-Description=East vs West
-
 [Basic]
 Name=Giants Domination 2 v 2 Super PRO [Ally]
 Percent=0
@@ -1890,7 +1885,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

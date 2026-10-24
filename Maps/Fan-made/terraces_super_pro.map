@@ -1803,11 +1803,6 @@ Name=0786DA60-G
 0AA50F20-G=yes
 0AAC5B20-G=yes
 
-[AllyBySpawnLocation1]
-A=0,2
-B=1,3
-Description=It's Terraces
-
 [Basic]
 Name=Terraces Super PRO
 Percent=87
@@ -1830,7 +1825,6 @@ AltNextScenario=GDI9C.MAP
 MultiplayerOnly=1
 IceGrowthEnabled=no
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

@@ -1929,14 +1929,8 @@ Size=0,0,250,125
 [Actions]
 0A50CB50=1,44,0,120,0,0,0,0,A
 
-[AllyBySpawnLocation1]
-A=0,1,4
-B=2,3,5
-Description=It's Cliffs
-
 [Basic]
 Name=Cliffs of Insanity Super PRO
-AllyBySpawnDefault=1
 Percent=0
 GameMode=Custom Map
 InitTime=10000

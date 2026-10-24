@@ -1525,14 +1525,8 @@ AreTeamMembersRecruitable=no
 086300F0=1,44,0,120,0,0,0,0,A
 0A7FCD50=1,4,1,0B5FD0B0,0,0,0,0,A
 
-[AllyBySpawnLocation1]
-A=3,4,5
-B=0,1,2
-Description=East vs West
-
 [Basic]
 Name=Casey's Canyon[Ally][Vet.Bal.2.50] 
-AllyBySpawnDefault=1
 Percent=0
 GameMode=standard
 InitTime=10000

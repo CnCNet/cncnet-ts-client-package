@@ -2,11 +2,6 @@
 ; www.wagnerma.de (german+english homepage of author), finalsun.wagnerma.de (finalsun homepage, german+english), www.theonliner.de (german homepage of FRG)
 ; note that all comments were truncated
 
-[AllyBySpawnLocation1]
-Description=East vs West
-A=1,3
-B=0,2
-
 [BIGBLUE3]
 Name=Blue Tiberium Tree
 Immune=yes
@@ -1402,7 +1397,6 @@ Size=0,0,200,100
 0AF3EF10-G=yes
 
 [Basic]
-AllyBySpawnDefault=1
 Name=Sanctuary[2-4][Ally][Vet.Bal.2.50] 
 Percent=0
 GameMode=standard

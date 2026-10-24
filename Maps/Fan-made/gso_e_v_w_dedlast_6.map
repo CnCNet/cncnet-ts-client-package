@@ -635,11 +635,6 @@ Size=0,0,100,50
 0AAC5B20-G=yes
 0AF3EF10-G=yes
 
-[AllyBySpawnLocation1]
-A=0,1,2
-B=3,4,5
-Description=East vs West
-
 [Basic]
 Name=GSO E v W - dedlast -(6)
 Percent=0
@@ -665,7 +660,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=no
 VeinGrowthEnabled=no
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

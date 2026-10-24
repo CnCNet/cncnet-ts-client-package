@@ -2,11 +2,6 @@
 ; www.wagnerma.de (german+english homepage of author), finalsun.wagnerma.de (finalsun homepage, german+english), www.theonliner.de (german homepage of FRG)
 ; note that all comments were truncated
 
-[AllyBySpawnLocation1]
-Description=East vs West
-A=0,1,2,3
-B=4,5,6,7
-
 [Preview]
 Size=0,0,120,60
 
@@ -680,7 +675,6 @@ Size=0,0,120,60
 
 [Basic]
 Name=GSO  4v4  (Auto-Ally)  A3H-Hitman
-AllyBySpawnDefault=1
 Percent=0
 GameMode=standard
 HomeCell=98

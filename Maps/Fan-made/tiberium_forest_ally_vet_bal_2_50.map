@@ -1534,11 +1534,6 @@ Size=0,0,200,140
 0AAC5B20-G=yes
 0AF3EF10-G=yes
 
-[AllyBySpawnLocation1]
-A=0,3
-B=1,2
-Description=East vs West
-
 [Basic]
 Name=Tiberium Forest[Ally][Vet.Bal.2.50]
 Percent=0
@@ -1563,7 +1558,6 @@ AltNextScenario=GDI9C.MAP
 MultiplayerOnly=1
 IceGrowthEnabled=no
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=yes

@@ -1983,11 +1983,6 @@ Size=0,0,300,101
 0AAC5B20-G=yes
 0AF3EF10-G=yes
 
-[AllyBySpawnLocation1]
-A=4,5,2,1
-B=0,3,6,7
-Description=East vs West
-
 [Basic]
 Name=The Pit[Ally][6-8p][Vet.Bal.2.50] 
 Percent=0
@@ -2013,7 +2008,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=yes

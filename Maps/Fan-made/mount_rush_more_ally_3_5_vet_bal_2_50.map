@@ -2,11 +2,6 @@
 ; www.wagnerma.de (german+english homepage of author), finalsun.wagnerma.de (finalsun homepage, german+english), www.theonliner.de (german homepage of FRG)
 ; note that all comments were truncated
 
-[AllyBySpawnLocation1]
-A=0,1
-B=2,3,4
-Description=North vs South
-
 [INGRNLMP]
 LightRedTint=0.01
 LightBlueTint=0.01
@@ -347,7 +342,6 @@ VeinGrowthEnabled=yes
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=yes
-AllyBySpawnDefault=1
 
 [CellTags]
 

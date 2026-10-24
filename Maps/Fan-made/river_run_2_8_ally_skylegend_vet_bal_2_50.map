@@ -1170,13 +1170,7 @@ TemperateOccupationBits=4
 961=AUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSwBQQzIhmy09ODBPtR8xSVRUbl
 962=ImQCokC1ACJ2QKSFpYAUwEVAAoZCIj0ENFAg+EXFwCWARIBm6+IjhAXiSkOSAkVAsRAAA=
 
-[AllyBySpawnLocation1]
-Description=East vs West
-A=0,1,2,3
-B=4,5,6,7
-
 [Basic]
-AllyBySpawnDefault=1
 Name=River Run [2-8][Ally]Skylegend[Vet.Bal.2.50] 
 Percent=0
 GameMode=standard

@@ -1428,14 +1428,8 @@ Size=0,0,270,90
 0AAC5B20-G=yes
 0AF3EF10-G=yes
 
-[AllyBySpawnLocation1]
-Description=NvS
-A=0,1,2,3
-B=4,5,6,7
-
 [Basic]
 Name=Firing Range A3H-Hitman[Ally][Vet.Bal.2.50] 
-AllyBySpawnDefault=1
 Percent=0
 GameMode=standard
 HomeCell=98
@@ -1459,7 +1453,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

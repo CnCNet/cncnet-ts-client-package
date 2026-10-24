@@ -1644,11 +1644,6 @@ Size=0,0,180,90
 475=AUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQA
 476=FIAEABSAAtPAIqOABUPy0IABEAAA==
 
-[AllyBySpawnLocation1]
-A=0,1,2
-B=3,4,5
-Description=Left vs Right
-
 [Basic]
 Name=BBG 6 Super PRO - Tournament [Ally][Vet.Bal.2.50]
 Percent=0
@@ -1674,7 +1669,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=no
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

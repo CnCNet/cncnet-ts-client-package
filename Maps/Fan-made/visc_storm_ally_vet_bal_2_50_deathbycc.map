@@ -976,11 +976,6 @@ Size=0,0,260,60
 468=ABSABAAUgAQAFIAEABSABAAUgAQAG0ErQAWAFQAkgAQAFIAEABSABAAUgAQAFIAEABCW9Z
 469=Pm1XPW1XPW9ZPhEAAA==
 
-[AllyBySpawnLocation1]
-A=0,1,2,3
-B=4,5,6,7
-Description=East vs West
-
 [Basic]
 Name=Visc Storm (Ally) (Vet.Bal.2.50) DeathByCC
 Percent=0
@@ -1006,7 +1001,6 @@ AltNextScenario=
 MultiplayerOnly=yes
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

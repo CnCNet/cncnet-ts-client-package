@@ -784,11 +784,6 @@ Size=0,0,140,80
 399=vAAtLwBIRCavMVtNOycsAEgVswJmUztMDVwRvAu0LTZMAUgMUAtcESeUBCosAEgDQAQq7A
 400=BYAXACUikwDDZcACqMADYsADbsAANNRSlWSTERAAA=
 
-[AllyBySpawnLocation1]
-A=0,1
-B=2,3
-Description=East vs West
-
 [Basic]
 Name=Twinside[Ally][Vet.Bal.2.50] 
 Percent=0
@@ -814,7 +809,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=yes

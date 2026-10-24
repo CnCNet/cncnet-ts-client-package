@@ -1419,11 +1419,6 @@ Size=0,0,290,145
 [0786DA60-G]
 Name=0786DA60-G
 
-[AllyBySpawnLocation1]
-A=0,1,2,3
-B=4,5,6,7
-Description=East vs West
-
 [Basic]
 Name=Forest Fires Remastered[Ally][Vet.Bal.2.50] 
 Percent=0
@@ -1446,7 +1441,6 @@ AltNextScenario=GDI9C.MAP
 MultiplayerOnly=1
 IceGrowthEnabled=no
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=yes

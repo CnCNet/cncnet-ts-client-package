@@ -1013,11 +1013,6 @@ Size=0,0,280,70
 573=AUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQA
 574=FIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgARBoqxAogISwAEQAA
 
-[AllyBySpawnLocation1]
-A=0,1,2,3
-B=4,5,6,7
-Description=East vs West
-
 [Basic]
 Name=Lost City -- Visc -- Shock~ (Ally) (Vet.Bal.2.50) (DeathByCC-original)
 Percent=0
@@ -1043,7 +1038,6 @@ AltNextScenario=
 MultiplayerOnly=yes
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

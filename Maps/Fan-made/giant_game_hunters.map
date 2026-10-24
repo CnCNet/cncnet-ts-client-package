@@ -511,11 +511,6 @@ Size=0,0,206,103
 01000006=1,11,0,5,0,0,0,0,A
 01000008=1,11,0,1,0,0,0,0,A
 
-[AllyBySpawnLocation1]
-A=0,1,5,6
-B=2,3,4,7
-Description=East vs West
-
 [Basic]
 Name=Giant Game Hunters
 Percent=0
@@ -541,7 +536,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

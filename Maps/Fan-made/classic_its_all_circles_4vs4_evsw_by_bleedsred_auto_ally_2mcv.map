@@ -1298,11 +1298,6 @@ Size=0,0,240,110
 0AAC5B20-G=yes
 0AF3EF10-G=yes
 
-[AllyBySpawnLocation1]
-Description=East vs West
-A=0,1,2,3
-B=4,5,6,7
-
 
 
 
@@ -1312,7 +1307,6 @@ B=4,5,6,7
 
 Name={classic} Its All Circles 4vs4 EvsW By Bleedsred (Auto-Ally- 2mcv)
 
-AllyBySpawnDefault=1
 
 
 Percent=0

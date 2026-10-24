@@ -2297,13 +2297,6 @@ Size=0,0,374,200
 01000006=1,11,0,4,0,0,0,0,A
 01000008=1,11,0,5,0,0,0,0,A
 
-[AllyBySpawnLocation1]
-A=0,4
-B=1,7
-C=2,6
-D=3,5
-Description=2 vs 2 vs 2 vs 2
-
 [Basic]
 Name=Conflicts of Giants -2v2v2v2- -auto ally- -rules-
 Player=Special
@@ -2330,7 +2323,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

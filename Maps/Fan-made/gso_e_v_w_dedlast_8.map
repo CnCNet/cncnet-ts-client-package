@@ -638,11 +638,6 @@ Size=0,0,100,50
 0AAC5B20-G=yes
 0AF3EF10-G=yes
 
-[AllyBySpawnLocation1]
-A=0,1,2,3
-B=4,5,6,7
-Description=East vs West
-
 
 
 [Basic]
@@ -673,7 +668,6 @@ VeinGrowthEnabled=no
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no
-AllyBySpawnDefault=1
 
 [CellTags]
 

@@ -1907,11 +1907,6 @@ Name=Loco2move
 01000000=1,4,1,01000004,0,0,0,0,A
 01000009=1,4,1,01000005,0,0,0,0,A
 
-[AllyBySpawnLocation1]
-A=0,1,2
-B=3,4,5
-Description=East vs West
-
 [Basic]
 Name=Area 51[6p][Ally][Vet.Bal.2.50] 
 Percent=0
@@ -1937,7 +1932,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

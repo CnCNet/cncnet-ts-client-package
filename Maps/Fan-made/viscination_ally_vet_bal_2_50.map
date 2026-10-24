@@ -983,11 +983,6 @@ Size=0,0,280,70
 521=QAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQAEJb1k+bVc9bVc9b1k+EQ
 522=AA
 
-[AllyBySpawnLocation1]
-A=0,1,2,3
-B=4,5,6,7
-Description=East vs West
-
 [Basic]
 Name=Viscination (Ally) (Vet.Bal.2.50)
 Percent=0
@@ -1013,7 +1008,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=no
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=yes
 TiberiumDeathToVisceroid=no

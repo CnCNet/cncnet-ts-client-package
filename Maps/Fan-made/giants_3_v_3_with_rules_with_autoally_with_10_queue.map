@@ -4,11 +4,6 @@
 [General]
 MaximumQueuedObjects=9
 
-[AllyBySpawnLocation1]
-Description=East vs West
-A=0,1,2
-B=3,4,5
-
 [Tags]
 01000001=0,Rules 1,01000000
 01000003=0,Rule1 1,01000002
@@ -1248,7 +1243,6 @@ Size=0,0,240,90
 0AF3EF10-G=yes
 
 [Basic]
-AllyBySpawnDefault=1
 Name=Giants 3 v 3 -with rules- -with autoally- -with 10 queue-
 Percent=0
 GameMode=standard

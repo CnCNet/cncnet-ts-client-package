@@ -1808,11 +1808,6 @@ Size=0,0,220,110
 01000090=1,55,0,1,0,0,0,0,W
 01000092=1,55,0,1,0,0,0,0,X
 
-[AllyBySpawnLocation1]
-A=0,1,2
-B=3,4,5
-Description=East vs West
-
 [Basic]
 Name=Tiber River[Ally]Tesla7zap[Vet.Bal.2.50]
 Percent=10
@@ -1839,7 +1834,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=yes

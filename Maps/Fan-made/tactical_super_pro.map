@@ -2453,14 +2453,8 @@ Name=0786DA60-G
 0AA50F20-G=yes
 0AAC5B20-G=yes
 
-[AllyBySpawnLocation1]
-A=0,3
-B=1,2
-Description=It's Tactical
-
 [Basic]
 Name=Tactical Super PRO
-AllyBySpawnDefault=1
 Percent=43
 GameMode=Custom Map
 InitTime=10000

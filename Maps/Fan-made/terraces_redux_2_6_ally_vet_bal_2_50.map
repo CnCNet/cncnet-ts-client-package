@@ -2367,13 +2367,7 @@ Size=0,0,318,144
 0AAC5B20-G=yes
 0AF3EF10-G=yes
 
-[AllyBySpawnLocation1]
-Description=East vs West
-A=0,2,4
-B=1,3,5
-
 [Basic]
-AllyBySpawnDefault=1
 Name=Terraces Redux [2-6][Ally][Vet.Bal.2.50]
 Percent=0
 GameMode=Custom Map

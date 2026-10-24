@@ -2466,14 +2466,8 @@ Name=0786DA60-G
 [Actions]
 0DEFDC30=3,73,0,55,0,0,0,0,A,72,0,1036831948,0,0,0,0,A,71,0,1020054732,0,0,0,0,A
 
-[AllyBySpawnLocation1]
-A=0,3,4
-B=1,2,5
-Description=It's Mutants
-
 [Basic]
 Name=Night of the Mutants Super PRO
-AllyBySpawnDefault=1
 Percent=0
 GameMode=Custom Map
 InitTime=10000

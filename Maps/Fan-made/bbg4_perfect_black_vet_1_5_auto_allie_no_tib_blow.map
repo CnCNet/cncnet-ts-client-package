@@ -10530,11 +10530,6 @@ Size=0,0,180,60
 [AIGenerals]
 Desc=Blank Section
 
-[AllyBySpawnLocation1]
-A=0,1
-B=2,3
-Description=East vs West
-
 [Ambush]
 Desc=Blank Section
 
@@ -10568,7 +10563,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

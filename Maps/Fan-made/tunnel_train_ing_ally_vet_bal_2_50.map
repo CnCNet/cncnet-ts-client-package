@@ -48,13 +48,7 @@ IonStorms=no
 Meteorites=no
 Visceroids=no
 
-[AllyBySpawnLocation1]
-Description=East vs West
-A=0,1
-B=2,3
-
 [Basic]
-AllyBySpawnDefault=1
 NextScenario=GDI 2A.map
 AltNextScenario=GDI9C.MAP
 Name=Tunnel Train-ing[Ally][Vet.Bal.2.50] 

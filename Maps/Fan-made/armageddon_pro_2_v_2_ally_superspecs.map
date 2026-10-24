@@ -1673,11 +1673,6 @@ Name=Delete mcv
 01L10004=3,106,0,50,9,0,0,0,A,106,0,52,9,0,0,0,A,106,0,55,9,0,0,0,A
 01L20004=3,106,0,51,9,0,0,0,A,106,0,53,9,0,0,0,A,106,0,54,9,0,0,0,A
 
-[AllyBySpawnLocation1]
-A=0,2,5
-B=1,3,4
-Description=East vs West
-
 [Basic]
 Name=Armageddon PRO 2 v 2 [Ally][SuperSpecs]
 Percent=0
@@ -1703,7 +1698,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=no
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

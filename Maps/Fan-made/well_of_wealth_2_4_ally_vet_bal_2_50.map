@@ -1128,11 +1128,6 @@ Size=0,0,156,84
 0AAC5B20-G=yes
 0AF3EF10-G=yes
 
-[AllyBySpawnLocation1]
-A=0,3
-B=1,2
-Description=North vs South
-
 [Basic]
 Name=Well of Wealth[2-4][Ally][Vet.Bal.2.50]
 Percent=0
@@ -1158,7 +1153,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

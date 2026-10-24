@@ -382,11 +382,6 @@ Size=0,0,180,60
 294=ABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSABA
 295=AUgAQAFIAEABSABAAUgAIG/MAjY8AjNcABEAAA==
 
-[AllyBySpawnLocation1]
-A=0,1
-B=2,3
-Description=East vs West
-
 [Basic]
 Name=Big Bluntz Blue[2-4][Ally][Vet.Bal.2.50] 
 Percent=0
@@ -412,7 +407,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=yes

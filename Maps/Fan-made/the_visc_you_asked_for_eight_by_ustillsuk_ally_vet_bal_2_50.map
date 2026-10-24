@@ -1363,11 +1363,6 @@ Size=0,0,300,80
 759=QAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSAAnDAIqIABcAkAESABAAUgAQAFIAE
 760=ABSABAAUgAQAFIAEABSABAAUgAQAFIAEABCW9ZPm1XPW1XPW9ZPhEAAA==
 
-[AllyBySpawnLocation1]
-A=0,1,2,3
-B=4,5,6,7
-Description=East vs West
-
 [Basic]
 Name=The Visc You Asked For Eight by UstillSUK (Ally)(Vet.Bal.2.50)
 Percent=0
@@ -1393,7 +1388,6 @@ AltNextScenario=
 MultiplayerOnly=yes
 IceGrowthEnabled=no
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

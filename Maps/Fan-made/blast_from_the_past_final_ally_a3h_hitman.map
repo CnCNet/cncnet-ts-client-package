@@ -1074,10 +1074,6 @@ Size=0,0,200,100
 0AAC5B20-G=yes
 0AF3EF10-G=yes
 
-[AllyBySpawnLocation1]
-A=7,6,3,2
-B=1,0,4,5
-
 [Basic]
 Name=Blast From The Past - Final (Ally) A3H-Hitman
 Percent=0
@@ -1103,7 +1099,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=yes

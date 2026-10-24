@@ -2316,11 +2316,6 @@ Size=0,0,240,130
 0AAC5B20-G=yes
 0AF3EF10-G=yes
 
-[AllyBySpawnLocation1]
-A=0,4,2
-B=1,5,3
-Description=East vs West
-
 [Basic]
 Name=Westwood's Canyon[2-6][Ally] [Vet.Bal.2.50]
 Percent=0
@@ -2346,7 +2341,6 @@ AltNextScenario=
 MultiplayerOnly=1
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=yes

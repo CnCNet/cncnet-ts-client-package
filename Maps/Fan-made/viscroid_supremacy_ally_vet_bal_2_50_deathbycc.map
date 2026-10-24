@@ -863,11 +863,6 @@ Size=0,0,260,50
 355=SABAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSAAwyAMwRAAtqAggRTgAEQ
 356=AA
 
-[AllyBySpawnLocation1]
-A=0,1,2,3
-B=4,5,6,7
-Description=East vs West
-
 [Basic]
 Name=Viscroid Supremacy (Ally) (Vet.Bal.2.50) DeathByCC
 Percent=0
@@ -893,7 +888,6 @@ AltNextScenario=
 MultiplayerOnly=yes
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

@@ -1751,11 +1751,6 @@ ImmuneToVeins=yes
 LightGreenTint=0.4
 LightIntensity=.01
 
-[AllyBySpawnLocation1]
-A=0,2
-B=1,3
-Description=East vs West
-
 [Basic]
 Name=Giants of Terraces Super PRO [Ally]
 Percent=0
@@ -1781,7 +1776,6 @@ AltNextScenario=
 MultiplayerOnly=yes
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no

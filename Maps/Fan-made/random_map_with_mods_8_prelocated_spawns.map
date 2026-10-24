@@ -1,10 +1,5 @@
 ; Made By PTapioK
 
-[AllyBySpawnLocation1]
-Description=East vs West
-A=0,1,2,3
-B=4,5,6,7
-
 [GAPOWR]
 Power=1100
 
@@ -42,7 +37,6 @@ SpreadPercentage=5.00
 0=Riparius
 
 [Basic]
-AllyBySpawnDefault=1
 Name=Random Map with Mods [8] [Prelocated Spawns]
 RandomMap=Yes
 FreeRadar=Yes

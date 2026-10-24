@@ -1087,11 +1087,6 @@ Size=0,0,240,80
 563=QAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSABAAUgAQAFIAEABSAAIb1k+b1k+bV
 564=c9bVcRAAAUAAABCT1vWT5vWT5tVz1tVyDTLAARAAA=
 
-[AllyBySpawnLocation1]
-A=0,1,2,3
-B=4,5,6,7
-Description=East vs West
-
 [Basic]
 Name=Another Visc Layers (Ally) (Vet.Bal.2.50) DeathByCC V4
 Percent=0
@@ -1117,7 +1112,6 @@ AltNextScenario=
 MultiplayerOnly=yes
 IceGrowthEnabled=yes
 VeinGrowthEnabled=yes
-AllyBySpawnDefault=1
 TiberiumGrowthEnabled=yes
 IgnoreGlobalAITriggers=no
 TiberiumDeathToVisceroid=no
