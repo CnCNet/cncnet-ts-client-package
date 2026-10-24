@@ -12,6 +12,7 @@ Version 8.00
 	- An "Image Scaling" dropdown: Nearest, Linear or PixelArt.
 	- A "Cursor Size" dropdown: Auto or 1x up to 8x.
 - Added: A diplomacy panel, which replaces the player list on the radar and shows each player's alliance, shared control, chat and connection status. It opens with Tab, which previously switched the radar to the kill count screen (Credits: ZivDero).
+- Added: A "Shared Control" checkbox in the CnCNet and LAN game lobbies, which lets players hand an ally command of their units from the diplomacy panel (Credits: ZivDero).
 - Added: The unused "Chem Spray Infantry" (WEEDGUY) is now a working hidden infantry (Credits: Bittah Commander).
 - Changed: Updated XNA CnCNet Client to version 2.14.0-rc.7 (https://github.com/CnCNet/xna-cncnet-client/releases) (Credits: SadPencil, Starkku, Kerbiter, 11EJDE11, Rampastring, rds1983, Flactine, BlackgamerzVN, ApocBruh).
 - Changed: The music is now included as MP3 files in the Music folder instead of as AUD files inside Scores.mix (Credits: Bittah Commander).
