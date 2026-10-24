@@ -67,6 +67,11 @@ Language.dll
 
 wineprefix
 
+# dynamically added INIs by client settings
+Resources/UpdaterConfig.ini
+INI/Theme01.ini
+INI/Theme.ini
+
 *.ffs_*
 
 # Game MIX archives are generated from MixSource
