@@ -3683,7 +3683,7 @@ AreTeamMembersRecruitable=no
 01000401=7,54,2,01000357,0,0,0,0,A,54,2,01000363,0,0,0,0,A,54,2,01000369,0,0,0,0,A,54,2,01000375,0,0,0,0,A,54,2,01000381,0,0,0,0,A,54,2,01000387,0,0,0,0,A,54,2,01000393,0,0,0,0,A
 
 [Basic]
-Name=Siege Labyrinth(2-3) 'bkmod v1.8'
+Name=Siege Labyrinth (2-3) 'bkmod v1.8'
 Percent=0
 GameMode=Custom Map
 HomeCell=98
