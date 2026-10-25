@@ -1,0 +1,153 @@
+/*******************************************************************************
+ *                                O P E N  T S
+ *******************************************************************************
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * Copyright 2026 OpenTS contributors
+ *
+ * See LICENSE.md for applicable additional terms and warranty disclaimers.
+ ******************************************************************************/
+
+
+/* The panel stays up while the game runs, so clicks outside the frame go to the map. */
+body
+{
+	pointer-events: none;
+}
+
+#reveal
+{
+	width: 640dp;
+	height: 391dp;
+	top: 50%;
+	margin-top: -195dp;
+	pointer-events: auto;
+}
+
+/* The screen sets the frame's height to fit its rows, so the bottom line and button keep to the bottom edge. */
+#content
+{
+	position: relative;
+	height: 100%;
+	padding: 0;
+}
+
+#content > *
+{
+	position: absolute;
+}
+
+#title
+{
+	left: 33dp;
+	top: 14dp;
+	width: 160dp;
+	height: 17dp;
+	line-height: 17dp;
+	white-space: nowrap;
+}
+
+#info, #footer
+{
+	height: 17dp;
+	font-family: dlg-sans;
+	font-size: 13dp;
+	line-height: 17dp;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+#info
+{
+	left: 193dp;
+	top: 14dp;
+	width: 414dp;
+	text-align: right;
+	color: #4eb6dc;
+	font-effect: shadow(1dp 1dp #000000);
+}
+#footer { left: 33dp; bottom: 13dp; width: 470dp; color: #ff4040; }
+
+#close { left: 513dp; bottom: 9dp; width: 94dp; }
+
+/* Both groups share one column grid: 556dp inside the border and padding. */
+#groups
+{
+	left: 33dp;
+	top: 44dp;
+	width: 574dp;
+}
+
+/* A dark backing, as the lists have, keeps the rows readable over the wallpaper. */
+#groups .group
+{
+	display: block;
+	padding: 11dp 8dp;
+	background-color: #000000c8;
+}
+
+#observers
+{
+	margin-top: 18dp;
+}
+
+.row
+{
+	display: flex;
+	height: 22dp;
+	font-family: dlg-sans;
+	font-size: 13dp;
+	line-height: 22dp;
+	white-space: nowrap;
+}
+
+.row.head
+{
+	height: 15dp;
+	line-height: 15dp;
+}
+
+.row.head.sub
+{
+	color: #4eb6dc;
+}
+
+.row > span
+{
+	display: block;
+	flex: 0 0 auto;
+	overflow: hidden;
+	text-align: center;
+}
+
+.row > .c-name
+{
+	flex: 1 1 0;
+	min-width: 0;
+	padding-left: 2dp;
+	text-align: left;
+}
+
+.c-kills { width: 40dp; }
+.c-box { width: 48dp; }
+.c-pair { width: 96dp; }
+.c-lat { width: 72dp; }
+
+.c-box input[type='checkbox']
+{
+	margin-top: 2dp;
+}
+
+.nocontrol .control, .nochat .chat
+{
+	display: none;
+}
+
+.c-lat.fair
+{
+	color: #f8f800;
+}
+
+.c-lat.poor, .c-lat .mark
+{
+	color: #ff4040;
+}

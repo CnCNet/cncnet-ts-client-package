@@ -1,0 +1,72 @@
+<!--
+	*************************************************************************
+	                              O P E N  T S
+	*************************************************************************
+	SPDX-License-Identifier: GPL-3.0-or-later
+	Copyright 2026 OpenTS contributors
+
+	See LICENSE.md for applicable additional terms and warranty disclaimers.
+-->
+<rml>
+<head>
+	<title>Diplomacy</title>
+	<link type="text/template" href="dialog.rml"/>
+	<link type="text/rcss" href="diplomacy.rcss"/>
+</head>
+<body template="dialog" data-model="diplomacy" data-class-nocontrol="!showcontrol" data-class-nochat="!showchat">
+	<p id="title">Diplomacy</p>
+	<p id="info">{{info}}</p>
+
+	<div id="groups">
+		<div class="group" id="players">
+			<div class="rule"><span></span><label>Players</label><span></span></div>
+			<div class="row head">
+				<span class="c-name"></span>
+				<span class="c-kills"></span>
+				<span class="c-pair">Alliance</span>
+				<span class="c-pair control">Control</span>
+				<span class="c-pair chat">Chat</span>
+				<span class="c-lat"></span>
+			</div>
+			<div class="row head sub">
+				<span class="c-name">Player</span>
+				<span class="c-kills">Kills</span>
+				<span class="c-box">Yours</span>
+				<span class="c-box">Theirs</span>
+				<span class="c-box control">Give</span>
+				<span class="c-box control">Given</span>
+				<span class="c-box chat">Send</span>
+				<span class="c-box chat">Mute</span>
+				<span class="c-lat">Latency</span>
+			</div>
+			<div class="row" data-for="row : players">
+				<span class="c-name" data-style-color="row.color" data-attr-tip="row.nametip">{{row.name}}</span>
+				<span class="c-kills">{{row.kills}}</span>
+				<span class="c-box"><input type="checkbox" data-if="row.hasally" data-attrif-checked="row.ally" data-attrif-disabled="!row.allyenabled" data-attr-tip="row.allytip" data-event-click="queue('ally', row.house)"/></span>
+				<span class="c-box" data-class-disabled="!row.theirsyes">{{row.theirs}}</span>
+				<span class="c-box control"><input type="checkbox" data-if="row.hasgive" data-attrif-checked="row.give" data-attrif-disabled="!row.giveenabled" data-attr-tip="row.givetip" data-event-click="queue('give', row.house)"/></span>
+				<span class="c-box control" data-class-disabled="!row.givenyes">{{row.given}}</span>
+				<span class="c-box chat"><input type="checkbox" data-if="row.haschat" data-attrif-checked="row.send" tip="Your chat goes to this player" data-event-click="queue('send', row.house)"/></span>
+				<span class="c-box chat"><input type="checkbox" data-if="row.haschat" data-attrif-checked="row.mute" tip="Hide this player's chat" data-event-click="queue('mute', row.house)"/></span>
+				<span class="c-lat" data-class-fair="row.latencyfair" data-class-poor="row.latencypoor">{{row.latency}}<span class="mark" data-if="row.waiting" data-attr-tip="row.waitingtip"> !</span></span>
+			</div>
+		</div>
+
+		<div class="group" id="observers" data-if="observers.size > 0">
+			<div class="rule"><span></span><label>Observers</label><span></span></div>
+			<div class="row" data-for="row : observers">
+				<span class="c-name" data-style-color="row.color">{{row.name}}</span>
+				<span class="c-kills"></span>
+				<span class="c-pair"></span>
+				<span class="c-pair control"></span>
+				<span class="c-box chat"><input type="checkbox" data-if="row.haschat" data-attrif-checked="row.send" tip="Your chat goes to this observer" data-event-click="queue('send', row.house)"/></span>
+				<span class="c-box chat"><input type="checkbox" data-if="row.haschat" data-attrif-checked="row.mute" tip="Hide this observer's chat" data-event-click="queue('mute', row.house)"/></span>
+				<span class="c-lat" data-class-fair="row.latencyfair" data-class-poor="row.latencypoor">{{row.latency}}</span>
+			</div>
+		</div>
+	</div>
+
+	<p id="footer">{{footer}}</p>
+	<button id="close" data-event-click="queue('close')">Close</button>
+</body>
+</rml>
