@@ -205,8 +205,6 @@ button.tall
 
 button:active
 {
-	position: relative;
-	top: 2dp;
 	border-width: 0 3dp 2dp 7dp;
 	padding: 4dp 6dp 0 1dp;
 	decorator: image(bde_li24.pcx scale-none left top) border-box, image(bde_ri24.pcx scale-none right top) padding-box, image(bde_mi24.pcx scale-none center top) padding-box;
@@ -251,7 +249,6 @@ button.tall.disabled, button.tall:disabled
 
 button.disabled:active, button:disabled:active
 {
-	top: 0dp;
 	border-width: 0 3dp 0 7dp;
 	padding: 3dp 7dp 0 0;
 	decorator: horizontal-gradient(#00000080 #00000080) border-box,
