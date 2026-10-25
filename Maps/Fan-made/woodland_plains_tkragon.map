@@ -4627,8 +4627,8 @@ DestroyableBridges=yes
 66=Neutral,INBLULMP,256,220,120,64,None,1,0,1,0,0,None,None,None,0,0
 67=Neutral,INBLULMP,256,192,122,64,None,1,0,1,0,0,None,None,None,0,0
 68=Neutral,INBLULMP,256,51,121,64,None,1,0,1,0,0,None,None,None,0,0
-69=Neutral,CAEUR2,256,121,13,64,None,1,0,1,0,0,None,None,None,0,0
-70=Neutral,CAMSC06,256,124,16,64,None,1,0,1,0,0,None,None,None,0,0
+69=Neutral,CITY09,256,121,13,64,None,1,0,1,0,0,None,None,None,0,0
+70=Neutral,GALITE,256,124,16,64,None,1,0,1,0,0,None,None,None,0,0
 
 [TaskForces]
 
@@ -4683,7 +4683,6 @@ DestroyableBridges=yes
 13117=TREE01
 13119=TREE02
 13120=TREE04
-13122=TREE11
 13124=TREE11
 13127=TREE11
 13129=TREE09

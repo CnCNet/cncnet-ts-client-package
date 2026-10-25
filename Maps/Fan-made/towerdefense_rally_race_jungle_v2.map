@@ -6,7 +6,7 @@
 ROT=8
 Cost=500
 Name=Rally Truck
-Image=MTRUCK
+Image=TRUCKA
 Owner=GDI,Nod
 Speed=14
 Points=25
@@ -194,12 +194,11 @@ Owner=Nod,GDI
 Prerequisite=GACTWR
 
 [GASILO]
-Image=MATESLA
+Image=GASPOT
 Primary=WEP01
 TechLevel=-1
 
 [GASPOT]
-Image=YGRAIL
 Immune=yes
 Primary=CyCannon
 
@@ -347,7 +346,6 @@ TechLevel=-1
 Unsellable=yes
 
 [NAOBEL]
-Image=CRYS
 Owner=GDI,Nod
 Power=3000
 Crewed=no
