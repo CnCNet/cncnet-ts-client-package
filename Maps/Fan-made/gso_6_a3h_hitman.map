@@ -654,7 +654,7 @@ Size=0,0,120,60
 0AF3EF10-G=yes
 
 [Basic]
-Name=GSO (6) A3H-Hitman
+Name=GSO A3H-Hitman
 Percent=0
 GameMode=standard
 HomeCell=98
