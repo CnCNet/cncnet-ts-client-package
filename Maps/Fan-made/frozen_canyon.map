@@ -1190,7 +1190,7 @@ Size=0,0,180,90
 01000078=1,62,0,0,0,0,0,0,A
 
 [Basic]
-Name=Frozen Canyon (2-4)
+Name=Frozen Canyon
 Percent=0
 GameMode=standard
 HomeCell=98

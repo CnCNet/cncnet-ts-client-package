@@ -1444,7 +1444,7 @@ Size=0,0,230,85
 01000008=4,71,0,1009805416,0,0,0,0,A,72,0,1063679872,0,0,0,0,A,73,0,30,0,0,0,0,A,53,2,01000006,0,0,0,0,A
 
 [Basic]
-Name=Sunstroke [2]
+Name=Sunstroke
 Percent=0
 GameMode=standard
 HomeCell=98

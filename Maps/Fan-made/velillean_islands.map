@@ -1395,7 +1395,7 @@ AreTeamMembersRecruitable=no
 0=Neutral,ORCATRAN,256,37,103,64,Guard,None,0,0,1,0
 
 [Basic]
-Name=Velillian Islands (2-4)
+Name=Velillian Islands
 Percent=0
 GameMode=standard
 HomeCell=98

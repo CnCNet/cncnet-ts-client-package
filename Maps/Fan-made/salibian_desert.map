@@ -1028,7 +1028,7 @@ AreTeamMembersRecruitable=no
 01000005=1,80,1,01000004,0,0,0,0,K
 
 [Basic]
-Name=FS Salibian Desert (2-3)
+Name=FS Salibian Desert
 Percent=0
 GameMode=standard
 HomeCell=98
