@@ -62,16 +62,6 @@ LightBlueTint=0.01
 DamageParticleSystems=SparkSys,LGSparkSys
 Powered=true
 
-[ABOREUSCRYSTAL]
-Name=Devil's throat
-Immune=yes
-IsAnimated=yes
-RadarColor=255,0,0
-AnimationRate=6
-SpawnsTiberium=yes
-TiberiumToSpawn=3
-AnimationProbability=1.003
-
 
 
 [Aboreus]
@@ -168,13 +158,6 @@ IsFlammable=yes
 SnowOccupationBits=7
 TemperateOccupationBits=4
 
-[T08]
-Name=Tree
-RadarColor=0,192,0
-IsFlammable=yes
-SnowOccupationBits=7
-TemperateOccupationBits=4
-
 [T10]
 Name=Tree
 RadarColor=0,192,0
@@ -225,41 +208,6 @@ SnowOccupationBits=7
 TemperateOccupationBits=4
 
 [T17]
-Name=Tree
-RadarColor=0,192,0
-IsFlammable=yes
-SnowOccupationBits=7
-TemperateOccupationBits=4
-
-[TC01]
-Name=Tree
-RadarColor=0,192,0
-IsFlammable=yes
-SnowOccupationBits=7
-TemperateOccupationBits=4
-
-[TC02]
-Name=Tree
-RadarColor=0,192,0
-IsFlammable=yes
-SnowOccupationBits=7
-TemperateOccupationBits=4
-
-[TC03]
-Name=Tree
-RadarColor=0,192,0
-IsFlammable=yes
-SnowOccupationBits=7
-TemperateOccupationBits=4
-
-[TC04]
-Name=Tree
-RadarColor=0,192,0
-IsFlammable=yes
-SnowOccupationBits=7
-TemperateOccupationBits=4
-
-[TC05]
 Name=Tree
 RadarColor=0,192,0
 IsFlammable=yes
@@ -348,30 +296,6 @@ Name=Tiberium Spore
 RadarColor=0,192,0
 IsFlammable=yes
 SnowOccupationBits=7
-TemperateOccupationBits=4
-
-[TREE01B]
-Name=Tree
-Image=TREE01
-RadarColor=0,192,0
-IsFlammable=yes
-SnowOccupationBits=6
-TemperateOccupationBits=4
-
-[TREE02B]
-Name=Tree
-Image=TREE02
-RadarColor=0,192,0
-IsFlammable=yes
-SnowOccupationBits=7
-TemperateOccupationBits=4
-
-[TREE03B]
-Name=Tree
-Image=TREE03
-RadarColor=0,192,0
-IsFlammable=yes
-SnowOccupationBits=6
 TemperateOccupationBits=4
 
 [TTNK]
@@ -505,7 +429,6 @@ TooBigToFitUnderBridge=true
 123=T05
 124=T06
 125=T07
-126=T08
 127=TDEAD1
 128=T10
 129=T11
@@ -515,19 +438,10 @@ TooBigToFitUnderBridge=true
 133=T15
 134=T16
 135=T17
-136=TC01
-137=TC02
-138=TC03
-139=TC04
-140=TC05
 141=TDTREE08
 142=TDTREE08B
 143=TDTREE18
 144=TDTREE18B
-145=TREE01B
-146=TREE02B
-147=TREE03B
-148=ABOREUSCRYSTAL
 154=TDROCK1
 155=TDROCK2
 156=TDROCK3
@@ -2898,19 +2812,11 @@ DestroyableBridges=yes
 63101=TREE22
 64063=TREE22
 64066=TREE22
-64092=TDROCK2
 65066=TREE22
-65092=TDROCK4
-65093=TDROCK2
-65095=TDROCK2
-65097=TDROCK2
-66096=TDROCK3
 67064=TREE22
-67096=TDROCK4
 68069=TREE22
 68086=TREE24
 68087=TREE25
-68096=TDROCK2
 69068=TREE25
 69073=TREE25
 69074=TREE24
@@ -2919,7 +2825,6 @@ DestroyableBridges=yes
 69088=TREE22
 69089=TREE24
 69090=TREE24
-69095=TDROCK2
 69096=TREE22
 70071=TREE24
 70090=TREE24
@@ -2944,10 +2849,10 @@ DestroyableBridges=yes
 76068=TREE24
 76088=TREE25
 76091=TREE25
-78078=ABOREUSCRYSTAL
-78081=ABOREUSCRYSTAL
-81078=ABOREUSCRYSTAL
-81081=ABOREUSCRYSTAL
+78078=TIBTRE01
+78081=TIBTRE01
+81078=TIBTRE01
+81081=TIBTRE01
 83086=TREE24
 84087=TREE23
 85072=TREE24
@@ -2975,11 +2880,9 @@ DestroyableBridges=yes
 91086=TREE23
 91089=TREE22
 91091=TREE23
-93065=TDROCK4
 95071=TREE24
 95097=TREE22
 96070=TREE24
-97066=TDROCK1
 97097=TREE22
 98060=TREE22
 98065=TREE22
@@ -2998,19 +2901,11 @@ DestroyableBridges=yes
 106060=TREE24
 106104=TREE22
 106109=TREE22
-107051=TDROCK6
-108052=TDROCK1
-108054=TDROCK6
 110050=TREE22
 110109=TREE22
 110112=TREE22
-112043=ROCK003
 112048=TREE24
-113044=ROCK002
 113045=TREE22
-114044=ROCK002
-114045=ROCK003
-115046=ROCK001
 
 [Waypoints]
 0=80040
@@ -3023,3 +2918,6 @@ DestroyableBridges=yes
 [Digest]
 1=ydqEaE4B1CcCPRPRddB2fFJjA7I=
 
+
+[TIBTRE01]
+TiberiumToSpawn=3
