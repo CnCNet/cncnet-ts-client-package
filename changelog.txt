@@ -15,6 +15,7 @@ Version 8.00
 - Added: A "Shared Control" checkbox in the CnCNet and LAN game lobbies, which lets players hand an ally command of their units from the diplomacy panel (Credits: ZivDero).
 - Added: The unused "Chem Spray Infantry" (WEEDGUY) is now a working hidden infantry (Credits: Bittah Commander).
 - Added: 235 community multiplayer maps, collected from funkyfresh's client and from their authors, in two new game modes: "Fan-made" and "Popular Mods" (maps that change the game's rules). Maps show their author where it could be identified, and names marked "(?)" are unconfirmed (Credits: the map authors, Metadorius, ZivDero).
+- Added: A "Legacy" client theme, modelled after the CnCNet ffsun client, with flat dark panels, gray text and the ffsun button colors. It can be selected in the client's Options menu.
 - Changed: Updated XNA CnCNet Client to version 2.14.0-rc.7 (https://github.com/CnCNet/xna-cncnet-client/releases) (Credits: SadPencil, Starkku, Kerbiter, 11EJDE11, Rampastring, rds1983, Flactine, BlackgamerzVN, ApocBruh).
 - Changed: The music is now included as MP3 files in the Music folder instead of as AUD files inside Scores.mix (Credits: Bittah Commander).
 - Changed: The main menu music track was replaced with one that plays both the Tiberian Sun and the Firestorm main menu themes in sequence (Credits: Bittah Commander).
