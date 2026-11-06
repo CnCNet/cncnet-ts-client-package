@@ -13,9 +13,6 @@ ExtraUnitLight=0.0
 ExtraAircraftLight=0.0
 ExtraInfantryLight=0.0
 
-[HARV]
-SelfHealing=no
-
 [INBLULMP]
 Immune=yes
 LightRedTint=0.01
