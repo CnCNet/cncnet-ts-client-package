@@ -23,6 +23,7 @@ Version 8.00
 - Changed: The in-game sound options window is no longer taller at resolutions of 600p or higher.
 - Changed: The Nod Tech Center now uses its damaged ActiveAnim (Credits: Bittah Commander).
 - Changed: Re-rendered all map previews using the game itself (Credits: ZivDero).
+- Changed: The RPG Tower now launches a directional projectile (Credits: Bittah Commander).
 - Fixed: The Cyborg Reaper now shows the player's colors when playing its death animation (Credits: ZivDero, Bittah Commander).
 - Fixed: The position of the "Force Update" button (Credits: Bittah Commander).
 - Fixed: The position of the button in the Privacy Notification window (Credits: Bittah Commander).
