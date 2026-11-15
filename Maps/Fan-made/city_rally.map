@@ -1714,8 +1714,8 @@ DestroyableBridges=yes
 
 [Triggers]
 01000000=Neutral,<none>,Reveal All Map,0,1,1,1,0
-01000002=Neutral,01000004,Spawn1Win,0,1,1,1,0
-01000004=Neutral,01000006,Spawn2Win,0,1,1,1,0
+01000002=Neutral,<none>,Spawn1Win,0,1,1,1,0
+01000004=Neutral,<none>,Spawn2Win,0,1,1,1,0
 01000006=Neutral,<none>,Spawn3Win,0,1,1,1,0
 01000008=Neutral,<none>,Delete Buggys,0,1,1,1,0
 01000015=Neutral,<none>,Civilians1,0,1,1,1,0
