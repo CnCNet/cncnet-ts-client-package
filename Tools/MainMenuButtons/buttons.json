@@ -11,7 +11,7 @@
     "rankedmatch": {"label": "Ranked Match", "size": [300, 72], "center_x": 150.0},
     "exitgame": {"label": "Exit", "size": [162, 72], "center_x": 83.5},
     "credits": {"label": "Credits", "size": [150, 50], "center_x": 75.0},
-    "mapeditor": {"label": "Map Editor", "size": [162, 50], "center_x": 83.5},
+    "mapeditor": {"label": "Map Editor", "size": [166, 50], "center_x": 87.5},
     "statistics": {"label": "Statistics", "size": [150, 50], "center_x": 74.5}
   },
   "de": {
@@ -20,7 +20,7 @@
     "exitgame": {"label": "Beenden", "size": [167, 72], "center_x": 82.5},
     "lan": {"label": "Netzwerk", "size": [300, 72], "center_x": 150.5},
     "loadmission": {"label": "Mission laden", "size": [300, 72], "center_x": 149.5},
-    "mapeditor": {"label": "Karteneditor", "size": [167, 50], "center_x": 84.0},
+    "mapeditor": {"label": "Karteneditor", "size": [175, 50], "center_x": 88.0},
     "options": {"label": "Einstellungen", "size": [300, 72], "center_x": 150.0},
     "playonline": {"label": "Internet", "size": [300, 72], "center_x": 150.0},
     "rankedmatch": {"label": "Ranglistenspiel", "size": [300, 72], "center_x": 150.0},
@@ -35,7 +35,7 @@
     "extras": {"label": "Дополнительно", "size": [300, 72], "center_x": 149.0},
     "lan": {"label": "Играть по LAN", "size": [300, 72], "center_x": 149.5},
     "loadmission": {"label": "Загрузить миссию", "size": [300, 72], "center_x": 149.5},
-    "mapeditor": {"label": "Редактор карт", "size": [200, 50], "center_x": 103.0},
+    "mapeditor": {"label": "Редактор карт", "size": [204, 50], "center_x": 107.0},
     "options": {"label": "Настройки", "size": [300, 72], "center_x": 149.5},
     "playonline": {"label": "Играть онлайн", "size": [300, 72], "center_x": 150.0},
     "quickmatch": {"label": "Быстрый матч", "size": [300, 72], "center_x": 149.5},

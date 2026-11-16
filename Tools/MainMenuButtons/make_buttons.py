@@ -3,10 +3,11 @@
 See README.md in this folder for how the look was derived and how to add buttons or languages.
 
 usage:
-  python make_buttons.py --font URWGothic-Demi.ttf                # all languages, written into Resources/
-  python make_buttons.py --font URWGothic-Demi.ttf --lang de --only exitgame mapeditor
-  python make_buttons.py --font URWGothic-Demi.ttf --out preview  # write to preview/<lang>/ instead
+  python make_buttons.py --fonts path/to/urw-base35-fonts/fonts               # all languages, into Resources/
+  python make_buttons.py --fonts ... --lang de --only exitgame mapeditor
+  python make_buttons.py --fonts ... --out preview                            # write to preview/<lang>/ instead
 
+--fonts is a folder containing URWGothic-Demi.ttf and URWGothic-Book.ttf.
 requires: Python 3, numpy, scipy, pillow
 """
 import argparse
@@ -21,18 +22,27 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.normpath(os.path.join(HERE, "..", ".."))
 OUTPUT_DIRS = {"en": os.path.join("Resources", "Default Theme", "MainMenu")}  # others: Translations/<lang>/...
 
-SS = 4  # supersampling factor
-
 # --- Font and size -------------------------------------------------------------------------------
 # Vanilla TS (GMENU.MIX TB*.PCX, 640x400) uses ITC Avant Garde Gothic Demi at ~15.35px with 0.29px
-# tracking. URW Gothic Demi is a metric clone. The client shows the vanilla menu background scaled
-# 1.8x (1152x720 centred in 1280x720), so the text is scaled 1.8x as well.
+# tracking. URW Gothic is a metric clone. The client shows the vanilla menu background scaled 1.8x
+# (1152x720 centred in 1280x720), so the text is scaled 1.8x as well.
 VAN_SIZE = 15.35           # px at 640x400
 TRACK = 0.29 / VAN_SIZE    # em
-CAP_EM = 0.739             # URW Gothic Demi cap height / em
-# Text placement per image height, in the same terms the original TSC (Century Gothic) art used:
-# (reference cap height, cap top, scale). 21 * 0.9725 = 20.42px = vanilla cap 11.34px * 1.8.
-TEXT_BOX = {72: (21, 23, 0.9725), 50: (16, 15, 1.0)}
+CAP_EM = 0.739             # URW Gothic cap height / em (same for Book and Demi)
+
+# Text style per image height:
+#   cap, top, scale  placement in the same terms the original TSC (Century Gothic) art used:
+#                    reference cap height, cap top, scale. 21 * 0.9725 = 20.42px = vanilla cap 11.34px * 1.8.
+#   font             URW Gothic weight file
+#   embolden         faux bold: px added around every stroke (final-image px)
+#   extra_track      px added between letters, 2 x embolden keeps the gaps of the unemboldened font
+#   ss               supersampling factor; embolden must be a multiple of 1/ss
+# The big 72px menu buttons are vanilla's own weight (Demi). The small 50px row (Credits, Statistics,
+# Map Editor) has no vanilla counterpart and uses a lighter Book + faux bold so it reads as secondary.
+TEXT_STYLE = {
+    72: dict(cap=21, top=23, scale=0.9725, font="URWGothic-Demi.ttf", embolden=0.0, extra_track=0.0, ss=4),
+    50: dict(cap=16, top=15, scale=1.0, font="URWGothic-Book.ttf", embolden=0.375, extra_track=0.75, ss=8),
+}
 
 # --- Effect --------------------------------------------------------------------------------------
 # Fitted against the vanilla PCX buttons composited over the bare TSTBACK.PCX background.
@@ -51,35 +61,42 @@ STYLE = {
 }
 
 
-def render_glyphs(label, font, size, w, h, cx, top):
+def render_glyphs(label, font, size, w, h, cx, top, ts):
     """Supersampled coverage of the label, ink centred on cx, cap top at `top`."""
-    big = Image.new("L", (w * SS, h * SS), 0)
+    ss = ts["ss"]
+    big = Image.new("L", (w * ss, h * ss), 0)
     d = ImageDraw.Draw(big)
-    tr = TRACK * size * SS
+    tr = TRACK * size * ss
+    if ts["extra_track"]:
+        tr += ts["extra_track"] * ss
+    emb = int(round(ts["embolden"] * ss))
     xs = [font.getlength(label[:i]) + i * tr for i in range(len(label))]
     l0 = font.getbbox(label[0])[0]
     r1 = xs[-1] + font.getbbox(label[-1])[2]
-    x0 = cx * SS - (l0 + r1) / 2
-    y0 = top * SS - font.getbbox("H")[1]
+    x0 = cx * ss - (l0 + r1) / 2
+    y0 = top * ss - font.getbbox("H")[1]
     for x, ch in zip(xs, label):
-        d.text((x0 + x, y0), ch, font=font, fill=255)
+        if emb:
+            d.text((x0 + x, y0), ch, font=font, fill=255, stroke_width=emb, stroke_fill=255)
+        else:
+            d.text((x0 + x, y0), ch, font=font, fill=255)
     return np.asarray(big, float) / 255
 
 
-def down(a, h, w):
-    return a.reshape(h, SS, w, SS).mean((1, 3))
+def down(a, h, w, ss):
+    return a.reshape(h, ss, w, ss).mean((1, 3))
 
 
-def compose(hi, w, h, st, k):
+def compose(hi, w, h, st, k, ss):
     """k = font size / vanilla font size."""
-    glow = down(1 - np.exp(-st["k1"] * gaussian_filter(hi, st["s1"] * k * SS)), h, w)
-    dark = down(np.clip(st["k2"] * gaussian_filter(hi, st["s2"] * k * SS) - st["c2"], 0, 1), h, w)
-    o = st["off"] * k * SS
-    shadow = down(gaussian_filter(nshift(hi, (o, o), order=1), st["s3"] * k * SS), h, w)
-    dist = distance_transform_edt(hi < 0.5) / SS / k
+    glow = down(1 - np.exp(-st["k1"] * gaussian_filter(hi, st["s1"] * k * ss)), h, w, ss)
+    dark = down(np.clip(st["k2"] * gaussian_filter(hi, st["s2"] * k * ss) - st["c2"], 0, 1), h, w, ss)
+    o = st["off"] * k * ss
+    shadow = down(gaussian_filter(nshift(hi, (o, o), order=1), st["s3"] * k * ss), h, w, ss)
+    dist = distance_transform_edt(hi < 0.5) / ss / k
     t = np.clip((OUTLINE + OUTLINE_SOFT - dist) / OUTLINE_SOFT, 0, 1)
-    outline = down(t * t * (3 - 2 * t) * (hi < 0.5), h, w)
-    cov = down(hi, h, w)
+    outline = down(t * t * (3 - 2 * t) * (hi < 0.5), h, w, ss)
+    cov = down(hi, h, w, ss)
 
     C = np.array(st["glow"], float) * glow[..., None]  # premultiplied colour
     A = glow
@@ -92,18 +109,19 @@ def compose(hi, w, h, st, k):
     return Image.fromarray(np.dstack([rgb, A * 255]).clip(0, 255).round().astype(np.uint8), "RGBA")
 
 
-def make_button(spec, font_path):
+def make_button(spec, fonts_dir):
     w, h = spec["size"]
-    cap, top, scale = TEXT_BOX[h]
-    tcap = cap * scale
-    top = top + cap / 2 - tcap / 2
+    ts = TEXT_STYLE[h]
+    ss = ts["ss"]
+    tcap = ts["cap"] * ts["scale"]
+    top = ts["top"] + ts["cap"] / 2 - tcap / 2
     size = tcap / CAP_EM
-    font = ImageFont.truetype(font_path, int(round(size * SS)))
-    hi = render_glyphs(spec["label"], font, size, w, h, spec["center_x"], top)
+    font = ImageFont.truetype(os.path.join(fonts_dir, ts["font"]), int(round(size * ss)))
+    hi = render_glyphs(spec["label"], font, size, w, h, spec["center_x"], top, ts)
     k = size / VAN_SIZE
     images = {}
     for suffix, st in STYLE.items():
-        img = compose(hi, w, h, st, k)
+        img = compose(hi, w, h, st, k, ss)
         a = np.asarray(img)[..., 3]
         edge = max(a[:, 0].max(), a[:, -1].max())
         if edge > 40:
@@ -114,7 +132,7 @@ def make_button(spec, font_path):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--font", required=True, help="path to URWGothic-Demi.ttf (or .otf)")
+    ap.add_argument("--fonts", required=True, help="folder with URWGothic-Demi.ttf and URWGothic-Book.ttf")
     ap.add_argument("--lang", nargs="*", help="languages from buttons.json (default: all)")
     ap.add_argument("--only", nargs="*", help="button names to generate (default: all)")
     ap.add_argument("--out", help="write to <out>/<lang>/ instead of into Resources/")
@@ -133,7 +151,7 @@ def main():
             if args.only and name not in args.only:
                 continue
             print(f"{lang}/{name}: {spec['label']}")
-            for suffix, img in make_button(spec, args.font).items():
+            for suffix, img in make_button(spec, args.fonts).items():
                 img.save(os.path.join(out, name + suffix + ".png"))
 
 

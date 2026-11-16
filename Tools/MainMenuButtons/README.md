@@ -15,14 +15,15 @@ The Legacy Theme uses different art and isn't generated here.
 
 ## Running it
 
-Requirements: Python 3 with `numpy`, `scipy` and `pillow`, and the URW Gothic Demi font from
-[URW base35](https://github.com/ArtifexSoftware/urw-base35-fonts) (`fonts/URWGothic-Demi.ttf`).
-The font isn't stored in this repo.
+Requirements: Python 3 with `numpy`, `scipy` and `pillow`, and the URW Gothic fonts from
+[URW base35](https://github.com/ArtifexSoftware/urw-base35-fonts). `--fonts` is the folder holding
+`URWGothic-Demi.ttf` and `URWGothic-Book.ttf` (the repo's `fonts/` folder). The fonts aren't stored
+in this repo.
 
 ```
-python make_buttons.py --font path/to/URWGothic-Demi.ttf
-python make_buttons.py --font path/to/URWGothic-Demi.ttf --lang ru --only quickmatch
-python make_buttons.py --font path/to/URWGothic-Demi.ttf --out preview
+python make_buttons.py --fonts path/to/urw-base35-fonts/fonts
+python make_buttons.py --fonts path/to/urw-base35-fonts/fonts --lang ru --only quickmatch
+python make_buttons.py --fonts path/to/urw-base35-fonts/fonts --out preview
 ```
 
 Without `--out` it overwrites the PNGs in `Resources/`. Running it on an unchanged `buttons.json`
@@ -40,7 +41,8 @@ All per-button data is in `buttons.json`:
 
 - `label`: the text. URW Gothic Demi covers Latin (including German umlauts and ß), Cyrillic and Greek.
 - `size`: the image size. Use height 72 for the big menu buttons (300 wide) and height 50 for the small
-  ones (Credits, Statistics, Map Editor). The height sets the text size; see `TEXT_BOX` in the script.
+  ones (Credits, Statistics, Map Editor). The height picks the text style (size, weight, spacing); see
+  `TEXT_STYLE` in the script.
 - `center_x`: where the centre of the text goes. For a new button use half the width. The existing
   values with .5 or odd offsets come from the older TSC art and keep the text where it was.
 
@@ -48,9 +50,11 @@ If the script warns that the glow is cut off at an edge, make the image wider in
 text. The client places buttons by their top-left corner (`Location=` in `MainMenu.ini` /
 `ExtrasWindow.ini`) and takes the size from the texture. So extra width on the right needs no other
 change. Extra width on the left needs the button's `Location` moved left by the same amount, in every
-language. That's why `exitgame` and `mapeditor` are 8px wider on the left in all languages, and their
-`Location` in the base INIs is 8px further left than before. The Legacy Theme INIs pin the old
-positions because Legacy inherits the base INIs (`BasedOn=`) but its art isn't padded.
+language, because all languages share one `Location`. That's why, in all languages, `exitgame` has
+8px and `mapeditor` 12px of extra width on the left compared to the old TSC art. Their `Location` in
+the base INIs moved left to match: `btnExit` 145 → 137, `btnMapEditor` 715 → 703 (`MainMenu.ini`),
+`btnExMapEditor` 490 → 478 (`ExtrasWindow.ini`). The Legacy Theme INIs pin the old positions because
+Legacy inherits the base INIs (`BasedOn=`) but its art isn't padded.
 
 A per-language `Location` is possible in `Translations/<lang>/Translation.ini`
 (`INI:Controls:MainMenu:btnExit:Location=x,y`), but the client only applies translated attributes
@@ -66,6 +70,14 @@ isolates the text effect.
 least-squares fit of six vanilla word widths gives 15.35px font size and 0.29px tracking at 640x400,
 and matches every word to within 1px. The old TSC art used Century Gothic instead, which is lighter and
 has different letterforms.
+
+**Small row.** Vanilla has no small buttons, so Credits, Statistics and Map Editor use a lighter
+style to read as secondary: URW Gothic Book with 0.375px faux bold (strokes thickened on every side,
+stems ~2.35px vs Demi's 2.9px) and 0.75px extra letter spacing, so the faux bold doesn't close up the
+gaps. Faux bold needs finer steps than 1/4 px, so these render at 8x supersampling instead of 4x.
+Because the dark glow depends on how much ink is nearby, the lighter strokes also give a slightly
+lighter dark glow, e.g. inside the "C" of Credits. To make the black match the big buttons exactly,
+the effect layers would have to be drawn from a Demi-weight copy of the text.
 
 **Scale.** The client's `mainmenubg.png` is `TSTBACK.PCX` scaled 1.8x (1152x720, centred in 1280x720
 with 64px margins), not 2x. The menu row spacing confirms it: vanilla 30px x 1.8 = 54px. So the text is
