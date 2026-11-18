@@ -30,6 +30,7 @@ Version 8.00
 - Fixed: The game speed options in the CnCNet and LAN game lobbies now match the speed the game actually runs at (Credits: ZivDero).
 - Removed: The cnc-ddraw, DDrawCompat and ts-ddraw renderers, because OpenTS renders the game itself.
 - Removed: The "Aimable SAMs" game option.
+- Removed: The Main Menu's "Statistics" button (to be restored in a future update).
 
 Version 7.08
 - Added: Multiplayer game lobby now have an "Auto Accept" checkbox, that players can tick in order to not have to click the "Accept" button again whenever the host changes a game option.
