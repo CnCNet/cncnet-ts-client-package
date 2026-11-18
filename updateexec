@@ -276,6 +276,12 @@ MIX\SCORES.MIX
 MIX\SCORES01.MIX
 MIX\TibSun.MIX
 
+Resources\Default Theme\lsbg.png
+Resources\Default Theme\lslogo-cn.png
+Resources\Default Theme\lslogo-fr.png
+Resources\Default Theme\lslogo.png
+Resources\Default Theme\lstext.png
+
 [RenameFolder]
 
 [RenameAndMerge]
