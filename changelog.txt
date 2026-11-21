@@ -28,6 +28,7 @@ Version 8.0.0
 - Fixed: The position of the "Force Update" button (Credits: Bittah Commander).
 - Fixed: The position of the button in the Privacy Notification window (Credits: Bittah Commander).
 - Fixed: The game speed options in the CnCNet and LAN game lobbies now match the speed the game actually runs at (Credits: ZivDero).
+- Fixed: ORCA Bombers and Banshees can no longer get stuck at the bottom or sides of the map while doing a strafe attack (Credits: Bittah Commander).
 - Removed: The cnc-ddraw, DDrawCompat and ts-ddraw renderers, because OpenTS renders the game itself.
 - Removed: The "Aimable SAMs" game option.
 - Removed: The Main Menu's "Statistics" button (to be restored in a future update).
