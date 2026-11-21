@@ -43,7 +43,7 @@ jobs:
         $tag_name = (gh release list --repo CnCNet/xna-cncnet-client --exclude-drafts --limit 1 --json tagName --jq '.[0].tagName')
         gh release download $tag_name --repo CnCNet/xna-cncnet-client --pattern "xna-cncnet-client-*"
         
-        7z x xna-cncnet-client-*.7z -y -oTEMPORARY
+        7z x xna-cncnet-client-*.7z -y -oTEMPORARY\Resources
         rm xna-cncnet-client-*.7z
         $product_version = (Get-Item -Path "TEMPORARY\Resources\clientdx.exe").VersionInfo.ProductVersion
 
