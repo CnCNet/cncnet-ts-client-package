@@ -1,4 +1,4 @@
-Version 8.00
+Version 8.0.0
 - Added: Tiberian Sun now runs on OpenTS, which replaces the original game executable along with the ts-patches engine patches (Credits: OpenTS contributors, Bittah Commander, ZivDero).
 - Added: A button that links to the OpenTS project was added to the client's main menu (Credits: Bittah Commander).
 - Added: An "Edge Scrolling" checkbox on the client's Options menu, which controls whether the map scrolls by moving the mouse cursor against the screen edges (Credits: Bittah Commander).
