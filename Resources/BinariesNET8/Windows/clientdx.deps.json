@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "clientdx/2.14.0-beta0026": {
+      "clientdx/2.14.0-tags-2-14-0-rc--0001": {
         "dependencies": {
           "ClientGUI": "1.0.0",
           "ClientUpdater": "1.0.0",
@@ -892,8 +892,8 @@
       "Rampastring.Tools/1.0.0": {
         "runtime": {
           "Rampastring.Tools.dll": {
-            "assemblyVersion": "3.1.0.0",
-            "fileVersion": "3.1.0.0"
+            "assemblyVersion": "3.0.4.0",
+            "fileVersion": "3.0.4.0"
           }
         }
       },
@@ -924,7 +924,7 @@
     }
   },
   "libraries": {
-    "clientdx/2.14.0-beta0026": {
+    "clientdx/2.14.0-tags-2-14-0-rc--0001": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
