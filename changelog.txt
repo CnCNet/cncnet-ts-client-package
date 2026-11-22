@@ -14,9 +14,9 @@ Version 8.0.0
 - Added: A diplomacy panel, which replaces the player list on the radar and shows each player's alliance, shared control, chat and connection status. It opens with Tab, which previously switched the radar to the kill count screen (Credits: ZivDero).
 - Added: A "Shared Control" checkbox in the CnCNet and LAN game lobbies, which lets players hand an ally command of their units from the diplomacy panel (Credits: ZivDero).
 - Added: The unused "Chem Spray Infantry" (WEEDGUY) is now a working hidden infantry (Credits: Bittah Commander).
-- Added: 235 community multiplayer maps, collected from funkyfresh's client and from their authors, in two new game modes: "Fan-made" and "Popular Mods" (maps that change the game's rules). Maps show their author where it could be identified, and names marked "(?)" are unconfirmed (Credits: the map authors, Metadorius, ZivDero).
-- Added: A "Legacy" client theme, modelled after the CnCNet ffsun client, with flat dark panels, gray text and the ffsun button colors; it can be selected in the client's Options menu (Credits: Kerbiter, ZivDero, Bittah Commander).
-- Changed: Updated XNA CnCNet Client to version 2.14.0-rc.7 (https://github.com/CnCNet/xna-cncnet-client/releases) (Credits: SadPencil, Starkku, Kerbiter, 11EJDE11, Rampastring, rds1983, Flactine, BlackgamerzVN, ApocBruh).
+- Added: 235 community multiplayer maps, collected from FunkyFr3sh's CnCNet client and from their authors, in "Default" and two new game modes: "Popular Custom" and "Co-Op". Maps show their author where it could be identified, and names marked "(?)" are unconfirmed (Credits: the map authors, Kerbiter, ZivDero).
+- Added: The "Legacy Theme" client theme, modeled after FunkyFr3sh's CnCNet client's dark theme, with flat dark panels, gray text and matching button colors; it can be selected in the client's Options menu (Credits: Kerbiter, ZivDero, Bittah Commander).
+- Changed: Updated XNA CnCNet Client to version 2.14.0-rc.9 (https://github.com/CnCNet/xna-cncnet-client/releases) (Credits: SadPencil, Starkku, Kerbiter, 11EJDE11, Rampastring, rds1983, Flactine, BlackgamerzVN, ApocBruh).
 - Changed: The music is now included as MP3 files in the Music folder instead of as AUD files inside Scores.mix (Credits: Bittah Commander).
 - Changed: The main menu music track was replaced with one that plays both the Tiberian Sun and the Firestorm main menu themes in sequence (Credits: Bittah Commander).
 - Changed: The client has a new icon (Credits: Bittah Commander).
@@ -28,7 +28,8 @@ Version 8.0.0
 - Fixed: The position of the "Force Update" button (Credits: Bittah Commander).
 - Fixed: The position of the button in the Privacy Notification window (Credits: Bittah Commander).
 - Fixed: The game speed options in the CnCNet and LAN game lobbies now match the speed the game actually runs at (Credits: ZivDero).
-- Fixed: ORCA Bombers and Banshees can no longer get stuck at the bottom or sides of the map while doing a strafe attack (Credits: Bittah Commander).
+- Fixed: Known vulnerabilities in networking/event code that allowed players to execute illegal actions.
+- Fixed: Terrace: ORCA Bombers and Banshees can no longer get stuck at the bottom or sides of the map while doing a strafe attack (Credits: Bittah Commander).
 - Removed: The cnc-ddraw, DDrawCompat and ts-ddraw renderers, because OpenTS renders the game itself.
 - Removed: The "Aimable SAMs" game option.
 - Removed: The Main Menu's "Statistics" button (to be restored in a future update).
@@ -501,7 +502,7 @@ E1 Elite's changes (2021-02-21):
 	FinalSun map editor changes (Credits: E1 Elite)
 	https://ppmforums.com/topic-47355/finalsun-101-patches/
 	
-	Map Renderer changes (Credits: E1 Elite, Starkku, Metadorius (aka Kerbiter), zzattack)
+	Map Renderer changes (Credits: E1 Elite, Starkku, Kerbiter, zzattack)
 	Source code (commit 2021-01-24)- https://github.com/zzattack/ccmaps-net
 	Download link for TSClient addon files:
 	https://ppmforums.com/post-585461/cnc-maps-renderer-rewritten-works-for-tiberian-sun-and-ra2/#585461
