@@ -1,5 +1,6 @@
 Version 8.0.1
--Fixed: Nod 09 [FS]: Core of the Problem: A cliff piece was missing from a cell.
+- Changed: Updated XNA CnCNet Client to version 2.14.0-rc.10 (https://github.com/CnCNet/xna-cncnet-client/releases) (Credits: 11EJDE11).
+- Fixed: Nod 09 [FS]: Core of the Problem: A cliff piece was missing from a cell.
 
 Version 8.0.0
 - Added: Tiberian Sun now runs on OpenTS, which replaces the original game executable along with the ts-patches engine patches (Credits: OpenTS contributors, Bittah Commander, ZivDero).
