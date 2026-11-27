@@ -1,10 +1,11 @@
 Version 8.0.1
 - Changed: Updated XNA CnCNet Client to version 2.14.0-rc.10 (https://github.com/CnCNet/xna-cncnet-client/releases) (Credits: 11EJDE11).
 - Changed: [8] Super Bridgehead Redux (Humble edit): Removed the increased firing range for cyborgs.
-- Changed: 69 "Popular Custom" maps were changed to a different game mode (Credits: Bittah Commander):
+- Changed: 65 "Popular Custom" maps were changed to a different game mode (Credits: Bittah Commander):
 	- 13 maps were changed to "Default"
 	- 11 maps were changed to "Tower Defense"
 	- 41 maps were changed to "Visceroid Pit"
+- Fixed: Nod 07 [FS]: Determined Retribution: CABAL didn't produce any units to attack the player with (Credits: Bittah Commander, Crimsonum).
 - Fixed: Nod 09 [FS]: Core of the Problem: A cliff piece was missing from a cell.
 - Fixed: [4] Terrace (Credits: Bittah Commander):
 	- ORCA Bombers and Banshees can no longer get stuck when doing a bombing run that causes them to fly beyond the bottom and side edges of the map.

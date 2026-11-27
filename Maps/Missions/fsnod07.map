@@ -10,6 +10,9 @@
 9=shut down the laser fencing surrounding CABAL's core.@@
 10=Third Objective: Destroy CABAL's base and all defenses.
 
+[General]
+UseMinDefenseRule=no
+
 [CAARAY]
 Name=CABAL Command Station
 Capturable=true
